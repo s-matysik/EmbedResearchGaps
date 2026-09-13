@@ -1,0 +1,15 @@
+gap_type,keyword,n_runs_found,n_seeds_found,n_sizes_found,mean_score,min_score,max_score,mean_frequency,cluster_labels,support
+Peripheral Keyword,account ownership,3,3,1,0.5540972939285113,0.5485130929412803,0.5637230124621504,1.0,Alternative credit & Bigtech credit | Commercial banks & bank lending,0.6
+Peripheral Keyword,south asia,3,3,1,0.5158241119391929,0.4293792183163345,0.5806973092320135,1.0,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland | Development Economics & Sub-Saharan Africa",0.6
+Peripheral Keyword,debit card,3,3,1,0.4992229071063831,0.4717061647965789,0.5212274351729775,1.0,Credit risk & alternative credit,0.6
+Peripheral Keyword,risk-taking behavior,2,2,1,0.508168929014722,0.5029730789841628,0.5133647790452813,1.0,Credit risk & alternative credit | Regulatory arbitrage & Relationship lending,0.4
+Peripheral Keyword,debt trap,2,2,1,0.4541533822813286,0.4433584398131101,0.46494832474954717,1.0,Credit risk & alternative credit,0.4
+Peripheral Keyword,black swan,1,1,1,0.6056046665599949,0.6056046665599949,0.6056046665599949,1.0,"China & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland",0.2
+Peripheral Keyword,artificial intelligence,1,1,1,0.5503214985059957,0.5503214985059957,0.5503214985059957,1.0,Soft information & alternative data,0.2
+Peripheral Keyword,social responsibilities,1,1,1,0.4899835996796744,0.4899835996796744,0.4899835996796744,1.0,Credit risk & Bank credit risk,0.2
+Peripheral Keyword,formal accounts,1,1,1,0.45521628271889714,0.45521628271889714,0.45521628271889714,1.0,Commercial banks & bank lending,0.2
+Peripheral Keyword,digital inclusion,1,1,1,0.42708799420144106,0.42708799420144106,0.42708799420144106,1.0,Bank FinTech & Fintech credit,0.2
+Peripheral Keyword,digital economy,1,1,1,0.41437417383355224,0.41437417383355224,0.41437417383355224,1.0,Bank FinTech & Fintech credit,0.2
+Peripheral Keyword,digital payment,1,1,1,0.40863481067117724,0.40863481067117724,0.40863481067117724,1.0,Bank FinTech & Finance,0.2
+Peripheral Keyword,non-financial firms,1,1,1,0.3870708936340149,0.3870708936340149,0.3870708936340149,1.0,Commercial banks & bank lending,0.2
+Peripheral Keyword,open banking,1,1,1,0.35568951600114695,0.35568951600114695,0.35568951600114695,1.0,Commercial banks & bank lending,0.2

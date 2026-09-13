@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import random
+import warnings
 from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -28,19 +29,28 @@ from .protocol import Annotation
 __all__ = ["ValidationReport", "validate_gaps", "selected_and_all_keywords"]
 
 
-def selected_and_all_keywords(
+def selected_and_control_keywords(
     result: PipelineResult,
-    max_all: int | None = None,
+    max_control: int | None = None,
     random_state: int = 42,
+    exclude_selected: bool = True,
 ) -> tuple[list[str], list[str]]:
-    """Split a run into the SELECTED and ALL keyword sets.
+    """Split a run into the candidate set and a disjoint control set.
 
     SELECTED are the keywords the pipeline flagged as candidate gaps (members
-    of a conceptual combination are expanded into individual keywords). ALL is
-    the control set: every unique author keyword of the analysis corpus,
+    of a conceptual combination are expanded into individual keywords).
+    CONTROL is every *other* unique author keyword of the analysis corpus,
     ordered by corpus-level document frequency.
 
-    ``max_all`` bounds the annotation cost on large corpora. The cap is
+    The two sets must be disjoint for a two-sample comparison to mean
+    anything.  Earlier versions of this function returned the whole keyword
+    population as the control, which nests the candidate set inside it: the
+    candidates then contribute to both arms, the two samples are not
+    independent, and a Welch or Mann-Whitney statistic computed on them has no
+    defined null distribution.  Pass ``exclude_selected=False`` only to
+    reproduce such a nested comparison deliberately.
+
+    ``max_control`` bounds the annotation cost on large corpora. The cap is
     applied by drawing a *random* sample with ``random_state``, not by taking
     the head of the ordered list: a head would be either all-frequent or --
     where document frequencies tie at one, as they do for most author keywords
@@ -60,12 +70,40 @@ def selected_and_all_keywords(
         # list(...) not the dict itself: Counter.update on a mapping would
         # add its values (all None) instead of counting its keys.
         counts.update(list(dict.fromkeys(keywords)))
-    everything = [keyword for keyword, _ in counts.most_common()]
-    if not everything:
+    population = [keyword for keyword, _ in counts.most_common()]
+    if exclude_selected:
+        flagged = set(selected)
+        control = [keyword for keyword in population if keyword not in flagged]
+    else:
+        control = list(population)
+    if not control:
         return selected, selected
-    if max_all is not None and len(everything) > max_all:
-        everything = sorted(random.Random(random_state).sample(everything, max_all))
-    return selected, everything
+    if max_control is not None and len(control) > max_control:
+        control = sorted(random.Random(random_state).sample(control, max_control))
+    return selected, control
+
+
+def selected_and_all_keywords(
+    result: PipelineResult,
+    max_all: int | None = None,
+    random_state: int = 42,
+) -> tuple[list[str], list[str]]:
+    """Deprecated alias returning the *nested* control set.
+
+    Kept so that a study run with version 1.0.0 can be reproduced exactly.
+    New code should call :func:`selected_and_control_keywords`, whose control
+    set excludes the candidates.
+    """
+    warnings.warn(
+        "selected_and_all_keywords returns a control set that contains the "
+        "candidates, so the two arms are not independent; use "
+        "selected_and_control_keywords instead",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+    return selected_and_control_keywords(
+        result, max_control=max_all, random_state=random_state, exclude_selected=False
+    )
 
 
 @dataclass

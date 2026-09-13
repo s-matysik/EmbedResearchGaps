@@ -147,3 +147,66 @@ class TestConsensusGaps:
         assert result.gaps.empty
         assert {"support", "keyword", "gap_type"} <= set(result.gaps.columns)
         assert result.summary()["n_candidates"] == 0
+
+
+class TestConsensusAcrossCorpusSizes:
+    """Pooling over analysis-corpus sizes as well as k-means seeds."""
+
+    def test_one_run_per_seed_and_size(self, synthetic_corpus, offline_config) -> None:
+        result = consensus_gaps(
+            synthetic_corpus, "articles_first", offline_config,
+            seeds=(42, 7), top_n=(30, 60),
+        )
+        assert result.stability["n_runs"] == 4
+        assert result.stability["n_seeds"] == 2
+        assert result.stability["corpus_sizes"] == [30, 60]
+        assert {(entry["seed"], entry["top_n"]) for entry in result.per_seed} == {
+            (42, 30), (7, 30), (42, 60), (7, 60)
+        }
+
+    def test_support_denominator_counts_runs_not_seeds(
+        self, synthetic_corpus, offline_config
+    ) -> None:
+        result = consensus_gaps(
+            synthetic_corpus, "articles_first", offline_config,
+            seeds=(42, 7), top_n=(30, 60),
+        )
+        assert (result.gaps["support"] * 4).round(6).eq(result.gaps["n_runs_found"]).all()
+        assert result.gaps["support"].le(1.0).all()
+
+    def test_seed_and_size_effects_are_reported_separately(
+        self, synthetic_corpus, offline_config
+    ) -> None:
+        result = consensus_gaps(
+            synthetic_corpus, "articles_first", offline_config,
+            seeds=(42, 7, 123), top_n=(30, 60),
+        )
+        assert not np.isnan(result.stability["mean_jaccard_same_size"])
+        assert not np.isnan(result.stability["mean_jaccard_across_sizes"])
+
+    def test_single_size_leaves_the_across_size_overlap_undefined(
+        self, synthetic_corpus, offline_config
+    ) -> None:
+        result = consensus_gaps(
+            synthetic_corpus, "articles_first", offline_config, seeds=(42, 7)
+        )
+        assert result.stability["n_corpus_sizes"] == 1
+        assert np.isnan(result.stability["mean_jaccard_across_sizes"])
+        assert result.stability["mean_jaccard_same_size"] == pytest.approx(
+            result.stability["mean_pairwise_jaccard"]
+        )
+
+    def test_duplicate_sizes_are_collapsed(self, synthetic_corpus, offline_config) -> None:
+        result = consensus_gaps(
+            synthetic_corpus, "articles_first", offline_config,
+            seeds=(42, 7), top_n=(60, 60, 30),
+        )
+        assert result.stability["corpus_sizes"] == [60, 30]
+        assert result.stability["n_runs"] == 4
+
+    def test_degenerate_size_is_rejected(self, synthetic_corpus, offline_config) -> None:
+        with pytest.raises(ValueError, match="top_n"):
+            consensus_gaps(
+                synthetic_corpus, "articles_first", offline_config,
+                seeds=(42, 7), top_n=(1, 50),
+            )

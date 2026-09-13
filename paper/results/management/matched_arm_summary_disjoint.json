@@ -1,0 +1,118 @@
+{
+  "n_eligible_annotated": 45,
+  "n_not_eligible": 75,
+  "selected_vs_eligible": {
+    "n_annotators": 5,
+    "n_selected_keywords": 26,
+    "n_all_keywords": 45,
+    "gap_rate_selected": 0.46153846153846156,
+    "gap_rate_all": 0.5223214285714286,
+    "gap_rate_delta_pp": -6.078296703296704,
+    "explored_rate_selected": 0.4076923076923077,
+    "explored_rate_all": 0.42410714285714285,
+    "explored_rate_delta_pp": -1.6414835164835162,
+    "mean_novelty_selected": 3.1538461538461537,
+    "mean_novelty_all": 3.4419642857142856,
+    "novelty_increase_pct": -8.370747281253117,
+    "selected_rates": {
+      "GAP": 0.46153846153846156,
+      "EXPLORED": 0.4076923076923077,
+      "LOW IMPORTANCE": 0.046153846153846156,
+      "METHOD": 0.0,
+      "NOISE": 0.08461538461538462
+    },
+    "all_rates": {
+      "GAP": 0.5223214285714286,
+      "EXPLORED": 0.42410714285714285,
+      "LOW IMPORTANCE": 0.03571428571428571,
+      "METHOD": 0.008928571428571428,
+      "NOISE": 0.008928571428571428
+    },
+    "selected_novelty": {
+      "mean": 3.1538461538461537,
+      "std": 2.0287145602192433,
+      "median": 2.0,
+      "q25": 2.0,
+      "q75": 5.0,
+      "share_ge_5": 0.2846153846153846,
+      "share_ge_8": 0.03076923076923077,
+      "n": 130
+    },
+    "all_novelty": {
+      "mean": 3.4419642857142856,
+      "std": 1.9901613785369556,
+      "median": 3.0,
+      "q25": 2.0,
+      "q75": 5.0,
+      "share_ge_5": 0.33035714285714285,
+      "share_ge_8": 0.022321428571428572,
+      "n": 224
+    },
+    "novelty_test": {
+      "overlapping_samples": 0.0,
+      "welch_t": -1.2970797796089568,
+      "welch_p": 0.19573002083659036,
+      "mannwhitney_u": 13169.0,
+      "mannwhitney_p": 0.12616106585794704,
+      "cohens_d": -0.1433758493531011,
+      "permutation_p": 0.19154042297885104
+    }
+  },
+  "eligible_vs_not_eligible": {
+    "n_annotators": 5,
+    "n_selected_keywords": 45,
+    "n_all_keywords": 75,
+    "gap_rate_selected": 0.5223214285714286,
+    "gap_rate_all": 0.44385026737967914,
+    "gap_rate_delta_pp": 7.847116119174946,
+    "explored_rate_selected": 0.42410714285714285,
+    "explored_rate_all": 0.27807486631016043,
+    "explored_rate_delta_pp": 14.603227654698243,
+    "mean_novelty_selected": 3.4419642857142856,
+    "mean_novelty_all": 3.179144385026738,
+    "novelty_increase_pct": 8.267001081340858,
+    "selected_rates": {
+      "GAP": 0.5223214285714286,
+      "EXPLORED": 0.42410714285714285,
+      "LOW IMPORTANCE": 0.03571428571428571,
+      "METHOD": 0.008928571428571428,
+      "NOISE": 0.008928571428571428
+    },
+    "all_rates": {
+      "GAP": 0.44385026737967914,
+      "EXPLORED": 0.27807486631016043,
+      "LOW IMPORTANCE": 0.09358288770053476,
+      "METHOD": 0.16042780748663102,
+      "NOISE": 0.02406417112299465
+    },
+    "selected_novelty": {
+      "mean": 3.4419642857142856,
+      "std": 1.9901613785369556,
+      "median": 3.0,
+      "q25": 2.0,
+      "q75": 5.0,
+      "share_ge_5": 0.33035714285714285,
+      "share_ge_8": 0.022321428571428572,
+      "n": 224
+    },
+    "all_novelty": {
+      "mean": 3.179144385026738,
+      "std": 2.225249527354143,
+      "median": 2.0,
+      "q25": 1.0,
+      "q75": 5.0,
+      "share_ge_5": 0.3048128342245989,
+      "share_ge_8": 0.03208556149732621,
+      "n": 374
+    },
+    "novelty_test": {
+      "overlapping_samples": 0.0,
+      "welch_t": 1.4946025711635749,
+      "welch_p": 0.1356357142364281,
+      "mannwhitney_u": 46581.0,
+      "mannwhitney_p": 0.019133782897720643,
+      "cohens_d": 0.12450133687373262,
+      "permutation_p": 0.14934253287335633
+    }
+  }
+}

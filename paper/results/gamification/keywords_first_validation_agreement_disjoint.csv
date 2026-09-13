@@ -1,0 +1,11 @@
+annotator_a,annotator_b,n_keywords,label_agreement,novelty_spearman,novelty_p_value
+anthropic:claude-sonnet-4-6,deepseek:deepseek-v4-pro,6,0.6666666666666666,0.6789028582272215,0.13810196225971375
+anthropic:claude-sonnet-4-6,google:gemini-2.5-flash,6,0.6666666666666666,0.9066928292470475,0.012653165414261067
+anthropic:claude-sonnet-4-6,openai:gpt-4o,6,0.5,0.25012215979228897,0.6326407183891358
+anthropic:claude-sonnet-4-6,xai:grok-4.5,6,0.6666666666666666,0.803030303030303,0.05437466956061993
+deepseek:deepseek-v4-pro,google:gemini-2.5-flash,6,1.0,0.8261843893231646,0.04269215275844931
+deepseek:deepseek-v4-pro,openai:gpt-4o,6,0.5,-0.28736848324283987,0.5808128125083478
+deepseek:deepseek-v4-pro,xai:grok-4.5,6,1.0,0.870388279778489,0.02411011055139099
+google:gemini-2.5-flash,openai:gpt-4o,6,0.5,0.09677419354838712,0.8552918666711422
+google:gemini-2.5-flash,xai:grok-4.5,6,1.0,0.8441622892989752,0.03453579816246234
+openai:gpt-4o,xai:grok-4.5,6,0.5,-0.31265269974036114,0.5463021185097108

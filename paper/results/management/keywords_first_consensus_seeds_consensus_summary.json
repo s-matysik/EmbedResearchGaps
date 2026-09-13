@@ -1,0 +1,88 @@
+{
+  "mode": "keywords_first",
+  "seeds": [
+    42,
+    7,
+    123,
+    2026,
+    31337
+  ],
+  "corpus_sizes": [
+    50
+  ],
+  "min_support": 0.0,
+  "n_candidates": 14,
+  "n_unanimous": 0,
+  "n_majority": 2,
+  "stability": {
+    "n_seeds": 5,
+    "n_corpus_sizes": 1,
+    "corpus_sizes": [
+      50
+    ],
+    "n_runs": 5,
+    "mean_pairwise_jaccard": 0.14007936507936505,
+    "min_pairwise_jaccard": 0.0,
+    "max_pairwise_jaccard": 0.3333333333333333,
+    "mean_jaccard_same_size": 0.14007936507936505,
+    "mean_jaccard_across_sizes": NaN,
+    "candidates_per_support": {
+      "0.6": 2,
+      "0.4": 4,
+      "0.2": 8
+    },
+    "mean_candidates_per_run": 4.4
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 6,
+      "gap_types": {
+        "Peripheral Keyword": 6
+      },
+      "silhouette": 0.05146225038468003
+    },
+    {
+      "seed": 7,
+      "top_n": 50,
+      "k": 8,
+      "n_gaps": 4,
+      "gap_types": {
+        "Peripheral Keyword": 4
+      },
+      "silhouette": 0.06334342213521948
+    },
+    {
+      "seed": 123,
+      "top_n": 50,
+      "k": 7,
+      "n_gaps": 4,
+      "gap_types": {
+        "Peripheral Keyword": 4
+      },
+      "silhouette": 0.06371849932616
+    },
+    {
+      "seed": 2026,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 3,
+      "gap_types": {
+        "Peripheral Keyword": 3
+      },
+      "silhouette": 0.05163164361404992
+    },
+    {
+      "seed": 31337,
+      "top_n": 50,
+      "k": 7,
+      "n_gaps": 5,
+      "gap_types": {
+        "Peripheral Keyword": 5
+      },
+      "silhouette": 0.062234808070951185
+    }
+  ]
+}

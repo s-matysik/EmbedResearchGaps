@@ -1,0 +1,38 @@
+gap_type,keyword,n_runs_found,n_seeds_found,n_sizes_found,mean_score,min_score,max_score,mean_frequency,cluster_labels,support
+Peripheral Keyword,debit card,13,5,3,0.5265302617170021,0.4717061647965789,0.5570534355564911,1.0,Bank FinTech & Bigtech credit | Commercial banks & Credit risk | Commercial banks & bank lending | Credit risk & alternative credit,0.65
+Peripheral Keyword,rural dwelling,9,5,2,0.634201638959195,0.5836643106880495,0.6566813571893898,1.0,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland | Development Economics & Economics",0.45
+Peripheral Keyword,south asia,9,5,4,0.565794685152626,0.4293792183163345,0.6108236176724186,1.0,"China & Sub-Saharan Africa | Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland | Development Economics & Sub-Saharan Africa | Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland & Sub-Saharan Africa",0.45
+Peripheral Keyword,credit card,9,5,2,0.5145474925458079,0.5009914076096855,0.5268751463666604,1.0,Bank FinTech & Bigtech credit | Commercial banks & Credit risk | Credit risk & alternative credit,0.45
+Peripheral Keyword,regulatory arbitrage,8,5,3,0.5172458088968419,0.5027921213137609,0.5230686681523786,1.0,Commercial banks & Credit risk | Commercial banks & bank lending | Credit risk & alternative credit | Development Economics & Finance,0.4
+Peripheral Keyword,account ownership,7,5,3,0.5673348487067618,0.5485130929412803,0.5999939168667341,1.0,"Alternative credit & Bigtech credit | Commercial banks & Credit risk | Commercial banks & bank lending | Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland",0.35
+Peripheral Keyword,benin republic,5,5,1,0.6161953273911962,0.6151733281123966,0.6173367390670808,1.0,China & system GMM,0.25
+Peripheral Keyword,historical materialism,5,3,2,0.5937694546329156,0.5897758817074698,0.5973986352587257,1.0,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland | Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland & Economics | Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland & Regulatory arbitrage",0.25
+Peripheral Keyword,loan officer,5,4,2,0.4935735743825919,0.4887942301760704,0.4975180180939529,1.0,Commercial banks & Credit risk | Credit risk & alternative credit,0.25
+Peripheral Keyword,debt trap,5,4,3,0.4624830497568414,0.4433584398131101,0.4915254034706489,1.0,Commercial banks & Credit risk | Credit risk & alternative credit,0.25
+Peripheral Keyword,umbrella review,4,4,1,0.5862659253812028,0.5846560468616031,0.5873404559660732,1.0,China & system GMM,0.2
+Peripheral Keyword,risk-taking behavior,4,2,3,0.5394264005373118,0.5029730789841628,0.6000886698799444,1.0,"Credit risk & alternative credit | Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland | Regulatory arbitrage & Relationship lending",0.2
+Peripheral Keyword,reverse socialisation,3,3,1,0.5986955488343167,0.5942617037310103,0.6023646664307948,1.0,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland",0.15
+Peripheral Keyword,formal accounts,3,3,3,0.47515110144184863,0.45521628271889714,0.49130742275406214,1.0,Commercial banks & bank lending | Credit risk & alternative credit,0.15
+Peripheral Keyword,artificial intelligence,2,2,2,0.5429066087691752,0.5354917190323548,0.5503214985059957,1.0,Bank FinTech & Bigtech credit | Soft information & alternative data,0.1
+Peripheral Keyword,service trust,2,2,1,0.5132671920515988,0.5130148714813627,0.5135195126218348,1.0,Commercial banks & Credit risk,0.1
+Peripheral Keyword,social responsibilities,2,2,2,0.49898020433249274,0.4899835996796744,0.5079768089853111,1.0,Credit risk & Bank credit risk | Finance & Responsible finance,0.1
+Peripheral Keyword,alternative information,2,2,1,0.4841606210056446,0.4759410924353884,0.4923801495759008,1.0,Credit risk & alternative credit,0.1
+Peripheral Keyword,payment facilitation,2,2,2,0.47705248564608493,0.468008438710244,0.48609653258192587,1.0,Bank FinTech & Bigtech credit | Commercial banks & Credit risk,0.1
+Peripheral Keyword,digital inclusion,2,1,2,0.4428811351663802,0.42708799420144106,0.4586742761313194,1.0,Bank FinTech & Finance | Bank FinTech & Fintech credit,0.1
+Peripheral Keyword,internal regtech,2,2,1,0.40608854571832004,0.4044038956552791,0.40777319578136095,1.0,Bank FinTech & Bigtech credit,0.1
+Peripheral Keyword,relationship lending,2,2,1,0.39945356227402967,0.3988599770832427,0.4000471474648166,1.0,Commercial banks & bank lending,0.1
+Peripheral Keyword,black swan,1,1,1,0.6056046665599949,0.6056046665599949,0.6056046665599949,1.0,"China & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland",0.05
+Peripheral Keyword,subsaharian africa,1,1,1,0.5953030329414946,0.5953030329414946,0.5953030329414946,1.0,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland",0.05
+Peripheral Keyword,saudi arabia,1,1,1,0.5721703161828957,0.5721703161828957,0.5721703161828957,1.0,China & system GMM,0.05
+Peripheral Keyword,covid-19 pandemic,1,1,1,0.56649780529389,0.56649780529389,0.56649780529389,1.0,Soft information & Bigtech,0.05
+Peripheral Keyword,google trends,1,1,1,0.5253888991833904,0.5253888991833904,0.5253888991833904,1.0,Soft information & alternative data,0.05
+Peripheral Keyword,regulatory resources,1,1,1,0.5136843761429403,0.5136843761429403,0.5136843761429403,1.0,Credit risk & alternative credit,0.05
+Peripheral Keyword,entrepreneurial risk,1,1,1,0.4972852936437685,0.4972852936437685,0.4972852936437685,1.0,Commercial banks & Credit risk,0.05
+Peripheral Keyword,credit evaluation,1,1,1,0.49008056600858696,0.49008056600858696,0.49008056600858696,1.0,Commercial banks & Credit risk,0.05
+Peripheral Keyword,information technology,1,1,1,0.4865847211920282,0.4865847211920282,0.4865847211920282,1.0,Bank FinTech & Bigtech credit,0.05
+Peripheral Keyword,technology infrastructure,1,1,1,0.47421079894161267,0.47421079894161267,0.47421079894161267,1.0,Bank FinTech & Bigtech credit,0.05
+Peripheral Keyword,loan size,1,1,1,0.46617489389481803,0.46617489389481803,0.46617489389481803,1.0,Commercial banks & bank lending,0.05
+Peripheral Keyword,digital economy,1,1,1,0.41437417383355224,0.41437417383355224,0.41437417383355224,1.0,Bank FinTech & Fintech credit,0.05
+Peripheral Keyword,digital payment,1,1,1,0.40863481067117724,0.40863481067117724,0.40863481067117724,1.0,Bank FinTech & Finance,0.05
+Peripheral Keyword,non-financial firms,1,1,1,0.3870708936340149,0.3870708936340149,0.3870708936340149,1.0,Commercial banks & bank lending,0.05
+Peripheral Keyword,open banking,1,1,1,0.35568951600114695,0.35568951600114695,0.35568951600114695,1.0,Commercial banks & bank lending,0.05
