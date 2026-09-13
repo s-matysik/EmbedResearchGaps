@@ -9,6 +9,7 @@
 | `results/<corpus>/` | candidate tables, keyword tables, diagnostics, run configs, validation annotations and reports, blinded expert sheets |
 | `results/sensitivity/` | corpus-size and k-means-seed sensitivity tables |
 | `results/manuscript_numbers.csv` | every number quoted in the article, in one table |
+| `submission/` | the files as submitted: the article in the journal's Original Software Publication template, the supplementary document, `figures/Figure_1..6.png` at 300 dpi, `highlights.txt` and `graphical_abstract.png` |
 
 Each `<mode>_run_config.json` fully describes the run that produced the tables
 beside it. Regenerate everything with the scripts in `../examples/`.

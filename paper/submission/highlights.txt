@@ -1,0 +1,7 @@
+Highlights
+
+- Two published research-gap procedures released as one tested Python library
+- Seven embedding backends; Scopus and Web of Science exports load without mapping
+- Consensus mode pools candidates over k-means seeds and analysis-corpus sizes
+- Five-provider LLM panel with a disjoint control set and blinded expert sheets
+- Case studies show ranking adds no novelty gain over lexical filters

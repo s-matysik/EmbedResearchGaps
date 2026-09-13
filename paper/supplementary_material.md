@@ -214,6 +214,30 @@ tail — is salvaged entry by entry so that one malformed entry does not discard
 the rest of the batch; a batch yielding nothing usable is requested once more
 before the error propagates.
 
+## S8b. Prior expert validation of the method
+
+The expert arm of the evidence base for this method is the AMCIS antecedent
+study, reference [17] of the manuscript, not this paper. There, two independent
+experts — an associate professor and a full professor, each with more than
+twenty years in the field of the corpus — scored the sixteen candidates that
+the articles-first procedure produced on a marketing corpus, using the same
+1–10 Novelty Score and the same label set reproduced in S8. Three candidates
+(*social commerce*, *time poverty*, *psychological distance*) were labelled
+`GAP` unanimously by all five models of that study's panel and corroborated as
+gaps by at least one expert. Expert mean Novelty Scores correlated with the
+panel means at Spearman ρ = 0.61 (*p* = 0.012, *n* = 16). That study reported
+the spread of expert opinion as wider than the spread across models and
+described its expert arm as a pilot.
+
+This paper did not repeat that arm. A sixteen-keyword pilot on one marketing
+corpus and the five-provider panel study of S3 on three corpora in two other
+domains are different measurements, and the disagreement between them — a
+positive expert-panel concordance there, no reliable enrichment over a disjoint
+control here — is what a larger calibrated expert study is needed to resolve.
+What this paper contributes to that study is the instrument: the blinded sheets
+of S9, shipped for all three corpora, and the concordance function that reads
+them back.
+
 ## S9. Expert validation protocol
 
 `build_expert_sheet` produces a blinded assessment sheet: rows shuffled with a
