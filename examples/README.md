@@ -16,6 +16,8 @@ not library code; `pip install -e .` is enough to run them.
 | `repair_validation.py` | re-runs one annotator and recomputes a study whose panel lost a model |
 | `make_figures.py` | `figures/fig1..fig6` — the manuscript figures |
 | `build_supplementary.py` | the supplementary workbook |
+| `build_docx.py` | renders `paper/manuscript.md` into the journal's Original Software Publication template: the template is opened as the base document, so page setup, the body font, the heading styles and the code-metadata table are inherited, and the five mandatory sections are attached to the template's own multilevel list so Word generates 1., 2., 2.1. rather than numbers typed into the heading text |
+| `build_docx_supp.py` | renders `paper/supplementary_material.md` into a companion document |
 
 Credentials are read from environment variables and never written anywhere:
 `SCOPUSAPI`, `SCOPUSINSTTOKEN` for retrieval, `OPENAI` for embeddings, and
