@@ -1,0 +1,120 @@
+{
+  "domain": "strategic management and organisation studies",
+  "annotators": [
+    "anthropic:claude-sonnet-4-6",
+    "deepseek:deepseek-v4-pro",
+    "google:gemini-2.5-flash",
+    "openai:gpt-4o",
+    "xai:grok-4.5"
+  ],
+  "n_annotations": 858,
+  "per_set": {
+    "SELECTED": {
+      "label_rates": {
+        "GAP": 0.46153846153846156,
+        "EXPLORED": 0.4076923076923077,
+        "LOW IMPORTANCE": 0.046153846153846156,
+        "METHOD": 0.0,
+        "NOISE": 0.08461538461538462
+      },
+      "novelty": {
+        "mean": 3.1538461538461537,
+        "std": 2.0287145602192433,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 5.0,
+        "share_ge_5": 0.2846153846153846,
+        "share_ge_8": 0.03076923076923077,
+        "n": 130
+      }
+    },
+    "ALL": {
+      "label_rates": {
+        "GAP": 0.47115384615384615,
+        "EXPLORED": 0.33516483516483514,
+        "LOW IMPORTANCE": 0.07967032967032966,
+        "METHOD": 0.08379120879120878,
+        "NOISE": 0.03021978021978022
+      },
+      "novelty": {
+        "mean": 3.2637362637362637,
+        "std": 2.1089194992742217,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 5.0,
+        "share_ge_5": 0.3021978021978022,
+        "share_ge_8": 0.023351648351648352,
+        "n": 728
+      }
+    }
+  },
+  "reliability": {
+    "fleiss_kappa_selected": 0.5785755757693051,
+    "krippendorff_alpha_selected": 0.5643458826548586
+  },
+  "comparison": {
+    "n_annotators": 5,
+    "n_selected_keywords": 26,
+    "n_all_keywords": 146,
+    "gap_rate_selected": 0.46153846153846156,
+    "gap_rate_all": 0.47115384615384615,
+    "gap_rate_delta_pp": -0.9615384615384581,
+    "explored_rate_selected": 0.4076923076923077,
+    "explored_rate_all": 0.33516483516483514,
+    "explored_rate_delta_pp": 7.2527472527472545,
+    "mean_novelty_selected": 3.1538461538461537,
+    "mean_novelty_all": 3.2637362637362637,
+    "novelty_increase_pct": -3.3670033670033686,
+    "selected_rates": {
+      "GAP": 0.46153846153846156,
+      "EXPLORED": 0.4076923076923077,
+      "LOW IMPORTANCE": 0.046153846153846156,
+      "METHOD": 0.0,
+      "NOISE": 0.08461538461538462
+    },
+    "all_rates": {
+      "GAP": 0.47115384615384615,
+      "EXPLORED": 0.33516483516483514,
+      "LOW IMPORTANCE": 0.07967032967032966,
+      "METHOD": 0.08379120879120878,
+      "NOISE": 0.03021978021978022
+    },
+    "selected_novelty": {
+      "mean": 3.1538461538461537,
+      "std": 2.0287145602192433,
+      "median": 2.0,
+      "q25": 2.0,
+      "q75": 5.0,
+      "share_ge_5": 0.2846153846153846,
+      "share_ge_8": 0.03076923076923077,
+      "n": 130
+    },
+    "all_novelty": {
+      "mean": 3.2637362637362637,
+      "std": 2.1089194992742217,
+      "median": 2.0,
+      "q25": 2.0,
+      "q75": 5.0,
+      "share_ge_5": 0.3021978021978022,
+      "share_ge_8": 0.023351648351648352,
+      "n": 728
+    },
+    "novelty_test": {
+      "welch_t": -0.5654504487785841,
+      "welch_p": 0.5724623616812525,
+      "mannwhitney_u": 46100.5,
+      "mannwhitney_p": 0.6321943071648644,
+      "cohens_d": -0.053107388698946434
+    }
+  },
+  "unanimous_gaps": [
+    "ecosystem orchestration",
+    "digital leadership",
+    "dt vision",
+    "family firms",
+    "design thinking",
+    "steel industry",
+    "agrifood businesses"
+  ],
+  "failures": {}
+}

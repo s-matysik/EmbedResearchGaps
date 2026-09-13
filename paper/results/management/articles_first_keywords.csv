@@ -1,0 +1,184 @@
+article_cluster,keyword,frequency,n_tokens,subcluster,distance_from_subcentroid,centrality,tfidf,global_frequency,is_core_domain,cluster_label
+0,digital innovation,1,2,1,0.20509315605873046,0.33650714711972896,0.006679228088870498,1,False,Family firms & digital innovation
+0,digital transformation,3,2,1,0.21209185483227944,0.35948836592878,0.04723341300078426,42,True,Family firms & digital innovation
+0,dynamic capabilities,3,2,1,0.3543918610210046,0.4264567293832171,0.04652296179299104,30,True,Family firms & digital innovation
+0,family business,1,2,0,0.1795930887671866,0.35440855260770265,0.0025692134907704983,1,False,Family firms & digital innovation
+0,mittelstand firms,1,2,0,0.19567043234781645,0.40066689660504995,0.0025692134907704983,1,False,Family firms & digital innovation
+0,pär ågerfalk,1,2,1,0.48717998949591856,0.5069938693094291,0.0025692134907704983,1,False,Family firms & digital innovation
+0,ryad titah,1,2,2,0.1995657890984177,0.5918439942429642,0.0025692134907704983,1,False,Family firms & digital innovation
+0,smes,1,1,0,0.2940765681995525,0.37970011100240975,0.011386653917105515,4,False,Family firms & digital innovation
+0,technology adoption,1,2,1,0.2669139868011552,0.3890431063950257,0.0025692134907704983,1,False,Family firms & digital innovation
+0,family firms,2,2,0,0.1277051598730018,0.3408007257882515,0.010055528337500487,2,False,Family firms & digital innovation
+0,performance,1,1,1,0.41061293595980175,0.4835831144530236,0.030542791118635844,3,False,Family firms & digital innovation
+0,thailand,1,1,2,0.19956578909841727,0.5709248987122442,0.0054856990826184825,1,False,Family firms & digital innovation
+1,competitive advantage,2,2,0,0.2873065634007883,0.36232147017190974,0.008646039876485417,3,False,Competitive advantage & Dynamic managerial capabilities
+1,digital maturity,1,2,1,0.30755266972071604,0.3539097987788862,0.008223326090475675,2,False,Competitive advantage & Dynamic managerial capabilities
+1,digital transformation,7,2,1,0.2940889271131826,0.3403405874345524,0.04723341300078426,42,True,Competitive advantage & Dynamic managerial capabilities
+1,dynamic capabilities,4,2,1,0.2451341535224899,0.33480868256778507,0.04652296179299104,30,True,Competitive advantage & Dynamic managerial capabilities
+1,strategic planning,1,2,4,0.23532895227186157,0.4018214045656119,0.003921811847327148,1,False,Competitive advantage & Dynamic managerial capabilities
+1,change management,1,2,1,0.32405118954047674,0.3597695995772875,0.004487946020878883,1,False,Competitive advantage & Dynamic managerial capabilities
+1,telecom,1,1,2,0.39049457573212476,0.5304309852036003,0.004487946020878883,1,False,Competitive advantage & Dynamic managerial capabilities
+1,yemen,1,1,3,0.0,0.7425545397180806,0.004487946020878883,1,False,Competitive advantage & Dynamic managerial capabilities
+1,business model,1,2,4,0.28530473174267224,0.42036343427898193,0.010149256794475973,1,False,Competitive advantage & Dynamic managerial capabilities
+1,dynamic managerial capabilities,2,3,1,0.20091473444068675,0.26335132537966255,0.006084895461738792,2,False,Competitive advantage & Dynamic managerial capabilities
+1,entrepreneurship,1,1,2,0.2596845748385601,0.3582774818471608,0.0036709640120188886,1,False,Competitive advantage & Dynamic managerial capabilities
+1,firm performance,1,2,0,0.3476404063557944,0.42152285448894755,0.01099710490204713,3,False,Competitive advantage & Dynamic managerial capabilities
+1,dynamic capability,1,2,1,0.2607339834493023,0.35177839631782226,0.019790523260593183,6,False,Competitive advantage & Dynamic managerial capabilities
+1,enterprise agility,1,2,1,0.2385942823001974,0.30488708556870325,0.004289728191952258,1,False,Competitive advantage & Dynamic managerial capabilities
+1,it alignment,1,2,1,0.37521328411167154,0.4128351768328338,0.004289728191952258,1,False,Competitive advantage & Dynamic managerial capabilities
+1,digital leadership,1,2,1,0.3021422813306287,0.33927767994771485,0.009086269118428565,3,False,Competitive advantage & Dynamic managerial capabilities
+1,intellectual capital,1,2,0,0.16036385020127808,0.3644152424952811,0.0030216726272935556,1,False,Competitive advantage & Dynamic managerial capabilities
+1,organizational adaptability,1,2,1,0.263443234967232,0.35248335319708746,0.0030216726272935556,1,False,Competitive advantage & Dynamic managerial capabilities
+1,technological innovation,1,2,2,0.21108711328017227,0.366744378131157,0.008304894392379237,3,False,Competitive advantage & Dynamic managerial capabilities
+1,human capital,1,2,0,0.1800974392640866,0.39724813758552924,0.005522798393907178,2,False,Competitive advantage & Dynamic managerial capabilities
+1,innovation,1,1,2,0.1834225640525825,0.3807255483066263,0.02959974305140611,5,False,Competitive advantage & Dynamic managerial capabilities
+1,managerial cognition,1,2,4,0.3241968602074844,0.43967789332116614,0.0030575723261262377,1,False,Competitive advantage & Dynamic managerial capabilities
+1,social capital,1,2,0,0.24765265322121688,0.4676876804971247,0.0030575723261262377,1,False,Competitive advantage & Dynamic managerial capabilities
+1,national recovery and resilience plan,1,5,4,0.3647974035018182,0.559202383994692,0.0028468321912866533,1,False,Competitive advantage & Dynamic managerial capabilities
+1,organizational readiness,1,2,1,0.3438820098373656,0.40395597745257494,0.0028468321912866533,1,False,Competitive advantage & Dynamic managerial capabilities
+1,public value creation,1,3,2,0.35282715957896515,0.46322448416719986,0.0028468321912866533,1,False,Competitive advantage & Dynamic managerial capabilities
+2,digital transformation,13,2,1,0.149014547989049,0.30276733348294993,0.04723341300078426,42,True,Digitalization & Microfoundations
+2,digitalization,4,1,1,0.2247153716168695,0.36591456893693386,0.0157996667883006,5,False,Digitalization & Microfoundations
+2,dynamic capabilities,10,2,2,0.2583498128973559,0.37537238137395157,0.04652296179299104,30,True,Digitalization & Microfoundations
+2,microfoundations,3,1,3,0.18439446431308504,0.4614165606366718,0.0079815856446649,3,False,Digitalization & Microfoundations
+2,qualitative interpretive research,1,3,0,0.25270589316083103,0.5331064964787364,0.002493953701260798,1,False,Digitalization & Microfoundations
+2,strategic agility,1,2,3,0.37632510879992953,0.4579313207602762,0.002493953701260798,1,False,Digitalization & Microfoundations
+2,strategic renewal,1,2,2,0.371962530324661,0.44054176782328003,0.002493953701260798,1,False,Digitalization & Microfoundations
+2,technology and innovation management,1,4,1,0.26599470364052,0.35069367389318096,0.002493953701260798,1,False,Digitalization & Microfoundations
+2,reconfiguring,1,1,2,0.4313902460187964,0.520238646250387,0.005004127282972913,1,False,Digitalization & Microfoundations
+2,seizing,1,1,4,0.525347442594805,0.635456366542057,0.005004127282972913,1,False,Digitalization & Microfoundations
+2,sensing,1,1,4,0.4573987093148124,0.5108159810464297,0.005004127282972913,1,False,Digitalization & Microfoundations
+2,digital innovation management,1,3,1,0.14504300240951828,0.2863806502854005,0.004816522088305911,1,False,Digitalization & Microfoundations
+2,digital transformation (dt),1,3,1,0.21279325527266946,0.3487087889503443,0.06494355948868537,2,False,Digitalization & Microfoundations
+2,mixed method,1,2,0,0.25838065412081535,0.414919213395049,0.0022091347515356633,1,False,Digitalization & Microfoundations
+2,multiple case study,1,3,0,0.2756156639462536,0.5029338929404565,0.0022091347515356633,1,False,Digitalization & Microfoundations
+2,new product development (npd),1,4,2,0.40377157322066215,0.43893346520316456,0.006033889940639775,1,False,Digitalization & Microfoundations
+2,sequential explanatory approach,1,3,0,0.3171945532929483,0.43578123750467457,0.0022091347515356633,1,False,Digitalization & Microfoundations
+2,structural equation model,1,3,0,0.4441124107240795,0.5360198168072117,0.0022091347515356633,1,False,Digitalization & Microfoundations
+2,dynamic capability,3,2,2,0.28176745732280917,0.3911469976668157,0.019790523260593183,6,False,Digitalization & Microfoundations
+2,emerging technologies,1,2,1,0.30449959310363817,0.3596674605971397,0.005074152515544022,1,False,Digitalization & Microfoundations
+2,iiot,1,1,4,0.38035365469908977,0.4898329827426239,0.005074152515544022,1,False,Digitalization & Microfoundations
+2,design science research,1,3,0,0.2747529893448938,0.36361036861915785,0.0036437911114602286,1,False,Digitalization & Microfoundations
+2,information system strategy,1,3,2,0.425493007930432,0.4485950333343207,0.0036437911114602286,1,False,Digitalization & Microfoundations
+2,innovation,2,1,1,0.3359550663837373,0.37067888397349735,0.02959974305140611,5,False,Digitalization & Microfoundations
+2,qualitative research,1,2,0,0.23740740471025057,0.49550011442753183,0.00367974573235731,1,False,Digitalization & Microfoundations
+2,routines,1,1,2,0.4571740740778927,0.5743930244322761,0.00367974573235731,1,False,Digitalization & Microfoundations
+2,technology,1,1,1,0.32664609637444353,0.3986273034005767,0.01374362246227748,1,False,Digitalization & Microfoundations
+2,micro-foundations,1,1,3,0.18368877233647218,0.4499804285350989,0.007442968541341317,2,False,Digitalization & Microfoundations
+2,supply chain management,1,3,4,0.4165529852915879,0.48681890049449106,0.004508672292140478,1,False,Digitalization & Microfoundations
+2,conceptual framework,1,2,3,0.34669122637921046,0.4852404727607307,0.004631733851228498,1,False,Digitalization & Microfoundations
+2,organizational capabilities,1,2,3,0.28982951865256834,0.4099315372653489,0.005827331366433628,2,False,Digitalization & Microfoundations
+2,design capabilities,1,2,2,0.2971598784100248,0.3824512581258246,0.003462127503133707,1,False,Digitalization & Microfoundations
+2,design thinking,1,2,0,0.3961362799793944,0.35653473789349055,0.003462127503133707,1,False,Digitalization & Microfoundations
+2,digital technologies,1,2,1,0.1574563910679413,0.3234538005734888,0.003462127503133707,1,False,Digitalization & Microfoundations
+2,customer value creation,1,3,2,0.42275757233685707,0.4585525346696696,0.0033688488579400296,1,False,Digitalization & Microfoundations
+2,made in italy,1,3,4,0.4850933146271481,0.634622438244862,0.0033688488579400296,1,False,Digitalization & Microfoundations
+2,sme,1,1,4,0.3774895759153126,0.5097869449667907,0.005636296633438057,1,False,Digitalization & Microfoundations
+2,automotive industry,1,2,4,0.37396344978869234,0.5305444347378029,0.0037766497828046228,1,False,Digitalization & Microfoundations
+2,case study,1,2,0,0.2863602715113647,0.4844081284882039,0.010289425568330462,3,False,Digitalization & Microfoundations
+2,industry 4.0,2,2,4,0.26097261390138626,0.38443099301098216,0.010866840613669057,2,False,Digitalization & Microfoundations
+2,digital dynamic capabilities,1,3,1,0.24100427052972084,0.2950256739390753,0.0044160946553217515,1,False,Digitalization & Microfoundations
+2,digital leadership,1,2,1,0.27018988526399945,0.3640576987937676,0.009086269118428565,3,False,Digitalization & Microfoundations
+2,emerging market firms,1,3,3,0.3660639940247522,0.5041626119231137,0.004150593962486628,1,False,Digitalization & Microfoundations
+2,qualitative study,1,2,0,0.2014999995925506,0.5065086538463482,0.00682184672401593,2,False,Digitalization & Microfoundations
+2,digital process innovation,1,3,1,0.15400614384689282,0.2949490110204608,0.0022315004319083264,1,False,Digitalization & Microfoundations
+2,process development,1,2,2,0.2708862604293778,0.33973928725122926,0.0022315004319083264,1,False,Digitalization & Microfoundations
+2,production system development,1,3,2,0.29744841494808216,0.4159156905815752,0.0022315004319083264,1,False,Digitalization & Microfoundations
+2,smart factory,1,2,4,0.2935076941055752,0.4429803037159725,0.0022315004319083264,1,False,Digitalization & Microfoundations
+2,steel industry,1,2,4,0.3532799578773077,0.5772648077442801,0.0022315004319083264,1,False,Digitalization & Microfoundations
+3,digital transformation,3,2,1,0.21069224899650396,0.3861006326306544,0.04723341300078426,42,True,ESG performance & Firm performance
+3,esg performance,2,2,0,0.11043886759376609,0.3071319564241253,0.005816813345976259,2,False,ESG performance & Firm performance
+3,firm performance,1,2,0,0.27176745510316924,0.3779537398050177,0.01099710490204713,3,False,ESG performance & Firm performance
+3,human capital,1,2,2,0.3257399753917172,0.4176306710366193,0.005522798393907178,2,False,ESG performance & Firm performance
+3,operational efficiency,1,2,0,0.31319785350692053,0.3698452661009024,0.003049410105258905,1,False,ESG performance & Firm performance
+3,technological innovation,1,2,1,0.15034308148057307,0.34341215067381314,0.008304894392379237,3,False,ESG performance & Firm performance
+3,dynamic capability theory,1,3,2,0.19444097969127205,0.39560213758732876,0.0033826872441053714,1,False,ESG performance & Firm performance
+3,green innovation,1,2,1,0.1932641010199838,0.3951324660061468,0.0033826872441053714,1,False,ESG performance & Firm performance
+3,social attention,1,2,2,0.39828571370699994,0.5391080110901253,0.0033826872441053714,1,False,ESG performance & Firm performance
+3,dynamic capabilities,1,2,2,0.19061334303541622,0.32738984049752795,0.04652296179299104,30,True,ESG performance & Firm performance
+3,esg,1,1,0,0.24504017236575315,0.3977801812501016,0.012403913104696965,1,False,ESG performance & Firm performance
+4,digital technology,1,2,0,0.18289956986060196,0.3591092962600858,0.0052118625833561995,1,False,Digital Technology & Internationalization
+4,digital transformation,9,2,0,0.17674263181964234,0.26413117346542325,0.04723341300078426,42,True,Digital Technology & Internationalization
+4,dynamic capabilities,7,2,2,0.2677247040258547,0.3672056164125479,0.04652296179299104,30,True,Digital Technology & Internationalization
+4,internationalization,1,1,2,0.47555569403827636,0.4352655968036707,0.0052118625833561995,1,False,Digital Technology & Internationalization
+4,case study,1,2,1,0.380552830370123,0.5772507520695946,0.010289425568330462,3,False,Digital Technology & Internationalization
+4,dynamic capability,1,2,2,0.29142902532534376,0.3833223149434114,0.019790523260593183,6,False,Digital Technology & Internationalization
+4,emerging market,1,2,3,0.3293039321925961,0.5006968666647604,0.007143520042875603,1,False,Digital Technology & Internationalization
+4,organisational remodelling,1,2,2,0.3734900692580203,0.43220867806008,0.003748544895853194,1,False,Digital Technology & Internationalization
+4,enterprise dynamic capabilities,1,3,2,0.2048644463268463,0.29968407776855144,0.004274879791187585,1,False,Digital Technology & Internationalization
+4,“business model innovation”,1,3,4,0.2052524763443867,0.3787110200207723,0.02959974305140611,1,False,Digital Technology & Internationalization
+4,digital maturity,1,2,0,0.23695492937783236,0.31318603165693815,0.008223326090475675,2,False,Digital Technology & Internationalization
+4,innovation performance,1,2,4,0.23746634884737317,0.3331258925088296,0.007744960255783678,1,False,Digital Technology & Internationalization
+4,absorptive capacity,1,2,2,0.35611382187528706,0.44299750430817,0.0027717928138592286,1,False,Digital Technology & Internationalization
+4,differentiation strategy,1,2,4,0.43250962362031764,0.4854033344498897,0.0027717928138592286,1,False,Digital Technology & Internationalization
+4,dynamic operational capability,1,3,2,0.3035303351778298,0.40035197104547904,0.0027717928138592286,1,False,Digital Technology & Internationalization
+4,lean production mechanism,1,3,2,0.39606755540243355,0.464148620618277,0.0027717928138592286,1,False,Digital Technology & Internationalization
+4,process digitalization initiative,1,3,0,0.19075273928791492,0.30322775309876393,0.0027717928138592286,1,False,Digital Technology & Internationalization
+4,manufacturing digitalization,1,2,0,0.2591166475635833,0.358924257660577,0.0038574087153734936,1,False,Digital Technology & Internationalization
+4,manufacturing firms,1,2,2,0.45513855592054975,0.5029687189489459,0.0038574087153734936,1,False,Digital Technology & Internationalization
+4,technological innovation,1,2,4,0.19619706664504633,0.3028596353617332,0.008304894392379237,3,False,Digital Technology & Internationalization
+4,strategic aggressiveness,1,2,3,0.34359635590254145,0.5005720757054826,0.006342135754032423,1,False,Digital Technology & Internationalization
+4,organizational resilience,1,2,2,0.3507939922952452,0.4573247894746626,0.0045973165031683635,1,False,Digital Technology & Internationalization
+4,technology disruption,1,2,4,0.26978296595292584,0.3294113826729861,0.0045973165031683635,1,False,Digital Technology & Internationalization
+4,digital capabilities,1,2,0,0.20219467485651088,0.2594392575962272,0.005505747228388988,2,False,Digital Technology & Internationalization
+4,digital culture,1,2,0,0.24115240633077895,0.36316987834889125,0.005561971672379939,2,False,Digital Technology & Internationalization
+4,digital transformation (dt),1,3,0,0.24015942070813145,0.32430139437395733,0.06494355948868537,2,False,Digital Technology & Internationalization
+4,digital-oriented human resources practices,1,4,0,0.3308371038977177,0.37024314614444787,0.0027254426061513915,1,False,Digital Technology & Internationalization
+4,dt vision,1,2,2,0.5663723497917781,0.5335969491317131,0.0027254426061513915,1,False,Digital Technology & Internationalization
+4,leadership,1,1,1,0.27810184238119606,0.47550238018387103,0.010650684212296101,1,False,Digital Technology & Internationalization
+4,business model innovation,1,3,4,0.20480046778658179,0.38756972172053605,0.007652955260180743,1,False,Digital Technology & Internationalization
+4,company performance,1,2,2,0.3988491135007606,0.428709666794429,0.004187580720436483,1,False,Digital Technology & Internationalization
+4,autonomous growth group,1,3,1,0.38564432319309216,0.5006872043258835,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,common language,1,2,1,0.4069975794362266,0.6255813176229268,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,digital disruption,1,2,4,0.2403561043979413,0.2689065294747829,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,digital platforms,1,2,0,0.21161633126966972,0.31968839762134316,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,digitization,1,1,0,0.2107895426245069,0.39470856808189536,0.004679677708373129,1,False,Digital Technology & Internationalization
+4,disruptive innovation,1,2,4,0.1777443811251257,0.3894161400017666,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,innovative culture,1,2,4,0.2904604038013512,0.3765828231919084,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,multimedia mindset,1,2,0,0.39261232179994165,0.4150479150749228,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,organizational capabilities,1,2,2,0.23527320690522813,0.3652225291599296,0.005827331366433628,2,False,Digital Technology & Internationalization
+4,resources-processes-values (rpv) framework,1,3,2,0.40820239340285613,0.5048148276618556,0.008864482791918345,1,False,Digital Technology & Internationalization
+4,response performance,1,2,3,0.3897288196666512,0.5701341093297393,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,staged resource allocation,1,3,2,0.43915960373144913,0.504984223680957,0.0018119940813229117,1,False,Digital Technology & Internationalization
+4,digital barriers,1,2,0,0.36863097409235057,0.425246947976917,0.0037215897738203663,1,False,Digital Technology & Internationalization
+4,micro-foundations,1,1,2,0.40339283904934065,0.4704613638158739,0.007442968541341317,2,False,Digital Technology & Internationalization
+4,process-based perspective,1,2,2,0.36374527235403276,0.4453441370952629,0.0037215897738203663,1,False,Digital Technology & Internationalization
+4,smes,1,1,2,0.5084624537363418,0.5248647329918137,0.011386653917105515,4,False,Digital Technology & Internationalization
+4,digitalization,1,1,0,0.14571116363887482,0.3101244080482103,0.0157996667883006,5,False,Digital Technology & Internationalization
+4,innovation,1,1,4,0.2038950814748286,0.36048227822322965,0.02959974305140611,5,False,Digital Technology & Internationalization
+4,knowledge,1,1,1,0.3230708993102571,0.5744018600826295,0.004667451376565912,1,False,Digital Technology & Internationalization
+4,market-sensing,1,1,3,0.21533034441777354,0.43933813441561154,0.004667451376565912,1,False,Digital Technology & Internationalization
+4,social media,1,2,0,0.41026790031006144,0.4880896871943944,0.004667451376565912,1,False,Digital Technology & Internationalization
+5,digital transformation,7,2,2,0.2209897170467614,0.32545671447160984,0.04723341300078426,42,True,Performance & SMEs
+5,dynamic capabilities,5,2,3,0.13629501466766403,0.32854359988110726,0.04652296179299104,30,True,Performance & SMEs
+5,firm performance,1,2,4,0.15796570918173292,0.395902926169838,0.01099710490204713,3,False,Performance & SMEs
+5,digital culture,1,2,2,0.20351555045319614,0.39602677321429924,0.005561971672379939,2,False,Performance & SMEs
+5,digital leadership,1,2,2,0.23607990065565965,0.343602782297746,0.009086269118428565,3,False,Performance & SMEs
+5,small and medium-sized enterprises,1,4,1,0.0641203946030815,0.43522272478991186,0.0034248567284321063,1,False,Performance & SMEs
+5,born-digital,1,1,2,0.29112383747674886,0.48377669262926193,0.00286363729553877,1,False,Performance & SMEs
+5,collaborative innovation,1,2,0,0.1593317038958304,0.39992597275659525,0.00286363729553877,1,False,Performance & SMEs
+5,performance,2,1,4,0.30475687288622444,0.4449578543209306,0.030542791118635844,3,False,Performance & SMEs
+5,relational collaboration,1,2,0,0.2960491969523156,0.442116821496234,0.00286363729553877,1,False,Performance & SMEs
+5,small- and medium-sized enterprise (sme),1,5,1,0.07332658696355998,0.46427756583967095,0.009559394861488157,1,False,Performance & SMEs
+5,dynamic capability,1,2,3,0.14976647332710147,0.3480475838715458,0.019790523260593183,6,False,Performance & SMEs
+5,financial performance,1,2,4,0.16723972991327885,0.4371491915276756,0.004347163745665616,1,False,Performance & SMEs
+5,market performance,1,2,4,0.1854367092709347,0.4212106398066904,0.004347163745665616,1,False,Performance & SMEs
+5,digital business performance,1,3,4,0.2373735931205443,0.29412961376869484,0.003362685041693381,1,False,Performance & SMEs
+5,digital capabilities,1,2,2,0.19587226186287587,0.26722559235386256,0.005505747228388988,2,False,Performance & SMEs
+5,ecosystem orchestration,1,2,0,0.40442305874162465,0.491881271151112,0.003362685041693381,1,False,Performance & SMEs
+5,process digitization,1,2,2,0.28344271274721755,0.4707228137997028,0.003362685041693381,1,False,Performance & SMEs
+5,responsiveness,1,1,3,0.3823160299137174,0.4829824297304457,0.003362685041693381,1,False,Performance & SMEs
+5,dynamic digital capability,1,3,3,0.20207534521462112,0.25280900588533173,0.0028109985456394168,1,False,Performance & SMEs
+5,fsqca,1,1,3,0.4670594715069136,0.5344553296411503,0.0028109985456394168,1,False,Performance & SMEs
+5,organizational innovation,1,2,0,0.22075814167317087,0.42494691232987314,0.0028109985456394168,1,False,Performance & SMEs
+5,configurational approach,1,2,3,0.40059096034684294,0.5368919093732349,0.0028109985456394168,1,False,Performance & SMEs
+5,small to medium-sized enterprises,1,4,1,0.06041206298352764,0.4349312519448554,0.0028109985456394168,1,False,Performance & SMEs
+5,case study,1,2,0,0.4650860334223058,0.5366000693975578,0.010289425568330462,3,False,Performance & SMEs
+5,competitive advantage,1,2,4,0.3306962782808508,0.4099578496520049,0.008646039876485417,3,False,Performance & SMEs
+5,innovation,1,1,0,0.24889008791985734,0.4121694915319001,0.02959974305140611,5,False,Performance & SMEs
+5,qualitative study,1,2,3,0.5019298740344873,0.5656634908085237,0.00682184672401593,2,False,Performance & SMEs
+5,cyber-security,1,1,2,0.391092033456091,0.5018490912091372,0.00317056297919225,1,False,Performance & SMEs
+5,digital literacy,1,2,2,0.20643438890121257,0.42149732495934944,0.00317056297919225,1,False,Performance & SMEs
+5,dynamic capabilities of the resourcebased view,1,6,3,0.25717224351424894,0.38221337574844316,0.04928434435405537,1,False,Performance & SMEs
+5,smes,2,1,1,0.20237632663483673,0.46728557704518203,0.011386653917105515,4,False,Performance & SMEs
+5,agrifood businesses,1,2,4,0.47601879886281195,0.5011233471043846,0.005065645250369705,1,False,Performance & SMEs

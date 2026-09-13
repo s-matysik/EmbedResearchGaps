@@ -1,0 +1,114 @@
+{
+  "mode": "keywords_first",
+  "n_articles": 50,
+  "n_keywords": 146,
+  "n_clusters": 6,
+  "n_gaps": 6,
+  "gap_types": {
+    "Peripheral Keyword": 6
+  },
+  "cluster_labels": {
+    "0": "Technology and innovation management & Internationalization",
+    "1": "Firm performance & Organisational remodelling",
+    "2": "Digitalization & Digital Technology",
+    "3": "Microfoundations & family business",
+    "4": "Strategic agility & Strategic renewal",
+    "5": "Qualitative interpretive research & Seizing"
+  },
+  "diagnostics": {
+    "n_clusters": 6,
+    "cluster_sizes": {
+      "0": 30,
+      "1": 27,
+      "2": 28,
+      "3": 17,
+      "4": 30,
+      "5": 14
+    },
+    "cluster_quality": {
+      "silhouette": 0.05146225038468003,
+      "davies_bouldin": 3.7505304794006746,
+      "calinski_harabasz": 5.41838530344806
+    },
+    "k_selection": {
+      "k": 6,
+      "k_range": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "wcss": [
+        96.32975734195523,
+        92.6467353338713,
+        89.86652494856648,
+        86.76351726106941,
+        85.92922370278373,
+        82.7459066070081,
+        81.94467100701533,
+        79.24338053679524,
+        78.3518554065904
+      ],
+      "silhouette": [
+        0.042376111924170394,
+        0.053861089689478836,
+        0.04697663308926573,
+        0.0549486070551483,
+        0.05146225038468003,
+        0.059042006146299675,
+        0.04169086105402155,
+        0.06465227426585377,
+        0.06356027658803114
+      ],
+      "k_elbow": null,
+      "k_silhouette": 9,
+      "rule": "elbow (max silhouette 0.065 < 0.25)"
+    },
+    "distance_metric": "cosine",
+    "frequency_threshold": 1,
+    "periphery_percentile": 95.0,
+    "peripheral_share": 0.0410958904109589,
+    "n_core_domain_terms": 2,
+    "core_domain_terms": [
+      "digital transformation",
+      "dynamic capabilities"
+    ],
+    "tfidf_match_statistics": {
+      "exact": 139,
+      "contains": 7
+    },
+    "corpus": {
+      "n_articles": 50,
+      "n_unique_keywords": 146,
+      "mean_keywords_per_article": 5.16,
+      "articles_without_keywords": 0,
+      "has_abstracts": true,
+      "has_citations": true,
+      "year_range": [
+        2015,
+        2026
+      ],
+      "dropped_empty_text": 0,
+      "dropped_empty_keywords": 0
+    },
+    "ranking": {
+      "ranked": true,
+      "encoder": {
+        "encoder": "precomputed",
+        "model": null
+      },
+      "min_distance": 0.23314005113413439,
+      "max_distance": 0.6516650118853666,
+      "cutoff_distance": 0.31216458178998185
+    },
+    "keyword_encoder": {
+      "encoder": "precomputed",
+      "model": null
+    }
+  }
+}

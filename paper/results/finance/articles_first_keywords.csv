@@ -1,0 +1,192 @@
+article_cluster,keyword,frequency,n_tokens,subcluster,distance_from_subcentroid,centrality,tfidf,global_frequency,is_core_domain,cluster_label
+0,credit risk,1,2,2,0.21599976988330716,0.4261859866156499,0.021568249255308113,6,False,Credit risk & Digitalization
+0,digitalization,1,1,1,0.3448883911535555,0.42445889886566823,0.006805936931199654,2,False,Credit risk & Digitalization
+0,egyptian banking sector,1,3,0,0.12259675578227669,0.44447652701041807,0.0040712427327056055,1,False,Credit risk & Digitalization
+0,financial inclusion,2,2,1,0.23736656714085158,0.24744105370857017,0.03979307931191825,28,True,Credit risk & Digitalization
+0,banking stability,1,2,0,0.12259675578227791,0.352929006630758,0.00320980062687593,1,False,Credit risk & Digitalization
+0,digital inclusive finance,1,3,1,0.11250777422239955,0.18601248020692263,0.00320980062687593,1,False,Credit risk & Digitalization
+0,financial technology innovation,1,3,1,0.20782331514260888,0.25365757833090674,0.00320980062687593,1,False,Credit risk & Digitalization
+0,risk transmission mechanisms,1,3,2,0.3016382632741825,0.5747850182221892,0.00320980062687593,1,False,Credit risk & Digitalization
+0,debt trap,1,2,2,0.27854365709099616,0.5076362885186358,0.0035500266524496117,1,False,Credit risk & Digitalization
+0,digital financial literacy,1,3,1,0.1854904837463407,0.2635976536208866,0.006674009493307058,2,False,Credit risk & Digitalization
+0,digital lending,1,2,1,0.25196845407159163,0.2993909863575299,0.006790361222391098,2,False,Credit risk & Digitalization
+0,fintech,1,1,1,0.220245255863583,0.2777151526086866,0.04610841539316258,34,True,Credit risk & Digitalization
+1,artificial intelligence,1,2,2,0.3501876271531672,0.5476971165331981,0.00410476384656232,1,False,Financial technology & financial innovation
+1,banks,1,1,0,0.45069115467226384,0.4986968206359127,0.016695269867076968,1,False,Financial technology & financial innovation
+1,digital payment,1,2,0,0.37744586789311185,0.4149661721404103,0.00410476384656232,1,False,Financial technology & financial innovation
+1,financial inclusion,11,2,0,0.2108520596604504,0.2750716191624605,0.03979307931191825,28,True,Financial technology & financial innovation
+1,fintech,11,1,0,0.23755905761229001,0.3515020528506525,0.04610841539316258,34,True,Financial technology & financial innovation
+1,mobile banking,1,2,0,0.3501874252426378,0.4446110578786533,0.0037437841570072644,1,False,Financial technology & financial innovation
+1,village and township banks,1,4,0,0.48110322109079084,0.5651618449246407,0.0037437841570072644,1,False,Financial technology & financial innovation
+1,financial technology,2,2,0,0.2327326931199305,0.34490966656186717,0.015226031625781932,7,False,Financial technology & financial innovation
+1,peer-to-peer lending,1,2,0,0.4423452824434265,0.4793313959335779,0.005785739857646971,2,False,Financial technology & financial innovation
+1,systematic literature review,1,3,4,0.4706492827567976,0.6601494775845067,0.0036054903593505387,1,False,Financial technology & financial innovation
+1,central and eastern european countries,1,5,3,0.34763529863657294,0.5124625366783704,0.0034546045467832216,1,False,Financial technology & financial innovation
+1,digitalization,1,1,1,0.2728478760454951,0.453418864376548,0.006805936931199654,2,False,Financial technology & financial innovation
+1,innovation,1,1,2,0.2056004195084995,0.4716383630704559,0.019383448161006844,1,False,Financial technology & financial innovation
+1,financial sustainability,1,2,0,0.3865797670069605,0.42356667687820315,0.0041887685021906405,1,False,Financial technology & financial innovation
+1,panel data analysis,1,3,4,0.18698602308760148,0.5117253060947011,0.0041887685021906405,1,False,Financial technology & financial innovation
+1,bank profitability,1,2,0,0.3682118218471162,0.4410277827670017,0.0043005726848342465,1,False,Financial technology & financial innovation
+1,developing countries,1,2,3,0.17804947121999493,0.45055535474058583,0.0043005726848342465,1,False,Financial technology & financial innovation
+1,inclusive finance,1,2,0,0.20230522217992042,0.26658145791241405,0.009912017144260982,2,False,Financial technology & financial innovation
+1,digital financial literacy,1,3,0,0.30373607199173414,0.35699732896729697,0.006674009493307058,2,False,Financial technology & financial innovation
+1,perceived regulatory support,1,3,4,0.4735455184991927,0.5569731073167766,0.003829938324633144,1,False,Financial technology & financial innovation
+1,digital divide,1,2,1,0.17573426747841814,0.41673201147053884,0.004105802453229092,1,False,Financial technology & financial innovation
+1,digital inequality,1,2,1,0.14134147276880005,0.40529106101420287,0.004105802453229092,1,False,Financial technology & financial innovation
+1,utaut2,1,1,2,0.4230586985326448,0.6230672273361947,0.004105802453229092,1,False,Financial technology & financial innovation
+1,digital economy,1,2,1,0.24157083433426185,0.3741540102388612,0.0037652643216191228,1,False,Financial technology & financial innovation
+1,regulatory resources,1,2,3,0.4588934313631362,0.5085676388929534,0.0037652643216191228,1,False,Financial technology & financial innovation
+1,technological innovation,1,2,2,0.2446058658151382,0.38749946140190883,0.0037652643216191228,1,False,Financial technology & financial innovation
+1,generalized method of moments,1,4,4,0.3597313944759004,0.6225080248573934,0.0031293838329069655,1,False,Financial technology & financial innovation
+1,principal component analysis,1,3,4,0.3992391968948128,0.5994454410653421,0.0031293838329069655,1,False,Financial technology & financial innovation
+1,traditional financial inclusion,1,3,0,0.18930946914401026,0.27395601942145476,0.0031293838329069655,1,False,Financial technology & financial innovation
+1,financial innovation,2,2,0,0.23923580626001284,0.315547269855727,0.01212833965001484,3,False,Financial technology & financial innovation
+1,economic development,1,2,3,0.3205358243487353,0.3784357489385769,0.0028960275847588713,1,False,Financial technology & financial innovation
+1,high-income countries,1,2,3,0.21719587849115696,0.4654106377279309,0.0028960275847588713,1,False,Financial technology & financial innovation
+1,middle-income countries,1,2,3,0.19573104954136955,0.46646217831103964,0.0028960275847588713,1,False,Financial technology & financial innovation
+1,panel regression analysis,1,3,4,0.17990522886857996,0.5466808227023874,0.0028960275847588713,1,False,Financial technology & financial innovation
+1,engagement,1,1,2,0.36074577423544607,0.534758914340589,0.004542425456648286,1,False,Financial technology & financial innovation
+1,financial products,1,2,0,0.2677315460570209,0.3798841105044297,0.004542425456648286,1,False,Financial technology & financial innovation
+1,fintech ecosystem,1,2,0,0.2745561129014433,0.3574766505500988,0.004542425456648286,1,False,Financial technology & financial innovation
+1,disadvantaged communities,1,2,3,0.31602841051023367,0.4808629481045412,0.00549680360723168,1,False,Financial technology & financial innovation
+1,inclusivity,1,1,1,0.3967079047205513,0.5021772598200981,0.00549680360723168,1,False,Financial technology & financial innovation
+2,bank fintech,2,2,2,0.17670837643118698,0.31873198151156723,0.0071395503834397476,2,False,Credit risk & Financial technology
+2,china,2,1,4,0.5469613674658218,0.6556192386758954,0.007554517166915655,2,False,Credit risk & Financial technology
+2,commercial banks,2,2,3,0.15119902582236389,0.38026536742479333,0.007940582950245736,2,False,Credit risk & Financial technology
+2,credit risk,5,2,0,0.18316840130901157,0.35720225320043086,0.021568249255308113,6,False,Credit risk & Financial technology
+2,alternative credit,2,2,0,0.21031353882965753,0.34831015606054694,0.00625815977282373,2,False,Credit risk & Financial technology
+2,bank lending,1,2,3,0.20893873353878734,0.3271185713529332,0.0016549560877760477,1,False,Credit risk & Financial technology
+2,banking,2,1,3,0.2218338665914381,0.3051792167816183,0.013631799949808647,2,False,Credit risk & Financial technology
+2,bigtech credit,2,2,2,0.28488184173616515,0.34359941152909124,0.007587871886909002,2,False,Credit risk & Financial technology
+2,development economics,1,2,4,0.32740267196571204,0.47598730886394724,0.0016549560877760477,1,False,Credit risk & Financial technology
+2,"dr david mcmillan, university of stirling, united kingdom of great britain and northern ireland",1,14,4,0.5184487036815567,0.6361892582581699,0.008767295143176953,1,False,Credit risk & Financial technology
+2,economics,1,1,4,0.3661501306992988,0.5180548308727062,0.0033099121755520954,1,False,Credit risk & Financial technology
+2,finance,2,1,2,0.33829439277342876,0.33617486455274515,0.018174813619148612,2,False,Credit risk & Financial technology
+2,financial inclusion,5,2,2,0.3040071067406469,0.34292288446758623,0.03979307931191825,28,True,Credit risk & Financial technology
+2,fintech credit,2,2,2,0.15826183895120505,0.2889650847518531,0.004234563713489687,2,False,Credit risk & Financial technology
+2,sub-saharan africa,1,2,4,0.5581178530369838,0.6771015424689225,0.007462909655834451,3,False,Credit risk & Financial technology
+2,system gmm,1,2,4,0.4596582427075091,0.5809541384174786,0.0016549560877760477,1,False,Credit risk & Financial technology
+2,bank credit risk,2,3,0,0.2193127727769607,0.3384324736894284,0.007127037842960612,2,False,Credit risk & Financial technology
+2,fintech,11,1,2,0.12619697028765708,0.34345530110817757,0.04610841539316258,34,True,Credit risk & Financial technology
+2,responsible finance,1,2,2,0.3152942769332694,0.31250458997939856,0.0034161006321113134,1,False,Credit risk & Financial technology
+2,sustainable finance,1,2,2,0.34506169181910873,0.36025926283118936,0.0034161006321113134,1,False,Credit risk & Financial technology
+2,economic growth,1,2,4,0.3184426898260504,0.4956338355262423,0.003311283190538142,1,False,Credit risk & Financial technology
+2,financial stability,1,2,4,0.4010746395907816,0.34755435031268045,0.006857601232515868,2,False,Credit risk & Financial technology
+2,regulatory arbitrage,1,2,1,0.5049729149075508,0.5058629219439287,0.003311283190538142,1,False,Credit risk & Financial technology
+2,soft information,1,2,4,0.552898914292175,0.5852382263997589,0.003311283190538142,1,False,Credit risk & Financial technology
+2,alternative data,1,2,0,0.35541678234871177,0.39195943429637425,0.006142353223099689,1,False,Credit risk & Financial technology
+2,credit invisible,1,2,0,0.2718423709502842,0.40617410014130184,0.003851689752384352,1,False,Credit risk & Financial technology
+2,fintech partnership,1,2,2,0.1660536457039371,0.3457829460120405,0.003851689752384352,1,False,Credit risk & Financial technology
+2,bigtech,2,1,2,0.3879951233577703,0.4942115990062095,0.00930435709599374,2,False,Credit risk & Financial technology
+2,competition,1,1,4,0.5140027258633462,0.6024738959008024,0.0027991402386414775,1,False,Credit risk & Financial technology
+2,local banks,1,2,3,0.1696674616304703,0.35239076552559423,0.0027991402386414775,1,False,Credit risk & Financial technology
+2,relationship lending,1,2,1,0.2885717161996254,0.43084182696320517,0.0027991402386414775,1,False,Credit risk & Financial technology
+2,soft credit information,1,3,0,0.28713683728662076,0.44181700954321945,0.0027991402386414775,1,False,Credit risk & Financial technology
+2,financial technology,3,2,2,0.16372189396691827,0.35156228837206527,0.015226031625781932,7,False,Credit risk & Financial technology
+2,green credit expansion,1,3,0,0.38145735602896713,0.3818724370141322,0.0030388212189974492,1,False,Credit risk & Financial technology
+2,green credit risk,1,3,0,0.1944066414331077,0.3565788514877405,0.0030388212189974492,1,False,Credit risk & Financial technology
+2,resource allocation efficiency,1,3,4,0.3988277069456627,0.5132522009731681,0.0030388212189974492,1,False,Credit risk & Financial technology
+2,fintech adoption,1,2,2,0.18747290303161224,0.35352963239656543,0.004165368018818717,1,False,Credit risk & Financial technology
+2,loan size,1,2,1,0.3106290837158554,0.44609274734063753,0.004165368018818717,1,False,Credit risk & Financial technology
+2,risk-taking,2,1,0,0.4975798478251595,0.5366956280993603,0.012325778548039467,2,False,Credit risk & Financial technology
+2,rural bank,1,2,3,0.30358484709939715,0.46682691194355863,0.004165368018818717,1,False,Credit risk & Financial technology
+2,performance,1,1,4,0.47869453574238285,0.5962672129862838,0.007893311610946557,1,False,Credit risk & Financial technology
+2,personal loans,1,2,1,0.2727335041993606,0.41186789635222676,0.00438880950222822,1,False,Credit risk & Financial technology
+2,dynamic panel two-stage gmm,1,4,4,0.5011921888515294,0.60681113376898,0.0029935497048881135,1,False,Credit risk & Financial technology
+2,postfinancing,1,1,1,0.3603142118949849,0.42381241732778996,0.0029935497048881135,1,False,Credit risk & Financial technology
+2,prefinancing,1,1,1,0.3020353069559746,0.41803076387811955,0.0029935497048881135,1,False,Credit risk & Financial technology
+2,sustainable financial development,1,3,4,0.3619801124604013,0.3680285716276228,0.0029935497048881135,1,False,Credit risk & Financial technology
+2,digital risk control,1,3,0,0.36462365120232276,0.4216388568173235,0.004464812591662077,1,False,Credit risk & Financial technology
+2,conventional financial sector,1,3,3,0.2525040995512673,0.3293635469950673,0.003027526298579406,1,False,Credit risk & Financial technology
+2,financial constraints,2,2,4,0.43737907564194667,0.39647123040878807,0.005645121550283233,2,False,Credit risk & Financial technology
+2,total alternative credit,1,3,0,0.26798705854995575,0.3692348277709896,0.003027526298579406,1,False,Credit risk & Financial technology
+2,corporate investment efficiency,1,3,4,0.4153792616543923,0.45933133006510884,0.0032147182433626383,1,False,Credit risk & Financial technology
+2,fintech development,1,2,2,0.13638472766542153,0.3135112519078228,0.0032147182433626383,1,False,Credit risk & Financial technology
+2,non-financial firms,1,2,3,0.3055825514152495,0.36945498428065005,0.0032147182433626383,1,False,Credit risk & Financial technology
+2,alternative data sources,1,3,0,0.39456065586926603,0.4245293352959132,0.0029403820462557346,1,False,Credit risk & Financial technology
+2,credit scoring,1,2,0,0.25945300643307556,0.3705268358077213,0.0029403820462557346,1,False,Credit risk & Financial technology
+2,creditworthiness,1,1,0,0.28592086622959145,0.39568282111323905,0.0029403820462557346,1,False,Credit risk & Financial technology
+2,social media analytics,1,3,4,0.5695043143027949,0.6185030925178981,0.0029403820462557346,1,False,Credit risk & Financial technology
+2,credit risk management,1,3,0,0.25376303873389383,0.3790673504889128,0.0030953311291113763,1,False,Credit risk & Financial technology
+2,lending efficiency,1,2,1,0.24319868590027593,0.3380023614527473,0.0030953311291113763,1,False,Credit risk & Financial technology
+2,lendingclub,1,1,1,0.2221166500710149,0.41559993165621245,0.0030953311291113763,1,False,Credit risk & Financial technology
+2,marketplace lending,1,2,1,0.22542959154068842,0.38519158820709776,0.0030953311291113763,1,False,Credit risk & Financial technology
+2,p2p lending,1,2,1,0.22391839565442095,0.4042665676592263,0.006492427364385649,2,False,Credit risk & Financial technology
+2,financial regulation,1,2,2,0.3759375778844464,0.37129244040200937,0.004301863874500953,1,False,Credit risk & Financial technology
+2,micro-risks,1,1,0,0.3997137079156833,0.4678822301415706,0.004301863874500953,1,False,Credit risk & Financial technology
+2,credit mismatch,1,2,0,0.29401116707404085,0.3992816307053173,0.003874961281287196,1,False,Credit risk & Financial technology
+2,green innovation,1,2,4,0.4535629727930863,0.5102027302691033,0.003874961281287196,1,False,Credit risk & Financial technology
+2,sustainable development,1,2,4,0.4026459818206043,0.5712949956374813,0.003874961281287196,1,False,Credit risk & Financial technology
+2,"business, management and accounting",1,4,4,0.4591124509603486,0.5259228235982643,0.008767295143176953,1,False,Credit risk & Financial technology
+2,commercial bank,1,2,3,0.18884471883897958,0.39956102723903264,0.0023319075437338555,1,False,Credit risk & Financial technology
+2,corporate finance,1,2,2,0.3974472768045647,0.3877220179023365,0.0023319075437338555,1,False,Credit risk & Financial technology
+2,credit & credit institutions,1,4,3,0.32037576571814896,0.3631627396421815,0.035681573534049625,1,False,Credit risk & Financial technology
+2,fintech index,1,2,2,0.18353409319752867,0.36830659524625986,0.0023319075437338555,1,False,Credit risk & Financial technology
+2,non-performing loans,1,2,3,0.39852022046701485,0.430513349952786,0.003924056554564511,2,False,Credit risk & Financial technology
+2,bank-specific factors,1,2,3,0.2701680570415115,0.3695235979169248,0.002916649826921625,1,False,Credit risk & Financial technology
+2,brics economies,1,2,4,0.39225013722616775,0.47293319456362004,0.002916649826921625,1,False,Credit risk & Financial technology
+2,gdp growth,1,2,4,0.385365567668671,0.5335337922365062,0.002916649826921625,1,False,Credit risk & Financial technology
+2,macroeconomic factors,1,2,4,0.37742500538986834,0.48744197125055155,0.002916649826921625,1,False,Credit risk & Financial technology
+3,alternative information,1,2,2,0.39717731665207134,0.4617156812504759,0.002792246646982176,1,False,Panel data & Alternative information
+3,digital inclusion,1,2,3,0.30695066179924524,0.4135730982301232,0.002792246646982176,1,False,Panel data & Alternative information
+3,ethics,1,1,0,0.25943976209893327,0.6034603023151619,0.002792246646982176,1,False,Panel data & Alternative information
+3,financial inclusion,4,2,3,0.1356909721808699,0.33078400832892974,0.03979307931191825,28,True,Panel data & Alternative information
+3,fintech,3,1,3,0.2726736733814181,0.3923748427419288,0.04610841539316258,34,True,Panel data & Alternative information
+3,peer-to-peer lending,1,2,1,0.16586274171235926,0.39052655232188505,0.005785739857646971,2,False,Panel data & Alternative information
+3,public policy,1,2,0,0.2156859207148818,0.47677811427691763,0.002792246646982176,1,False,Panel data & Alternative information
+3,social responsibilities,1,2,0,0.22312818076124974,0.5169719064212135,0.002792246646982176,1,False,Panel data & Alternative information
+3,micro-finance institutes,1,2,3,0.3154303466911089,0.41531583290588625,0.0036556225742735106,1,False,Panel data & Alternative information
+3,risky behaviour,1,2,1,0.4173698390410353,0.5057123854441405,0.0036556225742735106,1,False,Panel data & Alternative information
+3,south asia,1,2,2,0.5212219373641441,0.6239581577926591,0.0036556225742735106,1,False,Panel data & Alternative information
+3,bootstrap,1,1,2,0.3974566830111521,0.5393315798094352,0.0036854458773177075,1,False,Panel data & Alternative information
+3,cross-country analysis,1,2,2,0.3691098004118698,0.5019257155049688,0.0036854458773177075,1,False,Panel data & Alternative information
+3,entrepreneurial risk,1,2,1,0.3134604718319216,0.4747567555676133,0.0036854458773177075,1,False,Panel data & Alternative information
+3,panel data,2,2,2,0.3152085206425028,0.47602406237471584,0.009671324915482315,2,False,Panel data & Alternative information
+3,bank concentration,1,2,3,0.4584609624946814,0.505308339304069,0.0036878431466645413,1,False,Panel data & Alternative information
+3,digital financial inclusion,1,3,3,0.13666269836691103,0.34552951878535154,0.0036878431466645413,1,False,Panel data & Alternative information
+3,output volatility,1,2,2,0.40065831754100056,0.5322524413975456,0.0036878431466645413,1,False,Panel data & Alternative information
+3,crowdfunding,1,1,1,0.2845397706465713,0.38034935423387495,0.004083844539348429,1,False,Panel data & Alternative information
+3,cryptocurrency,1,1,3,0.43072511566928084,0.46143818061369113,0.004083844539348429,1,False,Panel data & Alternative information
+3,p2p lending,1,2,1,0.16693096636605842,0.37297629494440465,0.006492427364385649,2,False,Panel data & Alternative information
+3,platforms,1,1,2,0.32823529261293216,0.42680673200004915,0.004083844539348429,1,False,Panel data & Alternative information
+4,big tech,1,2,0,0.3804038906307352,0.43213196453286995,0.003958597369323497,1,False,Income inequality & Big tech
+4,digital lending,1,2,0,0.27908108786440833,0.4332727928407498,0.006790361222391098,2,False,Income inequality & Big tech
+4,fintech,4,1,0,0.17582302450167653,0.3587137463750617,0.04610841539316258,34,True,Income inequality & Big tech
+4,inclusion,1,1,3,0.25583998904308636,0.4397121927481167,0.04128461833803348,1,False,Income inequality & Big tech
+4,income inequality,4,2,3,0.3405962501755223,0.5103639958243286,0.013096149888067572,4,False,Income inequality & Big tech
+4,c11,1,1,2,0.2173371199496974,0.3805210974845403,0.0028400942779270616,1,False,Income inequality & Big tech
+4,d31,1,1,2,0.17865103474098498,0.3832578210919002,0.0028400942779270616,1,False,Income inequality & Big tech
+4,d63,1,1,2,0.15480243186619225,0.4136817009180157,0.0028400942779270616,1,False,Income inequality & Big tech
+4,f62,1,1,2,0.18664694399809045,0.43263006816808414,0.0028400942779270616,1,False,Income inequality & Big tech
+4,feature selection,1,2,3,0.38633410321888906,0.505418828712954,0.0028400942779270616,1,False,Income inequality & Big tech
+4,financial inclusion,2,2,0,0.24946952167733571,0.3599660118363197,0.03979307931191825,28,True,Income inequality & Big tech
+4,fincredit,1,1,0,0.3111261624347186,0.4046247149553832,0.0028400942779270616,1,False,Income inequality & Big tech
+4,o,1,1,1,0.20470866596139103,0.5086945963643271,0.0028400942779270616,1,False,Income inequality & Big tech
+4,africa,1,1,1,0.20470866596139103,0.5610038287997248,0.010748885837258096,1,False,Income inequality & Big tech
+4,institutions,1,1,3,0.3035184013118917,0.47974994924367664,0.008456364851664283,1,False,Income inequality & Big tech
+4,digital financial services,1,3,0,0.17820085376967487,0.375869043060326,0.005117830701881677,1,False,Income inequality & Big tech
+5,bank performance,1,2,2,0.22606870733306372,0.3127726777248734,0.004339431489997498,1,False,Financial technology & Sub-Saharan Africa
+5,fintech,4,1,0,0.19264523677762957,0.30856154622568643,0.04610841539316258,34,True,Financial technology & Sub-Saharan Africa
+5,inclusive finance,1,2,0,0.14866076225022662,0.24557010302545945,0.009912017144260982,2,False,Financial technology & Sub-Saharan Africa
+5,open banking,1,2,0,0.34523463462700943,0.34827456325770223,0.004339431489997498,1,False,Financial technology & Sub-Saharan Africa
+5,banks’ risk-taking,1,2,2,0.1598415970482152,0.3830864484297354,0.028187112218157142,1,False,Financial technology & Sub-Saharan Africa
+5,financial inclusion,4,2,0,0.17292868974567732,0.2559692559096788,0.03979307931191825,28,True,Financial technology & Sub-Saharan Africa
+5,financial stability,1,2,2,0.283408160928741,0.32302054138036795,0.006857601232515868,2,False,Financial technology & Sub-Saharan Africa
+5,z-score,1,1,4,0.31841863310002283,0.6163768680280338,0.004271693275635462,1,False,Financial technology & Sub-Saharan Africa
+5,financial technology,2,2,0,0.20344551670962385,0.3068567631270833,0.015226031625781932,7,False,Financial technology & Sub-Saharan Africa
+5,fintech-based financial inclusion,1,3,0,0.12306935132485608,0.2759027210665863,0.002986214801511959,1,False,Financial technology & Sub-Saharan Africa
+5,microfinance institutions,1,2,0,0.2970081460319802,0.38938225232692014,0.002986214801511959,1,False,Financial technology & Sub-Saharan Africa
+5,risk-taking behavior,1,2,2,0.4160403358280311,0.5828420140215937,0.002986214801511959,1,False,Financial technology & Sub-Saharan Africa
+5,sub-saharan africa,2,2,0,0.6368493613945378,0.6633705268730443,0.007462909655834451,3,False,Financial technology & Sub-Saharan Africa
+5,bank risk,1,2,2,0.16340346863074307,0.3476486345330685,0.004280728799477219,1,False,Financial technology & Sub-Saharan Africa
+5,regulation,1,1,4,0.27368623387665003,0.5351778208075209,0.0077615957746672674,1,False,Financial technology & Sub-Saharan Africa
+5,account ownership,1,2,3,0.3437620208775518,0.5445960831271319,0.0020072232246325468,1,False,Financial technology & Sub-Saharan Africa
+5,black swan,1,2,1,0.34919095637331976,0.6635805922073728,0.0020072232246325468,1,False,Financial technology & Sub-Saharan Africa
+5,credit card,1,2,3,0.1642285675739732,0.49840777643123935,0.0020072232246325468,1,False,Financial technology & Sub-Saharan Africa
+5,debit card,1,2,3,0.17399100631402098,0.48540142946911913,0.0020072232246325468,1,False,Financial technology & Sub-Saharan Africa
+5,digital finance,1,2,0,0.15824278566794003,0.26747810123661997,0.0020072232246325468,1,False,Financial technology & Sub-Saharan Africa
+5,efficiency,1,1,4,0.2412037627637894,0.5741438262088738,0.008901205191873453,1,False,Financial technology & Sub-Saharan Africa
+5,financial innovation,1,2,0,0.2369588774011856,0.287315984872589,0.01212833965001484,3,False,Financial technology & Sub-Saharan Africa
+5,formal accounts,1,2,1,0.2775844721543459,0.4627713538376812,0.0020072232246325468,1,False,Financial technology & Sub-Saharan Africa
+5,insolvency risk,1,2,2,0.26201340901412573,0.4154641188120304,0.0020072232246325468,1,False,Financial technology & Sub-Saharan Africa
+5,non-performing loans,1,2,1,0.2826601070154855,0.44155572568161006,0.003924056554564511,2,False,Financial technology & Sub-Saharan Africa

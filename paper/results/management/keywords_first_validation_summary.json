@@ -1,0 +1,114 @@
+{
+  "domain": "strategic management and organisation studies",
+  "annotators": [
+    "anthropic:claude-sonnet-4-6",
+    "deepseek:deepseek-v4-pro",
+    "google:gemini-2.5-flash",
+    "openai:gpt-4o",
+    "xai:grok-4.5"
+  ],
+  "n_annotations": 758,
+  "per_set": {
+    "SELECTED": {
+      "label_rates": {
+        "GAP": 0.4,
+        "EXPLORED": 0.23333333333333334,
+        "LOW IMPORTANCE": 0.03333333333333333,
+        "METHOD": 0.0,
+        "NOISE": 0.3333333333333333
+      },
+      "novelty": {
+        "mean": 2.8666666666666667,
+        "std": 2.0465839213495345,
+        "median": 2.0,
+        "q25": 1.0,
+        "q75": 4.75,
+        "share_ge_5": 0.26666666666666666,
+        "share_ge_8": 0.0,
+        "n": 30
+      }
+    },
+    "ALL": {
+      "label_rates": {
+        "GAP": 0.47115384615384615,
+        "EXPLORED": 0.33516483516483514,
+        "LOW IMPORTANCE": 0.07967032967032966,
+        "METHOD": 0.08379120879120878,
+        "NOISE": 0.03021978021978022
+      },
+      "novelty": {
+        "mean": 3.2637362637362637,
+        "std": 2.1089194992742217,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 5.0,
+        "share_ge_5": 0.3021978021978022,
+        "share_ge_8": 0.023351648351648352,
+        "n": 728
+      }
+    }
+  },
+  "reliability": {
+    "fleiss_kappa_selected": 0.6534653465346533,
+    "krippendorff_alpha_selected": 0.8446099459802987
+  },
+  "comparison": {
+    "n_annotators": 5,
+    "n_selected_keywords": 6,
+    "n_all_keywords": 146,
+    "gap_rate_selected": 0.4,
+    "gap_rate_all": 0.47115384615384615,
+    "gap_rate_delta_pp": -7.115384615384612,
+    "explored_rate_selected": 0.23333333333333334,
+    "explored_rate_all": 0.33516483516483514,
+    "explored_rate_delta_pp": -10.18315018315018,
+    "mean_novelty_selected": 2.8666666666666667,
+    "mean_novelty_all": 3.2637362637362637,
+    "novelty_increase_pct": -12.166105499438832,
+    "selected_rates": {
+      "GAP": 0.4,
+      "EXPLORED": 0.23333333333333334,
+      "LOW IMPORTANCE": 0.03333333333333333,
+      "METHOD": 0.0,
+      "NOISE": 0.3333333333333333
+    },
+    "all_rates": {
+      "GAP": 0.47115384615384615,
+      "EXPLORED": 0.33516483516483514,
+      "LOW IMPORTANCE": 0.07967032967032966,
+      "METHOD": 0.08379120879120878,
+      "NOISE": 0.03021978021978022
+    },
+    "selected_novelty": {
+      "mean": 2.8666666666666667,
+      "std": 2.0465839213495345,
+      "median": 2.0,
+      "q25": 1.0,
+      "q75": 4.75,
+      "share_ge_5": 0.26666666666666666,
+      "share_ge_8": 0.0,
+      "n": 30
+    },
+    "all_novelty": {
+      "mean": 3.2637362637362637,
+      "std": 2.1089194992742217,
+      "median": 2.0,
+      "q25": 2.0,
+      "q75": 5.0,
+      "share_ge_5": 0.3021978021978022,
+      "share_ge_8": 0.023351648351648352,
+      "n": 728
+    },
+    "novelty_test": {
+      "welch_t": -1.040154701705771,
+      "welch_p": 0.306163713331373,
+      "mannwhitney_u": 9481.5,
+      "mannwhitney_p": 0.21099017994611824,
+      "cohens_d": -0.19108391439147265
+    }
+  },
+  "unanimous_gaps": [
+    "relational collaboration"
+  ],
+  "failures": {}
+}

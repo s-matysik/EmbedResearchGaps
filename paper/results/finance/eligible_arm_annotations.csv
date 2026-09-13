@@ -1,0 +1,300 @@
+annotator,keyword_set,keyword,label,novelty,rationale
+openai:gpt-4o,ELIGIBLE,account ownership,GAP,5.0,"Account ownership is relevant to financial inclusion and has been studied, but further exploration is needed in the context of fintech credit."
+openai:gpt-4o,ELIGIBLE,bank lending,GAP,3.0,"Bank lending is a well-studied area, but its interaction with fintech credit and financial inclusion requires more research."
+openai:gpt-4o,ELIGIBLE,bank performance,GAP,4.0,"Bank performance is a broad topic with existing literature, yet the impact of fintech credit on it is not fully explored."
+openai:gpt-4o,ELIGIBLE,bank profitability,GAP,3.0,"While bank profitability is well-researched, the specific effects of fintech credit on profitability need further investigation."
+openai:gpt-4o,ELIGIBLE,bank risk,GAP,4.0,"Bank risk is a critical area with existing studies, but the influence of fintech credit on risk profiles is underexplored."
+openai:gpt-4o,ELIGIBLE,bank-specific factors,GAP,3.0,"Bank-specific factors are known, but their role in fintech credit's impact on financial inclusion and risk is not fully understood."
+openai:gpt-4o,ELIGIBLE,banking stability,GAP,4.0,"Banking stability is a significant topic, yet the effects of fintech credit on stability are not comprehensively studied."
+openai:gpt-4o,ELIGIBLE,brics economies,GAP,6.0,"BRICS economies present unique contexts for fintech credit's impact on financial inclusion, warranting further research."
+openai:gpt-4o,ELIGIBLE,commercial bank,EXPLORED,2.0,Commercial banks are a well-established area in finance literature.
+openai:gpt-4o,ELIGIBLE,corporate finance,LOW IMPORTANCE,1.0,Corporate finance is not directly relevant to the research problem focused on fintech credit and financial inclusion.
+openai:gpt-4o,ELIGIBLE,credit card,EXPLORED,2.0,Credit cards are a well-researched area in the context of financial services.
+openai:gpt-4o,ELIGIBLE,credit invisible,GAP,7.0,"The issue of credit invisibility is relevant to financial inclusion and fintech credit, with room for further study."
+openai:gpt-4o,ELIGIBLE,credit mismatch,GAP,8.0,Credit mismatch is an emerging topic with significant implications for fintech credit and financial inclusion.
+openai:gpt-4o,ELIGIBLE,credit scoring,GAP,3.0,"Credit scoring is well-studied, but its evolution with digital lending technologies needs more exploration."
+openai:gpt-4o,ELIGIBLE,cross-country analysis,GAP,5.0,"Cross-country analysis can provide insights into fintech credit's impact, but is not extensively covered."
+openai:gpt-4o,ELIGIBLE,debit card,LOW IMPORTANCE,1.0,Debit cards are not directly relevant to the research problem focused on fintech credit and financial inclusion.
+openai:gpt-4o,ELIGIBLE,developing countries,GAP,6.0,Developing countries offer unique contexts for studying fintech credit's impact on financial inclusion.
+openai:gpt-4o,ELIGIBLE,development economics,EXPLORED,2.0,Development economics is a broad and well-established field.
+openai:gpt-4o,ELIGIBLE,digital divide,GAP,7.0,"The digital divide is crucial for understanding fintech credit's role in financial inclusion, with ongoing research needed."
+openai:gpt-4o,ELIGIBLE,digital economy,GAP,3.0,"The digital economy is a broad area, but its specific link to fintech credit and banking outcomes requires more study."
+openai:gpt-4o,ELIGIBLE,digital finance,GAP,4.0,"Digital finance is a growing field with relevance to fintech credit, needing further exploration in specific contexts."
+openai:gpt-4o,ELIGIBLE,digital inclusion,GAP,6.0,"Digital inclusion is directly related to financial inclusion and fintech credit, with significant research potential."
+openai:gpt-4o,ELIGIBLE,digital inequality,GAP,7.0,"Digital inequality is a critical issue affecting fintech credit's impact on financial inclusion, requiring more research."
+openai:gpt-4o,ELIGIBLE,digital payment,GAP,3.0,"Digital payment systems are well-studied, but their role in fintech credit and financial inclusion needs further exploration."
+openai:gpt-4o,ELIGIBLE,economic development,EXPLORED,2.0,Economic development is a well-established area in the literature.
+openai:gpt-4o,ELIGIBLE,economic growth,EXPLORED,2.0,Economic growth is a well-explored area in economics and finance literature.
+openai:gpt-4o,ELIGIBLE,entrepreneurial risk,GAP,3.0,Entrepreneurial risk in the context of fintech credit and financial inclusion is not extensively covered.
+openai:gpt-4o,ELIGIBLE,financial products,EXPLORED,2.0,Financial products are a broad and well-explored area in finance literature.
+openai:gpt-4o,ELIGIBLE,financial regulation,GAP,3.0,Financial regulation related to fintech credit and digital lending is an emerging area with research potential.
+openai:gpt-4o,ELIGIBLE,fintech adoption,GAP,4.0,Fintech adoption is moderately explored but still has gaps in understanding its impact on financial inclusion.
+openai:gpt-4o,ELIGIBLE,fintech development,GAP,5.0,"Fintech development is an evolving area with ongoing research interest, especially in its impact on banking systems."
+openai:gpt-4o,ELIGIBLE,fintech ecosystem,GAP,6.0,The fintech ecosystem is a developing area with significant research potential in linking digital lending to outcomes.
+openai:gpt-4o,ELIGIBLE,fintech index,GAP,3.0,Fintech index is a less explored area with potential for measuring fintech impact on financial systems.
+openai:gpt-4o,ELIGIBLE,fintech partnership,GAP,5.0,Fintech partnerships are increasingly relevant but not extensively studied in the context of financial inclusion.
+openai:gpt-4o,ELIGIBLE,formal accounts,GAP,4.0,Formal accounts are moderately explored in relation to fintech's role in financial inclusion.
+openai:gpt-4o,ELIGIBLE,gdp growth,EXPLORED,2.0,GDP growth is a well-established area in economic literature.
+openai:gpt-4o,ELIGIBLE,green innovation,LOW IMPORTANCE,2.0,Green innovation is not directly relevant to fintech credit and financial inclusion.
+openai:gpt-4o,ELIGIBLE,high-income countries,GAP,3.0,The impact of fintech credit in high-income countries is less explored compared to developing regions.
+openai:gpt-4o,ELIGIBLE,insolvency risk,GAP,4.0,Insolvency risk related to fintech credit is an emerging area with research potential.
+openai:gpt-4o,ELIGIBLE,lending efficiency,GAP,5.0,Lending efficiency in the context of digital lending technologies is a developing research area.
+openai:gpt-4o,ELIGIBLE,loan size,GAP,3.0,Loan size in relation to fintech credit is moderately explored and has potential for further research.
+openai:gpt-4o,ELIGIBLE,local banks,GAP,4.0,The role of local banks in fintech credit systems is an area with research potential.
+openai:gpt-4o,ELIGIBLE,macroeconomic factors,EXPLORED,2.0,Macroeconomic factors are a well-explored area in economics.
+openai:gpt-4o,ELIGIBLE,micro-finance institutes,GAP,3.0,Micro-finance institutes in the context of fintech credit have some research gaps.
+openai:gpt-4o,ELIGIBLE,microfinance institutions,GAP,3.0,Microfinance institutions are moderately explored in relation to fintech credit.
+openai:gpt-4o,ELIGIBLE,middle-income countries,GAP,4.0,The impact of fintech credit in middle-income countries is less explored compared to other regions.
+openai:gpt-4o,ELIGIBLE,mobile banking,GAP,3.0,Mobile banking is moderately explored but has gaps in understanding its role in financial inclusion.
+openai:gpt-4o,ELIGIBLE,non-financial firms,LOW IMPORTANCE,2.0,Non-financial firms are not directly relevant to the research problem focused on banking systems.
+openai:gpt-4o,ELIGIBLE,open banking,GAP,5.0,Open banking is an emerging area with potential for research on its impact on financial inclusion.
+openai:gpt-4o,ELIGIBLE,personal loans,GAP,3.0,Personal loans in the context of fintech credit have some research gaps.
+openai:gpt-4o,ELIGIBLE,public policy,EXPLORED,2.0,Public policy in relation to fintech credit and financial inclusion is a well-explored area in the literature.
+openai:gpt-4o,ELIGIBLE,regulatory arbitrage,GAP,6.0,"Regulatory arbitrage in fintech credit is discussed but not extensively, with potential for further exploration in its impact on financial inclusion and credit risk."
+openai:gpt-4o,ELIGIBLE,relationship lending,GAP,5.0,"Relationship lending is moderately explored, but its interaction with digital lending technologies presents a gap in the literature."
+openai:gpt-4o,ELIGIBLE,responsible finance,GAP,4.0,"Responsible finance is discussed in the context of fintech, but more research is needed on its mechanisms affecting borrower outcomes."
+openai:gpt-4o,ELIGIBLE,risky behaviour,GAP,3.0,"Risky behaviour in digital lending is underexplored, especially regarding its impact on credit risk in banking systems."
+openai:gpt-4o,ELIGIBLE,rural bank,GAP,7.0,"Rural banks' interaction with fintech credit is not extensively covered, offering potential for research on financial inclusion."
+openai:gpt-4o,ELIGIBLE,sustainable development,EXPLORED,2.0,"Sustainable development is a broad and well-explored area, with limited direct relevance to the specific research problem."
+openai:gpt-4o,ELIGIBLE,sustainable finance,GAP,3.0,"Sustainable finance in the context of fintech credit is emerging, with room for further investigation on its effects on banking outcomes."
+openai:gpt-4o,ELIGIBLE,system gmm,METHOD,1.0,"System GMM is a methodological term related to econometric analysis, not a research gap."
+openai:gpt-4o,ELIGIBLE,technological innovation,EXPLORED,2.0,"Technological innovation is a well-known area, frequently discussed in the context of fintech and banking."
+anthropic:claude-sonnet-4-6,ELIGIBLE,account ownership,EXPLORED,2.0,"Account ownership is a standard proxy for financial inclusion extensively studied in the literature, including in relation to fintech and digital lending contexts."
+anthropic:claude-sonnet-4-6,ELIGIBLE,bank lending,EXPLORED,2.0,Bank lending is a foundational concept in banking and finance literature and is central to the research problem but already extensively covered.
+anthropic:claude-sonnet-4-6,ELIGIBLE,bank performance,GAP,3.0,"While bank performance is broadly studied, the specific impact of fintech credit competition on traditional bank performance metrics remains an active research area with gaps."
+anthropic:claude-sonnet-4-6,ELIGIBLE,bank profitability,GAP,3.0,"The effect of fintech credit on bank profitability is an emerging topic with limited consensus in the literature, particularly across different banking systems."
+anthropic:claude-sonnet-4-6,ELIGIBLE,bank risk,GAP,4.0,"How fintech credit alters overall bank risk profiles, including systemic and idiosyncratic risk, is not yet fully explored in the literature."
+anthropic:claude-sonnet-4-6,ELIGIBLE,bank-specific factors,EXPLORED,2.0,Bank-specific factors are standard control variables in banking studies and do not represent a novel research gap on their own.
+anthropic:claude-sonnet-4-6,ELIGIBLE,banking stability,GAP,4.0,"The implications of fintech credit growth for banking system stability is an emerging concern with limited empirical evidence, especially in developing economies."
+anthropic:claude-sonnet-4-6,ELIGIBLE,brics economies,GAP,5.0,Fintech credit's effects on financial inclusion and credit risk specifically within BRICS economies is underexplored given their heterogeneous financial systems.
+anthropic:claude-sonnet-4-6,ELIGIBLE,commercial bank,EXPLORED,2.0,Commercial banks are the primary institutional subject of the research problem and are extensively studied; the term itself is not a research gap.
+anthropic:claude-sonnet-4-6,ELIGIBLE,corporate finance,EXPLORED,2.0,"Corporate finance is a broad, well-established field label with limited specific relevance as a gap within the fintech credit and financial inclusion research problem."
+anthropic:claude-sonnet-4-6,ELIGIBLE,credit card,EXPLORED,2.0,Credit cards are a traditional financial product extensively studied in consumer credit literature and are not a novel gap in the fintech credit context.
+anthropic:claude-sonnet-4-6,ELIGIBLE,credit invisible,GAP,7.0,"Populations that are 'credit invisible' due to lack of credit history represent an underexplored segment that fintech credit could serve, with limited dedicated research on outcomes."
+anthropic:claude-sonnet-4-6,ELIGIBLE,credit mismatch,GAP,7.0,Credit mismatch between borrower needs and available fintech or bank credit products is a relatively novel concept with limited empirical investigation in the digital lending literature.
+anthropic:claude-sonnet-4-6,ELIGIBLE,credit scoring,GAP,3.0,Alternative credit scoring using digital data is discussed in the literature but mechanisms linking new scoring models to borrower outcomes and bank risk remain incompletely understood.
+anthropic:claude-sonnet-4-6,ELIGIBLE,cross-country analysis,METHOD,2.0,Cross-country analysis is a methodological approach rather than a substantive research gap or topic.
+anthropic:claude-sonnet-4-6,ELIGIBLE,debit card,EXPLORED,2.0,Debit cards are a well-studied payment instrument with limited direct relevance as a research gap in the fintech credit and credit risk domain.
+anthropic:claude-sonnet-4-6,ELIGIBLE,developing countries,GAP,3.0,"The specific dynamics of fintech credit, financial inclusion, and credit risk in developing country contexts remain underexplored relative to developed-country studies."
+anthropic:claude-sonnet-4-6,ELIGIBLE,development economics,EXPLORED,2.0,Development economics is a broad field label rather than a specific research gap within the fintech credit and financial inclusion problem.
+anthropic:claude-sonnet-4-6,ELIGIBLE,digital divide,GAP,5.0,The digital divide as a barrier to fintech credit access and its implications for financial inclusion outcomes is moderately explored but warrants further investigation.
+anthropic:claude-sonnet-4-6,ELIGIBLE,digital economy,GAP,3.0,The role of the broader digital economy in shaping fintech credit markets and financial inclusion is discussed but lacks deep empirical grounding across diverse contexts.
+anthropic:claude-sonnet-4-6,ELIGIBLE,digital finance,GAP,3.0,"Digital finance is a growing area with remaining gaps in understanding its mechanisms linking to credit risk and borrower outcomes, though the general topic is increasingly studied."
+anthropic:claude-sonnet-4-6,ELIGIBLE,digital inclusion,GAP,5.0,"Digital inclusion as a prerequisite and outcome of fintech credit adoption is underexplored relative to financial inclusion, offering genuine research potential."
+anthropic:claude-sonnet-4-6,ELIGIBLE,digital inequality,GAP,6.0,Digital inequality's role in mediating fintech credit access and its distributional effects on financial inclusion is a relatively underexplored intersection in the literature.
+anthropic:claude-sonnet-4-6,ELIGIBLE,digital payment,GAP,3.0,Digital payments as a gateway to fintech credit and financial inclusion is discussed but the causal mechanisms and credit risk implications remain incompletely studied.
+anthropic:claude-sonnet-4-6,ELIGIBLE,economic development,EXPLORED,2.0,Economic development is a broad macro-level concept extensively studied in relation to financial inclusion and does not represent a specific research gap in this context.
+anthropic:claude-sonnet-4-6,ELIGIBLE,economic growth,EXPLORED,2.0,"The relationship between financial development and economic growth is extensively documented in the literature, making this a well-explored macro-level construct with limited residual novelty in the fintech credit context."
+anthropic:claude-sonnet-4-6,ELIGIBLE,entrepreneurial risk,GAP,6.0,"How fintech credit reshapes risk-taking behavior among entrepreneurs and small business owners is underexplored relative to the broader credit risk literature, offering meaningful research potential."
+anthropic:claude-sonnet-4-6,ELIGIBLE,financial products,EXPLORED,2.0,"Financial products is a broad, generic label widely used across the literature and does not point to a specific underexplored area within fintech credit and financial inclusion research."
+anthropic:claude-sonnet-4-6,ELIGIBLE,financial regulation,GAP,4.0,"While regulation of fintech is discussed, the specific regulatory mechanisms that mediate fintech credit's effects on financial inclusion and bank credit risk remain incompletely studied."
+anthropic:claude-sonnet-4-6,ELIGIBLE,fintech adoption,GAP,3.0,Fintech adoption is increasingly studied but the heterogeneous drivers and barriers to adoption across borrower segments and their downstream effects on inclusion and risk are not fully resolved.
+anthropic:claude-sonnet-4-6,ELIGIBLE,fintech development,GAP,3.0,Fintech development as a country- or sector-level construct has growing literature but its differential impact on banking system credit risk and inclusion outcomes still warrants investigation.
+anthropic:claude-sonnet-4-6,ELIGIBLE,fintech ecosystem,GAP,5.0,"The systemic interactions among fintech actors, incumbents, and regulators forming an ecosystem and their collective effect on credit markets and inclusion are underexplored."
+anthropic:claude-sonnet-4-6,ELIGIBLE,fintech index,GAP,6.0,Constructing and validating composite fintech indices for cross-country empirical analysis of credit and inclusion outcomes is a methodologically and substantively underexplored area.
+anthropic:claude-sonnet-4-6,ELIGIBLE,fintech partnership,GAP,7.0,Bank–fintech partnerships as a mechanism linking digital lending to borrower outcomes and bank risk is a relatively nascent and underexplored topic with high practical relevance.
+anthropic:claude-sonnet-4-6,ELIGIBLE,formal accounts,GAP,3.0,The role of formal account ownership as a gateway or outcome of fintech credit access is discussed in inclusion literature but its causal pathways remain incompletely characterized.
+anthropic:claude-sonnet-4-6,ELIGIBLE,gdp growth,EXPLORED,2.0,GDP growth is a standard macroeconomic control variable widely used in the literature and does not represent a novel research gap in the fintech credit domain.
+anthropic:claude-sonnet-4-6,ELIGIBLE,green innovation,GAP,4.0,The intersection of fintech credit and green or sustainable innovation financing is an emerging and underexplored area with growing policy relevance.
+anthropic:claude-sonnet-4-6,ELIGIBLE,high-income countries,GAP,3.0,Comparative analysis of fintech credit effects specifically within high-income country contexts versus developing economies is underexplored despite its relevance for policy differentiation.
+anthropic:claude-sonnet-4-6,ELIGIBLE,insolvency risk,GAP,6.0,"How fintech credit expansion affects borrower and bank insolvency risk, particularly through relaxed underwriting standards, is an important but insufficiently studied mechanism."
+anthropic:claude-sonnet-4-6,ELIGIBLE,lending efficiency,GAP,5.0,The degree to which digital lending technologies improve allocative and operational lending efficiency relative to traditional banks is studied but not comprehensively resolved.
+anthropic:claude-sonnet-4-6,ELIGIBLE,loan size,GAP,4.0,The distribution of fintech loan sizes and its implications for financial inclusion of underserved borrowers versus credit risk concentration is an underexplored empirical question.
+anthropic:claude-sonnet-4-6,ELIGIBLE,local banks,GAP,5.0,"The competitive and complementary dynamics between fintech lenders and local community banks, and the resulting effects on credit risk and inclusion, are not well characterized."
+anthropic:claude-sonnet-4-6,ELIGIBLE,macroeconomic factors,EXPLORED,2.0,Macroeconomic factors are standard control variables in financial research and do not constitute a specific research gap in the fintech credit and inclusion literature.
+anthropic:claude-sonnet-4-6,ELIGIBLE,micro-finance institutes,GAP,3.0,The interaction and competition between fintech credit platforms and microfinance institutions in serving underbanked populations is underexplored and policy-relevant.
+anthropic:claude-sonnet-4-6,ELIGIBLE,microfinance institutions,GAP,3.0,"Similar to micro-finance institutes, the complementarity or substitution between MFIs and fintech lenders in advancing financial inclusion warrants further investigation."
+anthropic:claude-sonnet-4-6,ELIGIBLE,middle-income countries,GAP,4.0,Fintech credit dynamics in middle-income country contexts occupy an underexplored middle ground between advanced economy and low-income country studies.
+anthropic:claude-sonnet-4-6,ELIGIBLE,mobile banking,GAP,3.0,"Mobile banking as a channel for fintech credit delivery and its specific effects on inclusion and risk is studied but not exhaustively, particularly in diverse geographic contexts."
+anthropic:claude-sonnet-4-6,ELIGIBLE,non-financial firms,GAP,5.0,The entry of non-financial firms into credit markets via fintech platforms and its implications for banking system risk and borrower outcomes is an emerging and underexplored topic.
+anthropic:claude-sonnet-4-6,ELIGIBLE,open banking,GAP,6.0,Open banking frameworks as enablers of fintech credit through data sharing and their effects on financial inclusion and bank credit risk are relatively new and underexplored research areas.
+anthropic:claude-sonnet-4-6,ELIGIBLE,personal loans,GAP,3.0,"The specific dynamics of fintech-originated personal loans—including pricing, default rates, and inclusion effects—are studied but not comprehensively relative to other loan categories."
+anthropic:claude-sonnet-4-6,ELIGIBLE,public policy,EXPLORED,2.0,"Public policy implications of fintech and financial inclusion are broadly discussed across the literature, making this a well-covered and overly general term in the research domain."
+anthropic:claude-sonnet-4-6,ELIGIBLE,regulatory arbitrage,GAP,7.0,"The extent to which fintech lenders exploit regulatory gaps relative to traditional banks, and the systemic credit risk implications of such arbitrage, remains an underexplored but scientifically valuable area."
+anthropic:claude-sonnet-4-6,ELIGIBLE,relationship lending,GAP,5.0,How fintech credit disrupts or complements traditional relationship lending models—and the consequences for borrower outcomes and bank credit risk—has growing but still incomplete coverage in the literature.
+anthropic:claude-sonnet-4-6,ELIGIBLE,responsible finance,GAP,6.0,"The intersection of responsible finance principles with fintech credit practices, particularly regarding consumer protection and ethical lending algorithms, is discussed but not extensively studied."
+anthropic:claude-sonnet-4-6,ELIGIBLE,risky behaviour,GAP,5.0,How easy access to fintech credit influences borrower risk-taking behaviour and subsequent default rates is a relevant but insufficiently examined mechanism linking digital lending to credit risk outcomes.
+anthropic:claude-sonnet-4-6,ELIGIBLE,rural bank,GAP,7.0,"The specific impact of fintech credit on rural banks—including competitive displacement, credit risk transfer, and financial inclusion in underserved areas—is a relatively underexplored niche with strong research value."
+anthropic:claude-sonnet-4-6,ELIGIBLE,sustainable development,GAP,3.0,The link between fintech-driven financial inclusion and sustainable development goals is acknowledged in policy discourse but lacks rigorous empirical investigation in the banking and credit risk literature.
+anthropic:claude-sonnet-4-6,ELIGIBLE,sustainable finance,GAP,5.0,"How fintech credit platforms integrate or conflict with sustainable finance frameworks (e.g., ESG lending criteria) is an emerging and underexplored topic within the research domain."
+anthropic:claude-sonnet-4-6,ELIGIBLE,system gmm,METHOD,1.0,System GMM is a standard econometric estimation technique commonly used in banking panel-data studies and carries no intrinsic research-gap value.
+anthropic:claude-sonnet-4-6,ELIGIBLE,technological innovation,EXPLORED,2.0,Technological innovation as a driver of fintech credit is a foundational and extensively covered theme in the financial inclusion and digital lending literature.
+deepseek:deepseek-v4-pro,ELIGIBLE,account ownership,EXPLORED,2.0,Already extensively studied as a basic financial inclusion indicator in the fintech and digital finance literature.
+deepseek:deepseek-v4-pro,ELIGIBLE,bank lending,EXPLORED,2.0,Broad bank outcome already substantially covered in studies of fintech credit and bank lending behavior.
+deepseek:deepseek-v4-pro,ELIGIBLE,bank performance,EXPLORED,2.0,Broad bank outcome with a well-developed literature on fintech and digital finance impacts.
+deepseek:deepseek-v4-pro,ELIGIBLE,bank profitability,EXPLORED,2.0,Well-explored bank outcome in the fintech-competition and bank performance literature.
+deepseek:deepseek-v4-pro,ELIGIBLE,bank risk,EXPLORED,2.0,Bank risk-taking and credit risk in fintech contexts are already widely studied as a broad outcome area.
+deepseek:deepseek-v4-pro,ELIGIBLE,bank-specific factors,EXPLORED,2.0,Standard bank-level determinants and moderators are well established in banking studies and not a distinct fintech gap.
+deepseek:deepseek-v4-pro,ELIGIBLE,banking stability,EXPLORED,2.0,Well-examined outcome in the fintech and banking stability literature.
+deepseek:deepseek-v4-pro,ELIGIBLE,brics economies,GAP,5.0,Emerging-market context with partial empirical coverage and remaining comparative gaps for fintech credit and bank outcomes.
+deepseek:deepseek-v4-pro,ELIGIBLE,commercial bank,EXPLORED,1.0,Institutional category that is a broad field label rather than a specific research gap.
+deepseek:deepseek-v4-pro,ELIGIBLE,corporate finance,EXPLORED,1.0,Discipline-level field label with no specific unresolved fintech credit question attached.
+deepseek:deepseek-v4-pro,ELIGIBLE,credit card,EXPLORED,2.0,Traditional credit product whose relationship to financial inclusion and credit risk is already well documented.
+deepseek:deepseek-v4-pro,ELIGIBLE,credit invisible,GAP,7.0,Specific underserved segment for which alternative digital credit assessment is still an emerging research area.
+deepseek:deepseek-v4-pro,ELIGIBLE,credit mismatch,GAP,4.0,Credit misallocation and rationing in fintech credit markets are relevant but remain underexplored as borrower-outcome mechanisms.
+deepseek:deepseek-v4-pro,ELIGIBLE,credit scoring,GAP,5.0,Mechanism central to digital lending but alternative-data and inclusion-specific credit scoring questions remain only partially studied.
+deepseek:deepseek-v4-pro,ELIGIBLE,cross-country analysis,METHOD,1.0,Pure analytical approach rather than a substantive research topic.
+deepseek:deepseek-v4-pro,ELIGIBLE,debit card,EXPLORED,2.0,Traditional payment product whose inclusion effects are already well established.
+deepseek:deepseek-v4-pro,ELIGIBLE,developing countries,EXPLORED,2.0,"Commonly used context in fintech and financial inclusion research, already extensively studied as a broad setting."
+deepseek:deepseek-v4-pro,ELIGIBLE,development economics,EXPLORED,1.0,Field label with no specific gap-level focus on fintech credit mechanisms.
+deepseek:deepseek-v4-pro,ELIGIBLE,digital divide,GAP,5.0,Structural barrier to digital financial inclusion that is empirically recognized but not yet thoroughly linked to credit outcomes.
+deepseek:deepseek-v4-pro,ELIGIBLE,digital economy,EXPLORED,1.0,Broad field label encompassing fintech credit but lacking a specific unresolved research focus.
+deepseek:deepseek-v4-pro,ELIGIBLE,digital finance,EXPLORED,2.0,Broad field label already well represented in financial inclusion and fintech literature.
+deepseek:deepseek-v4-pro,ELIGIBLE,digital inclusion,GAP,5.0,Policy-relevant outcome with emerging evidence but still incomplete understanding of its credit-risk implications.
+deepseek:deepseek-v4-pro,ELIGIBLE,digital inequality,GAP,6.0,Specific barrier akin to digital divide with under-explored consequences for fintech credit access and risk.
+deepseek:deepseek-v4-pro,ELIGIBLE,digital payment,EXPLORED,2.0,Payment method already widely studied in financial inclusion and transaction-data literatures.
+deepseek:deepseek-v4-pro,ELIGIBLE,economic development,EXPLORED,1.0,Broad macro outcome and field label already well covered in finance and development studies.
+deepseek:deepseek-v4-pro,ELIGIBLE,economic growth,EXPLORED,2.0,Broad macro outcome and field label; the finance-growth nexus is well established and fintech credit adds only a specific application.
+deepseek:deepseek-v4-pro,ELIGIBLE,entrepreneurial risk,GAP,7.0,The link between fintech credit and entrepreneurial risk-taking and venture failure is emerging and not systematically examined.
+deepseek:deepseek-v4-pro,ELIGIBLE,financial products,LOW IMPORTANCE,2.0,Generic category that does not identify a testable mechanism or outcome in fintech credit research.
+deepseek:deepseek-v4-pro,ELIGIBLE,financial regulation,GAP,5.0,Regulatory frameworks for fintech credit are discussed but their causal effects on inclusion and credit risk remain insufficiently studied.
+deepseek:deepseek-v4-pro,ELIGIBLE,fintech adoption,EXPLORED,2.0,"Fintech adoption is a heavily studied construct, especially in technology acceptance and financial inclusion literatures."
+deepseek:deepseek-v4-pro,ELIGIBLE,fintech development,GAP,5.0,Fintech development is widely measured but its specific credit-market and risk implications are only partially understood.
+deepseek:deepseek-v4-pro,ELIGIBLE,fintech ecosystem,GAP,6.0,"Ecosystem-level interactions among fintechs, banks and regulators and their credit outcomes are underexplored."
+deepseek:deepseek-v4-pro,ELIGIBLE,fintech index,METHOD,2.0,Index construction and measurement are methodological issues rather than a substantive research gap.
+deepseek:deepseek-v4-pro,ELIGIBLE,fintech partnership,GAP,8.0,"Bank-fintech partnership mechanisms are an emerging, high-potential explanation for lending and risk outcomes."
+deepseek:deepseek-v4-pro,ELIGIBLE,formal accounts,EXPLORED,2.0,"Account ownership is a standard, well-studied financial inclusion indicator."
+deepseek:deepseek-v4-pro,ELIGIBLE,gdp growth,EXPLORED,1.0,Lexical variant of economic growth; macro growth outcomes are already extensively covered.
+deepseek:deepseek-v4-pro,ELIGIBLE,green innovation,LOW IMPORTANCE,2.0,Peripheral to the core fintech credit-inclusion-credit risk problem and lacks direct theoretical relevance here.
+deepseek:deepseek-v4-pro,ELIGIBLE,high-income countries,GAP,4.0,Comparative evidence on fintech credit effects in high-income banking systems is limited.
+deepseek:deepseek-v4-pro,ELIGIBLE,insolvency risk,GAP,8.0,Insolvency risk is a directly relevant credit-risk outcome that remains sparsely studied for digital lending.
+deepseek:deepseek-v4-pro,ELIGIBLE,lending efficiency,GAP,6.0,The effect of fintech credit on bank lending efficiency is studied but not comprehensively linked to inclusion and risk.
+deepseek:deepseek-v4-pro,ELIGIBLE,loan size,GAP,4.0,Loan size is a documented outcome in some fintech lending studies but not systematically integrated with inclusion and risk mechanisms.
+deepseek:deepseek-v4-pro,ELIGIBLE,local banks,GAP,6.0,Local banks' competitive and partnership responses to fintech credit are underexplored in banking literature.
+deepseek:deepseek-v4-pro,ELIGIBLE,macroeconomic factors,LOW IMPORTANCE,2.0,Generic control or moderator category rather than a specific researchable gap.
+deepseek:deepseek-v4-pro,ELIGIBLE,micro-finance institutes,NOISE,1.0,Non-standard variant or typo of microfinance institutions; it does not identify a distinct construct.
+deepseek:deepseek-v4-pro,ELIGIBLE,microfinance institutions,GAP,5.0,Digital lending's implications for microfinance institutions are relevant but only partially studied.
+deepseek:deepseek-v4-pro,ELIGIBLE,middle-income countries,GAP,4.0,Comparative evidence on fintech credit effects in middle-income banking systems is limited.
+deepseek:deepseek-v4-pro,ELIGIBLE,mobile banking,EXPLORED,2.0,Mobile banking and its financial inclusion effects are already extensively studied.
+deepseek:deepseek-v4-pro,ELIGIBLE,non-financial firms,GAP,6.0,Fintech credit to non-financial firms is increasingly studied but its risk and inclusion implications need further investigation.
+deepseek:deepseek-v4-pro,ELIGIBLE,open banking,GAP,8.0,"Open banking data-sharing mechanisms are an emerging, high-potential link between digital lending and borrower or bank outcomes."
+deepseek:deepseek-v4-pro,ELIGIBLE,personal loans,EXPLORED,2.0,Personal loans are a well-studied product category in marketplace and peer-to-peer lending.
+deepseek:deepseek-v4-pro,ELIGIBLE,public policy,EXPLORED,2.0,"Public policy is a broad field already extensively discussed in fintech credit research, offering little specificity as a gap."
+deepseek:deepseek-v4-pro,ELIGIBLE,regulatory arbitrage,GAP,6.0,Regulatory arbitrage is a recognized but not fully understood mechanism linking digital lending to credit risk and financial inclusion outcomes.
+deepseek:deepseek-v4-pro,ELIGIBLE,relationship lending,EXPLORED,2.0,Relationship lending is a dominant banking construct whose interaction with fintech credit is already well documented.
+deepseek:deepseek-v4-pro,ELIGIBLE,responsible finance,GAP,5.0,Responsible finance in digital lending is an emerging area with unresolved questions about consumer protection and borrower outcomes.
+deepseek:deepseek-v4-pro,ELIGIBLE,risky behaviour,LOW IMPORTANCE,2.0,The term is too broad and underspecified to identify a meaningful research gap in fintech credit.
+deepseek:deepseek-v4-pro,ELIGIBLE,rural bank,GAP,5.0,"Rural banks are a relevant institutional setting for financial inclusion, but how fintech credit affects them remains under-studied."
+deepseek:deepseek-v4-pro,ELIGIBLE,sustainable development,EXPLORED,2.0,Sustainable development is a broad policy goal already widely linked to financial inclusion and lacks specificity as a research gap.
+deepseek:deepseek-v4-pro,ELIGIBLE,sustainable finance,GAP,5.0,Sustainable finance intersects with fintech credit only recently and remains underexplored in relation to credit risk and inclusion.
+deepseek:deepseek-v4-pro,ELIGIBLE,system gmm,METHOD,1.0,"System GMM is an econometric estimation technique, not a substantive research topic."
+deepseek:deepseek-v4-pro,ELIGIBLE,technological innovation,EXPLORED,2.0,"Technological innovation is a core, well-explored construct in fintech credit research rather than a distinct gap."
+xai:grok-4.5,ELIGIBLE,account ownership,EXPLORED,2.0,"Standard financial-inclusion outcome (e.g., Findex) already extensively linked to banking access and digital finance."
+xai:grok-4.5,ELIGIBLE,bank lending,EXPLORED,2.0,"Core banking construct with a vast literature on volumes, channels, and competition, including fintech interfaces."
+xai:grok-4.5,ELIGIBLE,bank performance,EXPLORED,2.0,Widely studied outcome in banking and fintech-entry papers; little residual gap as a standalone theme.
+xai:grok-4.5,ELIGIBLE,bank profitability,EXPLORED,2.0,Highly saturated empirical topic on how digital lending and competition affect bank margins and ROA/ROE.
+xai:grok-4.5,ELIGIBLE,bank risk,EXPLORED,2.0,"Credit and stability risk of banks is a dominant, well-documented strand relative to fintech credit."
+xai:grok-4.5,ELIGIBLE,bank-specific factors,LOW IMPORTANCE,1.0,Empirical-control jargon rather than a substantive research gap on fintech–inclusion–risk mechanisms.
+xai:grok-4.5,ELIGIBLE,banking stability,EXPLORED,2.0,Macro- and bank-level stability effects of digital finance are already heavily researched.
+xai:grok-4.5,ELIGIBLE,brics economies,GAP,5.0,"Regional setting with growing but still incomplete evidence on fintech credit, inclusion, and bank risk spillovers."
+xai:grok-4.5,ELIGIBLE,commercial bank,LOW IMPORTANCE,1.0,Generic institutional label that adds no distinct theoretical or empirical research angle.
+xai:grok-4.5,ELIGIBLE,corporate finance,LOW IMPORTANCE,2.0,"Broad adjacent field not centered on fintech credit, household inclusion, or bank credit-risk mechanisms."
+xai:grok-4.5,ELIGIBLE,credit card,EXPLORED,2.0,"Traditional product with mature literatures on access, risk, and substitution by fintech credit."
+xai:grok-4.5,ELIGIBLE,credit invisible,GAP,7.0,Thin-file/no-file borrowers are central to fintech underwriting claims yet mechanisms and bank-risk outcomes remain under-mapped.
+xai:grok-4.5,ELIGIBLE,credit mismatch,GAP,6.0,Allocation and frictions between digital supply and borrower need/risk are less systematically studied than headline inclusion effects.
+xai:grok-4.5,ELIGIBLE,credit scoring,EXPLORED,2.0,"Alternative-data and ML scoring for digital lending is already a large, mature research area."
+xai:grok-4.5,ELIGIBLE,cross-country analysis,METHOD,1.0,"Empirical design choice, not a substantive gap on fintech credit mechanisms."
+xai:grok-4.5,ELIGIBLE,debit card,EXPLORED,2.0,Well-covered payment and inclusion instrument with limited remaining novelty for digital lending risk links.
+xai:grok-4.5,ELIGIBLE,developing countries,EXPLORED,2.0,Very common study setting for fintech and inclusion; as a keyword it is a saturated field label.
+xai:grok-4.5,ELIGIBLE,development economics,EXPLORED,1.0,Broad disciplinary label rather than a specific unresolved gap in fintech credit and bank risk.
+xai:grok-4.5,ELIGIBLE,digital divide,GAP,5.0,Access and capability barriers that mediate who benefits from fintech credit remain only partly integrated with bank-risk outcomes.
+xai:grok-4.5,ELIGIBLE,digital economy,EXPLORED,2.0,Overly broad macro label already ubiquitous and not a precise research gap for the stated problem.
+xai:grok-4.5,ELIGIBLE,digital finance,EXPLORED,2.0,Dominant umbrella construct with extensive evidence on inclusion and intermediation effects.
+xai:grok-4.5,ELIGIBLE,digital inclusion,GAP,4.0,Overlaps financial inclusion but still leaves room on how digital access channels translate into credit and bank-risk outcomes.
+xai:grok-4.5,ELIGIBLE,digital inequality,GAP,5.0,Distributional disparities in use of digital lending technologies are less fully tied to borrower and bank risk results.
+xai:grok-4.5,ELIGIBLE,digital payment,EXPLORED,2.0,"Mature literature on payments, rails, and inclusion with weaker residual novelty for credit-risk mechanisms."
+xai:grok-4.5,ELIGIBLE,economic development,EXPLORED,2.0,Macro development link to finance is classic and well-trodden relative to the specific fintech-credit problem.
+xai:grok-4.5,ELIGIBLE,economic growth,EXPLORED,2.0,"Macro growth is a long-standing, heavily documented outcome linked to financial inclusion and fintech penetration, offering little remaining gap specific to credit-risk mechanisms."
+xai:grok-4.5,ELIGIBLE,entrepreneurial risk,GAP,5.0,Borrower-side entrepreneurial risk as a channel from digital lending to inclusion and default outcomes remains only partially mapped in the fintech-credit literature.
+xai:grok-4.5,ELIGIBLE,financial products,EXPLORED,2.0,Generic product-label construct already saturated in banking and inclusion studies without distinctive explanatory power for fintech-credit mechanisms.
+xai:grok-4.5,ELIGIBLE,financial regulation,GAP,4.0,"Regulatory design for digital lending and its effects on inclusion versus bank risk is discussed but still incomplete, especially cross-jurisdiction mechanism evidence."
+xai:grok-4.5,ELIGIBLE,fintech adoption,EXPLORED,2.0,Core adoption construct is extensively measured and modelled in fintech-inclusion and banking competition papers.
+xai:grok-4.5,ELIGIBLE,fintech development,EXPLORED,2.0,Broad development/index narratives are already dominant framing devices in the existing fintech-credit literature.
+xai:grok-4.5,ELIGIBLE,fintech ecosystem,GAP,4.0,"Ecosystem-level interactions (platforms, data, partners) that transmit credit-risk and inclusion effects are recognised yet under-specified empirically."
+xai:grok-4.5,ELIGIBLE,fintech index,METHOD,1.0,Pure measurement/composite-index construct rather than a substantive research gap on mechanisms or outcomes.
+xai:grok-4.5,ELIGIBLE,fintech partnership,GAP,5.0,Bank–fintech partnership structures as a concrete mechanism linking digital lending to borrower access and bank risk still have limited causal evidence.
+xai:grok-4.5,ELIGIBLE,formal accounts,EXPLORED,2.0,Standard World-Bank-style inclusion indicator already exhaustively used as an outcome of fintech and mobile finance.
+xai:grok-4.5,ELIGIBLE,gdp growth,EXPLORED,2.0,Lexical variant of the well-trodden economic-growth outcome in fintech and financial-development studies.
+xai:grok-4.5,ELIGIBLE,green innovation,LOW IMPORTANCE,2.0,Peripheral to the stated focus on financial inclusion and credit-risk channels of fintech lending.
+xai:grok-4.5,ELIGIBLE,high-income countries,LOW IMPORTANCE,1.0,Mere geographic sample qualifier without independent theoretical content for the research problem.
+xai:grok-4.5,ELIGIBLE,insolvency risk,GAP,4.0,Bank or borrower insolvency as a distinct credit-risk dimension of fintech credit is examined in places but not comprehensively linked to inclusion mechanisms.
+xai:grok-4.5,ELIGIBLE,lending efficiency,GAP,5.0,Efficiency gains or losses in digital versus traditional credit intermediation remain an open bank-outcome channel.
+xai:grok-4.5,ELIGIBLE,loan size,GAP,4.0,Loan-size distribution as a mediator between digital underwriting and inclusion/risk outcomes is only sparsely analysed.
+xai:grok-4.5,ELIGIBLE,local banks,GAP,5.0,"Heterogeneous impact of fintech credit on local/community banks’ inclusion role and risk is still an active, under-explored margin."
+xai:grok-4.5,ELIGIBLE,macroeconomic factors,LOW IMPORTANCE,2.0,Generic control-variable category that adds no specific theoretical gap on fintech-credit mechanisms.
+xai:grok-4.5,ELIGIBLE,micro-finance institutes,EXPLORED,2.0,Orthographic variant of the long-established microfinance-inclusion literature already well connected to digital finance.
+xai:grok-4.5,ELIGIBLE,microfinance institutions,EXPLORED,2.0,Classic inclusion actors whose interaction with fintech is extensively documented.
+xai:grok-4.5,ELIGIBLE,middle-income countries,LOW IMPORTANCE,1.0,Sample-context label rather than a substantive research gap on mechanisms.
+xai:grok-4.5,ELIGIBLE,mobile banking,EXPLORED,2.0,"Mature, heavily studied delivery channel for financial inclusion and related credit products."
+xai:grok-4.5,ELIGIBLE,non-financial firms,GAP,4.0,Firm-level borrower outcomes under fintech credit versus bank credit still leave open questions on risk and access mechanisms.
+xai:grok-4.5,ELIGIBLE,open banking,GAP,7.0,Data-sharing and API-driven lending regimes are recent and only minimally linked to inclusion and bank credit-risk transmission.
+xai:grok-4.5,ELIGIBLE,personal loans,EXPLORED,2.0,Standard retail-credit product category already covered in fintech-lending and consumer-credit studies.
+xai:grok-4.5,ELIGIBLE,public policy,GAP,4.0,Policy design around fintech credit and inclusion is discussed but still leaves open how specific public-policy levers shape credit-risk and borrower outcomes in banking systems.
+xai:grok-4.5,ELIGIBLE,regulatory arbitrage,GAP,6.0,"A plausible mechanism linking digital lenders to bank risk and inclusion, with existing work on fintech–bank regulatory gaps that remains incomplete on welfare and systemic effects."
+xai:grok-4.5,ELIGIBLE,relationship lending,GAP,4.0,"Classic banking construct whose interaction with fintech credit (substitution versus complementarity, soft-information loss) is studied but not settled for inclusion and risk outcomes."
+xai:grok-4.5,ELIGIBLE,responsible finance,GAP,6.0,"Emerging framing for consumer protection, over-indebtedness, and ethical digital lending that is only thinly tied to bank credit-risk and inclusion evidence."
+xai:grok-4.5,ELIGIBLE,risky behaviour,EXPLORED,2.0,"Generic risk-taking language already central to vast credit-risk and borrower-behavior literatures, adding little distinct gap relative to fintech credit."
+xai:grok-4.5,ELIGIBLE,rural bank,GAP,5.0,Context-specific channel for inclusion where fintech credit’s effects on rural banks’ outreach and portfolio risk remain only partly documented.
+xai:grok-4.5,ELIGIBLE,sustainable development,LOW IMPORTANCE,2.0,Over-broad SDG framing that is rhetorically common but theoretically diffuse for pinpointing mechanisms from digital lending to inclusion and bank risk.
+xai:grok-4.5,ELIGIBLE,sustainable finance,GAP,5.0,Growing interface of ESG/green finance with fintech credit that still lacks systematic evidence on inclusion and banking credit-risk trade-offs.
+xai:grok-4.5,ELIGIBLE,system gmm,METHOD,1.0,"Pure econometric estimator (system generalized method of moments) used in panel work, not a substantive research-gap topic."
+xai:grok-4.5,ELIGIBLE,technological innovation,EXPLORED,2.0,"Core, heavily used descriptor of fintech itself and thus a well-trodden field label rather than a remaining gap."
+google:gemini-2.5-flash,ELIGIBLE,account ownership,GAP,6.0,"This keyword represents a specific aspect of financial inclusion that can be directly impacted by fintech credit, offering potential for detailed investigation into mechanisms."
+google:gemini-2.5-flash,ELIGIBLE,bank lending,EXPLORED,2.0,"This is a fundamental and well-understood concept in banking, serving as a broad context rather than a specific research gap in the problem statement."
+google:gemini-2.5-flash,ELIGIBLE,bank performance,GAP,6.0,"As a direct ""bank outcome"" mentioned in the research problem, the specific impact and mechanisms of fintech credit on various dimensions of bank performance remain a relevant area for investigation."
+google:gemini-2.5-flash,ELIGIBLE,bank profitability,GAP,6.0,"While a common metric, the precise mechanisms through which fintech credit influences bank profitability, considering both competition and collaboration, still warrant detailed investigation."
+google:gemini-2.5-flash,ELIGIBLE,bank risk,GAP,7.0,"This keyword directly addresses a core component of the research problem, as understanding how fintech credit affects various dimensions of bank risk is crucial and still evolving."
+google:gemini-2.5-flash,ELIGIBLE,bank-specific factors,METHOD,3.0,"This term refers to variables typically used in empirical analysis to control for heterogeneity among banks, making it more of a methodological consideration than a standalone research gap."
+google:gemini-2.5-flash,ELIGIBLE,banking stability,GAP,7.0,"The systemic implications of fintech credit on overall banking stability, beyond individual bank outcomes, represent a significant and less explored research area."
+google:gemini-2.5-flash,ELIGIBLE,brics economies,GAP,6.0,"Focusing on specific economic blocs like BRICS can reveal unique contextual factors influencing the relationship between fintech credit, financial inclusion, and credit risk in diverse emerging markets."
+google:gemini-2.5-flash,ELIGIBLE,commercial bank,EXPLORED,1.0,"This term identifies a primary type of institution within the banking system, serving as a subject of study rather than a specific research gap."
+google:gemini-2.5-flash,ELIGIBLE,corporate finance,EXPLORED,2.0,"This is a broad field of finance that is only indirectly related to the core mechanisms and outcomes specified in the research problem, which focuses more on retail/SME financial inclusion and bank-level credit risk."
+google:gemini-2.5-flash,ELIGIBLE,credit card,EXPLORED,2.0,"This is a specific, well-established financial product, and while fintech may interact with it, the term itself does not represent a novel research gap related to digital lending technologies."
+google:gemini-2.5-flash,ELIGIBLE,credit invisible,GAP,9.0,"This term directly addresses a key aspect of financial inclusion, as fintech credit often targets individuals lacking traditional credit histories, making its impact on this specific group a significant and less explored research gap."
+google:gemini-2.5-flash,ELIGIBLE,credit mismatch,GAP,7.0,"This concept is relevant to how fintech credit might address or create imbalances in credit supply and demand or risk assessment, offering a valuable area for investigation within financial inclusion and credit risk."
+google:gemini-2.5-flash,ELIGIBLE,credit scoring,GAP,6.0,"While a fundamental concept, the evolution of credit scoring through digital lending technologies and its implications for financial inclusion and credit risk is a dynamic and important research area."
+google:gemini-2.5-flash,ELIGIBLE,cross-country analysis,METHOD,1.0,"This term describes a research methodology for comparing findings across different national contexts, rather than a specific research gap itself."
+google:gemini-2.5-flash,ELIGIBLE,debit card,EXPLORED,1.0,"This is a well-established payment instrument, and while related to financial access, it is not directly central to the mechanisms of fintech credit or digital lending technologies."
+google:gemini-2.5-flash,ELIGIBLE,developing countries,GAP,7.0,"The specific context of developing countries presents unique challenges and opportunities for fintech credit, making its impact on financial inclusion and credit risk in these regions a significant research gap."
+google:gemini-2.5-flash,ELIGIBLE,development economics,EXPLORED,2.0,"This is a broad academic discipline that provides a theoretical lens, but it does not represent a specific research gap within the problem statement."
+google:gemini-2.5-flash,ELIGIBLE,digital divide,GAP,8.0,"This term highlights a critical barrier to digital financial inclusion, making the interaction between fintech credit and the digital divide a significant and less explored research gap."
+google:gemini-2.5-flash,ELIGIBLE,digital economy,EXPLORED,2.0,"This is a broad contextual term describing the environment in which fintech credit operates, rather than a specific research gap within the problem statement."
+google:gemini-2.5-flash,ELIGIBLE,digital finance,EXPLORED,3.0,"While related, ""digital finance"" is a broader concept than ""fintech credit,"" and the research problem specifically focuses on the latter, making this term more of a general field label."
+google:gemini-2.5-flash,ELIGIBLE,digital inclusion,GAP,6.0,"As a broader concept encompassing financial inclusion, understanding how fintech credit contributes to or is constrained by overall digital inclusion is a relevant area for investigation."
+google:gemini-2.5-flash,ELIGIBLE,digital inequality,GAP,8.0,"This term highlights the uneven distribution of benefits from digital technologies, making the potential for fintech credit to either reduce or widen financial disparities a significant and less explored research gap."
+google:gemini-2.5-flash,ELIGIBLE,digital payment,EXPLORED,2.0,"This is a specific financial service distinct from credit, and while related to the broader digital finance ecosystem, it is not the direct focus of the research problem on digital lending technologies."
+google:gemini-2.5-flash,ELIGIBLE,economic development,EXPLORED,3.0,"This is a broad macro-economic outcome, and while financial inclusion contributes to it, the term is too general to represent a specific research gap related to the direct mechanisms of fintech credit."
+google:gemini-2.5-flash,ELIGIBLE,economic growth,EXPLORED,2.0,"Economic growth is a broad macroeconomic outcome, not a specific mechanism or direct impact area within the core problem of fintech credit's effect on financial inclusion and credit risk."
+google:gemini-2.5-flash,ELIGIBLE,entrepreneurial risk,GAP,6.0,"Fintech credit's specific impact on entrepreneurial risk, particularly how digital lending technologies alter risk profiles and access to finance for entrepreneurs, warrants further investigation."
+google:gemini-2.5-flash,ELIGIBLE,financial products,EXPLORED,2.0,"Financial products is a very broad term that encompasses fintech credit itself, making it a general category rather than a specific research gap within the stated problem."
+google:gemini-2.5-flash,ELIGIBLE,financial regulation,GAP,7.0,"The role of financial regulation in shaping the effects of fintech credit on financial inclusion and credit risk, and the specific mechanisms through which it operates, remains a significant area for research."
+google:gemini-2.5-flash,ELIGIBLE,fintech adoption,GAP,4.0,"While fintech adoption is a prerequisite, understanding how its varying rates and patterns influence the specific mechanisms linking fintech credit to financial inclusion and credit risk in diverse banking systems presents a research gap."
+google:gemini-2.5-flash,ELIGIBLE,fintech development,GAP,3.0,"The stage and nature of fintech development within a banking system can significantly moderate the effects of fintech credit on financial inclusion and credit risk, offering a contextual research gap."
+google:gemini-2.5-flash,ELIGIBLE,fintech ecosystem,GAP,6.0,Investigating how the characteristics of different fintech ecosystems influence the specific mechanisms through which fintech credit impacts financial inclusion and credit risk offers a valuable research direction.
+google:gemini-2.5-flash,ELIGIBLE,fintech index,METHOD,1.0,"A 'fintech index' is a measurement tool or construct, not a substantive research gap related to the effects and mechanisms of fintech credit on financial inclusion and credit risk."
+google:gemini-2.5-flash,ELIGIBLE,fintech partnership,GAP,7.0,The specific mechanisms and outcomes of various fintech partnership models on financial inclusion and credit risk within banking systems represent a significant and evolving research gap.
+google:gemini-2.5-flash,ELIGIBLE,formal accounts,GAP,5.0,"The specific impact of fintech credit on the establishment, usage, and depth of formal accounts, particularly for previously unbanked populations, presents a relevant research gap within financial inclusion."
+google:gemini-2.5-flash,ELIGIBLE,gdp growth,EXPLORED,2.0,"GDP growth is a broad macroeconomic indicator, not a specific mechanism or direct impact area within the core problem of fintech credit's effect on financial inclusion and credit risk."
+google:gemini-2.5-flash,ELIGIBLE,green innovation,NOISE,1.0,Green innovation has no direct or discernible connection to the research problem concerning fintech credit's impact on financial inclusion and credit risk in banking systems.
+google:gemini-2.5-flash,ELIGIBLE,high-income countries,GAP,5.0,"The specific effects and mechanisms of fintech credit on financial inclusion and credit risk can vary significantly across different economic contexts, making high-income countries a valid contextual research dimension."
+google:gemini-2.5-flash,ELIGIBLE,insolvency risk,GAP,7.0,"Insolvency risk is a specific and critical dimension of credit risk, and understanding how fintech credit specifically influences this risk for borrowers and banks is central to the research problem."
+google:gemini-2.5-flash,ELIGIBLE,lending efficiency,GAP,6.0,Investigating how fintech credit specifically enhances lending efficiency within banking systems and how this efficiency translates into improved bank outcomes represents a relevant research gap.
+google:gemini-2.5-flash,ELIGIBLE,loan size,GAP,5.0,"The influence of fintech credit on the typical loan sizes offered and accessed, particularly its role in facilitating smaller loans for financial inclusion, is a specific and relevant aspect to investigate."
+google:gemini-2.5-flash,ELIGIBLE,local banks,GAP,6.0,"The specific challenges and opportunities for local banks in adapting to and leveraging fintech credit, and how this affects their financial inclusion and credit risk profiles, warrant focused research."
+google:gemini-2.5-flash,ELIGIBLE,macroeconomic factors,GAP,3.0,"While macroeconomic factors are a general context, understanding their specific interplay with the mechanisms linking fintech credit to financial inclusion and credit risk, rather than just general influence, presents a research gap."
+google:gemini-2.5-flash,ELIGIBLE,micro-finance institutes,GAP,7.0,"The interaction between fintech credit and microfinance institutions, including potential synergies or competition, and its implications for financial inclusion and credit risk, is a significant research gap."
+google:gemini-2.5-flash,ELIGIBLE,microfinance institutions,GAP,7.0,"The interaction between fintech credit and microfinance institutions, including potential synergies or competition, and its implications for financial inclusion and credit risk, is a significant research gap."
+google:gemini-2.5-flash,ELIGIBLE,middle-income countries,GAP,6.0,"The specific effects and mechanisms of fintech credit on financial inclusion and credit risk can vary significantly across different economic contexts, making middle-income countries a valid contextual research dimension."
+google:gemini-2.5-flash,ELIGIBLE,mobile banking,GAP,5.0,"Mobile banking serves as a crucial channel for fintech credit delivery, and its specific role as a mechanism influencing financial inclusion and credit risk warrants further investigation."
+google:gemini-2.5-flash,ELIGIBLE,non-financial firms,GAP,7.0,"The increasing role of non-financial firms in providing fintech credit, and its implications for financial inclusion, credit risk, and the broader banking system, represents a significant research gap."
+google:gemini-2.5-flash,ELIGIBLE,open banking,GAP,8.0,"Open banking is a transformative development that significantly influences the data-driven mechanisms of fintech credit, and its specific impact on financial inclusion and credit risk is a high-potential research gap."
+google:gemini-2.5-flash,ELIGIBLE,personal loans,GAP,5.0,"Personal loans represent a specific type of credit product where fintech credit's impact on accessibility, terms, and associated credit risk, especially for diverse borrower segments, is a relevant research area."
+google:gemini-2.5-flash,ELIGIBLE,regulatory arbitrage,GAP,8.0,The extent and impact of regulatory arbitrage by fintech credit providers on banking systems and credit risk are critical and ongoing research questions.
+google:gemini-2.5-flash,ELIGIBLE,relationship lending,GAP,6.0,"The interplay between traditional relationship lending and new fintech credit models, and its effects on financial inclusion and credit risk, is an evolving research topic."
+google:gemini-2.5-flash,ELIGIBLE,responsible finance,GAP,7.0,"Ensuring responsible finance practices in the context of fintech credit, particularly regarding consumer protection and ethical lending, is a crucial and developing research area."
+google:gemini-2.5-flash,ELIGIBLE,risky behaviour,GAP,6.0,Investigating how fintech credit influences borrower risky behavior and its subsequent impact on credit risk and financial stability is an active research area.
+google:gemini-2.5-flash,ELIGIBLE,rural bank,GAP,8.0,"The specific impact of fintech credit on the operations, financial inclusion efforts, and credit risk profiles of rural banks is an under-researched and important topic."
+google:gemini-2.5-flash,ELIGIBLE,sustainable development,LOW IMPORTANCE,2.0,"Sustainable development is a very broad concept that, while related to financial inclusion, is too general to represent a specific research gap directly within the stated problem's focus on fintech credit and banking outcomes."
+google:gemini-2.5-flash,ELIGIBLE,sustainable finance,GAP,7.0,The role of fintech credit in advancing sustainable finance objectives and managing ESG-related credit risks is an emerging and important research domain.
+google:gemini-2.5-flash,ELIGIBLE,system gmm,METHOD,1.0,"System GMM is a specific econometric methodology used for empirical analysis, not a research gap related to fintech credit or banking outcomes."
+google:gemini-2.5-flash,ELIGIBLE,technological innovation,EXPLORED,2.0,"Technological innovation is the broad underlying driver of fintech credit and digital lending, making it a foundational and well-understood concept rather than a specific research gap."

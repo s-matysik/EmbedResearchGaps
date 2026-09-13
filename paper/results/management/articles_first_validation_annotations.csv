@@ -1,0 +1,859 @@
+annotator,keyword_set,keyword,label,novelty,rationale
+openai:gpt-4o,ALL,digital transformation,EXPLORED,2.0,Digital transformation is a well-explored area in strategic management and organization studies.
+openai:gpt-4o,ALL,dynamic capabilities,GAP,3.0,"While dynamic capabilities are discussed, their specific role in digital transformation needs further exploration."
+openai:gpt-4o,ALL,dynamic capability,EXPLORED,2.0,This is a lexical variant of 'dynamic capabilities' and is well-explored.
+openai:gpt-4o,ALL,digitalization,EXPLORED,2.0,Digitalization is a broad and well-explored concept in the literature.
+openai:gpt-4o,ALL,innovation,EXPLORED,2.0,Innovation is a well-known and extensively studied area in strategic management.
+openai:gpt-4o,ALL,smes,GAP,3.0,The impact of digital transformation on SMEs is less explored compared to larger firms.
+openai:gpt-4o,ALL,microfoundations,GAP,4.0,Microfoundations of dynamic capabilities in digital transformation are under-researched.
+openai:gpt-4o,ALL,firm performance,EXPLORED,2.0,Firm performance is a well-explored outcome in strategic management studies.
+openai:gpt-4o,ALL,case study,METHOD,1.0,Case study is a methodological term.
+openai:gpt-4o,ALL,competitive advantage,EXPLORED,2.0,Competitive advantage is a central and well-explored concept in strategic management.
+openai:gpt-4o,ALL,digital leadership,GAP,5.0,Digital leadership is emerging as a critical factor in digital transformation but needs more research.
+openai:gpt-4o,ALL,performance,EXPLORED,1.0,Performance is a broad and well-explored concept in the literature.
+openai:gpt-4o,ALL,technological innovation,EXPLORED,2.0,Technological innovation is a well-studied area in strategic management.
+openai:gpt-4o,ALL,digital transformation (dt),NOISE,1.0,This is a lexical variant of 'digital transformation' and adds no new value.
+openai:gpt-4o,ALL,digital maturity,GAP,6.0,Digital maturity is an emerging concept with potential for further research in digital transformation.
+openai:gpt-4o,ALL,digital culture,GAP,5.0,Digital culture is increasingly recognized as important but is not extensively studied.
+openai:gpt-4o,ALL,family firms,GAP,4.0,The digital transformation of family firms is less explored compared to non-family firms.
+openai:gpt-4o,ALL,dynamic managerial capabilities,GAP,7.0,Dynamic managerial capabilities in the context of digital transformation are under-researched.
+openai:gpt-4o,ALL,micro-foundations,NOISE,1.0,This is a lexical variant of 'microfoundations' and adds no new value.
+openai:gpt-4o,ALL,esg performance,GAP,3.0,The intersection of ESG performance and digital transformation is emerging but not well-explored.
+openai:gpt-4o,ALL,human capital,GAP,3.0,Human capital's role in digital transformation is recognized but needs more detailed investigation.
+openai:gpt-4o,ALL,organizational capabilities,EXPLORED,2.0,Organizational capabilities are a well-explored area in strategic management.
+openai:gpt-4o,ALL,digital capabilities,GAP,5.0,Digital capabilities are crucial for transformation but require more focused research.
+openai:gpt-4o,ALL,qualitative study,METHOD,1.0,Qualitative study is a methodological term.
+openai:gpt-4o,ALL,industry 4.0,GAP,4.0,Industry 4.0's impact on digital transformation is an emerging area with research potential.
+openai:gpt-4o,ALL,qualitative interpretive research,METHOD,1.0,This is a methodological term referring to a research approach.
+openai:gpt-4o,ALL,strategic agility,GAP,5.0,Strategic agility is relevant to dynamic capabilities and digital transformation but requires further exploration in this context.
+openai:gpt-4o,ALL,strategic renewal,GAP,6.0,"Strategic renewal is pertinent to digital transformation and dynamic capabilities, with moderate exploration in literature."
+openai:gpt-4o,ALL,technology and innovation management,EXPLORED,2.0,This area is well-explored in the context of digital transformation and firm performance.
+openai:gpt-4o,ALL,reconfiguring,GAP,7.0,Reconfiguring is a dynamic capability aspect that needs more detailed investigation in digital transformation.
+openai:gpt-4o,ALL,seizing,GAP,7.0,Seizing is a dynamic capability that is moderately explored but still holds research potential in this context.
+openai:gpt-4o,ALL,sensing,GAP,7.0,Sensing is a dynamic capability aspect that requires further exploration in digital transformation.
+openai:gpt-4o,ALL,digital technology,EXPLORED,2.0,Digital technology is a well-explored area in the context of firm performance and transformation.
+openai:gpt-4o,ALL,internationalization,GAP,3.0,Internationalization is less explored in the context of digital transformation and dynamic capabilities.
+openai:gpt-4o,ALL,digital innovation management,GAP,5.0,This area is relevant to digital transformation but requires more detailed investigation.
+openai:gpt-4o,ALL,emerging market,GAP,4.0,Emerging markets are less explored in the context of digital transformation and dynamic capabilities.
+openai:gpt-4o,ALL,organisational remodelling,GAP,6.0,Organisational remodelling is relevant to digital transformation and requires further exploration.
+openai:gpt-4o,ALL,mixed method,METHOD,1.0,This is a methodological term referring to a research approach.
+openai:gpt-4o,ALL,multiple case study,METHOD,1.0,This is a methodological term referring to a research approach.
+openai:gpt-4o,ALL,new product development (npd),GAP,3.0,NPD is moderately explored in the context of digital transformation and dynamic capabilities.
+openai:gpt-4o,ALL,sequential explanatory approach,METHOD,1.0,This is a methodological term referring to a research approach.
+openai:gpt-4o,ALL,structural equation model,METHOD,1.0,This is a methodological term referring to a statistical method.
+openai:gpt-4o,ALL,emerging technologies,GAP,5.0,Emerging technologies are relevant to digital transformation but require more detailed investigation.
+openai:gpt-4o,ALL,iiot,GAP,4.0,Industrial Internet of Things (IIoT) is less explored in the context of dynamic capabilities and digital transformation.
+openai:gpt-4o,ALL,digital innovation,GAP,5.0,Digital innovation is relevant to digital transformation but requires more detailed investigation.
+openai:gpt-4o,ALL,family business,GAP,3.0,Family businesses are less explored in the context of digital transformation and dynamic capabilities.
+openai:gpt-4o,ALL,mittelstand firms,GAP,4.0,Mittelstand firms are less explored in the context of digital transformation and dynamic capabilities.
+openai:gpt-4o,ALL,pär ågerfalk,NOISE,1.0,This is a person's name and not relevant to the research problem.
+openai:gpt-4o,ALL,ryad titah,NOISE,1.0,This is a person's name and not relevant to the research problem.
+openai:gpt-4o,ALL,technology adoption,EXPLORED,2.0,Technology adoption is a well-explored area in the context of digital transformation.
+openai:gpt-4o,ALL,strategic planning,EXPLORED,2.0,Strategic planning is a well-established area in strategic management literature.
+openai:gpt-4o,ALL,design science research,METHOD,1.0,Design science research is a methodological approach rather than a research gap.
+openai:gpt-4o,ALL,information system strategy,GAP,3.0,"While information system strategy is discussed, its role in digital transformation needs further exploration."
+openai:gpt-4o,ALL,enterprise dynamic capabilities,GAP,4.0,Enterprise dynamic capabilities are relevant but require more detailed investigation in the context of digital transformation.
+openai:gpt-4o,ALL,“business model innovation”,GAP,5.0,Business model innovation is a growing area with potential for further research in digital transformation.
+openai:gpt-4o,ALL,small and medium-sized enterprises,GAP,3.0,"SMEs' digital transformation is less explored compared to large firms, offering research opportunities."
+openai:gpt-4o,ALL,qualitative research,METHOD,1.0,"Qualitative research is a methodological term, not a research gap."
+openai:gpt-4o,ALL,routines,GAP,4.0,Routines are important in dynamic capabilities but need more exploration in digital contexts.
+openai:gpt-4o,ALL,technology,EXPLORED,2.0,Technology is a broad and well-explored area in the context of digital transformation.
+openai:gpt-4o,ALL,change management,GAP,3.0,Change management is crucial for digital transformation but requires more specific studies.
+openai:gpt-4o,ALL,telecom,EXPLORED,2.0,The telecom industry is extensively studied in the context of digital transformation.
+openai:gpt-4o,ALL,yemen,LOW IMPORTANCE,1.0,Yemen is not directly relevant to the research problem in strategic management.
+openai:gpt-4o,ALL,business model,EXPLORED,2.0,Business models are a well-explored concept in strategic management.
+openai:gpt-4o,ALL,entrepreneurship,EXPLORED,2.0,Entrepreneurship is a well-established field within strategic management.
+openai:gpt-4o,ALL,supply chain management,EXPLORED,2.0,Supply chain management is a well-researched area in the context of digital transformation.
+openai:gpt-4o,ALL,innovation performance,GAP,3.0,Innovation performance is relevant but needs more specific studies in digital transformation.
+openai:gpt-4o,ALL,operational efficiency,EXPLORED,2.0,Operational efficiency is a well-known concept in strategic management.
+openai:gpt-4o,ALL,conceptual framework,METHOD,1.0,"Conceptual framework is a methodological term, not a research gap."
+openai:gpt-4o,ALL,absorptive capacity,GAP,4.0,Absorptive capacity is relevant but requires more exploration in digital transformation contexts.
+openai:gpt-4o,ALL,differentiation strategy,EXPLORED,2.0,Differentiation strategy is a well-established concept in strategic management.
+openai:gpt-4o,ALL,dynamic operational capability,GAP,5.0,Dynamic operational capability is less explored and offers potential for research in digital transformation.
+openai:gpt-4o,ALL,lean production mechanism,EXPLORED,2.0,Lean production is a well-known concept in operational management.
+openai:gpt-4o,ALL,process digitalization initiative,GAP,6.0,Process digitalization initiatives are emerging and require more detailed investigation.
+openai:gpt-4o,ALL,dynamic capability theory,GAP,3.0,Dynamic capability theory is relevant but needs more specific studies in digital transformation.
+openai:gpt-4o,ALL,green innovation,GAP,3.0,Green innovation is gaining attention but requires more research in the context of digital transformation.
+openai:gpt-4o,ALL,social attention,GAP,5.0,Social attention in the context of digital transformation is emerging but not extensively explored.
+openai:gpt-4o,ALL,manufacturing digitalization,GAP,4.0,"While manufacturing digitalization is discussed, its specific impact on dynamic capabilities is less explored."
+openai:gpt-4o,ALL,manufacturing firms,EXPLORED,2.0,Manufacturing firms are a well-known context for digital transformation studies.
+openai:gpt-4o,ALL,esg,GAP,3.0,ESG in relation to digital transformation and firm performance is gaining interest but needs more research.
+openai:gpt-4o,ALL,born-digital,GAP,6.0,Born-digital firms' strategies are less explored in the context of established firms' digital transformation.
+openai:gpt-4o,ALL,collaborative innovation,GAP,5.0,Collaborative innovation is relevant but not fully explored in mediating digital transformation.
+openai:gpt-4o,ALL,relational collaboration,GAP,4.0,Relational collaboration is discussed but requires more focus in the context of digital transformation.
+openai:gpt-4o,ALL,small- and medium-sized enterprise (sme),EXPLORED,2.0,SMEs are a common focus in digital transformation literature.
+openai:gpt-4o,ALL,financial performance,EXPLORED,2.0,Financial performance is a well-explored outcome in digital transformation studies.
+openai:gpt-4o,ALL,market performance,EXPLORED,2.0,Market performance is a common metric in strategic management literature.
+openai:gpt-4o,ALL,strategic aggressiveness,GAP,4.0,Strategic aggressiveness is less explored in the context of digital transformation.
+openai:gpt-4o,ALL,organizational resilience,GAP,5.0,Organizational resilience is increasingly relevant but not fully explored in digital contexts.
+openai:gpt-4o,ALL,technology disruption,GAP,3.0,Technology disruption is a known concept but its specific mechanisms in digital transformation need more research.
+openai:gpt-4o,ALL,design capabilities,GAP,4.0,Design capabilities are relevant but underexplored in enabling digital transformation.
+openai:gpt-4o,ALL,design thinking,GAP,3.0,Design thinking is discussed but its role in digital transformation is not extensively covered.
+openai:gpt-4o,ALL,digital technologies,EXPLORED,2.0,Digital technologies are a well-established area in the literature.
+openai:gpt-4o,ALL,enterprise agility,GAP,5.0,Enterprise agility is relevant but not fully explored in the context of digital transformation.
+openai:gpt-4o,ALL,it alignment,GAP,3.0,IT alignment is discussed but needs more focus on its role in digital transformation.
+openai:gpt-4o,ALL,intellectual capital,GAP,4.0,Intellectual capital is relevant but underexplored in the context of digital transformation.
+openai:gpt-4o,ALL,organizational adaptability,GAP,5.0,Organizational adaptability is increasingly important but not fully explored in digital contexts.
+openai:gpt-4o,ALL,digital business performance,GAP,3.0,Digital business performance is discussed but needs more research in the context of dynamic capabilities.
+openai:gpt-4o,ALL,ecosystem orchestration,GAP,6.0,Ecosystem orchestration is emerging as a key area in digital transformation but is not extensively covered.
+openai:gpt-4o,ALL,process digitization,GAP,4.0,Process digitization is relevant but requires more exploration in the context of dynamic capabilities.
+openai:gpt-4o,ALL,responsiveness,GAP,5.0,Responsiveness is important but not fully explored in digital transformation contexts.
+openai:gpt-4o,ALL,dynamic digital capability,GAP,7.0,Dynamic digital capability is a developing area with significant research potential.
+openai:gpt-4o,ALL,fsqca,METHOD,1.0,fsQCA is a methodological term referring to fuzzy-set qualitative comparative analysis.
+openai:gpt-4o,ALL,organizational innovation,EXPLORED,2.0,Organizational innovation is a well-explored area in strategic management and organization studies.
+openai:gpt-4o,ALL,configurational approach,GAP,3.0,The configurational approach is described but not extensively explored in the context of dynamic capabilities and digital transformation.
+openai:gpt-4o,ALL,small to medium-sized enterprises,EXPLORED,2.0,The role of SMEs in digital transformation is a well-explored area.
+openai:gpt-4o,ALL,digital-oriented human resources practices,GAP,7.0,Digital-oriented HR practices are emerging as a significant area of interest with potential for further research.
+openai:gpt-4o,ALL,dt vision,GAP,9.0,Digital transformation vision is minimally described in the literature and holds high scientific potential.
+openai:gpt-4o,ALL,leadership,EXPLORED,2.0,Leadership is a well-known and extensively studied area in organizational studies.
+openai:gpt-4o,ALL,managerial cognition,GAP,5.0,Managerial cognition is an area with some existing literature but requires more detailed investigation in the context of digital transformation.
+openai:gpt-4o,ALL,social capital,EXPLORED,2.0,Social capital is a well-explored concept in organizational studies.
+openai:gpt-4o,ALL,business model innovation,GAP,4.0,Business model innovation is described in the literature but not extensively in the context of digital transformation.
+openai:gpt-4o,ALL,company performance,EXPLORED,2.0,Company performance is a well-known area in strategic management.
+openai:gpt-4o,ALL,autonomous growth group,NOISE,1.0,The term 'autonomous growth group' is nonsensical in the context of the research problem.
+openai:gpt-4o,ALL,common language,GAP,3.0,The role of common language in digital transformation is underexplored and holds potential for research.
+openai:gpt-4o,ALL,digital disruption,EXPLORED,2.0,Digital disruption is a well-explored area in the context of digital transformation.
+openai:gpt-4o,ALL,digital platforms,GAP,3.0,Digital platforms are described but not extensively explored in the context of dynamic capabilities.
+openai:gpt-4o,ALL,digitization,EXPLORED,2.0,Digitization is a well-known and extensively studied area.
+openai:gpt-4o,ALL,disruptive innovation,EXPLORED,2.0,Disruptive innovation is a well-explored concept in strategic management.
+openai:gpt-4o,ALL,innovative culture,GAP,4.0,Innovative culture is described in the literature but requires more exploration in the context of digital transformation.
+openai:gpt-4o,ALL,multimedia mindset,NOISE,1.0,The term 'multimedia mindset' is nonsensical in the context of the research problem.
+openai:gpt-4o,ALL,resources-processes-values (rpv) framework,GAP,5.0,The RPV framework is underexplored in the context of digital transformation and dynamic capabilities.
+openai:gpt-4o,ALL,response performance,LOW IMPORTANCE,1.0,Response performance is theoretically vacuous in the context of the research problem.
+openai:gpt-4o,ALL,staged resource allocation,GAP,6.0,Staged resource allocation is an emerging area with potential for further research in digital transformation.
+openai:gpt-4o,ALL,national recovery and resilience plan,LOW IMPORTANCE,1.0,The term is practically irrelevant to the research problem.
+openai:gpt-4o,ALL,organizational readiness,GAP,3.0,Organizational readiness is described but not extensively explored in the context of digital transformation.
+openai:gpt-4o,ALL,public value creation,LOW IMPORTANCE,1.0,Public value creation is theoretically vacuous in the context of the research problem.
+openai:gpt-4o,ALL,customer value creation,GAP,5.0,"While customer value creation is a well-discussed topic, its specific role in digital transformation through dynamic capabilities is less explored."
+openai:gpt-4o,ALL,made in italy,LOW IMPORTANCE,2.0,"This term is more related to branding and regional production identity, which is not directly relevant to the research problem."
+openai:gpt-4o,ALL,sme,GAP,4.0,The role of SMEs in digital transformation is discussed but requires more exploration in the context of dynamic capabilities.
+openai:gpt-4o,ALL,cyber-security,EXPLORED,2.0,Cyber-security is a well-explored area in digital transformation literature.
+openai:gpt-4o,ALL,digital literacy,GAP,6.0,Digital literacy is crucial for digital transformation but is less explored in the context of dynamic capabilities.
+openai:gpt-4o,ALL,dynamic capabilities of the resourcebased view,GAP,3.0,This is a foundational concept but its specific application to digital transformation needs further exploration.
+openai:gpt-4o,ALL,automotive industry,GAP,3.0,The automotive industry's digital transformation is discussed but not extensively in the context of dynamic capabilities.
+openai:gpt-4o,ALL,thailand,LOW IMPORTANCE,2.0,The geographical focus on Thailand is not directly relevant to the research problem without specific context.
+openai:gpt-4o,ALL,digital dynamic capabilities,GAP,8.0,This is an emerging area with significant potential for research in digital transformation.
+openai:gpt-4o,ALL,emerging market firms,GAP,5.0,"Emerging market firms' digital transformation is less explored, especially regarding dynamic capabilities."
+openai:gpt-4o,ALL,agrifood businesses,GAP,3.0,Digital transformation in agrifood businesses is underexplored in the context of dynamic capabilities.
+openai:gpt-4o,ALL,digital barriers,GAP,7.0,Barriers to digital transformation are discussed but require more focus on dynamic capabilities.
+openai:gpt-4o,ALL,process-based perspective,GAP,4.0,A process-based perspective on digital transformation is less explored in the context of dynamic capabilities.
+openai:gpt-4o,ALL,digital process innovation,GAP,6.0,This area is emerging with potential for further research in digital transformation.
+openai:gpt-4o,ALL,process development,GAP,3.0,Process development in digital transformation is discussed but not extensively in the context of dynamic capabilities.
+openai:gpt-4o,ALL,production system development,LOW IMPORTANCE,2.0,This term is more technical and less relevant to the strategic management focus of the research problem.
+openai:gpt-4o,ALL,smart factory,GAP,4.0,Smart factories are discussed but require more exploration in the context of dynamic capabilities.
+openai:gpt-4o,ALL,steel industry,LOW IMPORTANCE,2.0,The steel industry is not directly relevant to the research problem without specific context.
+openai:gpt-4o,ALL,knowledge,EXPLORED,2.0,Knowledge is a well-explored concept in strategic management and digital transformation.
+openai:gpt-4o,ALL,market-sensing,GAP,5.0,Market-sensing capabilities are discussed but require more focus in the context of digital transformation.
+openai:gpt-4o,ALL,social media,EXPLORED,2.0,Social media's role in digital transformation is well-explored in the literature.
+anthropic:claude-sonnet-4-6,ALL,digital transformation,EXPLORED,2.0,"Digital transformation is the central construct of the research problem itself and is extensively covered in the strategic management literature, making it a field label rather than a gap."
+anthropic:claude-sonnet-4-6,ALL,dynamic capabilities,EXPLORED,2.0,"Dynamic capabilities are the other core construct of the research problem and represent one of the most extensively studied frameworks in strategic management, with hundreds of empirical and theoretical papers."
+anthropic:claude-sonnet-4-6,ALL,dynamic capability,EXPLORED,2.0,This is a pure lexical singular variant of 'dynamic capabilities' and refers to the same well-explored construct.
+anthropic:claude-sonnet-4-6,ALL,digitalization,EXPLORED,2.0,Digitalization is a near-synonym of digital transformation and is already extensively discussed in the strategic management and organisation studies literature.
+anthropic:claude-sonnet-4-6,ALL,innovation,EXPLORED,2.0,"Innovation is a broad, foundational construct in strategic management that has been exhaustively studied and does not represent a specific research gap in this context."
+anthropic:claude-sonnet-4-6,ALL,smes,GAP,5.0,"While SMEs and digital transformation are individually well-studied, the specific interplay of dynamic capabilities enabling digital transformation in SMEs—as opposed to large firms—remains underexplored and offers genuine research potential."
+anthropic:claude-sonnet-4-6,ALL,microfoundations,GAP,6.0,"The microfoundations of dynamic capabilities in the context of digital transformation remain an active and not fully resolved research area, with ongoing debates about individual- and process-level mechanisms."
+anthropic:claude-sonnet-4-6,ALL,firm performance,EXPLORED,2.0,"Firm performance is a standard dependent variable in strategic management research and is explicitly named in the research problem, making it a well-explored outcome construct rather than a gap."
+anthropic:claude-sonnet-4-6,ALL,case study,METHOD,1.0,Case study is a research methodology and not a substantive research topic or gap.
+anthropic:claude-sonnet-4-6,ALL,competitive advantage,EXPLORED,2.0,"Competitive advantage is a foundational and extensively studied construct in strategic management, closely linked to dynamic capabilities without representing a novel gap."
+anthropic:claude-sonnet-4-6,ALL,digital leadership,GAP,6.0,Digital leadership as a microfoundation or organisational mechanism mediating digital transformation and performance is relatively underexplored compared to broader leadership constructs.
+anthropic:claude-sonnet-4-6,ALL,performance,EXPLORED,1.0,Performance is an overly generic term that is a standard outcome variable across all of management research and adds no specificity or novelty.
+anthropic:claude-sonnet-4-6,ALL,technological innovation,GAP,3.0,Technological innovation as a mediating mechanism between digital capability adoption and firm performance has some literature but specific boundary conditions and pathways remain open for investigation.
+anthropic:claude-sonnet-4-6,ALL,digital transformation (dt),EXPLORED,1.0,"This is simply an abbreviated lexical variant of 'digital transformation,' which is already the central construct of the research problem and extensively explored."
+anthropic:claude-sonnet-4-6,ALL,digital maturity,GAP,6.0,"Digital maturity as a construct linking dynamic capabilities to transformation outcomes is gaining attention but lacks a consolidated theoretical and empirical base, representing a meaningful research gap."
+anthropic:claude-sonnet-4-6,ALL,digital culture,GAP,6.0,Digital culture as an organisational mechanism mediating the relationship between digital technology adoption and performance is underexplored relative to structural or process-based mechanisms.
+anthropic:claude-sonnet-4-6,ALL,family firms,GAP,6.0,"The role of dynamic capabilities in enabling digital transformation specifically within family firms, given their unique governance and resource constraints, is a relatively underexplored context."
+anthropic:claude-sonnet-4-6,ALL,dynamic managerial capabilities,GAP,7.0,"Dynamic managerial capabilities—focusing on managerial cognition, social capital, and human capital—as a distinct mechanism in digital transformation contexts is an emerging and underexplored area."
+anthropic:claude-sonnet-4-6,ALL,micro-foundations,GAP,6.0,This is a hyphenated variant of 'microfoundations' and refers to the same underexplored area of individual- and process-level antecedents of dynamic capabilities in digital transformation.
+anthropic:claude-sonnet-4-6,ALL,esg performance,GAP,7.0,"The relationship between digital transformation, dynamic capabilities, and ESG performance outcomes is a nascent and underexplored intersection with growing scientific and practical relevance."
+anthropic:claude-sonnet-4-6,ALL,human capital,GAP,5.0,Human capital as a microfoundation or mediating organisational mechanism in the dynamic capabilities–digital transformation–performance chain has received some but not exhaustive attention.
+anthropic:claude-sonnet-4-6,ALL,organizational capabilities,GAP,3.0,"Organisational capabilities are closely related to dynamic capabilities and are discussed in the literature, though their specific role as mediators in digital transformation contexts still offers some research potential."
+anthropic:claude-sonnet-4-6,ALL,digital capabilities,GAP,5.0,Digital capabilities as a distinct construct—separate from general dynamic capabilities—and their role in mediating digital transformation and performance is an active but not fully consolidated research area.
+anthropic:claude-sonnet-4-6,ALL,qualitative study,METHOD,1.0,Qualitative study is a methodological approach and not a substantive research topic or gap.
+anthropic:claude-sonnet-4-6,ALL,industry 4.0,GAP,4.0,"Industry 4.0 as a specific technological context for examining dynamic capabilities and digital transformation offers some remaining research potential, though the broader topic has received considerable attention."
+anthropic:claude-sonnet-4-6,ALL,qualitative interpretive research,METHOD,1.0,"This is a methodological approach, not a substantive research topic relevant to dynamic capabilities or digital transformation."
+anthropic:claude-sonnet-4-6,ALL,strategic agility,GAP,4.0,"While strategic agility is discussed in the literature, its precise role as a mediating mechanism between dynamic capabilities and digital transformation performance remains underexplored."
+anthropic:claude-sonnet-4-6,ALL,strategic renewal,GAP,5.0,Strategic renewal in the context of digital transformation of established firms is moderately explored but lacks detailed investigation of how dynamic capabilities drive renewal processes.
+anthropic:claude-sonnet-4-6,ALL,technology and innovation management,EXPLORED,1.0,"This is a broad field label rather than a specific research gap, and it is extensively covered in the existing literature."
+anthropic:claude-sonnet-4-6,ALL,reconfiguring,GAP,3.0,"Reconfiguring is a core Teecian dynamic capability microfoundation that, while theoretically established, still requires empirical investigation in digital transformation contexts."
+anthropic:claude-sonnet-4-6,ALL,seizing,GAP,3.0,Seizing as a dynamic capability microfoundation is theoretically established but its operationalisation in digital transformation settings remains underexplored empirically.
+anthropic:claude-sonnet-4-6,ALL,sensing,GAP,3.0,Sensing is a recognised dynamic capability component but its specific mechanisms in detecting digital opportunities for established firms warrant further investigation.
+anthropic:claude-sonnet-4-6,ALL,digital technology,EXPLORED,1.0,Digital technology is a central and extensively studied construct in the research domain and does not represent a novel gap on its own.
+anthropic:claude-sonnet-4-6,ALL,internationalization,GAP,4.0,The intersection of digital transformation and internationalisation of established firms is a moderately emerging area with remaining research potential.
+anthropic:claude-sonnet-4-6,ALL,digital innovation management,GAP,5.0,Managing digital innovation within established firms through dynamic capabilities is an area with growing but still limited empirical coverage.
+anthropic:claude-sonnet-4-6,ALL,emerging market,GAP,5.0,How dynamic capabilities enable digital transformation in emerging market contexts is underexplored relative to developed-economy studies.
+anthropic:claude-sonnet-4-6,ALL,organisational remodelling,GAP,7.0,Organisational remodelling as a distinct mediating mechanism between digital technology adoption and firm performance is rarely theorised or empirically examined.
+anthropic:claude-sonnet-4-6,ALL,mixed method,METHOD,1.0,"Mixed methods is a research design approach, not a substantive topic relevant to the research problem."
+anthropic:claude-sonnet-4-6,ALL,multiple case study,METHOD,1.0,Multiple case study is a research methodology and does not constitute a substantive research gap in the domain.
+anthropic:claude-sonnet-4-6,ALL,new product development (npd),GAP,3.0,"NPD is well-studied generally, but its transformation through digital capabilities in established firms offers some remaining research potential."
+anthropic:claude-sonnet-4-6,ALL,sequential explanatory approach,METHOD,1.0,"Sequential explanatory approach is a mixed-methods research design technique, not a substantive research topic."
+anthropic:claude-sonnet-4-6,ALL,structural equation model,METHOD,1.0,Structural equation modelling is a statistical method and does not represent a research gap in the substantive domain.
+anthropic:claude-sonnet-4-6,ALL,emerging technologies,GAP,4.0,The role of emerging technologies in triggering dynamic capability development for digital transformation is moderately explored but still offers research potential.
+anthropic:claude-sonnet-4-6,ALL,iiot,GAP,7.0,The Industrial Internet of Things as a specific digital technology context for dynamic capabilities and firm performance is relatively underexplored in strategic management literature.
+anthropic:claude-sonnet-4-6,ALL,digital innovation,GAP,3.0,Digital innovation is increasingly studied but its mediation role between dynamic capabilities and performance in established firms still has research gaps.
+anthropic:claude-sonnet-4-6,ALL,family business,GAP,6.0,How dynamic capabilities enable digital transformation specifically in family businesses is a relatively underexplored contextual boundary condition.
+anthropic:claude-sonnet-4-6,ALL,mittelstand firms,GAP,8.0,Digital transformation through dynamic capabilities in Mittelstand (German SME) firms is a highly specific and underexplored context with meaningful research potential.
+anthropic:claude-sonnet-4-6,ALL,pär ågerfalk,NOISE,1.0,This is a researcher's personal name and has no relevance as a research gap keyword.
+anthropic:claude-sonnet-4-6,ALL,ryad titah,NOISE,1.0,This is a researcher's personal name and constitutes noise with no connection to a substantive research gap.
+anthropic:claude-sonnet-4-6,ALL,technology adoption,EXPLORED,2.0,"Technology adoption is a well-established and extensively studied construct in both IS and strategic management literatures, offering limited novelty as a gap."
+anthropic:claude-sonnet-4-6,ALL,strategic planning,EXPLORED,2.0,"Strategic planning is a foundational and extensively studied concept in strategic management with well-established links to firm performance, offering little novel contribution to the specific research problem."
+anthropic:claude-sonnet-4-6,ALL,design science research,METHOD,1.0,Design science research is a methodological paradigm used in information systems research and does not constitute a substantive research gap in the context of dynamic capabilities and digital transformation.
+anthropic:claude-sonnet-4-6,ALL,information system strategy,GAP,3.0,"The alignment between information system strategy and dynamic capabilities in the context of digital transformation remains an area with meaningful research potential, particularly regarding how IS strategy mediates technology adoption and performance."
+anthropic:claude-sonnet-4-6,ALL,enterprise dynamic capabilities,GAP,4.0,"While dynamic capabilities are well-theorised, the specific operationalisation at the enterprise level and how enterprise-wide capability configurations drive digital transformation outcomes warrants further investigation."
+anthropic:claude-sonnet-4-6,ALL,small and medium-sized enterprises,GAP,5.0,"The applicability of dynamic capabilities frameworks to SMEs undergoing digital transformation is underexplored relative to large established firms, representing a meaningful contextual research gap."
+anthropic:claude-sonnet-4-6,ALL,qualitative research,METHOD,1.0,"Qualitative research is a data-collection and analysis methodology, not a substantive research topic relevant to the stated research problem."
+anthropic:claude-sonnet-4-6,ALL,routines,GAP,4.0,"Organisational routines as micro-foundations of dynamic capabilities and their role in mediating digital transformation processes are discussed but not exhaustively studied, leaving room for deeper investigation."
+anthropic:claude-sonnet-4-6,ALL,technology,NOISE,1.0,The term 'technology' is far too broad and generic to constitute a meaningful or actionable research gap in the context of this research problem.
+anthropic:claude-sonnet-4-6,ALL,change management,GAP,3.0,Change management practices as organisational mechanisms mediating the relationship between digital technology adoption and firm performance are relevant but undertheorised within the dynamic capabilities literature.
+anthropic:claude-sonnet-4-6,ALL,telecom,GAP,3.0,"The telecommunications sector provides a specific and relevant empirical context for studying digital transformation and dynamic capabilities in established firms, though it is a contextual rather than theoretical gap."
+anthropic:claude-sonnet-4-6,ALL,yemen,GAP,5.0,"Research on digital transformation and dynamic capabilities in Yemeni firms is extremely scarce, representing a genuine geographic and contextual gap, though its broader theoretical contribution may be limited."
+anthropic:claude-sonnet-4-6,ALL,business model,GAP,3.0,Business models as organisational mechanisms linking dynamic capabilities to digital transformation outcomes are relevant to the research problem but represent a somewhat explored area compared to more specific constructs.
+anthropic:claude-sonnet-4-6,ALL,entrepreneurship,EXPLORED,2.0,"Entrepreneurship is a broad and well-established field that, while tangentially related to dynamic capabilities, does not directly address the research problem of digital transformation in established firms."
+anthropic:claude-sonnet-4-6,ALL,supply chain management,GAP,3.0,The role of supply chain management as an organisational mechanism through which digital technologies affect firm performance is relevant but peripheral to the core theoretical focus of the research problem.
+anthropic:claude-sonnet-4-6,ALL,innovation performance,GAP,4.0,Innovation performance as a specific dimension of firm performance mediated by dynamic capabilities and digital technology adoption is a meaningful but not exhaustively studied construct in this context.
+anthropic:claude-sonnet-4-6,ALL,operational efficiency,GAP,3.0,"Operational efficiency as an outcome variable linking digital transformation to firm performance through dynamic capabilities is relevant and partially explored, with room for more nuanced investigation."
+anthropic:claude-sonnet-4-6,ALL,conceptual framework,METHOD,1.0,"Conceptual framework is a methodological or structural research tool, not a substantive research topic or gap in the domain of the stated research problem."
+anthropic:claude-sonnet-4-6,ALL,absorptive capacity,GAP,4.0,Absorptive capacity as an organisational mechanism mediating the relationship between digital technology adoption and firm performance within a dynamic capabilities lens is theoretically rich but not fully resolved in the literature.
+anthropic:claude-sonnet-4-6,ALL,differentiation strategy,GAP,3.0,How differentiation strategy interacts with dynamic capabilities to shape digital transformation outcomes is a relevant but underexplored intersection in the strategic management literature.
+anthropic:claude-sonnet-4-6,ALL,dynamic operational capability,GAP,6.0,Dynamic operational capabilities as a distinct construct bridging operational routines and higher-order dynamic capabilities in digital transformation contexts is an emerging and insufficiently theorised area.
+anthropic:claude-sonnet-4-6,ALL,lean production mechanism,GAP,4.0,"The intersection of lean production mechanisms with digital transformation and dynamic capabilities is an emerging area, particularly regarding how lean principles are reconfigured in digitally transformed organisations."
+anthropic:claude-sonnet-4-6,ALL,process digitalization initiative,GAP,6.0,Process digitalisation initiatives as specific organisational mechanisms mediating technology adoption and performance are a relatively novel and underexplored construct within the dynamic capabilities framework.
+anthropic:claude-sonnet-4-6,ALL,dynamic capability theory,EXPLORED,2.0,"Dynamic capability theory is the central theoretical lens of the research problem itself and is extensively developed in the literature, making it an explored area rather than a research gap."
+anthropic:claude-sonnet-4-6,ALL,green innovation,GAP,3.0,"Green innovation as an outcome or mechanism related to digital transformation and dynamic capabilities is an emerging intersection, though its connection to the core research problem is somewhat tangential."
+anthropic:claude-sonnet-4-6,ALL,social attention,GAP,4.0,Attention-based view applied to how top management allocates cognitive attention to digital transformation signals is underexplored relative to the research problem.
+anthropic:claude-sonnet-4-6,ALL,manufacturing digitalization,GAP,5.0,"While Industry 4.0 literature is growing, the specific dynamic-capability mechanisms mediating manufacturing digitalization and firm performance remain incompletely theorized."
+anthropic:claude-sonnet-4-6,ALL,manufacturing firms,EXPLORED,2.0,Manufacturing firms as a context for digital transformation and dynamic capabilities is a well-represented empirical setting in the existing literature.
+anthropic:claude-sonnet-4-6,ALL,esg,GAP,5.0,The intersection of ESG commitments with digital transformation strategies and how dynamic capabilities mediate ESG-related performance outcomes is still nascent.
+anthropic:claude-sonnet-4-6,ALL,born-digital,GAP,6.0,Contrasting born-digital firms with established firms undergoing digital transformation offers a meaningful comparative lens that is underexplored in dynamic-capabilities research.
+anthropic:claude-sonnet-4-6,ALL,collaborative innovation,GAP,5.0,How collaborative innovation routines function as organisational mechanisms linking digital technology adoption to performance is not yet well-established in the literature.
+anthropic:claude-sonnet-4-6,ALL,relational collaboration,GAP,4.0,Relational collaboration as a mediating organisational mechanism between digital capabilities and firm performance has received limited dedicated attention.
+anthropic:claude-sonnet-4-6,ALL,small- and medium-sized enterprise (sme),GAP,4.0,SME-specific dynamic capabilities for digital transformation are discussed but remain less theoretically developed compared to large-firm studies.
+anthropic:claude-sonnet-4-6,ALL,financial performance,EXPLORED,2.0,Financial performance as an outcome variable in dynamic-capabilities and digital transformation research is extensively covered and well-operationalized in the literature.
+anthropic:claude-sonnet-4-6,ALL,market performance,GAP,3.0,Market performance as a distinct outcome from financial performance in digital transformation contexts has some coverage but specific mediating mechanisms are underspecified.
+anthropic:claude-sonnet-4-6,ALL,strategic aggressiveness,GAP,6.0,Strategic aggressiveness as a moderator or mediator linking dynamic digital capabilities to performance outcomes is a relatively underexplored construct in this domain.
+anthropic:claude-sonnet-4-6,ALL,organizational resilience,GAP,5.0,"The relationship between digital transformation, dynamic capabilities, and organisational resilience as a performance-related outcome is growing but not yet consolidated."
+anthropic:claude-sonnet-4-6,ALL,technology disruption,GAP,3.0,Technology disruption is frequently invoked as context but its precise role as a boundary condition for dynamic-capability effectiveness in digital transformation is underspecified.
+anthropic:claude-sonnet-4-6,ALL,design capabilities,GAP,6.0,Design capabilities as a component of dynamic capabilities enabling digital transformation is a relatively novel and underexplored construct in strategic management literature.
+anthropic:claude-sonnet-4-6,ALL,design thinking,GAP,5.0,Design thinking as an organisational mechanism mediating digital technology adoption and firm performance has limited theoretical grounding in dynamic-capabilities frameworks.
+anthropic:claude-sonnet-4-6,ALL,digital technologies,EXPLORED,1.0,Digital technologies is the central construct of the research problem itself and is thoroughly covered as a topic across the strategic management and IS literatures.
+anthropic:claude-sonnet-4-6,ALL,enterprise agility,GAP,5.0,Enterprise agility as a mediating organisational mechanism between dynamic capabilities and digital transformation performance is discussed but lacks consolidated empirical grounding.
+anthropic:claude-sonnet-4-6,ALL,it alignment,GAP,3.0,IT-business alignment is a mature concept but its reconceptualization within dynamic-capabilities frameworks for digital transformation still offers research potential.
+anthropic:claude-sonnet-4-6,ALL,intellectual capital,GAP,4.0,Intellectual capital as a mediating resource between dynamic capabilities and digital transformation performance outcomes is underexplored relative to structural capital perspectives.
+anthropic:claude-sonnet-4-6,ALL,organizational adaptability,GAP,4.0,"Organisational adaptability is related to but distinct from dynamic capabilities, and its specific mediating role in digital transformation performance chains warrants further investigation."
+anthropic:claude-sonnet-4-6,ALL,digital business performance,GAP,5.0,"Digital business performance as a distinct, multi-dimensional construct separable from general firm performance in dynamic-capabilities research is not yet well-defined."
+anthropic:claude-sonnet-4-6,ALL,ecosystem orchestration,GAP,7.0,Ecosystem orchestration as a higher-order dynamic capability enabling digital transformation of established firms is an emerging and undertheorized area with high relevance.
+anthropic:claude-sonnet-4-6,ALL,process digitization,GAP,4.0,Process digitization as a specific organisational mechanism mediating between digital technology adoption and firm performance is discussed but lacks deep theoretical treatment.
+anthropic:claude-sonnet-4-6,ALL,responsiveness,GAP,3.0,Responsiveness is a component of dynamic capabilities but its precise operationalization as a mediating mechanism in digital transformation contexts remains underspecified.
+anthropic:claude-sonnet-4-6,ALL,dynamic digital capability,GAP,7.0,Dynamic digital capability as a distinct construct integrating digital and dynamic-capability theory is emerging and represents a genuine research frontier with significant theoretical potential.
+anthropic:claude-sonnet-4-6,ALL,fsqca,METHOD,1.0,"Fuzzy-set qualitative comparative analysis is a methodological technique, not a substantive research topic related to dynamic capabilities or digital transformation."
+anthropic:claude-sonnet-4-6,ALL,organizational innovation,EXPLORED,2.0,Organizational innovation is a well-established construct extensively covered in strategic management and innovation literature with broad theoretical grounding.
+anthropic:claude-sonnet-4-6,ALL,configurational approach,METHOD,2.0,The configurational approach is a methodological/analytical framework used in research design rather than a substantive research gap in digital transformation.
+anthropic:claude-sonnet-4-6,ALL,small to medium-sized enterprises,GAP,4.0,"While SMEs are widely studied, the specific mechanisms through which dynamic capabilities enable digital transformation in SMEs remain underexplored compared to large firms."
+anthropic:claude-sonnet-4-6,ALL,digital-oriented human resources practices,GAP,7.0,The role of digitally oriented HRM practices as an organisational mechanism mediating between digital technology adoption and firm performance is relatively underexplored in the literature.
+anthropic:claude-sonnet-4-6,ALL,dt vision,GAP,6.0,Digital transformation vision as a strategic leadership construct shaping transformation trajectories is emerging but not yet extensively theorised in the dynamic capabilities literature.
+anthropic:claude-sonnet-4-6,ALL,leadership,EXPLORED,2.0,Leadership is a broadly and extensively studied topic in strategic management and organisational studies with abundant literature across many contexts.
+anthropic:claude-sonnet-4-6,ALL,managerial cognition,GAP,6.0,Managerial cognition as a microfoundation of dynamic capabilities in the context of digital transformation is gaining attention but remains insufficiently theorised.
+anthropic:claude-sonnet-4-6,ALL,social capital,GAP,3.0,Social capital's role as an organisational mechanism linking digital technology adoption and performance is touched upon but not deeply integrated into the dynamic capabilities–digital transformation literature.
+anthropic:claude-sonnet-4-6,ALL,business model innovation,GAP,4.0,Business model innovation as a mediating mechanism between dynamic capabilities and firm performance in digital transformation contexts has growing but still incomplete coverage.
+anthropic:claude-sonnet-4-6,ALL,company performance,EXPLORED,1.0,Company/firm performance is the central dependent variable in strategic management research and is thoroughly explored across countless studies.
+anthropic:claude-sonnet-4-6,ALL,autonomous growth group,NOISE,2.0,This term has no recognisable or established meaning in the strategic management or digital transformation literature and appears to be a nonsensical or misattributed phrase.
+anthropic:claude-sonnet-4-6,ALL,common language,LOW IMPORTANCE,2.0,Common language as a concept carries minimal theoretical value in the context of dynamic capabilities and digital transformation research.
+anthropic:claude-sonnet-4-6,ALL,digital disruption,GAP,3.0,Digital disruption is discussed in the literature but its precise mechanisms and firm-level responses through dynamic capabilities remain areas requiring further investigation.
+anthropic:claude-sonnet-4-6,ALL,digital platforms,GAP,4.0,The role of digital platforms as both enablers and outcomes of dynamic capabilities in established firms' transformation is an active but still developing research area.
+anthropic:claude-sonnet-4-6,ALL,digitization,EXPLORED,2.0,"Digitization is a foundational and extensively covered concept in the digital transformation literature, often used interchangeably with digitalization."
+anthropic:claude-sonnet-4-6,ALL,disruptive innovation,EXPLORED,2.0,Disruptive innovation is a well-established theoretical construct with decades of extensive scholarly treatment in strategic management.
+anthropic:claude-sonnet-4-6,ALL,innovative culture,GAP,4.0,Innovative organisational culture as a mediating mechanism between digital technology adoption and performance is acknowledged but not deeply examined in dynamic capabilities research.
+anthropic:claude-sonnet-4-6,ALL,multimedia mindset,GAP,3.0,Multimedia mindset is a niche and underexplored cognitive construct that could relate to managerial capabilities in digital transformation but lacks substantial theoretical grounding.
+anthropic:claude-sonnet-4-6,ALL,resources-processes-values (rpv) framework,GAP,5.0,The RPV framework from Christensen's work is underutilised in the dynamic capabilities–digital transformation literature and its application to established firms' transformation offers research potential.
+anthropic:claude-sonnet-4-6,ALL,response performance,GAP,4.0,Response performance as a distinct performance dimension capturing organisational agility in reacting to digital disruption is not well theorised in the existing literature.
+anthropic:claude-sonnet-4-6,ALL,staged resource allocation,GAP,6.0,Staged resource allocation as an organisational mechanism governing digital transformation investments is a relatively underexplored topic with clear relevance to dynamic capabilities theory.
+anthropic:claude-sonnet-4-6,ALL,national recovery and resilience plan,GAP,3.0,The influence of national policy instruments like recovery and resilience plans on firms' digital transformation capabilities is an emerging and underexplored area.
+anthropic:claude-sonnet-4-6,ALL,organizational readiness,GAP,4.0,Organisational readiness for digital transformation as a precondition or mediating variable between dynamic capabilities and performance outcomes is discussed but not exhaustively theorised.
+anthropic:claude-sonnet-4-6,ALL,public value creation,GAP,5.0,Public value creation through digital transformation is primarily studied in public administration contexts and its intersection with dynamic capabilities in established firms is largely unexplored.
+anthropic:claude-sonnet-4-6,ALL,customer value creation,GAP,3.0,"While customer value creation is discussed in strategic management, its role as a mediating mechanism between digital technology adoption and firm performance remains underexplored in the dynamic capabilities literature."
+anthropic:claude-sonnet-4-6,ALL,made in italy,NOISE,1.0,"This is a country-of-origin branding concept with no meaningful connection to dynamic capabilities, digital transformation, or the organisational mechanisms central to the research problem."
+anthropic:claude-sonnet-4-6,ALL,sme,GAP,4.0,"SMEs face distinct constraints in developing dynamic capabilities for digital transformation compared to large firms, and the mediating organisational mechanisms in this context remain insufficiently theorised."
+anthropic:claude-sonnet-4-6,ALL,cyber-security,GAP,4.0,Cyber-security as an organisational capability enabling or constraining digital transformation and its link to firm performance is underexplored within the dynamic capabilities framework.
+anthropic:claude-sonnet-4-6,ALL,digital literacy,GAP,5.0,Digital literacy as an organisational-level mediating mechanism between digital technology adoption and performance outcomes is not yet well integrated into dynamic capabilities theory.
+anthropic:claude-sonnet-4-6,ALL,dynamic capabilities of the resourcebased view,EXPLORED,2.0,The relationship between dynamic capabilities and the resource-based view is a foundational and extensively covered topic in the strategic management literature.
+anthropic:claude-sonnet-4-6,ALL,automotive industry,GAP,3.0,"The automotive industry provides a relevant empirical context for studying digital transformation and dynamic capabilities, though sector-specific mechanisms remain partially underexplored."
+anthropic:claude-sonnet-4-6,ALL,thailand,GAP,4.0,"Research on dynamic capabilities and digital transformation in Thai firms is sparse, offering a geographically underrepresented institutional context with genuine research potential."
+anthropic:claude-sonnet-4-6,ALL,digital dynamic capabilities,GAP,6.0,"Digital dynamic capabilities as a distinct construct—differentiating digitally-enabled sensing, seizing, and reconfiguring routines—is an emerging and not yet fully theorised area within the research problem."
+anthropic:claude-sonnet-4-6,ALL,emerging market firms,GAP,5.0,How emerging market firms develop dynamic capabilities to navigate digital transformation under institutional voids and resource constraints is underexplored relative to developed-market contexts.
+anthropic:claude-sonnet-4-6,ALL,agrifood businesses,GAP,5.0,"The agrifood sector is a relatively underexplored empirical context for studying digital transformation and dynamic capabilities, with sector-specific barriers and mechanisms warranting investigation."
+anthropic:claude-sonnet-4-6,ALL,digital barriers,GAP,6.0,Organisational and institutional barriers to digital transformation and how dynamic capabilities help firms overcome them is a topic with growing but still limited systematic treatment in the literature.
+anthropic:claude-sonnet-4-6,ALL,process-based perspective,GAP,5.0,A process-based perspective on how dynamic capabilities unfold during digital transformation offers a theoretically valuable but underutilised lens compared to variance-based approaches.
+anthropic:claude-sonnet-4-6,ALL,digital process innovation,GAP,6.0,Digital process innovation as a mediating mechanism linking dynamic capabilities to firm performance in the context of digital transformation is an emerging and insufficiently studied construct.
+anthropic:claude-sonnet-4-6,ALL,process development,GAP,3.0,Process development is relevant to organisational reconfiguration during digital transformation but is a broad term with moderate novelty in this specific research context.
+anthropic:claude-sonnet-4-6,ALL,production system development,GAP,4.0,How production system development acts as an organisational mechanism mediating digital technology adoption and performance is underexplored within the dynamic capabilities literature.
+anthropic:claude-sonnet-4-6,ALL,smart factory,GAP,5.0,Smart factory implementation as an empirical manifestation of digital transformation requiring specific dynamic capabilities is a growing but not yet exhaustively studied area in strategic management.
+anthropic:claude-sonnet-4-6,ALL,steel industry,GAP,4.0,"The steel industry is an underrepresented empirical context for studying digital transformation and dynamic capabilities, particularly given its capital-intensive and traditionally slow-to-digitise nature."
+anthropic:claude-sonnet-4-6,ALL,knowledge,EXPLORED,2.0,Knowledge as a resource and capability antecedent is a thoroughly explored construct in both the resource-based view and dynamic capabilities literature.
+anthropic:claude-sonnet-4-6,ALL,market-sensing,GAP,5.0,Market-sensing as a specific dynamic capability enabling digital transformation and its link to performance outcomes is discussed but not yet comprehensively theorised in the digital context.
+anthropic:claude-sonnet-4-6,ALL,social media,GAP,3.0,Social media as a digital technology whose adoption requires specific dynamic capabilities and whose performance effects are mediated by organisational mechanisms is partially explored but not exhaustively so.
+deepseek:deepseek-v4-pro,ALL,digital transformation,EXPLORED,1.0,"Core phenomenon with an extensive, mature literature in management and information systems."
+deepseek:deepseek-v4-pro,ALL,dynamic capabilities,EXPLORED,1.0,Dominant strategic management construct that has been theorized and reviewed extensively.
+deepseek:deepseek-v4-pro,ALL,dynamic capability,EXPLORED,1.0,Merely the singular lexical variant of the already dominant dynamic capabilities construct.
+deepseek:deepseek-v4-pro,ALL,digitalization,EXPLORED,1.0,Broad transformation-related term with a large and mature literature.
+deepseek:deepseek-v4-pro,ALL,innovation,EXPLORED,1.0,Very broad and extensively researched management outcome and process.
+deepseek:deepseek-v4-pro,ALL,smes,EXPLORED,2.0,SME digitalization and innovation are already the focus of a substantial research stream.
+deepseek:deepseek-v4-pro,ALL,microfoundations,GAP,8.0,Microfoundations of dynamic capabilities in digital transformation remain underexplored despite growing interest.
+deepseek:deepseek-v4-pro,ALL,firm performance,EXPLORED,1.0,Central dependent variable with extensive strategic management research.
+deepseek:deepseek-v4-pro,ALL,case study,METHOD,1.0,"Qualitative research design term, not a research gap."
+deepseek:deepseek-v4-pro,ALL,competitive advantage,EXPLORED,1.0,Core strategic outcome with a long-established literature.
+deepseek:deepseek-v4-pro,ALL,digital leadership,GAP,7.0,Emerging topic with growing but still limited empirical research linking leadership to digital transformation.
+deepseek:deepseek-v4-pro,ALL,performance,LOW IMPORTANCE,1.0,Overly generic outcome term lacking theoretical specificity in this context.
+deepseek:deepseek-v4-pro,ALL,technological innovation,EXPLORED,1.0,Broad innovation-related construct already extensively studied.
+deepseek:deepseek-v4-pro,ALL,digital transformation (dt),EXPLORED,1.0,"Duplicate of digital transformation with an abbreviation, not a distinct gap."
+deepseek:deepseek-v4-pro,ALL,digital maturity,GAP,6.0,Concept has practitioner and some academic coverage but lacks systematic strategic-management investigation.
+deepseek:deepseek-v4-pro,ALL,digital culture,GAP,7.0,Organizational culture for digital transformation is increasingly important but empirically underdeveloped.
+deepseek:deepseek-v4-pro,ALL,family firms,GAP,6.0,Digital transformation in family firms is an emerging context with limited strategic-management research.
+deepseek:deepseek-v4-pro,ALL,dynamic managerial capabilities,GAP,8.0,Managerial-level dynamic capabilities are a promising microfoundational angle that remains underexplored.
+deepseek:deepseek-v4-pro,ALL,micro-foundations,GAP,8.0,"Hyphenated variant of microfoundations, denoting the same underexplored research area."
+deepseek:deepseek-v4-pro,ALL,esg performance,GAP,5.0,ESG as a performance outcome of digital transformation is gaining attention but remains under-researched.
+deepseek:deepseek-v4-pro,ALL,human capital,EXPLORED,2.0,"Broad resource construct already extensively linked to innovation, capabilities, and performance."
+deepseek:deepseek-v4-pro,ALL,organizational capabilities,EXPLORED,2.0,Broad capability construct heavily studied in strategic management and adjacent fields.
+deepseek:deepseek-v4-pro,ALL,digital capabilities,GAP,6.0,Digital capability concept is increasingly used but still lacks conceptual integration and empirical depth.
+deepseek:deepseek-v4-pro,ALL,qualitative study,METHOD,1.0,Research design term rather than a substantive research gap.
+deepseek:deepseek-v4-pro,ALL,industry 4.0,EXPLORED,2.0,Widely studied technological-manufacturing trend with extensive literature on adoption and performance.
+deepseek:deepseek-v4-pro,ALL,qualitative interpretive research,METHOD,1.0,This is a methodological approach rather than a substantive research gap.
+deepseek:deepseek-v4-pro,ALL,strategic agility,GAP,5.0,Strategic agility is linked to digital transformation but its enabling mechanisms and performance outcomes remain underexplored.
+deepseek:deepseek-v4-pro,ALL,strategic renewal,EXPLORED,2.0,"Strategic renewal is an established construct in strategic management and dynamic capabilities research, making it a dominant label rather than a distinct gap."
+deepseek:deepseek-v4-pro,ALL,technology and innovation management,EXPLORED,1.0,This is a broad field label covering well-established research streams rather than a specific unresolved topic.
+deepseek:deepseek-v4-pro,ALL,reconfiguring,EXPLORED,2.0,Reconfiguring is a canonical dynamic capability dimension and is already well described in the literature.
+deepseek:deepseek-v4-pro,ALL,seizing,EXPLORED,2.0,Seizing is a standard dynamic capability activity and is well established in the framework.
+deepseek:deepseek-v4-pro,ALL,sensing,EXPLORED,2.0,Sensing is a foundational dynamic capability construct that is already well explored.
+deepseek:deepseek-v4-pro,ALL,digital technology,EXPLORED,2.0,Digital technology is a broad central label rather than a specific unresolved research topic.
+deepseek:deepseek-v4-pro,ALL,internationalization,LOW IMPORTANCE,2.0,Internationalization is a separate strategic management topic with limited direct relevance to the stated digital transformation mechanisms.
+deepseek:deepseek-v4-pro,ALL,digital innovation management,GAP,6.0,Digital innovation management is an emerging area with open questions about organising for digital innovation and performance.
+deepseek:deepseek-v4-pro,ALL,emerging market,LOW IMPORTANCE,2.0,Emerging market is a contextual category rather than an organisational mechanism central to this research problem.
+deepseek:deepseek-v4-pro,ALL,organisational remodelling,GAP,6.0,Organisational remodelling points to structural mechanisms that may mediate digital technology adoption and performance but remains underexplored.
+deepseek:deepseek-v4-pro,ALL,mixed method,METHOD,1.0,Mixed method is a research design term rather than a substantive research gap.
+deepseek:deepseek-v4-pro,ALL,multiple case study,METHOD,1.0,Multiple case study is a methodological choice rather than a substantive research gap.
+deepseek:deepseek-v4-pro,ALL,new product development (npd),EXPLORED,2.0,New product development is a well-established innovation outcome area and not a distinct gap in digital transformation mechanisms.
+deepseek:deepseek-v4-pro,ALL,sequential explanatory approach,METHOD,1.0,Sequential explanatory approach is a specific research design procedure rather than a substantive topic.
+deepseek:deepseek-v4-pro,ALL,structural equation model,METHOD,1.0,Structural equation modeling is an analytical method rather than a research gap.
+deepseek:deepseek-v4-pro,ALL,emerging technologies,GAP,5.0,"Emerging technologies are studied, but their organisational implications for established firms' transformation are not yet extensively understood."
+deepseek:deepseek-v4-pro,ALL,iiot,GAP,4.0,IIoT is a specific technology context whose strategic and organisational implications for established firms are only partially explored.
+deepseek:deepseek-v4-pro,ALL,digital innovation,GAP,7.0,"Digital innovation is central to the research problem but still has many unresolved questions about mechanisms, organising, and performance outcomes."
+deepseek:deepseek-v4-pro,ALL,family business,LOW IMPORTANCE,2.0,Family business is a contextual category that narrows the sample but is not directly tied to the core dynamic capability mechanisms.
+deepseek:deepseek-v4-pro,ALL,mittelstand firms,LOW IMPORTANCE,2.0,Mittelstand firms represent a specific empirical context rather than a conceptual gap in the focal mechanisms.
+deepseek:deepseek-v4-pro,ALL,pär ågerfalk,NOISE,1.0,This is an author name and provides no substantive research topic.
+deepseek:deepseek-v4-pro,ALL,ryad titah,NOISE,1.0,This is an author name and provides no substantive research topic.
+deepseek:deepseek-v4-pro,ALL,technology adoption,EXPLORED,2.0,"Technology adoption is a dominant construct with extensive prior literature, especially TAM and UTAUT, rather than a new gap."
+deepseek:deepseek-v4-pro,ALL,strategic planning,EXPLORED,2.0,Strategic planning is a well-established strategic management area already extensively covered in digital transformation research.
+deepseek:deepseek-v4-pro,ALL,design science research,METHOD,1.0,Design science research is a research methodology/approach rather than a substantive gap.
+deepseek:deepseek-v4-pro,ALL,information system strategy,EXPLORED,2.0,"Information system strategy is a mature, well-explored construct."
+deepseek:deepseek-v4-pro,ALL,enterprise dynamic capabilities,EXPLORED,1.0,Enterprise dynamic capabilities is a lexical variant of the dominant dynamic capabilities construct.
+deepseek:deepseek-v4-pro,ALL,“business model innovation”,GAP,5.0,Business model innovation remains a viable gap because its interaction with dynamic capabilities and mediating role in digital transformation is not yet fully specified.
+deepseek:deepseek-v4-pro,ALL,small and medium-sized enterprises,GAP,4.0,SMEs represent a contextual gap; digital transformation and dynamic capabilities in this setting are studied but still require deeper investigation.
+deepseek:deepseek-v4-pro,ALL,qualitative research,METHOD,1.0,"Qualitative research is a methodological choice, not a topic gap."
+deepseek:deepseek-v4-pro,ALL,routines,EXPLORED,2.0,"Routines are a core, extensively studied element of dynamic capabilities."
+deepseek:deepseek-v4-pro,ALL,technology,LOW IMPORTANCE,1.0,Technology is too broad and theoretically vacuous in this context.
+deepseek:deepseek-v4-pro,ALL,change management,EXPLORED,2.0,Change management is a well-known area with extensive digital transformation literature.
+deepseek:deepseek-v4-pro,ALL,telecom,LOW IMPORTANCE,1.0,Telecom is an industry label too broad to constitute a specific research gap.
+deepseek:deepseek-v4-pro,ALL,yemen,LOW IMPORTANCE,1.0,Yemen is a geographical context with limited theoretical relevance to this research problem.
+deepseek:deepseek-v4-pro,ALL,business model,EXPLORED,2.0,"Business model is a broad, well-established field label."
+deepseek:deepseek-v4-pro,ALL,entrepreneurship,EXPLORED,2.0,"Entrepreneurship is a broad, well-explored domain."
+deepseek:deepseek-v4-pro,ALL,supply chain management,EXPLORED,2.0,Supply chain management is a well-established adjacent field.
+deepseek:deepseek-v4-pro,ALL,innovation performance,EXPLORED,2.0,"Innovation performance is a commonly used, well-explored outcome construct."
+deepseek:deepseek-v4-pro,ALL,operational efficiency,EXPLORED,2.0,Operational efficiency is a well-explored performance dimension.
+deepseek:deepseek-v4-pro,ALL,conceptual framework,METHOD,1.0,"Conceptual framework is an analytical/theoretical article element, not a substantive gap."
+deepseek:deepseek-v4-pro,ALL,absorptive capacity,EXPLORED,2.0,"Absorptive capacity is a dominant, extensively studied dynamic capability."
+deepseek:deepseek-v4-pro,ALL,differentiation strategy,EXPLORED,2.0,"Differentiation strategy is a classic, well-explored strategic management construct."
+deepseek:deepseek-v4-pro,ALL,dynamic operational capability,GAP,6.0,Dynamic operational capability is an underexplored operational-level construct with remaining research potential.
+deepseek:deepseek-v4-pro,ALL,lean production mechanism,EXPLORED,2.0,Lean production mechanism belongs to a mature operations management area.
+deepseek:deepseek-v4-pro,ALL,process digitalization initiative,GAP,5.0,Process digitalization initiative is a specific organisational mechanism that still lacks detailed empirical investigation.
+deepseek:deepseek-v4-pro,ALL,dynamic capability theory,EXPLORED,1.0,Dynamic capability theory is the dominant theoretical lens and is extensively described.
+deepseek:deepseek-v4-pro,ALL,green innovation,GAP,4.0,Green innovation is a scientifically valuable but under-investigated outcome at the intersection of digital transformation and dynamic capabilities.
+deepseek:deepseek-v4-pro,ALL,social attention,LOW IMPORTANCE,1.0,This term is theoretically vague and not recognised as a mechanism in the digital transformation and dynamic capabilities literature.
+deepseek:deepseek-v4-pro,ALL,manufacturing digitalization,EXPLORED,2.0,"This is an established subfield within Industry 4.0 and digital transformation research, leaving little room as a distinct gap."
+deepseek:deepseek-v4-pro,ALL,manufacturing firms,LOW IMPORTANCE,1.0,This is a sample descriptor rather than a research topic or gap.
+deepseek:deepseek-v4-pro,ALL,esg,EXPLORED,2.0,"ESG is a broad, well-researched theme whose link to digital transformation is already receiving substantial attention."
+deepseek:deepseek-v4-pro,ALL,born-digital,EXPLORED,2.0,This is a well-known construct from digital entrepreneurship and is not central to established-firm transformation.
+deepseek:deepseek-v4-pro,ALL,collaborative innovation,EXPLORED,2.0,Collaborative innovation is a mature and extensively studied innovation-management topic.
+deepseek:deepseek-v4-pro,ALL,relational collaboration,EXPLORED,2.0,This is largely a variant of established relational governance and interorganizational collaboration research.
+deepseek:deepseek-v4-pro,ALL,small- and medium-sized enterprise (sme),LOW IMPORTANCE,1.0,"This denotes a study population, not a theoretical or empirical gap."
+deepseek:deepseek-v4-pro,ALL,financial performance,EXPLORED,1.0,Financial performance is a dominant outcome construct already extensively examined in strategy and digital transformation.
+deepseek:deepseek-v4-pro,ALL,market performance,EXPLORED,1.0,Market performance is another well-established outcome construct in this literature.
+deepseek:deepseek-v4-pro,ALL,strategic aggressiveness,GAP,6.0,This behavioural mechanism is relevant but under-explored in the context of dynamic capabilities and digital transformation.
+deepseek:deepseek-v4-pro,ALL,organizational resilience,EXPLORED,2.0,"Organizational resilience is a well-known construct already broadly studied, including in digital transformation contexts."
+deepseek:deepseek-v4-pro,ALL,technology disruption,EXPLORED,2.0,Technology disruption is a well-established field label and not a specific gap.
+deepseek:deepseek-v4-pro,ALL,design capabilities,GAP,6.0,Design capabilities are relevant but remain under-investigated as dynamic capabilities enabling digital transformation.
+deepseek:deepseek-v4-pro,ALL,design thinking,EXPLORED,2.0,Design thinking is a widely known innovation approach already extensively discussed in management research.
+deepseek:deepseek-v4-pro,ALL,digital technologies,EXPLORED,1.0,This is the core broad field label of the research domain and is already extensively covered.
+deepseek:deepseek-v4-pro,ALL,enterprise agility,EXPLORED,2.0,Enterprise agility is a well-established construct in information systems and management research.
+deepseek:deepseek-v4-pro,ALL,it alignment,EXPLORED,1.0,IT alignment is a mature and well-researched area within information systems and strategy.
+deepseek:deepseek-v4-pro,ALL,intellectual capital,EXPLORED,2.0,Intellectual capital is a well-known strategic management construct with an established literature.
+deepseek:deepseek-v4-pro,ALL,organizational adaptability,EXPLORED,2.0,This is a widely studied organizational capability construct.
+deepseek:deepseek-v4-pro,ALL,digital business performance,EXPLORED,2.0,Digital business performance is a common outcome construct in digital transformation research.
+deepseek:deepseek-v4-pro,ALL,ecosystem orchestration,GAP,7.0,"Ecosystem orchestration is a specific, high-value mechanism that is still emerging in digital transformation research."
+deepseek:deepseek-v4-pro,ALL,process digitization,EXPLORED,2.0,Process digitization is a well-covered core topic in digital transformation.
+deepseek:deepseek-v4-pro,ALL,responsiveness,EXPLORED,1.0,"Responsiveness is a broad, well-established organisational capability construct."
+deepseek:deepseek-v4-pro,ALL,dynamic digital capability,GAP,6.0,This central construct is still being conceptualised and lacks extensive empirical specification in the digital transformation literature.
+deepseek:deepseek-v4-pro,ALL,fsqca,METHOD,1.0,Fuzzy-set qualitative comparative analysis is a methodological technique rather than a substantive research gap.
+deepseek:deepseek-v4-pro,ALL,organizational innovation,EXPLORED,2.0,"This is a broad, widely studied innovation construct in strategy and organisation research."
+deepseek:deepseek-v4-pro,ALL,configurational approach,METHOD,2.0,"Configurational thinking is an analytical/methodological approach, not a research topic per se."
+deepseek:deepseek-v4-pro,ALL,small to medium-sized enterprises,EXPLORED,2.0,SMEs are a common empirical context extensively studied in digital transformation research.
+deepseek:deepseek-v4-pro,ALL,digital-oriented human resources practices,GAP,7.0,The intersection of digital HRM practices and dynamic capabilities is emerging and remains under-investigated.
+deepseek:deepseek-v4-pro,ALL,dt vision,GAP,5.0,Digital transformation vision is a specific strategic construct with limited dedicated research.
+deepseek:deepseek-v4-pro,ALL,leadership,EXPLORED,1.0,"Leadership is a mature, extensively researched domain."
+deepseek:deepseek-v4-pro,ALL,managerial cognition,EXPLORED,2.0,Managerial cognition is an established microfoundation strand in strategy and dynamic capabilities research.
+deepseek:deepseek-v4-pro,ALL,social capital,EXPLORED,2.0,Social capital is a well-known construct with a large literature.
+deepseek:deepseek-v4-pro,ALL,business model innovation,EXPLORED,2.0,Business model innovation is extensively studied in digital transformation and strategy research.
+deepseek:deepseek-v4-pro,ALL,company performance,EXPLORED,1.0,"Company performance is a standard outcome variable, not a research gap."
+deepseek:deepseek-v4-pro,ALL,autonomous growth group,LOW IMPORTANCE,2.0,The term is vague and not established as a construct with clear theoretical value in this domain.
+deepseek:deepseek-v4-pro,ALL,common language,LOW IMPORTANCE,2.0,Too generic to constitute a researchable mechanism in this domain.
+deepseek:deepseek-v4-pro,ALL,digital disruption,EXPLORED,2.0,Digital disruption is a well-known phenomenon with extensive coverage.
+deepseek:deepseek-v4-pro,ALL,digital platforms,EXPLORED,2.0,Digital platforms are a dominant topic with substantial literature.
+deepseek:deepseek-v4-pro,ALL,digitization,EXPLORED,1.0,"Digitization is a foundational, broadly studied concept."
+deepseek:deepseek-v4-pro,ALL,disruptive innovation,EXPLORED,1.0,Disruptive innovation is an established innovation theory.
+deepseek:deepseek-v4-pro,ALL,innovative culture,EXPLORED,2.0,Innovation culture is widely researched as an organizational antecedent.
+deepseek:deepseek-v4-pro,ALL,multimedia mindset,LOW IMPORTANCE,1.0,Not a recognized theoretical construct and lacks scientific value in this context.
+deepseek:deepseek-v4-pro,ALL,resources-processes-values (rpv) framework,EXPLORED,2.0,"RPV is a known framework for incumbent innovation, not an unexplored gap."
+deepseek:deepseek-v4-pro,ALL,response performance,LOW IMPORTANCE,1.0,Vague performance term with no established conceptual meaning.
+deepseek:deepseek-v4-pro,ALL,staged resource allocation,GAP,5.0,Staged resource allocation is a plausible organisational mechanism but remains under-studied in digital transformation.
+deepseek:deepseek-v4-pro,ALL,national recovery and resilience plan,LOW IMPORTANCE,1.0,"A specific EU policy instrument, not a scientific research gap in this domain."
+deepseek:deepseek-v4-pro,ALL,organizational readiness,EXPLORED,2.0,Organizational readiness is an established construct in technology adoption and change research.
+deepseek:deepseek-v4-pro,ALL,public value creation,LOW IMPORTANCE,2.0,Relevant mainly to public management and peripheral to firm-level digital transformation performance.
+deepseek:deepseek-v4-pro,ALL,customer value creation,EXPLORED,2.0,"Customer value creation is a central, well-studied outcome in digital transformation and strategy research."
+deepseek:deepseek-v4-pro,ALL,made in italy,LOW IMPORTANCE,2.0,Made in Italy is a country-of-origin/branding label with no theoretical construct value for this digital transformation problem.
+deepseek:deepseek-v4-pro,ALL,sme,EXPLORED,2.0,SME is a broad organizational context and digital transformation in SMEs is already extensively covered.
+deepseek:deepseek-v4-pro,ALL,cyber-security,GAP,6.0,Cybersecurity is underexplored as an organizational capability or mechanism in strategic management despite its digital transformation relevance.
+deepseek:deepseek-v4-pro,ALL,digital literacy,GAP,6.0,Digital literacy is an emerging organizational capability relevant to digital transformation but not yet extensively studied in this domain.
+deepseek:deepseek-v4-pro,ALL,dynamic capabilities of the resourcebased view,EXPLORED,1.0,This phrase is a lexical variant of the dominant dynamic capabilities and resource-based view construct.
+deepseek:deepseek-v4-pro,ALL,automotive industry,EXPLORED,2.0,Digital transformation in the automotive industry is already a well-researched empirical setting.
+deepseek:deepseek-v4-pro,ALL,thailand,LOW IMPORTANCE,2.0,Thailand alone is a narrow geographic setting with no theoretical value for the stated general research problem.
+deepseek:deepseek-v4-pro,ALL,digital dynamic capabilities,GAP,8.0,Digital dynamic capabilities is an emerging construct with high relevance and limited systematic treatment.
+deepseek:deepseek-v4-pro,ALL,emerging market firms,GAP,6.0,Emerging market firms are increasingly studied but still have unresolved digital transformation and capability questions.
+deepseek:deepseek-v4-pro,ALL,agrifood businesses,GAP,7.0,Agrifood businesses are a sector-specific context where digital transformation remains underexplored.
+deepseek:deepseek-v4-pro,ALL,digital barriers,EXPLORED,2.0,Barriers to digital transformation are already widely reviewed and well known in the literature.
+deepseek:deepseek-v4-pro,ALL,process-based perspective,EXPLORED,2.0,Process-based perspective is an established theoretical lens in strategy and organization studies.
+deepseek:deepseek-v4-pro,ALL,digital process innovation,GAP,6.0,Digital process innovation is a specific intersection of digitalization and process innovation with remaining research potential.
+deepseek:deepseek-v4-pro,ALL,process development,EXPLORED,2.0,"Process development is a broad, mature topic in operations and innovation research."
+deepseek:deepseek-v4-pro,ALL,production system development,EXPLORED,2.0,Production system development is well studied in manufacturing and Industry 4.0 research.
+deepseek:deepseek-v4-pro,ALL,smart factory,EXPLORED,1.0,Smart factory is a core Industry 4.0 concept with extensive existing literature.
+deepseek:deepseek-v4-pro,ALL,steel industry,GAP,6.0,Steel industry digital transformation is sector-specific and less extensively covered than leading industries.
+deepseek:deepseek-v4-pro,ALL,knowledge,EXPLORED,1.0,"Knowledge is a broad, dominant construct central to existing dynamic capabilities research."
+deepseek:deepseek-v4-pro,ALL,market-sensing,EXPLORED,2.0,Market-sensing is an established dynamic capability subconstruct in the literature.
+deepseek:deepseek-v4-pro,ALL,social media,EXPLORED,2.0,Social media adoption and performance is a well-explored digital technology topic.
+xai:grok-4.5,ALL,digital transformation,EXPLORED,1.0,Core construct of the stated problem and one of the most heavily reviewed topics in strategic management over the past decade.
+xai:grok-4.5,ALL,dynamic capabilities,EXPLORED,1.0,Foundational theoretical lens explicitly named in the research problem and extensively linked to digital transformation in prior literature.
+xai:grok-4.5,ALL,dynamic capability,EXPLORED,1.0,Pure lexical singular variant of the dominant dynamic-capabilities construct already saturated in this domain.
+xai:grok-4.5,ALL,digitalization,EXPLORED,2.0,Near-synonym of digital transformation that has been extensively mapped in strategy and organisation studies.
+xai:grok-4.5,ALL,innovation,EXPLORED,2.0,"Overly broad, classic field label with vast prior coverage and little residual specificity for the stated problem."
+xai:grok-4.5,ALL,smes,EXPLORED,2.0,"Large existing body of DT and capabilities work already targets SMEs, while the problem focuses on established firms."
+xai:grok-4.5,ALL,microfoundations,GAP,6.0,Active but still incomplete stream examining lower-level mechanisms that link dynamic capabilities to digital transformation outcomes.
+xai:grok-4.5,ALL,firm performance,EXPLORED,1.0,Primary dependent variable already central to virtually every DT–capabilities study.
+xai:grok-4.5,ALL,case study,METHOD,1.0,Pure methodological label referring to a research design rather than a substantive theoretical gap.
+xai:grok-4.5,ALL,competitive advantage,EXPLORED,2.0,Classic strategy outcome construct thoroughly examined in dynamic-capabilities and digital-transformation research.
+xai:grok-4.5,ALL,digital leadership,GAP,7.0,Emerging organisational mechanism that may mediate technology adoption and performance but remains thinly theorised relative to broader DT work.
+xai:grok-4.5,ALL,performance,LOW IMPORTANCE,1.0,"Generic, theoretically vacuous term that adds no distinct construct beyond firm performance."
+xai:grok-4.5,ALL,technological innovation,EXPLORED,2.0,"Long-standing, well-documented theme already integrated into digital-transformation and capabilities debates."
+xai:grok-4.5,ALL,digital transformation (dt),EXPLORED,1.0,"Abbreviation variant of the core, already saturated digital-transformation construct."
+xai:grok-4.5,ALL,digital maturity,GAP,5.0,Useful mediating or moderating state variable whose precise links to dynamic capabilities and performance still lack cumulative evidence.
+xai:grok-4.5,ALL,digital culture,GAP,6.0,"Plausible organisational mechanism mediating technology adoption and outcomes, yet still under-specified in established-firm settings."
+xai:grok-4.5,ALL,family firms,GAP,5.0,Distinct governance context in which dynamic-capability routes to digital transformation remain comparatively underexplored.
+xai:grok-4.5,ALL,dynamic managerial capabilities,GAP,6.0,Manager-level extension of dynamic capabilities with recognised but still limited empirical integration into digital-transformation studies.
+xai:grok-4.5,ALL,micro-foundations,GAP,6.0,Hyphenated variant of the microfoundations agenda that continues to offer research potential for unpacking DT mechanisms.
+xai:grok-4.5,ALL,esg performance,GAP,7.0,Nascent outcome domain whose intersection with digital transformation and dynamic capabilities is only beginning to be examined.
+xai:grok-4.5,ALL,human capital,EXPLORED,2.0,Standard resource/mechanism already widely treated in both dynamic-capabilities and digital-transformation literatures.
+xai:grok-4.5,ALL,organizational capabilities,EXPLORED,2.0,Broad umbrella term largely overlapping with the well-mapped dynamic-capabilities tradition.
+xai:grok-4.5,ALL,digital capabilities,GAP,4.0,More specific capability subset that is discussed yet still incompletely linked to mediating mechanisms and performance in established firms.
+xai:grok-4.5,ALL,qualitative study,METHOD,1.0,"Pure methodological descriptor, not a substantive research-gap concept."
+xai:grok-4.5,ALL,industry 4.0,EXPLORED,2.0,Widely researched technological context already extensively connected to digital transformation and firm capabilities.
+xai:grok-4.5,ALL,qualitative interpretive research,METHOD,1.0,"Pure methodological label for an interpretive qualitative stance, not a substantive research gap on dynamic capabilities or digital transformation."
+xai:grok-4.5,ALL,strategic agility,GAP,5.0,"Adjacent to dynamic capabilities and used in digital-transformation work, yet the precise mediating mechanisms linking agility, DC microfoundations and performance in established firms remain only partially mapped."
+xai:grok-4.5,ALL,strategic renewal,GAP,4.0,Classic strategy construct with growing but still incomplete linkage to how digital-technology adoption triggers renewal via dynamic capabilities in incumbent firms.
+xai:grok-4.5,ALL,technology and innovation management,EXPLORED,2.0,Broad field label already saturating the literature rather than a distinct under-researched gap inside the stated problem.
+xai:grok-4.5,ALL,reconfiguring,EXPLORED,2.0,Core Teece microfoundation of dynamic capabilities that has been extensively theorised and applied to digital transformation.
+xai:grok-4.5,ALL,seizing,EXPLORED,2.0,Core Teece microfoundation already central and well-documented in DC-enabled digital-transformation studies.
+xai:grok-4.5,ALL,sensing,EXPLORED,2.0,Core Teece microfoundation thoroughly covered in the dynamic-capabilities and digital-transformation literatures.
+xai:grok-4.5,ALL,digital technology,EXPLORED,2.0,"Foundational and ubiquitous construct in the research problem domain, not a novel gap."
+xai:grok-4.5,ALL,internationalization,GAP,3.0,"Contextual factor with some existing work, yet how DC mediate digital transformation during international expansion of established firms is still thinly specified."
+xai:grok-4.5,ALL,digital innovation management,GAP,5.0,"Emerging subfield whose organisational mechanisms linking digital-innovation routines, dynamic capabilities and firm performance in incumbents retain clear research potential."
+xai:grok-4.5,ALL,emerging market,GAP,4.0,Important context for established firms where DC-enabled digital transformation and performance mediation are studied less systematically than in advanced economies.
+xai:grok-4.5,ALL,organisational remodelling,GAP,6.0,"Directly addresses organisational mechanisms that may mediate technology adoption and performance, yet remains conceptually under-specified relative to mainstream DC and DT constructs."
+xai:grok-4.5,ALL,mixed method,METHOD,1.0,Generic methodological descriptor with no substantive theoretical content for the research problem.
+xai:grok-4.5,ALL,multiple case study,METHOD,1.0,"Standard research design label, not a knowledge gap on dynamic capabilities or digital transformation."
+xai:grok-4.5,ALL,new product development (npd),EXPLORED,2.0,"Mature, heavily researched domain whose links to digital technologies and capabilities are already well established."
+xai:grok-4.5,ALL,sequential explanatory approach,METHOD,1.0,Specific mixed-methods design term lacking theoretical bearing on the stated problem.
+xai:grok-4.5,ALL,structural equation model,METHOD,1.0,"Statistical modelling technique, not a substantive research gap."
+xai:grok-4.5,ALL,emerging technologies,GAP,3.0,Broad but still useful lens; how particular emerging technologies interact with DC microfoundations and organisational mediators in incumbents is only partially charted.
+xai:grok-4.5,ALL,iiot,GAP,5.0,"Concrete industrial digital technology whose adoption, reconfiguration capabilities and performance effects in established firms remain an active but incomplete research area."
+xai:grok-4.5,ALL,digital innovation,GAP,3.0,"Closely related and increasingly studied construct, yet the organisational mechanisms that translate digital innovation into performance via dynamic capabilities still offer incremental gaps."
+xai:grok-4.5,ALL,family business,GAP,5.0,"Distinct organisational context in which socio-emotional and governance mechanisms may uniquely mediate DC-enabled digital transformation, still under-explored relative to non-family incumbents."
+xai:grok-4.5,ALL,mittelstand firms,GAP,6.0,Specific population of established mid-sized firms whose digital-transformation pathways and dynamic-capability configurations are documented only selectively and retain high contextual value.
+xai:grok-4.5,ALL,pär ågerfalk,NOISE,1.0,Author name without conceptual connection to the research-problem domain.
+xai:grok-4.5,ALL,ryad titah,NOISE,1.0,Author name without conceptual connection to the research-problem domain.
+xai:grok-4.5,ALL,technology adoption,EXPLORED,2.0,"Classic, extensively theorised construct (TAM and successors) already embedded in digital-transformation research rather than a novel gap."
+xai:grok-4.5,ALL,strategic planning,EXPLORED,2.0,"Classic, extensively documented construct in strategic management and transformation research with little remaining gap relative to DC-enabled digital change."
+xai:grok-4.5,ALL,design science research,METHOD,1.0,"Pure methodological paradigm for artefact design, not a substantive research-gap topic in the DC–digital transformation problem."
+xai:grok-4.5,ALL,information system strategy,GAP,3.0,Alignment of IS strategy with digital transformation is studied but still leaves room on how dynamic capabilities shape and mediate IS strategy outcomes in established firms.
+xai:grok-4.5,ALL,enterprise dynamic capabilities,EXPLORED,2.0,Lexical variant of the core dynamic-capabilities construct already central and heavily mapped in the digital-transformation literature.
+xai:grok-4.5,ALL,“business model innovation”,GAP,3.0,"Widely linked to digital transformation and DC, yet specific mediating mechanisms between technology adoption, BMI, and performance in incumbents remain only partly specified."
+xai:grok-4.5,ALL,small and medium-sized enterprises,EXPLORED,2.0,Large dedicated literature on SME digitalization exists; the stated problem targets established firms and this descriptor adds mainly a sample boundary already well covered.
+xai:grok-4.5,ALL,qualitative research,METHOD,1.0,Generic methodological label without substantive theoretical content for the research problem.
+xai:grok-4.5,ALL,routines,EXPLORED,2.0,Foundational microfoundation of dynamic-capabilities theory and already extensively theorised in organisational and digital-change studies.
+xai:grok-4.5,ALL,technology,LOW IMPORTANCE,1.0,"Overly generic term that adds no theoretical or empirical specificity to DC, mediation, or digital transformation."
+xai:grok-4.5,ALL,change management,EXPLORED,2.0,"Long-standing, well-documented field adjacent to transformation; offers limited novel leverage on DC-mediated digital performance links."
+xai:grok-4.5,ALL,telecom,LOW IMPORTANCE,2.0,Industry setting only; sector studies exist and the label itself does not constitute a conceptual research gap.
+xai:grok-4.5,ALL,yemen,LOW IMPORTANCE,1.0,Highly idiosyncratic geographic context with negligible generalisable theoretical value for the core DC–digital-transformation problem.
+xai:grok-4.5,ALL,business model,EXPLORED,2.0,Core and heavily researched construct in digital strategy and transformation scholarship.
+xai:grok-4.5,ALL,entrepreneurship,LOW IMPORTANCE,2.0,Primarily oriented to new ventures rather than the digital transformation of established firms emphasised in the problem.
+xai:grok-4.5,ALL,supply chain management,GAP,3.0,"Digital supply-chain mechanisms can mediate technology adoption and performance, yet their coupling with dynamic capabilities in incumbents is only moderately developed."
+xai:grok-4.5,ALL,innovation performance,EXPLORED,2.0,Standard outcome variable already ubiquitous in DC and digital-transformation empirical work.
+xai:grok-4.5,ALL,operational efficiency,EXPLORED,2.0,Common performance dimension extensively examined as a consequence of digital technology adoption.
+xai:grok-4.5,ALL,conceptual framework,METHOD,1.0,"Meta-level structural term referring to article architecture, not a substantive gap topic."
+xai:grok-4.5,ALL,absorptive capacity,EXPLORED,2.0,Complementary capability construct already tightly integrated and widely tested alongside dynamic capabilities in digital contexts.
+xai:grok-4.5,ALL,differentiation strategy,EXPLORED,2.0,Generic generic-strategy label with limited distinctive contribution to DC-enabled digital transformation mechanisms.
+xai:grok-4.5,ALL,dynamic operational capability,GAP,6.0,More specific operationalisation of DC that remains less saturated than general DC theory and is pertinent to how firms reconfigure operations during digital transformation.
+xai:grok-4.5,ALL,lean production mechanism,GAP,5.0,"Potentially relevant organisational mechanism linking digital process adoption to performance, yet sparsely examined inside the DC–digital-transformation frame."
+xai:grok-4.5,ALL,process digitalization initiative,GAP,5.0,Concrete form of digital technology adoption whose capability antecedents and performance-mediating pathways in established firms still warrant deeper study.
+xai:grok-4.5,ALL,dynamic capability theory,EXPLORED,1.0,"The foundational theoretical lens of the problem itself, already exhaustively elaborated in strategic management."
+xai:grok-4.5,ALL,green innovation,LOW IMPORTANCE,2.0,Sustainability-oriented construct only peripherally connected to the stated digital-transformation and DC mediation problem unless artificially forced.
+xai:grok-4.5,ALL,social attention,LOW IMPORTANCE,2.0,"Peripheral to dynamic capabilities and digital transformation of established firms, with little theoretical leverage on the adoption–performance link."
+xai:grok-4.5,ALL,manufacturing digitalization,GAP,5.0,"Industry 4.0 and manufacturing DT are studied, yet mechanisms linking dynamic capabilities to performance in established manufacturers remain only partially mapped."
+xai:grok-4.5,ALL,manufacturing firms,LOW IMPORTANCE,1.0,Mere sample or context descriptor rather than a conceptual gap in the dynamic-capabilities–digital-transformation relationship.
+xai:grok-4.5,ALL,esg,GAP,6.0,Intersection of ESG outcomes with digital transformation and dynamic capabilities in established firms is still thinly theorised and empirically sparse.
+xai:grok-4.5,ALL,born-digital,GAP,4.0,"Useful contrast class to established firms, but comparative dynamic-capability pathways versus born-digital organisations are only moderately developed."
+xai:grok-4.5,ALL,collaborative innovation,EXPLORED,2.0,Open and collaborative innovation in digital settings is already a mature stream with extensive dynamic-capability treatments.
+xai:grok-4.5,ALL,relational collaboration,GAP,5.0,Relational mechanisms as mediators between digital adoption and performance under dynamic capabilities remain less systematically examined than broader collaboration constructs.
+xai:grok-4.5,ALL,small- and medium-sized enterprise (sme),EXPLORED,2.0,"SME digital transformation and capability building constitute a large, well-documented literature rather than an open conceptual gap."
+xai:grok-4.5,ALL,financial performance,EXPLORED,1.0,"Standard, heavily used outcome variable in digital-transformation and dynamic-capability studies."
+xai:grok-4.5,ALL,market performance,EXPLORED,1.0,Conventional performance dimension already routinely linked to digital technology adoption and capabilities.
+xai:grok-4.5,ALL,strategic aggressiveness,GAP,6.0,Sparse treatment as a mediating or moderating organisational mechanism in digital transformation of established firms.
+xai:grok-4.5,ALL,organizational resilience,GAP,5.0,Growing but still incomplete integration with dynamic capabilities as an enabler or mediator of digital transformation outcomes.
+xai:grok-4.5,ALL,technology disruption,EXPLORED,2.0,Disruptive-technology and disruption-response literatures are foundational and extensively linked to dynamic capabilities.
+xai:grok-4.5,ALL,design capabilities,GAP,6.0,Design-related capabilities as distinct dynamic capabilities supporting digital transformation of incumbents remain under-specified.
+xai:grok-4.5,ALL,design thinking,GAP,5.0,Managerially popular yet only moderately theorised as an organisational mechanism linking digital technologies to performance via dynamic capabilities.
+xai:grok-4.5,ALL,digital technologies,EXPLORED,1.0,Core independent construct of the research problem and already saturated in the digital-transformation literature.
+xai:grok-4.5,ALL,enterprise agility,EXPLORED,2.0,"Agility is a dominant, well-researched correlate and operationalisation of dynamic capabilities in digital contexts."
+xai:grok-4.5,ALL,it alignment,EXPLORED,2.0,Classic strategic IT-alignment research is mature and only incrementally additive to current dynamic-capability–DT debates.
+xai:grok-4.5,ALL,intellectual capital,GAP,3.0,"Established construct whose mediating role between digital adoption, dynamic capabilities and performance still offers incremental research openings."
+xai:grok-4.5,ALL,organizational adaptability,GAP,3.0,Closely overlaps dynamic capabilities yet retains some room to clarify distinct mediating mechanisms in digital transformation.
+xai:grok-4.5,ALL,digital business performance,GAP,4.0,"More specific performance conceptualisation than generic firm performance, still needing clearer nomological placement with dynamic capabilities."
+xai:grok-4.5,ALL,ecosystem orchestration,GAP,7.0,Emerging high-potential mechanism by which established firms’ dynamic capabilities realise value from digital transformation inside ecosystems.
+xai:grok-4.5,ALL,process digitization,EXPLORED,2.0,Central operational facet of digital transformation already extensively described in the literature.
+xai:grok-4.5,ALL,responsiveness,GAP,3.0,Generic capability facet related to agility; limited distinctive theorisation as mediator in the stated problem.
+xai:grok-4.5,ALL,dynamic digital capability,GAP,8.0,"Construct sitting at the exact intersection of dynamic capabilities and digital transformation, still nascent and high-potential for established firms."
+xai:grok-4.5,ALL,fsqca,METHOD,1.0,"fsQCA is a pure analytical technique for configurational analysis, not a substantive research gap on dynamic capabilities or digital transformation."
+xai:grok-4.5,ALL,organizational innovation,EXPLORED,2.0,"Organizational innovation is a long-standing, heavily theorized construct in strategy and OT and is already widely linked to transformation and performance."
+xai:grok-4.5,ALL,configurational approach,METHOD,2.0,Denotes an analytical lens/method family rather than a theoretical mechanism mediating digital adoption and performance.
+xai:grok-4.5,ALL,small to medium-sized enterprises,EXPLORED,2.0,"SME context is a saturated empirical setting in digital transformation research, not a novel organisational mechanism or capability gap."
+xai:grok-4.5,ALL,digital-oriented human resources practices,GAP,6.0,"Specific HR configurations as mediators between digital technology adoption, dynamic capabilities, and performance remain only partially mapped."
+xai:grok-4.5,ALL,dt vision,GAP,5.0,Digital transformation vision as a distinct cognitive–strategic mechanism enabling dynamic capabilities in incumbents is still thinly specified.
+xai:grok-4.5,ALL,leadership,EXPLORED,1.0,Leadership is one of the most saturated explanatory factors in digital transformation and capability-building studies.
+xai:grok-4.5,ALL,managerial cognition,GAP,5.0,Managerial cognition is central to dynamic capabilities theory but its mediating role in digital technology–performance links in established firms is still under-elaborated.
+xai:grok-4.5,ALL,social capital,EXPLORED,2.0,"Social capital is a mature construct repeatedly applied to innovation, alliances, and transformation without constituting a fresh gap here."
+xai:grok-4.5,ALL,business model innovation,EXPLORED,2.0,"BMI is a dominant, extensively studied pathway in digital transformation and strategy literature."
+xai:grok-4.5,ALL,company performance,EXPLORED,1.0,"Lexical variant of the dependent variable already stated in the research problem, not a research gap."
+xai:grok-4.5,ALL,autonomous growth group,NOISE,1.0,"Not a recognized construct in strategic management, dynamic capabilities, or digital transformation scholarship."
+xai:grok-4.5,ALL,common language,GAP,4.0,Shared language as a micro-level organisational mechanism supporting digital capability building is plausible but only sparsely theorized.
+xai:grok-4.5,ALL,digital disruption,EXPLORED,2.0,Digital disruption is a mainstream framing of environmental change already extensively treated in incumbent adaptation research.
+xai:grok-4.5,ALL,digital platforms,EXPLORED,2.0,"Digital platforms are a core, heavily researched technology and business-model topic in DT and strategy."
+xai:grok-4.5,ALL,digitization,EXPLORED,1.0,Foundational and well-mapped technology concept routinely distinguished from digitalization/transformation.
+xai:grok-4.5,ALL,disruptive innovation,EXPLORED,1.0,"Classic, saturated theory stream; not a remaining gap for DC-enabled digital transformation mechanisms."
+xai:grok-4.5,ALL,innovative culture,EXPLORED,2.0,"Culture for innovation is a standard, widely tested enabler in transformation and performance studies."
+xai:grok-4.5,ALL,multimedia mindset,NOISE,1.0,Fringe phrasing with no established theoretical standing in dynamic capabilities or digital transformation research.
+xai:grok-4.5,ALL,resources-processes-values (rpv) framework,GAP,5.0,Christensen’s RPV lens is known but only minimally integrated with dynamic capabilities accounts of incumbent digital transformation.
+xai:grok-4.5,ALL,response performance,LOW IMPORTANCE,2.0,Vague performance variant that adds little conceptual value beyond standard firm-performance outcomes.
+xai:grok-4.5,ALL,staged resource allocation,GAP,6.0,"Sequenced resource-commitment processes are a promising but under-specified organisational mechanism linking DC, digital adoption, and performance."
+xai:grok-4.5,ALL,national recovery and resilience plan,LOW IMPORTANCE,1.0,"Policy funding programme context, not a theoretical mechanism for firm-level dynamic capabilities or digital transformation."
+xai:grok-4.5,ALL,organizational readiness,EXPLORED,2.0,Readiness for IT/digital change is a mature adoption construct with extensive prior empirical coverage.
+xai:grok-4.5,ALL,public value creation,LOW IMPORTANCE,2.0,"Primarily a public-sector outcome frame, peripheral to established-firm performance mediation in the stated problem."
+xai:grok-4.5,ALL,customer value creation,GAP,4.0,Links digital adoption to performance via value mechanisms but remains only moderately specified within dynamic-capabilities accounts of established-firm transformation.
+xai:grok-4.5,ALL,made in italy,LOW IMPORTANCE,2.0,Country-brand label with negligible theoretical leverage on how dynamic capabilities enable digital transformation or mediate performance.
+xai:grok-4.5,ALL,sme,EXPLORED,2.0,SME digital transformation is already extensively mapped; the stated problem focuses on established firms where this descriptor adds little new insight.
+xai:grok-4.5,ALL,cyber-security,GAP,3.0,"Relevant risk-related organisational concern in digital adoption, yet still thinly integrated into dynamic-capabilities mediation models."
+xai:grok-4.5,ALL,digital literacy,GAP,5.0,"Plausible micro-level organisational mechanism linking technology adoption to capability reconfiguration, still under-examined in established firms."
+xai:grok-4.5,ALL,dynamic capabilities of the resourcebased view,EXPLORED,1.0,"Core, long-standing theoretical pairing already saturating the strategic-management literature on digital transformation."
+xai:grok-4.5,ALL,automotive industry,EXPLORED,2.0,Sector repeatedly used as empirical setting for digital transformation and dynamic-capabilities studies; functions mainly as a field label.
+xai:grok-4.5,ALL,thailand,LOW IMPORTANCE,1.0,Pure geographic tag that does not itself constitute a theoretical or mechanistic research gap.
+xai:grok-4.5,ALL,digital dynamic capabilities,GAP,7.0,Emerging construct directly central to the research problem and still only partially theorised and tested.
+xai:grok-4.5,ALL,emerging market firms,GAP,5.0,Contextual boundary condition with remaining scope to explain how dynamic capabilities shape digital transformation and performance differently than in advanced economies.
+xai:grok-4.5,ALL,agrifood businesses,GAP,3.0,"Niche sectoral setting where digital-capability mechanisms are only sparsely documented, offering limited but non-zero value."
+xai:grok-4.5,ALL,digital barriers,GAP,4.0,Adoption impediments that may moderate capability deployment; treated descriptively more often than as mediators of performance.
+xai:grok-4.5,ALL,process-based perspective,METHOD,2.0,Analytical framing or research lens rather than a substantive organisational or capability construct.
+xai:grok-4.5,ALL,digital process innovation,GAP,5.0,"Concrete organisational mechanism that can mediate technology adoption and performance, still incompletely linked to dynamic capabilities."
+xai:grok-4.5,ALL,process development,LOW IMPORTANCE,2.0,Generic operations term lacking distinctive theoretical content for the digital-transformation–dynamic-capabilities nexus.
+xai:grok-4.5,ALL,production system development,LOW IMPORTANCE,2.0,Narrow manufacturing phrase that adds little explanatory power beyond already-studied operational capabilities.
+xai:grok-4.5,ALL,smart factory,EXPLORED,2.0,Well-covered Industry 4.0 archetype already extensively tied to digital transformation studies.
+xai:grok-4.5,ALL,steel industry,LOW IMPORTANCE,2.0,Specific sectoral label without inherent conceptual novelty for the stated research problem.
+xai:grok-4.5,ALL,knowledge,LOW IMPORTANCE,1.0,"Overly generic noun that, standing alone, supplies no actionable theoretical or empirical gap."
+xai:grok-4.5,ALL,market-sensing,EXPLORED,2.0,Classic sensing dimension of dynamic capabilities already standard in digital-transformation research.
+xai:grok-4.5,ALL,social media,EXPLORED,2.0,Widely studied digital technology whose adoption–performance links are already well documented.
+google:gemini-2.5-flash,ALL,digital transformation,EXPLORED,2.0,"Digital transformation is a central and extensively studied concept in strategic management, forming a core part of the research problem itself."
+google:gemini-2.5-flash,ALL,dynamic capabilities,EXPLORED,2.0,"Dynamic capabilities is a foundational theory in strategic management and has been widely explored, including its role in digital contexts."
+google:gemini-2.5-flash,ALL,dynamic capability,EXPLORED,2.0,"This is a singular form of ""dynamic capabilities,"" which is a well-established and extensively explored concept."
+google:gemini-2.5-flash,ALL,digitalization,EXPLORED,2.0,"Digitalization is a widely discussed concept, often used synonymously with or as a precursor to digital transformation, making it a well-explored area."
+google:gemini-2.5-flash,ALL,innovation,EXPLORED,2.0,"Innovation is a fundamental and extensively researched concept in strategic management, though its specific interplay with dynamic capabilities in digital transformation still offers nuanced research avenues."
+google:gemini-2.5-flash,ALL,smes,GAP,5.0,"While digital transformation in SMEs is gaining attention, the specific interplay of dynamic capabilities and mediating mechanisms in this context, especially compared to larger established firms, still presents research gaps."
+google:gemini-2.5-flash,ALL,microfoundations,GAP,7.0,"Investigating the microfoundations of dynamic capabilities in the context of digital transformation offers a promising avenue for understanding the granular mechanisms at play, an area still requiring deeper exploration."
+google:gemini-2.5-flash,ALL,firm performance,EXPLORED,2.0,"Firm performance is a fundamental and extensively studied dependent variable in strategic management, making it a well-explored concept."
+google:gemini-2.5-flash,ALL,case study,METHOD,1.0,"""Case study"" refers to a specific research methodology and does not represent a scientific research gap or topic."
+google:gemini-2.5-flash,ALL,competitive advantage,EXPLORED,2.0,"Competitive advantage is a foundational concept in strategic management, extensively studied as an outcome of strategic choices and capabilities."
+google:gemini-2.5-flash,ALL,digital leadership,GAP,6.0,"Digital leadership, as a specific organizational mechanism influencing dynamic capabilities and digital transformation, is an emerging area with significant potential for further investigation."
+google:gemini-2.5-flash,ALL,performance,EXPLORED,2.0,"""Performance"" is a general term for a dependent variable, closely related to the extensively studied concept of firm performance."
+google:gemini-2.5-flash,ALL,technological innovation,EXPLORED,2.0,"Technological innovation is a broad and extensively researched field, though its specific interplay with dynamic capabilities in digital transformation still offers nuanced research avenues."
+google:gemini-2.5-flash,ALL,digital transformation (dt),EXPLORED,2.0,"This is an abbreviation for ""digital transformation,"" which is a central and extensively studied concept in strategic management."
+google:gemini-2.5-flash,ALL,digital maturity,GAP,6.0,"Digital maturity is a relevant concept for understanding the stages and impact of digital transformation, and its interaction with dynamic capabilities and firm performance warrants further detailed investigation."
+google:gemini-2.5-flash,ALL,digital culture,GAP,7.0,"Digital culture represents a crucial organizational mechanism influencing the success of digital transformation and the development of dynamic capabilities, an area with significant research potential."
+google:gemini-2.5-flash,ALL,family firms,GAP,6.0,"The unique characteristics of family firms present a distinct context for studying digital transformation and dynamic capabilities, an area that is less explored than general established firms."
+google:gemini-2.5-flash,ALL,dynamic managerial capabilities,GAP,7.0,"Dynamic managerial capabilities offer a more granular perspective on the human element driving organizational adaptation, presenting a valuable research gap in the context of digital transformation."
+google:gemini-2.5-flash,ALL,micro-foundations,GAP,7.0,"Investigating the micro-foundations of dynamic capabilities in the context of digital transformation offers a promising avenue for understanding the granular mechanisms at play, an area still requiring deeper exploration."
+google:gemini-2.5-flash,ALL,esg performance,GAP,3.0,"While ESG performance is an important outcome, its specific link to dynamic capabilities and digital transformation, beyond general firm performance, represents a distinct and less explored research area."
+google:gemini-2.5-flash,ALL,human capital,GAP,6.0,Human capital is a critical resource and an organizational mechanism whose specific role in developing dynamic capabilities for successful digital transformation requires further detailed investigation.
+google:gemini-2.5-flash,ALL,organizational capabilities,EXPLORED,2.0,"Organizational capabilities is a broad and foundational concept in strategic management, encompassing dynamic capabilities and extensively explored in the literature."
+google:gemini-2.5-flash,ALL,digital capabilities,GAP,7.0,Digital capabilities are specific to the digital context and represent a crucial and still evolving area of research regarding their development and impact on firm performance during digital transformation.
+google:gemini-2.5-flash,ALL,qualitative study,METHOD,1.0,"""Qualitative study"" refers to a specific research methodology and does not represent a scientific research gap or topic."
+google:gemini-2.5-flash,ALL,industry 4.0,GAP,5.0,"Industry 4.0 represents a specific technological context driving digital transformation, and its implications for dynamic capabilities and organizational mechanisms in established firms still warrant further investigation."
+google:gemini-2.5-flash,ALL,qualitative interpretive research,METHOD,1.0,This term refers to a research methodology rather than a substantive research topic.
+google:gemini-2.5-flash,ALL,strategic agility,GAP,6.0,"Strategic agility is a relevant concept closely related to dynamic capabilities and digital transformation, with ongoing research potential regarding its mechanisms and impact."
+google:gemini-2.5-flash,ALL,strategic renewal,GAP,6.0,"Strategic renewal is a critical outcome of dynamic capabilities and digital transformation, offering further research potential on how firms achieve it in the digital age."
+google:gemini-2.5-flash,ALL,technology and innovation management,EXPLORED,2.0,This term represents a broad academic field rather than a specific research gap within the stated problem.
+google:gemini-2.5-flash,ALL,reconfiguring,GAP,7.0,"Reconfiguring is a core dynamic capability, and its specific mechanisms and challenges in enabling digital transformation in established firms warrant further investigation."
+google:gemini-2.5-flash,ALL,seizing,GAP,7.0,"Seizing opportunities is a fundamental dynamic capability, and its operationalization and effectiveness in leveraging digital technologies for firm performance require more detailed study."
+google:gemini-2.5-flash,ALL,sensing,GAP,7.0,"Sensing is a crucial dynamic capability for identifying digital opportunities and threats, and its specific processes and antecedents in the context of digital transformation need further exploration."
+google:gemini-2.5-flash,ALL,digital technology,EXPLORED,2.0,"Digital technology is a central construct explicitly mentioned in the research problem, representing a well-defined area rather than a specific gap."
+google:gemini-2.5-flash,ALL,internationalization,LOW IMPORTANCE,1.0,Internationalization is a distinct strategic dimension not directly addressed by the core mechanisms or relationships outlined in the research problem.
+google:gemini-2.5-flash,ALL,digital innovation management,GAP,7.0,"Digital innovation management is a highly relevant and evolving field that directly addresses how firms manage innovation in the context of digital transformation, offering significant research potential."
+google:gemini-2.5-flash,ALL,emerging market,GAP,6.0,"Research on digital transformation and dynamic capabilities in the specific context of established firms in emerging markets presents unique challenges and opportunities, warranting further investigation."
+google:gemini-2.5-flash,ALL,organisational remodelling,GAP,6.0,"Organisational remodelling is a crucial process for established firms undergoing digital transformation, and its specific mechanisms and outcomes in this context require further research."
+google:gemini-2.5-flash,ALL,mixed method,METHOD,1.0,This term refers to a research methodology rather than a substantive research topic.
+google:gemini-2.5-flash,ALL,multiple case study,METHOD,1.0,This term refers to a research methodology or design rather than a substantive research topic.
+google:gemini-2.5-flash,ALL,new product development (npd),EXPLORED,2.0,"New product development is a well-established area, and while it can be influenced by digital transformation, it is not a core research gap within the specified problem's focus on organizational mechanisms and firm performance."
+google:gemini-2.5-flash,ALL,sequential explanatory approach,METHOD,1.0,This term refers to a specific research design within mixed methods rather than a substantive research topic.
+google:gemini-2.5-flash,ALL,structural equation model,METHOD,1.0,This term refers to a statistical analysis method rather than a substantive research topic.
+google:gemini-2.5-flash,ALL,emerging technologies,GAP,9.0,"Emerging technologies are central to digital transformation, and understanding how established firms leverage them through dynamic capabilities presents a significant and evolving research gap."
+google:gemini-2.5-flash,ALL,iiot,GAP,9.0,"IIoT represents a specific emerging technology whose adoption and integration mechanisms within established firms, mediated by dynamic capabilities, offer significant research potential."
+google:gemini-2.5-flash,ALL,digital innovation,GAP,7.0,"Digital innovation is a central concept to the research problem, and understanding its generation and management through dynamic capabilities in established firms remains an active research area."
+google:gemini-2.5-flash,ALL,family business,GAP,6.0,"Family businesses possess unique characteristics that can significantly influence their dynamic capabilities and digital transformation processes, making them a valuable context for further research."
+google:gemini-2.5-flash,ALL,mittelstand firms,GAP,6.0,"Mittelstand firms represent a distinct organizational context with specific characteristics that influence their dynamic capabilities and digital transformation, offering a valuable area for focused research."
+google:gemini-2.5-flash,ALL,pär ågerfalk,NOISE,1.0,This term is a proper noun referring to an individual and holds no scientific value as a research gap or concept.
+google:gemini-2.5-flash,ALL,ryad titah,NOISE,1.0,This term is a proper noun referring to an individual and holds no scientific value as a research gap or concept.
+google:gemini-2.5-flash,ALL,technology adoption,EXPLORED,2.0,"Technology adoption is a fundamental concept explicitly mentioned in the research problem, representing a well-understood process rather than a specific research gap."
+google:gemini-2.5-flash,ALL,design science research,METHOD,1.0,"Design science research is a methodological approach, not a substantive research topic or gap related to dynamic capabilities, digital transformation, or firm performance."
+google:gemini-2.5-flash,ALL,information system strategy,EXPLORED,2.0,"Information system strategy is a well-established field crucial for digital transformation, but as a broad concept, it is extensively explored rather than representing a specific research gap in the interplay with dynamic capabilities."
+google:gemini-2.5-flash,ALL,enterprise dynamic capabilities,GAP,6.0,"While dynamic capabilities are central to the research problem, their specific manifestation and impact within established firms undergoing digital transformation, particularly concerning mediating mechanisms, still offer significant research potential."
+google:gemini-2.5-flash,ALL,“business model innovation”,GAP,7.0,"Business model innovation is a critical outcome and enabler of digital transformation, and its specific relationship with dynamic capabilities and mediating mechanisms in established firms presents substantial research opportunities."
+google:gemini-2.5-flash,ALL,small and medium-sized enterprises,GAP,5.0,"While 'established firms' is broad, the specific challenges and mechanisms of digital transformation and dynamic capabilities within small and medium-sized enterprises represent a distinct and less extensively explored context with unique research potential."
+google:gemini-2.5-flash,ALL,qualitative research,METHOD,1.0,"Qualitative research is a methodological approach, not a substantive research topic or gap related to dynamic capabilities, digital transformation, or firm performance."
+google:gemini-2.5-flash,ALL,routines,EXPLORED,2.0,"Routines are a foundational concept in organizational theory, extensively explored as building blocks of capabilities, and thus represent a well-known area rather than a specific research gap in the context of digital transformation."
+google:gemini-2.5-flash,ALL,technology,EXPLORED,1.0,Technology is an overly broad and foundational term that is a core component of the research problem but does not represent a specific research gap in itself.
+google:gemini-2.5-flash,ALL,change management,EXPLORED,2.0,"Change management is a well-established discipline crucial for any major organizational shift like digital transformation, making it an extensively explored area rather than a specific research gap."
+google:gemini-2.5-flash,ALL,telecom,LOW IMPORTANCE,1.0,"Telecom refers to a specific industry sector, which is a contextual detail rather than a theoretical construct or a research gap in the general problem of dynamic capabilities and digital transformation."
+google:gemini-2.5-flash,ALL,yemen,NOISE,1.0,Yemen is a specific geographical location and holds no scientific value or connection to the theoretical constructs or research gaps outlined in the general research problem.
+google:gemini-2.5-flash,ALL,business model,EXPLORED,2.0,"Business model is a foundational concept in strategic management, extensively explored in the literature, and serves as a broad context rather than a specific research gap."
+google:gemini-2.5-flash,ALL,entrepreneurship,EXPLORED,2.0,"Entrepreneurship is a broad and well-established field, related to innovation but not a direct core construct or specific research gap within the stated problem focusing on dynamic capabilities and digital transformation in established firms."
+google:gemini-2.5-flash,ALL,supply chain management,EXPLORED,2.0,"Supply chain management is a distinct and well-established functional area, and while impacted by digital transformation, it is not a specific research gap within the general problem of dynamic capabilities and firm performance."
+google:gemini-2.5-flash,ALL,innovation performance,GAP,6.0,"Innovation performance is a crucial and specific dimension of firm performance directly impacted by digital transformation and dynamic capabilities, offering significant research potential regarding its mediating mechanisms."
+google:gemini-2.5-flash,ALL,operational efficiency,GAP,6.0,"Operational efficiency is a key aspect of firm performance often targeted by digital transformation, and its specific relationship with dynamic capabilities and mediating mechanisms presents a valid research area."
+google:gemini-2.5-flash,ALL,conceptual framework,METHOD,1.0,"Conceptual framework refers to a structural element of research design or theoretical development, not a substantive research topic or gap itself."
+google:gemini-2.5-flash,ALL,absorptive capacity,GAP,7.0,"Absorptive capacity is a specific and critical dynamic capability, and its precise role and mechanisms in enabling digital transformation and mediating firm performance in established firms warrant further investigation."
+google:gemini-2.5-flash,ALL,differentiation strategy,EXPLORED,2.0,"Differentiation strategy is a well-established generic competitive strategy, extensively covered in strategic management literature, and thus represents an explored area rather than a specific research gap."
+google:gemini-2.5-flash,ALL,dynamic operational capability,GAP,8.0,"Dynamic operational capability represents a specific and less explored intersection of dynamic capabilities and operational excellence, offering significant potential to understand how firms adapt operations during digital transformation."
+google:gemini-2.5-flash,ALL,lean production mechanism,EXPLORED,2.0,"Lean production mechanisms are well-established operational concepts focused on efficiency, extensively explored in operations management, and do not represent a specific research gap in the context of dynamic capabilities and digital transformation."
+google:gemini-2.5-flash,ALL,process digitalization initiative,GAP,7.0,"Process digitalization initiatives are a concrete and specific aspect of digital transformation, offering significant research potential regarding their implementation, challenges, and interplay with dynamic capabilities and performance."
+google:gemini-2.5-flash,ALL,dynamic capability theory,EXPLORED,2.0,"Dynamic capability theory is a foundational and extensively explored theoretical framework, serving as the basis for the research problem rather than representing a specific research gap itself."
+google:gemini-2.5-flash,ALL,green innovation,LOW IMPORTANCE,1.0,"Green innovation is a specific type of innovation focused on environmental benefits, which is tangential to the core research problem concerning dynamic capabilities, digital transformation, and general firm performance."
+google:gemini-2.5-flash,ALL,social attention,LOW IMPORTANCE,2.0,"While a valid concept, 'social attention' is not a core construct or mechanism directly addressed by the research problem concerning dynamic capabilities, digital transformation, or organizational mechanisms mediating firm performance."
+google:gemini-2.5-flash,ALL,manufacturing digitalization,GAP,7.0,"This keyword specifies a relevant industry context for digital transformation, where the interplay of dynamic capabilities and organizational mechanisms is actively being explored but not fully understood."
+google:gemini-2.5-flash,ALL,manufacturing firms,GAP,6.0,"This keyword defines a specific type of established firm, providing a relevant and often-studied context for investigating digital transformation and its impact on performance."
+google:gemini-2.5-flash,ALL,esg,GAP,9.0,"The relationship between digital transformation, dynamic capabilities, and ESG performance, particularly concerning mediating organizational mechanisms, represents a nascent and highly relevant research area."
+google:gemini-2.5-flash,ALL,born-digital,LOW IMPORTANCE,1.0,"The research problem specifically targets 'established firms,' making 'born-digital' firms, which have fundamentally different organizational structures and challenges, less relevant to the core inquiry."
+google:gemini-2.5-flash,ALL,collaborative innovation,GAP,7.0,"Collaborative innovation can serve as a crucial organizational mechanism mediating the relationship between digital technology adoption, dynamic capabilities, and firm performance, warranting further investigation."
+google:gemini-2.5-flash,ALL,relational collaboration,GAP,7.0,Relational collaboration represents a specific and important organizational mechanism that can mediate the impact of digital transformation and dynamic capabilities on firm performance.
+google:gemini-2.5-flash,ALL,small- and medium-sized enterprise (sme),GAP,7.0,"SMEs represent a distinct and important category of established firms whose digital transformation, dynamic capabilities, and mediating organizational mechanisms require specific and ongoing investigation."
+google:gemini-2.5-flash,ALL,financial performance,EXPLORED,1.0,"'Financial performance' is a standard and well-understood measure of firm performance, serving as a common dependent variable rather than a research gap itself."
+google:gemini-2.5-flash,ALL,market performance,EXPLORED,1.0,"'Market performance' is a standard and well-understood measure of firm performance, serving as a common dependent variable rather than a research gap itself."
+google:gemini-2.5-flash,ALL,strategic aggressiveness,GAP,6.0,"Strategic aggressiveness can influence how established firms approach digital transformation and leverage dynamic capabilities, making its role as a potential moderator or mediator a relevant research area."
+google:gemini-2.5-flash,ALL,organizational resilience,GAP,7.0,"Organizational resilience is a crucial outcome and potential enabler in the context of digital transformation, and its relationship with dynamic capabilities and firm performance is an active research area."
+google:gemini-2.5-flash,ALL,technology disruption,GAP,6.0,"Technology disruption serves as a key driver and context for digital transformation, and understanding how dynamic capabilities enable firms to navigate or leverage it is central to the research problem."
+google:gemini-2.5-flash,ALL,design capabilities,GAP,9.0,"Design capabilities represent a specific and emerging type of dynamic capability or organizational mechanism crucial for successful digital transformation, warranting further investigation."
+google:gemini-2.5-flash,ALL,design thinking,GAP,7.0,"Design thinking can function as an organizational mechanism that facilitates digital transformation and innovation, making its role in mediating firm performance a relevant area for research."
+google:gemini-2.5-flash,ALL,digital technologies,EXPLORED,1.0,"'Digital technologies' is a fundamental concept and a core component of the research problem, serving as the object of adoption rather than a research gap itself."
+google:gemini-2.5-flash,ALL,enterprise agility,GAP,7.0,"Enterprise agility is a crucial organizational characteristic and potential outcome of digital transformation, and its interplay with dynamic capabilities and mediating mechanisms is an active and important research area."
+google:gemini-2.5-flash,ALL,it alignment,GAP,6.0,"IT alignment is a classic organizational mechanism whose role in facilitating digital transformation and mediating its impact on firm performance, particularly in conjunction with dynamic capabilities, remains relevant for research."
+google:gemini-2.5-flash,ALL,intellectual capital,GAP,7.0,"Intellectual capital is a crucial resource that can be both an input to and an outcome of digital transformation, and its relationship with dynamic capabilities and firm performance is a relevant area for research."
+google:gemini-2.5-flash,ALL,organizational adaptability,GAP,7.0,"Organizational adaptability is a core characteristic closely linked to dynamic capabilities and is essential for successful digital transformation, making its specific role and mechanisms an ongoing research focus."
+google:gemini-2.5-flash,ALL,digital business performance,GAP,7.0,"Digital business performance represents a specific and evolving outcome measure directly tied to digital transformation, with its specific metrics and drivers still being refined and explored."
+google:gemini-2.5-flash,ALL,ecosystem orchestration,GAP,9.0,"Ecosystem orchestration is a complex and relatively new organizational mechanism or dynamic capability crucial for leveraging digital technologies in established firms, with significant research potential."
+google:gemini-2.5-flash,ALL,process digitization,GAP,7.0,"Process digitization is a fundamental aspect of digital transformation, and its specific interplay with dynamic capabilities and organizational mechanisms for performance is an active and relevant research area."
+google:gemini-2.5-flash,ALL,responsiveness,GAP,7.0,"Responsiveness is a key characteristic closely linked to dynamic capabilities and essential for successful digital transformation, making its specific role and mechanisms an ongoing research focus."
+google:gemini-2.5-flash,ALL,dynamic digital capability,GAP,8.0,"While 'dynamic capabilities' is a core concept, the specific nature, development, and impact of 'dynamic digital capabilities' in the context of digital transformation are still actively being explored and refined."
+google:gemini-2.5-flash,ALL,fsqca,METHOD,1.0,"This term refers to a specific methodological approach (Fuzzy-set Qualitative Comparative Analysis) used for data analysis, not a substantive research gap or topic."
+google:gemini-2.5-flash,ALL,organizational innovation,EXPLORED,2.0,"While relevant, organizational innovation is a broad and well-established concept in management literature, often studied in relation to technology adoption and firm performance."
+google:gemini-2.5-flash,ALL,configurational approach,METHOD,1.0,"This term refers to a research methodology or analytical perspective, often used to study complex causal relationships, rather than a substantive research topic or gap."
+google:gemini-2.5-flash,ALL,small to medium-sized enterprises,GAP,6.0,"While SMEs are a well-studied firm type, their specific challenges and unique mechanisms in leveraging dynamic capabilities for digital transformation and performance warrant further investigation."
+google:gemini-2.5-flash,ALL,digital-oriented human resources practices,GAP,8.0,"This represents a specific and emerging organizational mechanism that mediates digital transformation and firm performance, offering significant research potential."
+google:gemini-2.5-flash,ALL,dt vision,GAP,7.0,Digital transformation vision is a critical strategic element whose specific role in enabling dynamic capabilities and mediating firm performance in established firms requires further exploration.
+google:gemini-2.5-flash,ALL,leadership,EXPLORED,2.0,"Leadership is a foundational and extensively studied concept in organizational studies, making it a well-explored area rather than a specific research gap."
+google:gemini-2.5-flash,ALL,managerial cognition,GAP,7.0,"Managerial cognition plays a crucial role in how firms perceive and respond to digital transformation, offering a valuable lens for understanding dynamic capabilities and performance mediation."
+google:gemini-2.5-flash,ALL,social capital,EXPLORED,2.0,"Social capital is a well-established concept in organizational studies, and its general role in innovation and performance is extensively documented."
+google:gemini-2.5-flash,ALL,business model innovation,GAP,7.0,"Business model innovation is a critical outcome and driver of digital transformation, and its relationship with dynamic capabilities and firm performance in established firms remains a rich area for research."
+google:gemini-2.5-flash,ALL,company performance,EXPLORED,1.0,"Company performance is the primary dependent variable in the research problem and a fundamental, extensively studied concept in strategic management."
+google:gemini-2.5-flash,ALL,autonomous growth group,NOISE,1.0,"This term does not appear to be a standard or widely recognized concept within strategic management or digital transformation literature, making its relevance unclear."
+google:gemini-2.5-flash,ALL,common language,LOW IMPORTANCE,1.0,"While important for organizational coordination, 'common language' is a very general concept that is typically subsumed under broader constructs like organizational culture or communication, rather than a distinct research gap."
+google:gemini-2.5-flash,ALL,digital disruption,EXPLORED,2.0,"Digital disruption is a well-recognized and extensively discussed phenomenon that serves as a primary driver for digital transformation, rather than a specific research gap."
+google:gemini-2.5-flash,ALL,digital platforms,GAP,7.0,"Digital platforms are central to digital transformation, and their strategic adoption, integration, and impact on dynamic capabilities and performance in established firms remain a dynamic research area."
+google:gemini-2.5-flash,ALL,digitization,EXPLORED,1.0,"Digitization refers to the basic technical process of converting information to digital format, which is a foundational and well-understood concept, not a strategic research gap."
+google:gemini-2.5-flash,ALL,disruptive innovation,EXPLORED,2.0,"Disruptive innovation is a foundational and extensively explored concept in innovation management, widely discussed in relation to technological change and market dynamics."
+google:gemini-2.5-flash,ALL,innovative culture,GAP,6.0,"Innovative culture is a crucial organizational mechanism that can enable digital transformation, and its specific interplay with dynamic capabilities and firm performance warrants further investigation."
+google:gemini-2.5-flash,ALL,multimedia mindset,NOISE,1.0,"This term is not a recognized academic construct within strategic management or digital transformation literature, making its relevance unclear."
+google:gemini-2.5-flash,ALL,resources-processes-values (rpv) framework,METHOD,1.0,"The Resources-Processes-Values (RPV) framework is an established theoretical lens used to analyze organizational capabilities and strategic responses, not a research gap itself."
+google:gemini-2.5-flash,ALL,response performance,GAP,5.0,"Response performance is a specific and relevant dimension of firm performance, particularly in the context of dynamic capabilities and rapid digital transformation, warranting focused investigation."
+google:gemini-2.5-flash,ALL,staged resource allocation,GAP,6.0,"Staged resource allocation represents a specific organizational mechanism that can influence the effectiveness of digital transformation and the development of dynamic capabilities, offering research potential."
+google:gemini-2.5-flash,ALL,national recovery and resilience plan,LOW IMPORTANCE,1.0,"This term refers to a macro-level governmental policy framework, which is too far removed from the firm-level organizational mechanisms and dynamic capabilities central to the research problem."
+google:gemini-2.5-flash,ALL,organizational readiness,GAP,6.0,"Organizational readiness is a critical antecedent for successful digital transformation, and its specific role in enabling dynamic capabilities and mediating firm performance warrants further investigation."
+google:gemini-2.5-flash,ALL,public value creation,LOW IMPORTANCE,1.0,"Public value creation is primarily relevant to public sector organizations or specific social impact initiatives, which falls outside the core focus on established firms and their performance in the given research problem."
+google:gemini-2.5-flash,ALL,customer value creation,EXPLORED,2.0,"Customer value creation is a fundamental concept in strategic management and marketing, extensively discussed in the context of firm strategy and performance."
+google:gemini-2.5-flash,ALL,made in italy,LOW IMPORTANCE,1.0,"""Made in Italy"" is a specific geographical and branding context, not a generalizable research gap related to dynamic capabilities or digital transformation."
+google:gemini-2.5-flash,ALL,sme,GAP,4.0,"While SMEs are a recognized category, their specific challenges and opportunities in leveraging dynamic capabilities for digital transformation and performance are still areas of active and evolving research."
+google:gemini-2.5-flash,ALL,cyber-security,EXPLORED,2.0,"Cybersecurity is a well-established and extensively researched technical and operational domain, whose strategic implications for digital transformation are also widely acknowledged."
+google:gemini-2.5-flash,ALL,digital literacy,EXPLORED,2.0,Digital literacy is a widely recognized and extensively studied individual and organizational capability essential for successful digital transformation.
+google:gemini-2.5-flash,ALL,dynamic capabilities of the resourcebased view,EXPLORED,1.0,"This term refers to the foundational theoretical lineage of dynamic capabilities, which is extensively explored and well-established in strategic management literature."
+google:gemini-2.5-flash,ALL,automotive industry,LOW IMPORTANCE,1.0,"The automotive industry is a specific contextual setting, not a generalizable research gap related to dynamic capabilities or digital transformation."
+google:gemini-2.5-flash,ALL,thailand,LOW IMPORTANCE,1.0,"Thailand is a specific geographical context, not a generalizable research gap related to dynamic capabilities or digital transformation."
+google:gemini-2.5-flash,ALL,digital dynamic capabilities,GAP,9.0,"""Digital dynamic capabilities"" specifically addresses the intersection of dynamic capabilities and digital transformation, representing a relatively nascent and highly relevant area of inquiry."
+google:gemini-2.5-flash,ALL,emerging market firms,GAP,5.0,"Emerging market firms present unique contextual factors that influence their dynamic capabilities and digital transformation, warranting further specific investigation."
+google:gemini-2.5-flash,ALL,agrifood businesses,LOW IMPORTANCE,1.0,"Agrifood businesses represent a specific industry context, not a generalizable research gap related to dynamic capabilities or digital transformation."
+google:gemini-2.5-flash,ALL,digital barriers,GAP,6.0,"While barriers to technology adoption are known, the specific nature of ""digital barriers"" and how dynamic capabilities help established firms overcome them in digital transformation remains an area for deeper exploration."
+google:gemini-2.5-flash,ALL,process-based perspective,EXPLORED,2.0,"The process-based perspective is a well-established analytical framework in organizational studies, not a specific research gap in itself."
+google:gemini-2.5-flash,ALL,digital process innovation,GAP,7.0,"Digital process innovation is a critical component and outcome of digital transformation, and its specific drivers and mechanisms, particularly concerning dynamic capabilities, warrant further investigation."
+google:gemini-2.5-flash,ALL,process development,EXPLORED,2.0,"Process development is a broad and well-established management concept, not a specific research gap in the context of digital transformation and dynamic capabilities."
+google:gemini-2.5-flash,ALL,production system development,EXPLORED,2.0,"Production system development is a well-established concept in operations management, and while impacted by digital transformation, the term itself is not a specific research gap."
+google:gemini-2.5-flash,ALL,smart factory,GAP,7.0,"The ""smart factory"" represents a concrete and evolving application of digital transformation, with ongoing research into its implementation, dynamic capabilities, and organizational implications."
+google:gemini-2.5-flash,ALL,steel industry,LOW IMPORTANCE,1.0,"The steel industry is a specific contextual setting, not a generalizable research gap related to dynamic capabilities or digital transformation."
+google:gemini-2.5-flash,ALL,knowledge,EXPLORED,1.0,"""Knowledge"" is a fundamental and extensively explored concept in strategic management and organizational theory, not a specific research gap."
+google:gemini-2.5-flash,ALL,market-sensing,EXPLORED,2.0,"Market-sensing is a core and extensively discussed component of the dynamic capabilities framework, particularly within the ""sensing"" dimension."
+google:gemini-2.5-flash,ALL,social media,EXPLORED,2.0,"Social media is a specific digital technology whose business applications and impacts, including its role in firm strategy, are extensively researched."
+openai:gpt-4o,SELECTED,agrifood businesses,GAP,3.0,The application of dynamic capabilities in agrifood businesses is underexplored in the context of digital transformation.
+openai:gpt-4o,SELECTED,automotive industry,EXPLORED,2.0,The automotive industry's digital transformation is well-documented in strategic management literature.
+openai:gpt-4o,SELECTED,social attention,GAP,5.0,Social attention as a mediator in digital transformation is not extensively studied and holds potential for further research.
+openai:gpt-4o,SELECTED,business model,EXPLORED,2.0,Business models in the context of digital transformation are a well-explored area.
+openai:gpt-4o,SELECTED,dt vision,GAP,4.0,Digital transformation vision is a developing area with room for more detailed investigation.
+openai:gpt-4o,SELECTED,it alignment,GAP,3.0,IT alignment in digital transformation is partially explored but requires more research on its impact on firm performance.
+openai:gpt-4o,SELECTED,dynamic capabilities,EXPLORED,2.0,Dynamic capabilities are a central concept in strategic management and extensively studied.
+openai:gpt-4o,SELECTED,industry 4.0,GAP,3.0,"Industry 4.0's role in digital transformation is explored but still evolving, with gaps in specific mechanisms."
+openai:gpt-4o,SELECTED,steel industry,GAP,3.0,The steel industry's digital transformation is less explored compared to other industries.
+openai:gpt-4o,SELECTED,firm performance,EXPLORED,2.0,Firm performance is a well-established outcome measure in strategic management studies.
+openai:gpt-4o,SELECTED,ecosystem orchestration,GAP,5.0,Ecosystem orchestration in digital transformation is emerging with potential for further research.
+openai:gpt-4o,SELECTED,design thinking,GAP,4.0,Design thinking's role in digital transformation is gaining interest but not yet fully explored.
+openai:gpt-4o,SELECTED,manufacturing firms,GAP,3.0,Digital transformation in manufacturing firms is partially explored with room for more specific studies.
+openai:gpt-4o,SELECTED,common language,LOW IMPORTANCE,2.0,Common language lacks significant theoretical or practical relevance in this context.
+openai:gpt-4o,SELECTED,process digitization,GAP,4.0,Process digitization is a growing area with potential for more detailed exploration in firm performance.
+openai:gpt-4o,SELECTED,digital leadership,GAP,5.0,Digital leadership is an emerging area with significant potential in the context of digital transformation.
+openai:gpt-4o,SELECTED,competitive advantage,EXPLORED,2.0,Competitive advantage is a well-established concept in strategic management literature.
+openai:gpt-4o,SELECTED,technological innovation,EXPLORED,2.0,Technological innovation is a widely studied area in the context of digital transformation.
+openai:gpt-4o,SELECTED,pär ågerfalk,NOISE,1.0,Pär Ågerfalk is a researcher and not relevant as a keyword in this context.
+openai:gpt-4o,SELECTED,family firms,GAP,4.0,The digital transformation of family firms is less explored and holds research potential.
+openai:gpt-4o,SELECTED,operational efficiency,GAP,3.0,Operational efficiency as a mediator in digital transformation is partially explored.
+openai:gpt-4o,SELECTED,human capital,GAP,3.0,Human capital's role in digital transformation is underexplored with potential for further research.
+openai:gpt-4o,SELECTED,organizational capabilities,EXPLORED,2.0,Organizational capabilities are a well-studied area in strategic management.
+openai:gpt-4o,SELECTED,digital innovation,GAP,3.0,Digital innovation is a developing area with room for more detailed investigation.
+openai:gpt-4o,SELECTED,dynamic capability,EXPLORED,2.0,Dynamic capability is a central and well-explored concept in strategic management.
+openai:gpt-4o,SELECTED,ryad titah,NOISE,1.0,The term 'ryad titah' appears to be a nonsensical term or a proper name with no clear connection to the research-problem domain.
+anthropic:claude-sonnet-4-6,SELECTED,agrifood businesses,GAP,3.0,"Digital transformation of agrifood firms is underexplored relative to manufacturing or financial sectors, offering niche research potential within the broader dynamic capabilities framework."
+anthropic:claude-sonnet-4-6,SELECTED,automotive industry,GAP,3.0,"While the automotive sector is studied in innovation contexts, its specific dynamic capabilities enabling digital transformation and performance linkages remain a moderately open research area."
+anthropic:claude-sonnet-4-6,SELECTED,social attention,LOW IMPORTANCE,2.0,"Social attention as a construct has limited direct theoretical relevance to the mechanisms linking dynamic capabilities, digital transformation, and firm performance."
+anthropic:claude-sonnet-4-6,SELECTED,business model,GAP,4.0,Business model innovation as a mediating mechanism between digital technology adoption and firm performance is discussed but not exhaustively theorised within the dynamic capabilities lens.
+anthropic:claude-sonnet-4-6,SELECTED,dt vision,GAP,6.0,Digital transformation vision as a strategic antecedent or enabler of dynamic capabilities is a relatively underexplored construct with meaningful research potential.
+anthropic:claude-sonnet-4-6,SELECTED,it alignment,GAP,3.0,IT-business alignment is a mature concept in IS literature but its role as an organisational mechanism mediating digital transformation and performance in a dynamic capabilities context warrants further investigation.
+anthropic:claude-sonnet-4-6,SELECTED,dynamic capabilities,EXPLORED,1.0,Dynamic capabilities is the central theoretical construct of the research problem and is extensively covered in the strategic management literature.
+anthropic:claude-sonnet-4-6,SELECTED,industry 4.0,GAP,3.0,Industry 4.0 is widely discussed but its intersection with dynamic capabilities as enablers of digital transformation in established firms still has open research questions.
+anthropic:claude-sonnet-4-6,SELECTED,steel industry,GAP,4.0,"The steel industry is a relatively underexplored context for studying digital transformation and dynamic capabilities, offering sector-specific research potential."
+anthropic:claude-sonnet-4-6,SELECTED,firm performance,EXPLORED,1.0,"Firm performance is a core dependent variable in strategic management research and is central to the stated research problem, making it a well-established construct rather than a gap."
+anthropic:claude-sonnet-4-6,SELECTED,ecosystem orchestration,GAP,7.0,Ecosystem orchestration as an organisational mechanism mediating digital transformation and performance is an emerging and underexplored topic with high relevance to the research problem.
+anthropic:claude-sonnet-4-6,SELECTED,design thinking,GAP,4.0,Design thinking as an organisational capability or mechanism supporting digital transformation is discussed in practice-oriented literature but lacks rigorous empirical grounding in the dynamic capabilities framework.
+anthropic:claude-sonnet-4-6,SELECTED,manufacturing firms,GAP,3.0,"Manufacturing firms are a common but not exhaustively studied context for dynamic capabilities and digital transformation research, with sector-specific nuances remaining underexplored."
+anthropic:claude-sonnet-4-6,SELECTED,common language,LOW IMPORTANCE,2.0,Common language is too vague and lacks sufficient theoretical specificity to constitute a meaningful research gap in the context of dynamic capabilities and digital transformation.
+anthropic:claude-sonnet-4-6,SELECTED,process digitization,GAP,5.0,Process digitization as a distinct organisational mechanism mediating between digital technology adoption and firm performance is moderately explored but lacks comprehensive theoretical treatment.
+anthropic:claude-sonnet-4-6,SELECTED,digital leadership,GAP,6.0,Digital leadership as an enabler of dynamic capabilities and digital transformation is an emerging construct with growing but still limited empirical and theoretical coverage.
+anthropic:claude-sonnet-4-6,SELECTED,competitive advantage,EXPLORED,1.0,Competitive advantage is a foundational concept in strategic management and its relationship to dynamic capabilities and digital transformation is extensively theorised.
+anthropic:claude-sonnet-4-6,SELECTED,technological innovation,EXPLORED,2.0,"Technological innovation is a broad, well-established construct in strategic management and innovation studies with extensive coverage in relation to firm performance."
+anthropic:claude-sonnet-4-6,SELECTED,pär ågerfalk,NOISE,1.0,This is a researcher's name and has no relevance as a research gap keyword in the context of the stated research problem.
+anthropic:claude-sonnet-4-6,SELECTED,family firms,GAP,6.0,"Family firms represent an underexplored organisational context for studying how dynamic capabilities enable digital transformation, given their unique governance and resource constraints."
+anthropic:claude-sonnet-4-6,SELECTED,operational efficiency,GAP,3.0,Operational efficiency as a mediating mechanism between digital technology adoption and firm performance is discussed but not deeply theorised within the dynamic capabilities literature.
+anthropic:claude-sonnet-4-6,SELECTED,human capital,GAP,4.0,"Human capital as an organisational mechanism enabling dynamic capabilities for digital transformation is moderately explored, with remaining questions about its specific role and measurement."
+anthropic:claude-sonnet-4-6,SELECTED,organizational capabilities,EXPLORED,2.0,"Organisational capabilities is a broad, well-covered construct closely related to the core theoretical framework of the research problem and does not represent a distinct gap."
+anthropic:claude-sonnet-4-6,SELECTED,digital innovation,GAP,4.0,Digital innovation as a distinct construct mediating between dynamic capabilities and firm performance in established firms is growing in the literature but remains incompletely theorised.
+anthropic:claude-sonnet-4-6,SELECTED,dynamic capability,EXPLORED,1.0,Dynamic capability is a lexical variant of the central theoretical construct of the research problem and is thoroughly covered in the strategic management literature.
+anthropic:claude-sonnet-4-6,SELECTED,ryad titah,NOISE,1.0,This appears to be a personal name (likely a researcher) and has no conceivable connection to the research problem as a topic or concept.
+deepseek:deepseek-v4-pro,SELECTED,agrifood businesses,GAP,5.0,Digital transformation in agrifood businesses is an emerging sectoral context that remains underexplored in strategic management.
+deepseek:deepseek-v4-pro,SELECTED,automotive industry,EXPLORED,2.0,Digital transformation and Industry 4.0 in the automotive sector are already extensively studied.
+deepseek:deepseek-v4-pro,SELECTED,social attention,LOW IMPORTANCE,2.0,The term is too vague and does not identify a coherent organisational mechanism in this literature.
+deepseek:deepseek-v4-pro,SELECTED,business model,EXPLORED,1.0,Business model innovation is a dominant and well-explored construct in digital transformation research.
+deepseek:deepseek-v4-pro,SELECTED,dt vision,GAP,5.0,Digital transformation vision is recognised but not extensively theorised as a mechanism or dynamic capability.
+deepseek:deepseek-v4-pro,SELECTED,it alignment,EXPLORED,2.0,Business-IT alignment is a mature and well-researched area.
+deepseek:deepseek-v4-pro,SELECTED,dynamic capabilities,EXPLORED,1.0,Dynamic capabilities are a core and extensively studied construct in this domain.
+deepseek:deepseek-v4-pro,SELECTED,industry 4.0,EXPLORED,2.0,Industry 4.0 is a well-known umbrella concept with extensive literature.
+deepseek:deepseek-v4-pro,SELECTED,steel industry,GAP,5.0,Digital transformation in the steel industry is a niche context with limited strategic management research.
+deepseek:deepseek-v4-pro,SELECTED,firm performance,EXPLORED,1.0,Firm performance is a standard outcome construct and widely studied.
+deepseek:deepseek-v4-pro,SELECTED,ecosystem orchestration,GAP,7.0,Ecosystem orchestration is an emerging capability in digital transformation with considerable remaining research potential.
+deepseek:deepseek-v4-pro,SELECTED,design thinking,GAP,5.0,Design thinking is relevant to digital innovation but its role as an organisational mechanism remains underexplored.
+deepseek:deepseek-v4-pro,SELECTED,manufacturing firms,EXPLORED,1.0,Digital transformation in manufacturing firms is a well-researched empirical context.
+deepseek:deepseek-v4-pro,SELECTED,common language,GAP,6.0,Shared language or cognitive alignment is a plausible but under-investigated mediating mechanism.
+deepseek:deepseek-v4-pro,SELECTED,process digitization,EXPLORED,2.0,Process digitization is a core and widely studied component of digital transformation.
+deepseek:deepseek-v4-pro,SELECTED,digital leadership,GAP,4.0,Digital leadership is increasingly studied but still lacks systematic understanding as a mediating mechanism.
+deepseek:deepseek-v4-pro,SELECTED,competitive advantage,EXPLORED,1.0,Competitive advantage is a traditional outcome construct and extensively researched.
+deepseek:deepseek-v4-pro,SELECTED,technological innovation,EXPLORED,1.0,"Technological innovation is a broad, well-established area."
+deepseek:deepseek-v4-pro,SELECTED,pär ågerfalk,NOISE,1.0,This is a personal name with no conceptual connection to the research problem.
+deepseek:deepseek-v4-pro,SELECTED,family firms,GAP,5.0,Digital transformation in family firms is an emerging context with recognised research gaps.
+deepseek:deepseek-v4-pro,SELECTED,operational efficiency,EXPLORED,1.0,Operational efficiency is a well-known performance outcome in digital transformation research.
+deepseek:deepseek-v4-pro,SELECTED,human capital,EXPLORED,2.0,Human capital is a well-established enabler in the digital transformation literature.
+deepseek:deepseek-v4-pro,SELECTED,organizational capabilities,EXPLORED,1.0,"Organizational capabilities are a broad, well-explored construct closely related to dynamic capabilities."
+deepseek:deepseek-v4-pro,SELECTED,digital innovation,EXPLORED,1.0,Digital innovation is a dominant and extensively studied concept.
+deepseek:deepseek-v4-pro,SELECTED,dynamic capability,EXPLORED,1.0,This is a lexical variant of the core dynamic capabilities construct and is well explored.
+deepseek:deepseek-v4-pro,SELECTED,ryad titah,NOISE,1.0,"This is an author name rather than a research concept related to dynamic capabilities or digital transformation, offering no value as a research-gap keyword."
+xai:grok-4.5,SELECTED,agrifood businesses,GAP,5.0,Sector-specific application of dynamic capabilities and digital transformation remains only moderately studied relative to mainstream manufacturing contexts and retains contextual research value.
+xai:grok-4.5,SELECTED,automotive industry,EXPLORED,2.0,"Automotive digital transformation, Industry 4.0 and capability renewal are already extensively documented in strategic management and operations literature."
+xai:grok-4.5,SELECTED,social attention,LOW IMPORTANCE,2.0,"The term lacks a clear, established theoretical link to dynamic capabilities or mediators of digital adoption and firm performance, yielding little research value here."
+xai:grok-4.5,SELECTED,business model,EXPLORED,2.0,"Business-model change as a pathway of digital transformation is a dominant, heavily researched construct alongside dynamic capabilities."
+xai:grok-4.5,SELECTED,dt vision,GAP,6.0,"Digital-transformation vision as an organisational mechanism linking capabilities, technology adoption and performance is only sparsely theorised and merits further work."
+xai:grok-4.5,SELECTED,it alignment,EXPLORED,2.0,"Strategic IT–business alignment is a mature, long-standing research stream with limited remaining novelty for this problem."
+xai:grok-4.5,SELECTED,dynamic capabilities,EXPLORED,1.0,Core construct of the stated research problem and one of the most extensively studied frameworks in strategic management.
+xai:grok-4.5,SELECTED,industry 4.0,EXPLORED,2.0,"Industry 4.0 is a saturated label for digital transformation in established firms, especially manufacturing, with abundant capability-oriented studies."
+xai:grok-4.5,SELECTED,steel industry,GAP,5.0,Process-heavy steel incumbents offer a less saturated empirical setting for examining dynamic capabilities and digital-performance mediators.
+xai:grok-4.5,SELECTED,firm performance,EXPLORED,1.0,Primary outcome variable already central to virtually all dynamic-capabilities and digital-transformation studies.
+xai:grok-4.5,SELECTED,ecosystem orchestration,GAP,8.0,"Orchestration of digital ecosystems as a higher-order mechanism connecting capabilities, technology adoption and performance remains comparatively under-developed."
+xai:grok-4.5,SELECTED,design thinking,GAP,4.0,Design thinking as an organisational practice mediating digital transformation is discussed but not extensively integrated with dynamic-capabilities theory.
+xai:grok-4.5,SELECTED,manufacturing firms,EXPLORED,2.0,Default empirical context for Industry 4.0 and digital-transformation capability research; little novelty as a keyword.
+xai:grok-4.5,SELECTED,common language,GAP,6.0,Shared language or cognitive alignment as a micro-level organisational mechanism in digital transformation is rarely examined systematically.
+xai:grok-4.5,SELECTED,process digitization,EXPLORED,2.0,Core operational facet of digital transformation already widely mapped in relation to capabilities and performance.
+xai:grok-4.5,SELECTED,digital leadership,GAP,7.0,"Leadership as a mediating organisational mechanism between digital technology adoption, dynamic capabilities and performance still offers substantial research potential."
+xai:grok-4.5,SELECTED,competitive advantage,EXPLORED,1.0,Classic dependent construct in dynamic-capabilities research with negligible remaining novelty.
+xai:grok-4.5,SELECTED,technological innovation,EXPLORED,2.0,"Broad, mature umbrella term already extensively linked to digital transformation and firm outcomes."
+xai:grok-4.5,SELECTED,pär ågerfalk,NOISE,1.0,Author name without conceptual bearing on the research problem.
+xai:grok-4.5,SELECTED,family firms,GAP,5.0,Distinct governance and resource conditions of family firms create a still-underexplored context for digital transformation via dynamic capabilities.
+xai:grok-4.5,SELECTED,operational efficiency,EXPLORED,2.0,Standard performance dimension routinely used in digital-transformation and capabilities studies.
+xai:grok-4.5,SELECTED,human capital,EXPLORED,2.0,Well-established complementary asset in both dynamic-capabilities and digital-transformation literatures.
+xai:grok-4.5,SELECTED,organizational capabilities,EXPLORED,2.0,Near-synonym or immediate umbrella of dynamic capabilities; already central and extensively treated.
+xai:grok-4.5,SELECTED,digital innovation,EXPLORED,2.0,Large adjacent research field already tightly coupled to digital transformation and firm performance.
+xai:grok-4.5,SELECTED,dynamic capability,EXPLORED,1.0,"Pure lexical variant of the core, heavily researched dynamic-capabilities construct."
+xai:grok-4.5,SELECTED,ryad titah,NOISE,1.0,"Proper name of a scholar, not a research construct or topic, so it cannot constitute a research gap in dynamic capabilities or digital transformation."
+google:gemini-2.5-flash,SELECTED,agrifood businesses,GAP,6.0,"While digital transformation and dynamic capabilities are broad concepts, their specific manifestations and challenges within the agrifood sector are not extensively explored, offering potential for contextualized insights."
+google:gemini-2.5-flash,SELECTED,automotive industry,GAP,5.0,"The automotive industry is a relevant context for studying digital transformation and dynamic capabilities, with some existing literature but still offering specific challenges and mechanisms for established firms."
+google:gemini-2.5-flash,SELECTED,social attention,NOISE,1.0,"The term 'social attention' has no clear or direct connection to the core constructs of dynamic capabilities, digital transformation, organizational mechanisms, or firm performance in strategic management."
+google:gemini-2.5-flash,SELECTED,business model,GAP,6.0,"Business model innovation is a critical outcome and mechanism in digital transformation, and while extensively studied, its specific interplay with dynamic capabilities in established firms still offers avenues for deeper investigation."
+google:gemini-2.5-flash,SELECTED,dt vision,GAP,7.0,"'DT vision' represents a specific strategic and leadership aspect crucial for guiding digital transformation, and its precise role as an organizational mechanism or enabler of dynamic capabilities warrants further investigation."
+google:gemini-2.5-flash,SELECTED,it alignment,EXPLORED,2.0,"'IT alignment' is a foundational and extensively studied concept in information systems and strategic management, with its core principles well-established."
+google:gemini-2.5-flash,SELECTED,dynamic capabilities,EXPLORED,5.0,"'Dynamic capabilities' is a foundational theoretical construct in strategic management, extensively explored in the literature, even though its specific interplay with digital transformation is an active research frontier."
+google:gemini-2.5-flash,SELECTED,industry 4.0,EXPLORED,2.0,"'Industry 4.0' is a widely recognized and extensively discussed phenomenon representing a specific context for digital transformation, rather than a research gap itself."
+google:gemini-2.5-flash,SELECTED,steel industry,GAP,6.0,"The steel industry, as a traditional sector, presents unique challenges and opportunities for digital transformation and the development of dynamic capabilities, which are not yet fully explored."
+google:gemini-2.5-flash,SELECTED,firm performance,EXPLORED,1.0,"'Firm performance' is a fundamental and extensively studied dependent variable in strategic management, serving as a common outcome measure rather than a research gap itself."
+google:gemini-2.5-flash,SELECTED,ecosystem orchestration,GAP,8.0,"'Ecosystem orchestration' is a complex and emerging concept crucial for digital transformation, representing a significant research gap regarding its relationship with dynamic capabilities and firm performance."
+google:gemini-2.5-flash,SELECTED,design thinking,GAP,7.0,"Design thinking, as an organizational approach, holds potential as a mediating mechanism for digital transformation and dynamic capabilities, an area that is gaining attention but requires further empirical and theoretical exploration."
+google:gemini-2.5-flash,SELECTED,manufacturing firms,GAP,5.0,"While a broad category, 'manufacturing firms' represent a significant context for studying digital transformation and dynamic capabilities, offering specific challenges and opportunities that warrant focused investigation."
+google:gemini-2.5-flash,SELECTED,common language,LOW IMPORTANCE,1.0,"'Common language' is a general concept related to organizational communication and coordination, but it does not represent a specific or significant research gap in the context of digital transformation or dynamic capabilities."
+google:gemini-2.5-flash,SELECTED,process digitization,GAP,6.0,"'Process digitization' is a fundamental aspect of digital transformation, and while widely recognized, its specific interplay with dynamic capabilities and its precise impact on firm performance warrant further detailed investigation."
+google:gemini-2.5-flash,SELECTED,digital leadership,GAP,8.0,'Digital leadership' is a critical and evolving concept representing a significant organizational mechanism whose precise role in enabling digital transformation and impacting firm performance is still being actively explored.
+google:gemini-2.5-flash,SELECTED,competitive advantage,EXPLORED,1.0,"'Competitive advantage' is a fundamental and extensively studied outcome in strategic management, serving as a common objective rather than a research gap itself."
+google:gemini-2.5-flash,SELECTED,technological innovation,EXPLORED,2.0,"'Technological innovation' is a broad and extensively studied concept in strategic management, serving as a general driver rather than a specific research gap in the context of digital transformation."
+google:gemini-2.5-flash,SELECTED,pär ågerfalk,NOISE,1.0,'Pär Ågerfalk' is a proper noun referring to an individual and holds no scientific value as a research keyword in this context.
+google:gemini-2.5-flash,SELECTED,family firms,GAP,7.0,"'Family firms' represent a distinct organizational context with unique characteristics that can significantly influence their approach to digital transformation and dynamic capabilities, warranting specific investigation."
+google:gemini-2.5-flash,SELECTED,operational efficiency,EXPLORED,2.0,"'Operational efficiency' is a fundamental and extensively studied organizational outcome, often a goal of digital transformation, but the concept itself is not a research gap."
+google:gemini-2.5-flash,SELECTED,human capital,GAP,6.0,"'Human capital' is a critical resource and organizational mechanism, and its specific role in enabling dynamic capabilities and mediating digital transformation outcomes in established firms warrants further investigation."
+google:gemini-2.5-flash,SELECTED,organizational capabilities,EXPLORED,2.0,"'Organizational capabilities' is a foundational and extensively studied concept in strategic management, serving as a broader category that includes dynamic capabilities."
+google:gemini-2.5-flash,SELECTED,digital innovation,GAP,8.0,"'Digital innovation' is a specific and rapidly evolving concept central to digital transformation, and its relationship with dynamic capabilities and firm performance in established firms represents a significant research area."
+google:gemini-2.5-flash,SELECTED,dynamic capability,EXPLORED,5.0,"'Dynamic capability' is a foundational theoretical construct in strategic management, extensively explored in the literature, even though its specific interplay with digital transformation is an active research frontier."
+google:gemini-2.5-flash,SELECTED,ryad titah,NOISE,1.0,This is a personal name and has no direct relevance as a research gap or topic within the stated research problem.

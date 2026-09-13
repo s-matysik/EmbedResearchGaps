@@ -1,0 +1,169 @@
+keyword,frequency,n_tokens,cluster,distance_from_subcentroid,centrality,tfidf,global_frequency,is_core_domain,cluster_label
+bank fintech,2,2,2,0.21197902027766635,0.3426749040535537,0.0071395503834397476,2,False,Bank FinTech & Fintech credit
+china,2,1,3,0.5040563530742224,0.6230480303091919,0.007554517166915655,2,False,China & Economics
+commercial banks,2,2,0,0.17512823901388597,0.4081612676766977,0.007940582950245736,2,False,Commercial banks & bank lending
+credit risk,6,2,4,0.2668005160733369,0.40166091410621463,0.021568249255308113,6,False,Credit risk & Bank credit risk
+alternative credit,2,2,1,0.22000616439584775,0.40155444909930826,0.00625815977282373,2,False,Alternative credit & Bigtech credit
+bank lending,1,2,0,0.21833625564397774,0.3673331813986772,0.0016549560877760477,1,False,Commercial banks & bank lending
+banking,2,1,0,0.20325652292238194,0.3125134921801118,0.013631799949808647,2,False,Commercial banks & bank lending
+bigtech credit,2,2,1,0.308026582543118,0.3738321877071671,0.007587871886909002,2,False,Alternative credit & Bigtech credit
+development economics,1,2,5,0.2743551358108598,0.4533131524854366,0.0016549560877760477,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+"dr david mcmillan, university of stirling, united kingdom of great britain and northern ireland",1,14,5,0.5450636947712588,0.623281264072828,0.008767295143176953,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+economics,1,1,3,0.4752919210926503,0.5058802577401853,0.0033099121755520954,1,False,China & Economics
+finance,2,1,1,0.3547370497076705,0.3538176465705708,0.018174813619148612,2,False,Alternative credit & Bigtech credit
+financial inclusion,28,2,2,0.20594646412751172,0.3103038442528886,0.03979307931191825,28,True,Bank FinTech & Fintech credit
+fintech credit,2,2,2,0.21139782221911108,0.3440341672558547,0.004234563713489687,2,False,Bank FinTech & Fintech credit
+sub-saharan africa,3,2,5,0.4619345868907475,0.6302850426893584,0.007462909655834451,3,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+system gmm,1,2,3,0.4329068634079958,0.5373665579510034,0.0016549560877760477,1,False,China & Economics
+bank credit risk,2,3,4,0.2868985907707011,0.39497681012485697,0.007127037842960612,2,False,Credit risk & Bank credit risk
+fintech,34,1,2,0.17808448402990085,0.3501788189341688,0.04610841539316258,34,True,Bank FinTech & Fintech credit
+responsible finance,1,2,2,0.3315440302683834,0.32638184422887906,0.0034161006321113134,1,False,Bank FinTech & Fintech credit
+sustainable finance,1,2,2,0.3693743541588942,0.3826674455358503,0.0034161006321113134,1,False,Bank FinTech & Fintech credit
+economic growth,1,2,5,0.34072309761528863,0.48317415171464473,0.003311283190538142,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+financial stability,2,2,4,0.3109846526701252,0.3604570346766919,0.006857601232515868,2,False,Credit risk & Bank credit risk
+regulatory arbitrage,1,2,4,0.44437846654380775,0.5031684437122604,0.003311283190538142,1,False,Credit risk & Bank credit risk
+soft information,1,2,3,0.5061773276297401,0.5634100697390693,0.003311283190538142,1,False,China & Economics
+alternative data,1,2,1,0.38333270305664513,0.38957687249672457,0.006142353223099689,1,False,Alternative credit & Bigtech credit
+credit invisible,1,2,1,0.29069380855898963,0.4426462731481271,0.003851689752384352,1,False,Alternative credit & Bigtech credit
+fintech partnership,1,2,2,0.20819415128848218,0.36004764134787326,0.003851689752384352,1,False,Bank FinTech & Fintech credit
+bigtech,2,1,3,0.38829411270400027,0.4589011557680003,0.00930435709599374,2,False,China & Economics
+competition,1,1,3,0.40834301553291263,0.5662947027865448,0.0027991402386414775,1,False,China & Economics
+local banks,1,2,0,0.170473314416556,0.3700238645685203,0.0027991402386414775,1,False,Commercial banks & bank lending
+relationship lending,1,2,4,0.4069293437659016,0.4648660481585145,0.0027991402386414775,1,False,Credit risk & Bank credit risk
+soft credit information,1,3,1,0.31012309645436,0.4928059022283766,0.0027991402386414775,1,False,Alternative credit & Bigtech credit
+bank performance,1,2,0,0.18236598589052644,0.3518247491460612,0.004339431489997498,1,False,Commercial banks & bank lending
+inclusive finance,2,2,2,0.1977244901186168,0.2761977805817687,0.009912017144260982,2,False,Bank FinTech & Fintech credit
+open banking,1,2,2,0.3483079596758447,0.38479858105381004,0.004339431489997498,1,False,Bank FinTech & Fintech credit
+financial technology,7,2,2,0.20421490607059234,0.35637783571828363,0.015226031625781932,7,False,Bank FinTech & Fintech credit
+green credit expansion,1,3,4,0.43675240557239825,0.42316738769036966,0.0030388212189974492,1,False,Credit risk & Bank credit risk
+green credit risk,1,3,4,0.29681351769369313,0.4184259927076889,0.0030388212189974492,1,False,Credit risk & Bank credit risk
+resource allocation efficiency,1,3,5,0.47465678731230954,0.503228038108658,0.0030388212189974492,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+artificial intelligence,1,2,3,0.4767116631324919,0.6018540422417047,0.00410476384656232,1,False,China & Economics
+banks,1,1,0,0.2767101358812283,0.43248650517010456,0.016695269867076968,1,False,Commercial banks & bank lending
+digital payment,1,2,2,0.3647134284192085,0.4337972610733938,0.00410476384656232,1,False,Bank FinTech & Fintech credit
+digitalization,2,1,3,0.4575145174693901,0.5202229981464067,0.006805936931199654,2,False,China & Economics
+egyptian banking sector,1,3,0,0.3241823025710098,0.49031721744614043,0.0040712427327056055,1,False,Commercial banks & bank lending
+banks’ risk-taking,1,2,4,0.26164971075558163,0.4184379998820127,0.028187112218157142,1,False,Credit risk & Bank credit risk
+z-score,1,1,3,0.5562346283958134,0.6266808417117896,0.004271693275635462,1,False,China & Economics
+mobile banking,1,2,2,0.3822076347897123,0.43924769542915565,0.0037437841570072644,1,False,Bank FinTech & Fintech credit
+village and township banks,1,4,0,0.3342129098755421,0.5473934850193903,0.0037437841570072644,1,False,Commercial banks & bank lending
+fintech adoption,1,2,2,0.19940127993813062,0.3526444726953035,0.004165368018818717,1,False,Bank FinTech & Fintech credit
+loan size,1,2,1,0.40399675063428053,0.47866018316084036,0.004165368018818717,1,False,Alternative credit & Bigtech credit
+risk-taking,2,1,4,0.37415456068679465,0.5092502890133185,0.012325778548039467,2,False,Credit risk & Bank credit risk
+rural bank,1,2,0,0.2876819718501473,0.46610992589675937,0.004165368018818717,1,False,Commercial banks & bank lending
+fintech-based financial inclusion,1,3,2,0.12482139433601092,0.3189743514404343,0.002986214801511959,1,False,Bank FinTech & Fintech credit
+microfinance institutions,1,2,2,0.35645094426790125,0.40893103321169777,0.002986214801511959,1,False,Bank FinTech & Fintech credit
+risk-taking behavior,1,2,4,0.4502225780622289,0.6029759704876698,0.002986214801511959,1,False,Credit risk & Bank credit risk
+big tech,1,2,3,0.41038318150193476,0.47960266793639017,0.003958597369323497,1,False,China & Economics
+digital lending,2,2,2,0.3532904163246735,0.4091356937383639,0.006790361222391098,2,False,Bank FinTech & Fintech credit
+inclusion,1,1,3,0.43064036744811607,0.5525852035262715,0.04128461833803348,1,False,China & Economics
+income inequality,4,2,5,0.41784939606277893,0.5222814690522373,0.013096149888067572,4,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+performance,1,1,3,0.38534869204852273,0.5626636368206039,0.007893311610946557,1,False,China & Economics
+personal loans,1,2,1,0.32204639454505757,0.4502507828312543,0.00438880950222822,1,False,Alternative credit & Bigtech credit
+dynamic panel two-stage gmm,1,4,5,0.476105511916201,0.5810476070671731,0.0029935497048881135,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+postfinancing,1,1,1,0.39028708700142556,0.45329911534502876,0.0029935497048881135,1,False,Alternative credit & Bigtech credit
+prefinancing,1,1,1,0.3584743742437714,0.45603269262533286,0.0029935497048881135,1,False,Alternative credit & Bigtech credit
+sustainable financial development,1,3,5,0.4016549406221944,0.3846656535270556,0.0029935497048881135,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+digital risk control,1,3,4,0.3509815423532957,0.4027676787533825,0.004464812591662077,1,False,Credit risk & Bank credit risk
+banking stability,1,2,0,0.21018894223952134,0.3609767993984707,0.00320980062687593,1,False,Commercial banks & bank lending
+digital inclusive finance,1,3,2,0.1395638622215536,0.304929727261557,0.00320980062687593,1,False,Bank FinTech & Fintech credit
+financial technology innovation,1,3,2,0.17298752361408276,0.32921527747890367,0.00320980062687593,1,False,Bank FinTech & Fintech credit
+risk transmission mechanisms,1,3,4,0.4694260888239321,0.5811049853666754,0.00320980062687593,1,False,Credit risk & Bank credit risk
+peer-to-peer lending,2,2,1,0.3424388287708786,0.4455645286079749,0.005785739857646971,2,False,Alternative credit & Bigtech credit
+systematic literature review,1,3,5,0.634392123333367,0.6945989896002758,0.0036054903593505387,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+c11,1,1,3,0.4186867480451013,0.588397289469965,0.0028400942779270616,1,False,China & Economics
+d31,1,1,3,0.42909243252818574,0.5948191221332821,0.0028400942779270616,1,False,China & Economics
+d63,1,1,3,0.45086736110573944,0.6207537845440462,0.0028400942779270616,1,False,China & Economics
+f62,1,1,3,0.5002795577700914,0.6527479340682396,0.0028400942779270616,1,False,China & Economics
+feature selection,1,2,3,0.4503217513267208,0.5697870142681172,0.0028400942779270616,1,False,China & Economics
+fincredit,1,1,1,0.2962834984712892,0.40896068470546443,0.0028400942779270616,1,False,Alternative credit & Bigtech credit
+o,1,1,3,0.5315741669202917,0.6912590652490914,0.0028400942779270616,1,False,China & Economics
+conventional financial sector,1,3,4,0.3645228245315939,0.34586441746631147,0.003027526298579406,1,False,Credit risk & Bank credit risk
+financial constraints,2,2,4,0.3498480338577361,0.41852568487292485,0.005645121550283233,2,False,Credit risk & Bank credit risk
+total alternative credit,1,3,1,0.2935061461189947,0.40788396124388415,0.003027526298579406,1,False,Alternative credit & Bigtech credit
+debt trap,1,2,1,0.46126140476461375,0.5153883508394556,0.0035500266524496117,1,False,Alternative credit & Bigtech credit
+digital financial literacy,2,3,2,0.2608758656258391,0.3921545543539591,0.006674009493307058,2,False,Bank FinTech & Fintech credit
+corporate investment efficiency,1,3,4,0.4348335763100182,0.482887535999057,0.0032147182433626383,1,False,Credit risk & Bank credit risk
+fintech development,1,2,2,0.16787397913599078,0.3204804862922741,0.0032147182433626383,1,False,Bank FinTech & Fintech credit
+non-financial firms,1,2,4,0.3828750935877794,0.40650045542303026,0.0032147182433626383,1,False,Credit risk & Bank credit risk
+central and eastern european countries,1,5,5,0.43768661588041025,0.5480412580702377,0.0034546045467832216,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+innovation,1,1,3,0.3565363184063082,0.5244128692488259,0.019383448161006844,1,False,China & Economics
+financial sustainability,1,2,4,0.3464369175297636,0.38867740409738283,0.0041887685021906405,1,False,Credit risk & Bank credit risk
+panel data analysis,1,3,5,0.390983650202813,0.5420460821020718,0.0041887685021906405,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+bank risk,1,2,0,0.16639895329142185,0.3910535348621953,0.004280728799477219,1,False,Commercial banks & bank lending
+regulation,1,1,3,0.47930360662768634,0.5445130899480927,0.0077615957746672674,1,False,China & Economics
+alternative information,1,2,3,0.5036496919346217,0.5259085126270546,0.002792246646982176,1,False,China & Economics
+digital inclusion,1,2,2,0.42708799420144106,0.4809732307086573,0.002792246646982176,1,False,Bank FinTech & Fintech credit
+ethics,1,1,3,0.5189192565177918,0.6680290171739723,0.002792246646982176,1,False,China & Economics
+public policy,1,2,5,0.484127084481486,0.532329923033164,0.002792246646982176,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+social responsibilities,1,2,4,0.4899835996796744,0.5621745500823818,0.002792246646982176,1,False,Credit risk & Bank credit risk
+alternative data sources,1,3,1,0.4234565758342633,0.424606479059066,0.0029403820462557346,1,False,Alternative credit & Bigtech credit
+credit scoring,1,2,1,0.2945208142668876,0.4218152970774425,0.0029403820462557346,1,False,Alternative credit & Bigtech credit
+creditworthiness,1,1,1,0.3355882674458752,0.4433339134082205,0.0029403820462557346,1,False,Alternative credit & Bigtech credit
+social media analytics,1,3,3,0.5096340895614271,0.5810831239587086,0.0029403820462557346,1,False,China & Economics
+micro-finance institutes,1,2,2,0.3488976068553491,0.39103123402678497,0.0036556225742735106,1,False,Bank FinTech & Fintech credit
+risky behaviour,1,2,4,0.43700137288578067,0.5607112423507261,0.0036556225742735106,1,False,Credit risk & Bank credit risk
+south asia,1,2,5,0.5343754331462011,0.6783131432902731,0.0036556225742735106,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+bootstrap,1,1,3,0.4697569830576175,0.6268839672868025,0.0036854458773177075,1,False,China & Economics
+cross-country analysis,1,2,5,0.3712345103842768,0.5241987527349288,0.0036854458773177075,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+entrepreneurial risk,1,2,4,0.36620385387913046,0.4993030297010581,0.0036854458773177075,1,False,Credit risk & Bank credit risk
+panel data,2,2,5,0.4307000580710387,0.51553867314404,0.009671324915482315,2,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+bank profitability,1,2,0,0.2550959750766377,0.3853848448349765,0.0043005726848342465,1,False,Commercial banks & bank lending
+developing countries,1,2,5,0.29863671956782856,0.49868830649791185,0.0043005726848342465,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+credit risk management,1,3,4,0.3030321237999902,0.4311613695518127,0.0030953311291113763,1,False,Credit risk & Bank credit risk
+lending efficiency,1,2,4,0.38857793505133253,0.3709879163098312,0.0030953311291113763,1,False,Credit risk & Bank credit risk
+lendingclub,1,1,1,0.3171135593965815,0.4587652814947426,0.0030953311291113763,1,False,Alternative credit & Bigtech credit
+marketplace lending,1,2,1,0.3530304922787144,0.41964694698050353,0.0030953311291113763,1,False,Alternative credit & Bigtech credit
+p2p lending,2,2,1,0.32295320645142644,0.4274072290941342,0.006492427364385649,2,False,Alternative credit & Bigtech credit
+perceived regulatory support,1,3,4,0.5095589773688816,0.5748921335988871,0.003829938324633144,1,False,Credit risk & Bank credit risk
+digital divide,1,2,5,0.4371901276836503,0.5098987461089238,0.004105802453229092,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+digital inequality,1,2,5,0.42852632660986234,0.5066042387075776,0.004105802453229092,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+utaut2,1,1,3,0.48503208134012743,0.6591083841906664,0.004105802453229092,1,False,China & Economics
+digital economy,1,2,2,0.41437417383355224,0.44080552891456337,0.0037652643216191228,1,False,Bank FinTech & Fintech credit
+regulatory resources,1,2,4,0.4378770342588102,0.5009204492986061,0.0037652643216191228,1,False,Credit risk & Bank credit risk
+technological innovation,1,2,3,0.4200164606960418,0.4697954434935572,0.0037652643216191228,1,False,China & Economics
+generalized method of moments,1,4,5,0.5462740009078539,0.6391230137395656,0.0031293838329069655,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+principal component analysis,1,3,3,0.565907208505914,0.6154822299999951,0.0031293838329069655,1,False,China & Economics
+traditional financial inclusion,1,3,2,0.19724306111593282,0.2962024447177558,0.0031293838329069655,1,False,Bank FinTech & Fintech credit
+financial regulation,1,2,4,0.346338488308641,0.38188305770856446,0.004301863874500953,1,False,Credit risk & Bank credit risk
+micro-risks,1,1,4,0.3377971118655896,0.4542026747353052,0.004301863874500953,1,False,Credit risk & Bank credit risk
+financial innovation,3,2,2,0.27360137825867725,0.318837994035978,0.01212833965001484,3,False,Bank FinTech & Fintech credit
+credit mismatch,1,2,1,0.3407658553160241,0.44074193000659523,0.003874961281287196,1,False,Alternative credit & Bigtech credit
+green innovation,1,2,3,0.47608099595564446,0.48917064423628476,0.003874961281287196,1,False,China & Economics
+sustainable development,1,2,5,0.4261081061575098,0.551517128973662,0.003874961281287196,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+economic development,1,2,5,0.2719569435870959,0.4272846517686686,0.0028960275847588713,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+high-income countries,1,2,5,0.37658053116587875,0.5268261254799639,0.0028960275847588713,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+middle-income countries,1,2,5,0.3485412418227716,0.5213688490886043,0.0028960275847588713,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+panel regression analysis,1,3,5,0.3997654289166992,0.5829298601565998,0.0028960275847588713,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+bank concentration,1,2,0,0.2071997409029398,0.4218403247943159,0.0036878431466645413,1,False,Commercial banks & bank lending
+digital financial inclusion,1,3,2,0.1669159027455831,0.33933286536882523,0.0036878431466645413,1,False,Bank FinTech & Fintech credit
+output volatility,1,2,3,0.5117641630937905,0.5522819728105521,0.0036878431466645413,1,False,China & Economics
+engagement,1,1,3,0.43876315546567457,0.5411457225024054,0.004542425456648286,1,False,China & Economics
+financial products,1,2,2,0.3513894509688107,0.3368871484012752,0.004542425456648286,1,False,Bank FinTech & Fintech credit
+fintech ecosystem,1,2,2,0.2198162104134369,0.37004287111352085,0.004542425456648286,1,False,Bank FinTech & Fintech credit
+"business, management and accounting",1,4,3,0.5419427262622702,0.5289600551537389,0.008767295143176953,1,False,China & Economics
+commercial bank,1,2,0,0.19280425380082267,0.4270033687471061,0.0023319075437338555,1,False,Commercial banks & bank lending
+corporate finance,1,2,4,0.40458605581539253,0.4268215837496324,0.0023319075437338555,1,False,Credit risk & Bank credit risk
+credit & credit institutions,1,4,1,0.3536655357422325,0.40817412578933765,0.035681573534049625,1,False,Alternative credit & Bigtech credit
+fintech index,1,2,2,0.24834302783442075,0.37512541054578963,0.0023319075437338555,1,False,Bank FinTech & Fintech credit
+non-performing loans,2,2,4,0.4193942716277548,0.4651062027856123,0.003924056554564511,2,False,Credit risk & Bank credit risk
+africa,1,1,3,0.5697814242631186,0.6891620815773958,0.010748885837258096,1,False,China & Economics
+institutions,1,1,3,0.46148947357266634,0.4613252391082967,0.008456364851664283,1,False,China & Economics
+disadvantaged communities,1,2,5,0.4264061938985404,0.5314418355848345,0.00549680360723168,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+inclusivity,1,1,3,0.4838472240214453,0.5625028586107773,0.00549680360723168,1,False,China & Economics
+bank-specific factors,1,2,0,0.24553856552264075,0.38676964726890706,0.002916649826921625,1,False,Commercial banks & bank lending
+brics economies,1,2,5,0.3933141785762574,0.4670849489216684,0.002916649826921625,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+gdp growth,1,2,5,0.4002190546497191,0.5312010978868347,0.002916649826921625,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+macroeconomic factors,1,2,5,0.4123404986726227,0.4928886386891336,0.002916649826921625,1,False,"Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+crowdfunding,1,1,1,0.39987516747336493,0.4707442747831909,0.004083844539348429,1,False,Alternative credit & Bigtech credit
+cryptocurrency,1,1,1,0.5256401777480082,0.52174883412164,0.004083844539348429,1,False,Alternative credit & Bigtech credit
+platforms,1,1,3,0.36635686962707725,0.4984056853310137,0.004083844539348429,1,False,China & Economics
+digital financial services,1,3,2,0.16866557430708817,0.33515907792641997,0.005117830701881677,1,False,Bank FinTech & Fintech credit
+account ownership,1,2,1,0.550055776382103,0.5531460811628005,0.0020072232246325468,1,False,Alternative credit & Bigtech credit
+black swan,1,2,3,0.5533329787719864,0.69135478581507,0.0020072232246325468,1,False,China & Economics
+credit card,1,2,1,0.39756372163933584,0.5296985496364954,0.0020072232246325468,1,False,Alternative credit & Bigtech credit
+debit card,1,2,1,0.4814411106378569,0.546642593673375,0.0020072232246325468,1,False,Alternative credit & Bigtech credit
+digital finance,1,2,2,0.1190109466415461,0.2935802560479256,0.0020072232246325468,1,False,Bank FinTech & Fintech credit
+efficiency,1,1,3,0.4302389076399,0.5715624516880725,0.008901205191873453,1,False,China & Economics
+formal accounts,1,2,4,0.4870368129065843,0.4860171334544482,0.0020072232246325468,1,False,Credit risk & Bank credit risk
+insolvency risk,1,2,4,0.2914105049832507,0.4427749433253374,0.0020072232246325468,1,False,Credit risk & Bank credit risk

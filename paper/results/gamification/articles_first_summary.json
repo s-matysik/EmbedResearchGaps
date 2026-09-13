@@ -1,0 +1,120 @@
+{
+  "mode": "articles_first",
+  "n_articles": 50,
+  "n_keywords": 200,
+  "n_clusters": 6,
+  "n_gaps": 28,
+  "gap_types": {
+    "Emerging Concept": 18,
+    "Cross-Cluster Concept": 7,
+    "Conceptual Combination": 3
+  },
+  "cluster_labels": {
+    "0": "Mobile apps & Branded app",
+    "1": "Consumer behavior & gamification marketing",
+    "2": "Marketing & Digital Marketing",
+    "3": "Customer engagement & Engagement",
+    "4": "Consumer behaviour & e-commerce platforms",
+    "5": "Brand loyalty & Brand engagement"
+  },
+  "diagnostics": {
+    "n_clusters": 6,
+    "cluster_sizes": {
+      "0": 8,
+      "1": 4,
+      "2": 5,
+      "3": 26,
+      "4": 3,
+      "5": 4
+    },
+    "cluster_quality": {
+      "silhouette": 0.017273289234782597,
+      "davies_bouldin": 2.6604463775685816,
+      "calinski_harabasz": 1.996894260044075
+    },
+    "k_selection": {
+      "k": 6,
+      "k_range": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "wcss": [
+        13.911766356907862,
+        13.374164839954993,
+        12.778978852367938,
+        12.286473144140295,
+        11.948810945930521,
+        11.387263509152184,
+        11.08840414260771,
+        10.523562118971785,
+        10.365161586045055
+      ],
+      "silhouette": [
+        0.04221853142915124,
+        0.020112546985918862,
+        0.030603820129683924,
+        0.033909893835933624,
+        0.017273289234782597,
+        0.026345797679827726,
+        0.03131121196974435,
+        0.04187960504654448,
+        0.02868798348928562
+      ],
+      "k_elbow": null,
+      "k_silhouette": 2,
+      "rule": "elbow (max silhouette 0.042 < 0.25)"
+    },
+    "distance_metric": "cosine",
+    "gaps_before_deduplication": 39,
+    "gaps_after_deduplication": 28,
+    "skipped_clusters": {},
+    "n_core_domain_terms": 1,
+    "core_domain_terms": [
+      "gamification"
+    ],
+    "tfidf_match_statistics": {
+      "exact": 169,
+      "contains": 3
+    },
+    "corpus": {
+      "n_articles": 50,
+      "n_unique_keywords": 172,
+      "mean_keywords_per_article": 5.32,
+      "articles_without_keywords": 0,
+      "has_abstracts": true,
+      "has_citations": true,
+      "year_range": [
+        2014,
+        2026
+      ],
+      "dropped_empty_text": 0,
+      "dropped_empty_keywords": 0
+    },
+    "ranking": {
+      "ranked": true,
+      "encoder": {
+        "encoder": "precomputed",
+        "model": null
+      },
+      "min_distance": 0.22506814382509122,
+      "max_distance": 0.7717120867988465,
+      "cutoff_distance": 0.36377723634645065
+    },
+    "article_encoder": {
+      "encoder": "precomputed",
+      "model": null
+    },
+    "keyword_encoder": {
+      "encoder": "precomputed",
+      "model": null
+    },
+    "n_unique_keywords_encoded": 172
+  }
+}

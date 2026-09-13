@@ -1,0 +1,121 @@
+{
+  "mode": "articles_first",
+  "n_articles": 50,
+  "n_keywords": 183,
+  "n_clusters": 6,
+  "n_gaps": 27,
+  "gap_types": {
+    "Emerging Concept": 18,
+    "Cross-Cluster Concept": 7,
+    "Conceptual Combination": 2
+  },
+  "cluster_labels": {
+    "0": "Family firms & digital innovation",
+    "1": "Competitive advantage & Dynamic managerial capabilities",
+    "2": "Digitalization & Microfoundations",
+    "3": "ESG performance & Firm performance",
+    "4": "Digital Technology & Internationalization",
+    "5": "Performance & SMEs"
+  },
+  "diagnostics": {
+    "n_clusters": 6,
+    "cluster_sizes": {
+      "0": 3,
+      "1": 7,
+      "2": 15,
+      "3": 3,
+      "4": 13,
+      "5": 9
+    },
+    "cluster_quality": {
+      "silhouette": 0.032569518633881835,
+      "davies_bouldin": 2.848862540604919,
+      "calinski_harabasz": 2.0700460606878277
+    },
+    "k_selection": {
+      "k": 6,
+      "k_range": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "wcss": [
+        13.587977610139836,
+        13.112746724956155,
+        12.491475949891518,
+        12.001171259649997,
+        11.69082248325901,
+        11.109285888663386,
+        10.680959252550688,
+        10.435587964530542,
+        9.961083850523833
+      ],
+      "silhouette": [
+        0.0395175495427812,
+        0.02935995645594412,
+        0.03243214559033783,
+        0.03941239190119791,
+        0.032569518633881835,
+        0.04024155262367209,
+        0.041434208034839486,
+        0.016076314422890644,
+        0.031009413602768945
+      ],
+      "k_elbow": null,
+      "k_silhouette": 8,
+      "rule": "elbow (max silhouette 0.041 < 0.25)"
+    },
+    "distance_metric": "cosine",
+    "gaps_before_deduplication": 38,
+    "gaps_after_deduplication": 27,
+    "skipped_clusters": {},
+    "n_core_domain_terms": 2,
+    "core_domain_terms": [
+      "digital transformation",
+      "dynamic capabilities"
+    ],
+    "tfidf_match_statistics": {
+      "exact": 139,
+      "contains": 7
+    },
+    "corpus": {
+      "n_articles": 50,
+      "n_unique_keywords": 146,
+      "mean_keywords_per_article": 5.16,
+      "articles_without_keywords": 0,
+      "has_abstracts": true,
+      "has_citations": true,
+      "year_range": [
+        2015,
+        2026
+      ],
+      "dropped_empty_text": 0,
+      "dropped_empty_keywords": 0
+    },
+    "ranking": {
+      "ranked": true,
+      "encoder": {
+        "encoder": "precomputed",
+        "model": null
+      },
+      "min_distance": 0.23314005113413439,
+      "max_distance": 0.6516650118853666,
+      "cutoff_distance": 0.31216458178998185
+    },
+    "article_encoder": {
+      "encoder": "precomputed",
+      "model": null
+    },
+    "keyword_encoder": {
+      "encoder": "precomputed",
+      "model": null
+    },
+    "n_unique_keywords_encoded": 146
+  }
+}
