@@ -15,22 +15,42 @@ from .text import normalize_keyword, split_author_keywords
 __all__ = ["Corpus", "load_csv", "from_dataframe", "COLUMN_ALIASES"]
 
 #: Canonical column name -> accepted source spellings (case-insensitive).
+#:
+#: Covers the Scopus CSV export, both Web of Science export flavours (the
+#: tab-delimited file with two-letter field tags and the full-record file with
+#: spelled-out headers) and the Scopus Search API field names.
+#:
+#: Web of Science ``ID`` / ``Keywords Plus`` is deliberately *not* an alias for
+#: ``author_keywords``: those terms are assigned algorithmically by the
+#: database, not by the authors, and both published procedures are defined on
+#: author-assigned keywords.  Pass ``column_map={"author_keywords":
+#: "Keywords Plus"}`` to use them anyway, and say so when reporting the run.
 COLUMN_ALIASES: dict[str, tuple[str, ...]] = {
-    "title": ("title", "document title", "ti", "dc:title"),
+    "title": ("title", "document title", "article title", "ti", "dc:title"),
     "abstract": ("abstract", "ab", "dc:description"),
     "author_keywords": (
         "author keywords", "authkeywords", "keywords", "author_keywords",
-        "de", "id", "author-keywords",
+        "de", "author-keywords",
     ),
-    "year": ("year", "publication year", "py", "prism:coverdate", "cover date"),
+    "year": (
+        "year", "publication year", "py", "prism:coverdate", "cover date",
+    ),
     "citations": (
         "cited by", "citations", "times cited", "tc", "citedby-count",
         "cited-by", "citation count",
+        "times cited, all databases", "times cited, wos core",
+        "times cited, web of science core collection",
     ),
     "doi": ("doi", "di", "prism:doi"),
     "authors": ("authors", "author full names", "af", "au", "dc:creator"),
-    "source": ("source title", "journal", "so", "prism:publicationname", "publication name"),
-    "eid": ("eid", "scopus id", "uid", "id"),
+    "source": (
+        "source title", "journal", "so", "prism:publicationname",
+        "publication name",
+    ),
+    "eid": (
+        "eid", "scopus id", "uid", "ut", "ut (unique wos id)", "ut (unique id)",
+        "wos id", "accession number",
+    ),
 }
 
 _REQUIRED = ("title", "author_keywords")

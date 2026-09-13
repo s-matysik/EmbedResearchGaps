@@ -129,3 +129,100 @@ def test_load_csv_round_trip(tmp_path: Path) -> None:
     assert isinstance(corpus, Corpus)
     assert corpus.n_articles == 3
     assert corpus.source_path == str(path)
+
+
+def wos_tab_delimited(base: pd.DataFrame) -> pd.DataFrame:
+    """A Web of Science tab-delimited export: two-letter field tags."""
+    return pd.DataFrame({
+        "PT": ["J"] * len(base),
+        "AU": base["Authors"], "AF": base["Authors"],
+        "TI": base["Title"], "SO": base["Source title"],
+        "AB": base["Abstract"],
+        "DE": base["Author Keywords"],
+        "ID": ["ALGORITHM; PERFORMANCE"] * len(base),   # Keywords Plus
+        "PY": base["Year"], "TC": base["Cited by"], "DI": base["DOI"],
+        "UT": [f"WOS:00000{i}" for i in range(len(base))],
+    })
+
+
+def wos_full_record(base: pd.DataFrame) -> pd.DataFrame:
+    """A Web of Science full-record export: spelled-out headers."""
+    return pd.DataFrame({
+        "Publication Type": ["J"] * len(base),
+        "Author Full Names": base["Authors"],
+        "Article Title": base["Title"],
+        "Source Title": base["Source title"],
+        "Abstract": base["Abstract"],
+        "Author Keywords": base["Author Keywords"],
+        "Keywords Plus": ["ALGORITHM; PERFORMANCE"] * len(base),
+        "Publication Year": base["Year"],
+        "Times Cited, All Databases": base["Cited by"],
+        "DOI": base["DOI"],
+        "UT (Unique WOS ID)": [f"WOS:00000{i}" for i in range(len(base))],
+    })
+
+
+class TestWebOfScienceExports:
+    """Both Web of Science export flavours load without a column map."""
+
+    def test_tab_delimited_tags_resolve(self, synthetic_frame: pd.DataFrame) -> None:
+        corpus = from_dataframe(wos_tab_delimited(synthetic_frame))
+        assert corpus.n_articles == len(synthetic_frame)
+        assert corpus.column_map["title"] == "TI"
+        assert corpus.column_map["author_keywords"] == "DE"
+        assert corpus.column_map["citations"] == "TC"
+        assert corpus.has_citations and corpus.has_abstracts
+
+    def test_full_record_headers_resolve(self, synthetic_frame: pd.DataFrame) -> None:
+        corpus = from_dataframe(wos_full_record(synthetic_frame))
+        assert corpus.column_map["title"] == "Article Title"
+        assert corpus.column_map["citations"] == "Times Cited, All Databases"
+        assert corpus.column_map["eid"] == "UT (Unique WOS ID)"
+        assert corpus.has_citations
+
+    @pytest.mark.parametrize("builder", [wos_tab_delimited, wos_full_record])
+    def test_keywords_plus_is_not_taken_for_author_keywords(
+        self, synthetic_frame: pd.DataFrame, builder
+    ) -> None:
+        """Keywords Plus is database-assigned, so it must not be picked up."""
+        corpus = from_dataframe(builder(synthetic_frame))
+        flat = {kw for keywords in corpus.keyword_lists for kw in keywords}
+        assert "algorithm" not in flat and "performance" not in flat
+
+    @pytest.mark.parametrize("builder", [wos_tab_delimited, wos_full_record])
+    def test_keywords_plus_can_be_requested_explicitly(
+        self, synthetic_frame: pd.DataFrame, builder
+    ) -> None:
+        frame = builder(synthetic_frame)
+        column = "ID" if "ID" in frame.columns else "Keywords Plus"
+        corpus = from_dataframe(frame, column_map={"author_keywords": column})
+        flat = {kw for keywords in corpus.keyword_lists for kw in keywords}
+        assert flat == {"algorithm", "performance"}
+
+    def test_both_flavours_give_the_same_corpus_as_scopus(
+        self, synthetic_frame: pd.DataFrame
+    ) -> None:
+        scopus = from_dataframe(synthetic_frame)
+        for builder in (wos_tab_delimited, wos_full_record):
+            other = from_dataframe(builder(synthetic_frame))
+            assert other.keyword_lists == scopus.keyword_lists
+            assert list(other.frame["combined_text"]) == list(scopus.frame["combined_text"])
+            assert list(other.frame["citations"]) == list(scopus.frame["citations"])
+
+    def test_tab_separated_file_round_trip(
+        self, synthetic_frame: pd.DataFrame, tmp_path: Path
+    ) -> None:
+        path = tmp_path / "savedrecs.txt"
+        wos_tab_delimited(synthetic_frame).to_csv(path, sep="\t", index=False)
+        corpus = load_csv(path, sep="\t")
+        assert corpus.n_articles == len(synthetic_frame)
+        assert corpus.column_map["author_keywords"] == "DE"
+
+    def test_both_modes_run_on_a_wos_corpus(
+        self, synthetic_frame: pd.DataFrame, offline_config
+    ) -> None:
+        from embedresearchgaps import articles_first, keywords_first
+
+        corpus = from_dataframe(wos_full_record(synthetic_frame))
+        assert articles_first(corpus, offline_config).n_gaps > 0
+        assert keywords_first(corpus, offline_config).n_gaps > 0
