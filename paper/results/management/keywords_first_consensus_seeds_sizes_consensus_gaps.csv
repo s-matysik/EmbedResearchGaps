@@ -1,0 +1,51 @@
+gap_type,keyword,n_runs_found,n_seeds_found,n_sizes_found,mean_score,min_score,max_score,mean_frequency,cluster_labels,support
+Peripheral Keyword,ryad titah,18,5,4,0.6019648671279493,0.4736321540720534,0.693782591586465,1.0,Microfoundations & Qualitative interpretive research | Microfoundations & family business | Qualitative interpretive research & Reconfiguring | Qualitative interpretive research & Seizing | Reconfiguring & Seizing | Seizing & IIoT | Seizing & Sensing,0.9
+Peripheral Keyword,freight transportation,10,5,2,0.5846488893256472,0.5590797454784842,0.6120283292971911,1.0,Emerging market & family business | Firm performance & Emerging market | Microfoundations & Emerging market | Microfoundations & Firm performance | Microfoundations & Strategic renewal | Seizing & IIoT | Seizing & Sensing | Technology and innovation management & Internationalization,0.5
+Peripheral Keyword,multimedia mindset,9,5,3,0.4310108828220941,0.4131656089393415,0.44125974613809815,1.0,Digitalization & Digital Technology,0.45
+Peripheral Keyword,social attention,8,5,3,0.5771165673347662,0.5189357182422341,0.6124866345625594,1.0,Firm performance & Routines | Firm performance & performance | Microfoundations & Qualitative interpretive research | Microfoundations & Strategic agility | Qualitative interpretive research & Case study | Strategic agility & Strategic renewal,0.4
+Peripheral Keyword,digital seizing,7,4,2,0.4323211516178662,0.42662086924180853,0.43968393063872324,1.0,Digitalization & Digital Technology,0.35
+Peripheral Keyword,exogenous shock,5,5,1,0.6621892993656381,0.6525203074985504,0.6693801270422333,1.0,Microfoundations & Qualitative interpretive research | Qualitative interpretive research & Reconfiguring,0.25
+Peripheral Keyword,african banking,5,5,1,0.5714874518722652,0.5593427581438664,0.5930250472991156,1.0,Emerging market & family business | Firm performance & Emerging market | Microfoundations & Firm performance | Microfoundations & Strategic renewal,0.25
+Peripheral Keyword,pär ågerfalk,4,3,3,0.5902976087291493,0.5557167638714401,0.6092407574347953,1.0,Firm performance & family business | Qualitative interpretive research & Case study | Seizing & IIoT | Strategic agility & Strategic renewal,0.2
+Peripheral Keyword,differentiation strategy,4,4,2,0.49190423124927773,0.48064986001412136,0.5023537294358056,1.0,Microfoundations & Strategic agility | Strategic agility & Strategic renewal | Strategic renewal & Technology and innovation management | Technology and innovation management & new product development (NPD),0.2
+Peripheral Keyword,technological diversity,4,4,1,0.4393946449705456,0.43552404674922385,0.44171810506791154,1.0,Digitalization & Digital Technology | Technology and innovation management & new product development (NPD),0.2
+Peripheral Keyword,environmental hostility,3,3,1,0.5848175159418202,0.5718973100575454,0.5942883177126705,1.0,Firm performance & Emerging market | Microfoundations & Qualitative interpretive research | Microfoundations & Strategic renewal,0.15
+Peripheral Keyword,complementary services,3,3,2,0.5337547055460997,0.530209932586755,0.5376629579778972,1.0,Microfoundations & Emerging market | Microfoundations & Strategic renewal | Technology and innovation management & Internationalization,0.15
+Peripheral Keyword,social capital,3,3,2,0.49332320545172487,0.46262820600163335,0.5094025610034651,1.0,Dynamic capability & Enterprise Dynamic Capabilities | Firm performance & Organisational remodelling | Microfoundations & Strategic agility,0.15
+Peripheral Keyword,leadership cognition,3,2,2,0.4888831875203586,0.46912652323111725,0.5117464018488216,1.0,Dynamic capabilities & Strategic agility | Strategic agility & Strategic renewal | Strategic renewal & Technology and innovation management,0.15
+Peripheral Keyword,ecosystem orchestration,3,2,2,0.48042602499825665,0.4695293330359691,0.48927319120643076,1.0,Dynamic capabilities & Strategic agility | Strategic agility & Strategic renewal | Technology and innovation management & new product development (NPD),0.15
+Peripheral Keyword,steel industry,3,3,2,0.47649721346999585,0.45327140303680924,0.5067002950765712,1.0,Emerging market & family business | Family business & Mittelstand firms | Microfoundations & family business,0.15
+Peripheral Keyword,information governance,3,3,1,0.47467595798001955,0.4696698829136918,0.4775080204333245,1.0,Digitalization & Digital Technology,0.15
+Peripheral Keyword,automotive industry,3,2,2,0.45682333733360697,0.4357406122478531,0.48331729371999343,1.0,Emerging market & family business | Family business & Mittelstand firms | Technology and innovation management & Emerging market,0.15
+Peripheral Keyword,relational embeddedness,2,2,1,0.5369892427335918,0.5350183527962604,0.5389601326709232,1.0,Microfoundations & Firm performance | Microfoundations & Strategic renewal,0.1
+Peripheral Keyword,work-life balance,2,2,1,0.5340939291919238,0.5178010638697174,0.5503867945141301,1.0,Microfoundations & Strategic renewal | Strategic agility & Strategic renewal,0.1
+Peripheral Keyword,dt vision,2,2,1,0.5195951538396593,0.5140550298188326,0.5251352778604859,1.0,Digitalization & Digital Technology | Firm performance & performance,0.1
+Peripheral Keyword,employee attitudes,2,2,1,0.5088821887615604,0.4870538822454802,0.5307104952776407,1.0,Dynamic capabilities & Microfoundations | Strategic agility & Strategic renewal,0.1
+Peripheral Keyword,visionary leadership,2,2,1,0.4754344890152992,0.4683023340673216,0.48256664396327686,1.0,Dynamic capabilities & Strategic agility,0.1
+Peripheral Keyword,green transition,2,2,1,0.4599325632774445,0.44067200888036906,0.4791931176745199,1.0,Strategic renewal & Technology and innovation management | Technology and innovation management & new product development (NPD),0.1
+Peripheral Keyword,emerging market,2,2,1,0.45409592104187396,0.4482111071540609,0.45998073492968705,1.0,Emerging market & family business | Technology and innovation management & Emerging market,0.1
+Peripheral Keyword,team learning,2,2,1,0.43766284914633413,0.4253360651412317,0.4499896331514366,1.0,Strategic agility & Strategic renewal | Strategic renewal & Technology and innovation management,0.1
+Peripheral Keyword,strategic aggressiveness,2,1,2,0.4354221258039567,0.40972550117755546,0.461118750430358,1.0,Dynamic capabilities & Strategic agility | Strategic agility & Strategic renewal,0.1
+Peripheral Keyword,relational collaboration,2,2,2,0.4329590981900716,0.42850100435980676,0.43741719202033646,1.0,Firm performance & Organisational remodelling | Qualitative interpretive research & Case study,0.1
+Peripheral Keyword,cognitive technologies,2,2,1,0.42336116227573467,0.4216712941891161,0.42505103036235325,1.0,Digitalization & Digital Technology,0.1
+Peripheral Keyword,value co-creation,2,2,1,0.4139013812627963,0.41231937172269073,0.41548339080290186,1.0,Technology and innovation management & new product development (NPD),0.1
+Peripheral Keyword,technology turbulence,2,2,1,0.41064673787457195,0.4088739648106696,0.4124195109384743,1.0,Digitalization & Digital Technology,0.1
+Peripheral Keyword,msmes performance,1,1,1,0.5324023584503784,0.5324023584503784,0.5324023584503784,1.0,Internationalization & Firm performance,0.05
+Peripheral Keyword,human–ai interaction,1,1,1,0.5078380668225108,0.5078380668225108,0.5078380668225108,1.0,Digitalization & Digital Technology,0.05
+Peripheral Keyword,turbulent environments,1,1,1,0.49146312759452604,0.49146312759452604,0.49146312759452604,1.0,Strategic agility & Strategic renewal,0.05
+Peripheral Keyword,business model,1,1,1,0.4796566725045689,0.4796566725045689,0.4796566725045689,1.0,Digitalization & Technology and innovation management,0.05
+Peripheral Keyword,generalist learning,1,1,1,0.4780827296552962,0.4780827296552962,0.4780827296552962,1.0,Dynamic capabilities & Microfoundations,0.05
+Peripheral Keyword,organisational unlearning,1,1,1,0.47587355837898637,0.47587355837898637,0.47587355837898637,1.0,Strategic agility & Dynamic capability,0.05
+Peripheral Keyword,organizational unlearning,1,1,1,0.47583071549474365,0.47583071549474365,0.47583071549474365,1.0,Strategic agility & Dynamic capability,0.05
+Peripheral Keyword,circular economy,1,1,1,0.4730036627340841,0.4730036627340841,0.4730036627340841,1.0,Technology and innovation management & Emerging market,0.05
+Peripheral Keyword,emerging economies,1,1,1,0.4724990868081246,0.4724990868081246,0.4724990868081246,1.0,Technology and innovation management & Emerging market,0.05
+Peripheral Keyword,entrepreneurial persistence,1,1,1,0.4526712882514521,0.4526712882514521,0.4526712882514521,1.0,Strategic renewal & Technology and innovation management,0.05
+Peripheral Keyword,managerial cognition,1,1,1,0.45181965164886084,0.45181965164886084,0.45181965164886084,1.0,Firm performance & competitive advantage,0.05
+Peripheral Keyword,human capital,1,1,1,0.44234443130186496,0.44234443130186496,0.44234443130186496,1.0,Firm performance & performance,0.05
+Peripheral Keyword,social media,1,1,1,0.4413247742324363,0.4413247742324363,0.4413247742324363,1.0,Digitalization & Digital Technology,0.05
+Peripheral Keyword,design thinking,1,1,1,0.4243712700853113,0.4243712700853113,0.4243712700853113,1.0,Digitalization & Digital Technology,0.05
+Peripheral Keyword,product competitiveness,1,1,1,0.42129830814149827,0.42129830814149827,0.42129830814149827,1.0,Firm performance & Performance,0.05
+Peripheral Keyword,digital sensing,1,1,1,0.4093103356492602,0.4093103356492602,0.4093103356492602,1.0,Digitalization & Digital Technology,0.05
+Peripheral Keyword,green innovation,1,1,1,0.40403403568172247,0.40403403568172247,0.40403403568172247,1.0,Digitalization & Technology and innovation management,0.05
+Peripheral Keyword,response performance,1,1,1,0.3082796460264887,0.3082796460264887,0.3082796460264887,1.0,Firm performance & performance,0.05
+Peripheral Keyword,enterprise agility,1,1,1,0.3060907222151874,0.3060907222151874,0.3060907222151874,1.0,Dynamic capability & Enterprise Dynamic Capabilities,0.05

@@ -22,6 +22,7 @@ __all__ = [
     "pairwise_agreement",
     "SetComparison",
     "compare_keyword_sets",
+    "permutation_mean_difference",
     "expert_llm_concordance",
 ]
 
@@ -246,16 +247,56 @@ class SetComparison:
         }
 
 
+def permutation_mean_difference(
+    left: np.ndarray,
+    right: np.ndarray,
+    n_resamples: int = 20_000,
+    random_state: int = 42,
+) -> float:
+    """Two-sided permutation p-value for the difference of two means.
+
+    Labels are shuffled between the pooled observations, which is the exact
+    null of "the two sets are annotated alike" and needs neither normality nor
+    equal variance -- the reason to prefer it over Welch when one arm holds
+    only a few dozen judgements.
+    """
+    left = np.asarray(left, dtype=float)
+    right = np.asarray(right, dtype=float)
+    if left.size == 0 or right.size == 0:
+        return float("nan")
+    observed = abs(left.mean() - right.mean())
+    pooled = np.concatenate([left, right])
+    rng = np.random.default_rng(random_state)
+    n_left = left.size
+    count = 0
+    for _ in range(n_resamples):
+        rng.shuffle(pooled)
+        if abs(pooled[:n_left].mean() - pooled[n_left:].mean()) >= observed:
+            count += 1
+    # add-one correction: a permutation p-value is never exactly zero
+    return float((count + 1) / (n_resamples + 1))
+
+
 def compare_keyword_sets(
     selected: pd.DataFrame,
     everything: pd.DataFrame,
 ) -> SetComparison:
-    """Compare annotations of the SELECTED and ALL keyword sets.
+    """Compare annotations of the candidate set and a control set.
 
     ``selected`` holds judgements of the keywords the pipeline flagged,
-    ``everything`` judgements of the unfiltered corpus keywords.  Novelty
-    distributions are compared with a Welch t-test and a Mann-Whitney U test,
-    the two tests reported in the PACIS paper.
+    ``everything`` judgements of the control keywords.  The two frames must
+    describe *disjoint* keyword sets: see
+    :func:`~embedresearchgaps.validation.runner.selected_and_control_keywords`.
+    When they are not disjoint the returned comparison carries
+    ``novelty_test['overlapping_samples'] = 1.0`` and the parametric p-values
+    are omitted, because a two-sample statistic on nested samples has no
+    defined null distribution.
+
+    Novelty distributions are compared with a Welch t-test and a Mann-Whitney
+    U test -- the two tests reported in the PACIS paper -- and, because the
+    candidate sets are small and the Novelty Score is a bounded ordinal
+    variable, with a two-sided permutation test on the difference of means
+    that assumes neither normality nor equal variance.
     """
     selected_rates, all_rates = label_rates(selected), label_rates(everything)
     selected_novelty, all_novelty = mean_novelty(selected), mean_novelty(everything)
@@ -264,16 +305,33 @@ def compare_keyword_sets(
     if not selected.empty and not everything.empty:
         left = selected["novelty"].astype(float).to_numpy()
         right = everything["novelty"].astype(float).to_numpy()
-        t_stat, t_p = stats.ttest_ind(left, right, equal_var=False)
-        u_stat, u_p = stats.mannwhitneyu(left, right, alternative="two-sided")
-        pooled = np.sqrt((np.var(left, ddof=1) + np.var(right, ddof=1)) / 2) if len(left) > 1 and len(right) > 1 else np.nan
-        test = {
-            "welch_t": float(t_stat),
-            "welch_p": float(t_p),
-            "mannwhitney_u": float(u_stat),
-            "mannwhitney_p": float(u_p),
-            "cohens_d": float((left.mean() - right.mean()) / pooled) if pooled and pooled > 0 else float("nan"),
-        }
+        shared = set(selected["keyword"]) & set(everything["keyword"])
+        if shared:
+            test = {
+                "overlapping_samples": 1.0,
+                "n_shared_keywords": float(len(shared)),
+            }
+        else:
+            t_stat, t_p = stats.ttest_ind(left, right, equal_var=False)
+            u_stat, u_p = stats.mannwhitneyu(left, right, alternative="two-sided")
+            pooled = (
+                np.sqrt((np.var(left, ddof=1) + np.var(right, ddof=1)) / 2)
+                if len(left) > 1 and len(right) > 1
+                else np.nan
+            )
+            test = {
+                "overlapping_samples": 0.0,
+                "welch_t": float(t_stat),
+                "welch_p": float(t_p),
+                "mannwhitney_u": float(u_stat),
+                "mannwhitney_p": float(u_p),
+                "cohens_d": (
+                    float((left.mean() - right.mean()) / pooled)
+                    if pooled and pooled > 0
+                    else float("nan")
+                ),
+                "permutation_p": permutation_mean_difference(left, right),
+            }
 
     base = all_novelty.get("mean", float("nan"))
     return SetComparison(

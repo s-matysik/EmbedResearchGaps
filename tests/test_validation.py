@@ -14,6 +14,8 @@ import pytest
 from embedresearchgaps import GapConfig, articles_first
 from embedresearchgaps.validation import (
     Annotation,
+    permutation_mean_difference,
+    selected_and_control_keywords,
     CallableAnnotator,
     ChatAnnotator,
     LABELS,
@@ -260,8 +262,10 @@ class TestMetrics:
         assert comparison.explored_rate_delta_pp == pytest.approx(-25.0)
         assert comparison.novelty_increase_pct > 0
         assert set(comparison.novelty_test) == {
-            "welch_t", "welch_p", "mannwhitney_u", "mannwhitney_p", "cohens_d"
+            "overlapping_samples", "welch_t", "welch_p", "mannwhitney_u",
+            "mannwhitney_p", "cohens_d", "permutation_p",
         }
+        assert comparison.novelty_test["overlapping_samples"] == 0.0
         assert "gap_rate_delta_pp" in comparison.to_dict()
 
 
@@ -585,3 +589,95 @@ def test_annotations_to_frame_schema() -> None:
         "annotator", "keyword_set", "keyword", "label", "novelty", "rationale"
     ]
     assert annotations_to_frame([]).empty
+
+
+class TestControlSetIndependence:
+    """The control set must not contain the candidates it is compared against."""
+
+    def test_control_excludes_the_candidates(self, synthetic_corpus, offline_config) -> None:
+        result = articles_first(synthetic_corpus, offline_config)
+        selected, control = selected_and_control_keywords(result)
+        assert selected, "fixture must produce candidates"
+        assert not set(selected) & set(control)
+
+    def test_control_is_the_rest_of_the_keyword_population(
+        self, synthetic_corpus, offline_config
+    ) -> None:
+        result = articles_first(synthetic_corpus, offline_config)
+        selected, control = selected_and_control_keywords(result)
+        population = {kw for kws in result.articles["keywords_normalized"] for kw in kws}
+        assert set(control) == population - set(selected)
+
+    def test_nested_control_is_available_but_deprecated(
+        self, synthetic_corpus, offline_config
+    ) -> None:
+        result = articles_first(synthetic_corpus, offline_config)
+        with pytest.deprecated_call():
+            selected, nested = selected_and_all_keywords(result)
+        assert set(selected) <= set(nested)
+
+    def test_cap_samples_from_the_disjoint_control(
+        self, synthetic_corpus, offline_config
+    ) -> None:
+        result = articles_first(synthetic_corpus, offline_config)
+        selected, control = selected_and_control_keywords(
+            result, max_control=8, random_state=1
+        )
+        assert len(control) == 8
+        assert not set(selected) & set(control)
+
+    def test_overlapping_samples_suppress_the_parametric_tests(self) -> None:
+        shared = pd.DataFrame({
+            "annotator": ["m1"] * 4, "keyword_set": ["SELECTED"] * 4,
+            "keyword": ["a", "b", "c", "d"], "label": ["GAP"] * 4,
+            "novelty": [5, 6, 7, 8], "rationale": [""] * 4,
+        })
+        nested = shared.assign(keyword_set="ALL")
+        comparison = compare_keyword_sets(shared, nested)
+        assert comparison.novelty_test["overlapping_samples"] == 1.0
+        assert comparison.novelty_test["n_shared_keywords"] == 4.0
+        assert "welch_p" not in comparison.novelty_test
+
+    def test_disjoint_samples_get_all_three_tests(self) -> None:
+        left = pd.DataFrame({
+            "annotator": ["m1"] * 4, "keyword_set": ["SELECTED"] * 4,
+            "keyword": ["a", "b", "c", "d"], "label": ["GAP"] * 4,
+            "novelty": [8, 9, 8, 9], "rationale": [""] * 4,
+        })
+        right = pd.DataFrame({
+            "annotator": ["m1"] * 4, "keyword_set": ["CONTROL"] * 4,
+            "keyword": ["e", "f", "g", "h"], "label": ["EXPLORED"] * 4,
+            "novelty": [1, 2, 1, 2], "rationale": [""] * 4,
+        })
+        comparison = compare_keyword_sets(left, right)
+        assert comparison.novelty_test["overlapping_samples"] == 0.0
+        for key in ("welch_p", "mannwhitney_p", "permutation_p", "cohens_d"):
+            assert key in comparison.novelty_test
+        assert comparison.novelty_test["permutation_p"] < 0.1
+
+
+class TestPermutationTest:
+    def test_identical_samples_are_never_significant(self) -> None:
+        values = np.array([3.0, 4, 5, 3, 4, 5])
+        assert permutation_mean_difference(values, values, n_resamples=2000) == 1.0
+
+    def test_separated_samples_are_significant(self) -> None:
+        p = permutation_mean_difference(
+            np.arange(1.0, 11.0), np.arange(21.0, 31.0), n_resamples=2000
+        )
+        assert p < 0.01
+
+    def test_p_value_is_never_zero(self) -> None:
+        p = permutation_mean_difference(
+            np.zeros(20), np.ones(20) * 9, n_resamples=500
+        )
+        assert 0 < p <= 1
+
+    def test_deterministic_for_a_given_seed(self) -> None:
+        left, right = np.array([2.0, 5, 7, 3]), np.array([4.0, 6, 1, 8])
+        first = permutation_mean_difference(left, right, n_resamples=1000, random_state=7)
+        second = permutation_mean_difference(left, right, n_resamples=1000, random_state=7)
+        assert first == second
+
+    def test_empty_input_is_undefined(self) -> None:
+        assert np.isnan(permutation_mean_difference(np.array([]), np.array([1.0])))

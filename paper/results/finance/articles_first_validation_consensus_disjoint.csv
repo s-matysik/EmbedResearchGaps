@@ -1,0 +1,169 @@
+keyword_set,keyword,n_annotators,gap_votes,gap_share,majority_label,unanimous,mean_novelty,std_novelty
+CONTROL,credit invisible,5,5,1.0,GAP,True,7.6,1.1401754250991378
+CONTROL,digital financial literacy,5,5,1.0,GAP,True,7.6,0.5477225575051662
+CONTROL,digital risk control,5,5,1.0,GAP,True,7.0,0.7071067811865476
+CONTROL,fintech partnership,5,5,1.0,GAP,True,7.0,0.7071067811865476
+CONTROL,open banking,5,5,1.0,GAP,True,7.0,0.7071067811865476
+CONTROL,risk transmission mechanisms,5,5,1.0,GAP,True,7.0,0.7071067811865476
+SELECTED,bigtech credit,5,5,1.0,GAP,True,7.0,1.4142135623730951
+CONTROL,alternative data sources,5,5,1.0,GAP,True,6.8,0.8366600265340756
+CONTROL,central and eastern european countries,5,5,1.0,GAP,True,6.8,0.4472135954999579
+CONTROL,village and township banks,5,5,1.0,GAP,True,6.8,0.8366600265340756
+CONTROL,alternative information,5,5,1.0,GAP,True,6.6,1.3416407864998738
+CONTROL,brics economies,5,5,1.0,GAP,True,6.6,0.8944271909999159
+CONTROL,credit mismatch,5,5,1.0,GAP,True,6.4,0.5477225575051661
+CONTROL,ethics,5,5,1.0,GAP,True,6.4,1.6733200530681511
+CONTROL,perceived regulatory support,5,5,1.0,GAP,True,6.4,0.8944271909999159
+CONTROL,regulatory arbitrage,5,5,1.0,GAP,True,6.4,1.140175425099138
+CONTROL,fintech ecosystem,5,5,1.0,GAP,True,6.2,1.7888543819998317
+SELECTED,big tech,5,5,1.0,GAP,True,6.2,1.7888543819998317
+SELECTED,debt trap,5,5,1.0,GAP,True,6.2,0.4472135954999579
+CONTROL,africa,5,5,1.0,GAP,True,6.0,1.8708286933869707
+CONTROL,digital inequality,5,5,1.0,GAP,True,6.0,1.224744871391589
+CONTROL,insolvency risk,5,5,1.0,GAP,True,6.0,1.224744871391589
+SELECTED,disadvantaged communities,5,5,1.0,GAP,True,6.0,1.4142135623730951
+SELECTED,soft information,5,5,1.0,GAP,True,6.0,1.0
+CONTROL,alternative credit,5,5,1.0,GAP,True,5.8,0.8366600265340756
+CONTROL,egyptian banking sector,5,5,1.0,GAP,True,5.8,0.8366600265340756
+CONTROL,bigtech,5,5,1.0,GAP,True,5.6,0.8944271909999159
+CONTROL,digital divide,5,5,1.0,GAP,True,5.6,1.51657508881031
+CONTROL,responsible finance,5,5,1.0,GAP,True,5.6,0.8944271909999159
+CONTROL,rural bank,5,5,1.0,GAP,True,5.6,1.140175425099138
+SELECTED,alternative data,5,5,1.0,GAP,True,5.4,1.6733200530681511
+CONTROL,lending efficiency,5,5,1.0,GAP,True,5.2,1.0954451150103321
+SELECTED,bank fintech,5,5,1.0,GAP,True,5.2,1.0954451150103321
+CONTROL,financial constraints,5,5,1.0,GAP,True,5.0,1.0
+CONTROL,income inequality,5,5,1.0,GAP,True,5.0,0.7071067811865476
+CONTROL,risk-taking,5,5,1.0,GAP,True,5.0,0.7071067811865476
+SELECTED,sub-saharan africa,5,5,1.0,GAP,True,5.0,0.7071067811865476
+CONTROL,entrepreneurial risk,5,5,1.0,GAP,True,4.8,1.3038404810405297
+CONTROL,middle-income countries,5,5,1.0,GAP,True,4.8,1.0954451150103321
+SELECTED,south asia,5,5,1.0,GAP,True,4.8,1.0954451150103321
+SELECTED,banks’ risk-taking,4,4,1.0,GAP,True,4.75,2.0615528128088303
+CONTROL,banking stability,5,5,1.0,GAP,True,4.4,1.140175425099138
+CONTROL,sustainable financial development,5,5,1.0,GAP,True,4.4,0.8944271909999159
+SELECTED,bank concentration,5,5,1.0,GAP,True,4.4,0.5477225575051661
+CONTROL,bank credit risk,5,5,1.0,GAP,True,4.2,1.3038404810405297
+CONTROL,efficiency,5,5,1.0,GAP,True,4.2,1.3038404810405297
+SELECTED,risk-taking behavior,5,5,1.0,GAP,True,4.2,1.3038404810405297
+CONTROL,green credit expansion,5,4,0.8,GAP,False,6.2,2.588435821108957
+CONTROL,green credit risk,5,4,0.8,GAP,False,6.2,2.588435821108957
+CONTROL,social media analytics,5,4,0.8,GAP,False,5.6,2.3021728866442674
+CONTROL,fintech index,5,4,0.8,GAP,False,5.4,2.073644135332772
+CONTROL,soft credit information,5,4,0.8,GAP,False,5.4,2.4083189157584592
+SELECTED,regulatory resources,5,4,0.8,GAP,False,5.2,2.16794833886788
+CONTROL,digital inclusion,5,4,0.8,GAP,False,5.0,2.1213203435596424
+CONTROL,financial sustainability,5,4,0.8,GAP,False,5.0,2.1213203435596424
+CONTROL,micro-risks,5,4,0.8,GAP,False,5.0,1.7320508075688772
+CONTROL,digital inclusive finance,5,4,0.8,GAP,False,4.8,2.387467277262665
+CONTROL,fintech-based financial inclusion,5,4,0.8,GAP,False,4.8,2.387467277262665
+CONTROL,total alternative credit,5,4,0.8,GAP,False,4.8,2.16794833886788
+CONTROL,bank-specific factors,5,4,0.8,GAP,False,4.6,1.6733200530681511
+CONTROL,financial stability,5,4,0.8,GAP,False,4.6,1.6733200530681511
+CONTROL,relationship lending,5,4,0.8,GAP,False,4.6,1.816590212458495
+CONTROL,corporate investment efficiency,5,4,0.8,GAP,False,4.4,1.816590212458495
+CONTROL,crowdfunding,5,4,0.8,GAP,False,4.4,1.816590212458495
+CONTROL,local banks,5,4,0.8,GAP,False,4.4,1.51657508881031
+CONTROL,microfinance institutions,5,4,0.8,GAP,False,4.4,1.816590212458495
+CONTROL,resource allocation efficiency,5,4,0.8,GAP,False,4.4,1.51657508881031
+CONTROL,sustainable finance,5,4,0.8,GAP,False,4.4,1.51657508881031
+SELECTED,artificial intelligence,5,4,0.8,GAP,False,4.0,1.5811388300841898
+CONTROL,loan size,5,4,0.8,GAP,False,3.8,1.4832396974191326
+CONTROL,personal loans,5,4,0.8,GAP,False,3.6,1.51657508881031
+SELECTED,output volatility,5,4,0.8,GAP,False,3.6,1.51657508881031
+CONTROL,developing countries,5,3,0.6,GAP,False,4.2,2.949576240750525
+CONTROL,digital financial inclusion,5,3,0.6,GAP,False,4.0,2.345207879911715
+CONTROL,micro-finance institutes,5,3,0.6,GAP,False,4.0,2.1213203435596424
+CONTROL,p2p lending,5,3,0.6,GAP,False,4.0,2.345207879911715
+CONTROL,peer-to-peer lending,5,3,0.6,GAP,False,4.0,2.1213203435596424
+CONTROL,postfinancing,5,3,0.6,GAP,False,4.0,2.9154759474226504
+CONTROL,prefinancing,5,3,0.6,GAP,False,4.0,2.9154759474226504
+CONTROL,regulation,5,3,0.6,GAP,False,4.0,2.1213203435596424
+CONTROL,bank profitability,5,3,0.6,GAP,False,3.8,2.04939015319192
+CONTROL,china,5,3,0.6,GAP,False,3.8,2.04939015319192
+CONTROL,financial regulation,5,3,0.6,GAP,False,3.8,2.16794833886788
+CONTROL,marketplace lending,5,3,0.6,GAP,False,3.8,2.4899799195977463
+CONTROL,public policy,5,3,0.6,GAP,False,3.8,2.16794833886788
+CONTROL,cryptocurrency,5,3,0.6,GAP,False,3.6,1.51657508881031
+CONTROL,fintech adoption,5,3,0.6,GAP,False,3.6,1.51657508881031
+CONTROL,non-financial firms,5,3,0.6,GAP,False,3.6,1.51657508881031
+CONTROL,competition,5,3,0.6,GAP,False,3.4,2.073644135332772
+CONTROL,macroeconomic factors,5,3,0.6,GAP,False,3.4,1.6733200530681511
+CONTROL,mobile banking,5,3,0.6,GAP,False,3.4,1.6733200530681511
+CONTROL,social responsibilities,5,3,0.6,GAP,False,3.4,1.6733200530681511
+CONTROL,account ownership,5,3,0.6,GAP,False,3.2,1.6431676725154984
+CONTROL,bank performance,5,3,0.6,GAP,False,3.2,2.280350850198276
+CONTROL,conventional financial sector,5,3,0.6,GAP,False,3.2,1.3038404810405297
+CONTROL,formal accounts,5,3,0.6,GAP,False,3.2,1.6431676725154984
+CONTROL,digital payment,5,3,0.6,GAP,False,3.0,1.0
+CONTROL,risky behaviour,5,3,0.6,GAP,False,3.0,1.0
+CONTROL,non-performing loans,5,2,0.4,EXPLORED,False,3.6,2.3021728866442674
+CONTROL,bank risk,5,2,0.4,EXPLORED,False,3.4,2.1908902300206647
+CONTROL,high-income countries,5,2,0.4,EXPLORED,False,3.0,1.7320508075688772
+SELECTED,digital lending,5,2,0.4,EXPLORED,False,3.0,1.7320508075688772
+CONTROL,economic growth,5,2,0.4,EXPLORED,False,2.6,1.51657508881031
+CONTROL,gdp growth,5,2,0.4,GAP,False,2.4,0.5477225575051661
+CONTROL,green innovation,5,2,0.4,GAP,False,2.2,1.3038404810405297
+CONTROL,sustainable development,5,2,0.4,GAP,False,2.2,0.8366600265340756
+CONTROL,lendingclub,5,2,0.4,GAP,False,2.0,1.0
+SELECTED,black swan,5,2,0.4,GAP,False,2.0,1.0
+CONTROL,financial technology innovation,4,1,0.25,EXPLORED,False,2.75,1.5
+CONTROL,credit risk management,5,1,0.2,EXPLORED,False,3.0,2.23606797749979
+CONTROL,credit scoring,5,1,0.2,EXPLORED,False,3.0,2.23606797749979
+CONTROL,fincredit,5,1,0.2,NOISE,False,3.0,3.391164991562634
+SELECTED,fintech credit,5,1,0.2,EXPLORED,False,3.0,2.23606797749979
+CONTROL,fintech development,5,1,0.2,EXPLORED,False,2.8,1.7888543819998322
+CONTROL,platforms,5,1,0.2,EXPLORED,False,2.8,1.7888543819998322
+CONTROL,digital financial services,5,1,0.2,EXPLORED,False,2.6,1.3416407864998738
+CONTROL,inclusivity,5,1,0.2,EXPLORED,False,2.6,1.3416407864998738
+CONTROL,digitalization,5,1,0.2,EXPLORED,False,2.4,0.8944271909999161
+CONTROL,creditworthiness,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,digital economy,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,digital finance,5,1,0.2,EXPLORED,False,2.2,1.0954451150103321
+CONTROL,technological innovation,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,traditional financial inclusion,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,cross-country analysis,5,1,0.2,METHOD,False,2.0,1.224744871391589
+CONTROL,institutions,5,1,0.2,EXPLORED,False,2.0,0.7071067811865476
+SELECTED,inclusive finance,5,1,0.2,EXPLORED,False,1.8,0.8366600265340756
+CONTROL,utaut2,5,1,0.2,METHOD,False,1.6,0.8944271909999159
+CONTROL,credit card,5,0,0.0,EXPLORED,True,2.0,0.0
+CONTROL,economic development,5,0,0.0,EXPLORED,True,2.0,0.0
+CONTROL,financial products,5,0,0.0,EXPLORED,False,2.0,0.0
+SELECTED,financial inclusion,5,0,0.0,EXPLORED,True,2.0,0.0
+SELECTED,financial innovation,5,0,0.0,EXPLORED,True,2.0,0.0
+CONTROL,commercial bank,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+CONTROL,corporate finance,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+CONTROL,fintech,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+SELECTED,credit risk,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+CONTROL,bank lending,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+CONTROL,debit card,5,0,0.0,EXPLORED,False,1.6,0.5477225575051661
+SELECTED,commercial banks,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+SELECTED,financial technology,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+CONTROL,credit & credit institutions,5,0,0.0,EXPLORED,False,1.4,0.5477225575051661
+CONTROL,development economics,5,0,0.0,EXPLORED,False,1.4,0.5477225575051661
+CONTROL,innovation,5,0,0.0,EXPLORED,False,1.4,0.5477225575051661
+CONTROL,banking,5,0,0.0,EXPLORED,False,1.2,0.44721359549995804
+CONTROL,performance,5,0,0.0,EXPLORED,False,1.2,0.4472135954999579
+CONTROL,banks,5,0,0.0,EXPLORED,True,1.0,0.0
+CONTROL,bootstrap,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,"business, management and accounting",5,0,0.0,NOISE,False,1.0,0.0
+CONTROL,c11,5,0,0.0,NOISE,False,1.0,0.0
+CONTROL,d31,5,0,0.0,NOISE,False,1.0,0.0
+CONTROL,d63,5,0,0.0,NOISE,False,1.0,0.0
+CONTROL,"dr david mcmillan, university of stirling, united kingdom of great britain and northern ireland",5,0,0.0,NOISE,True,1.0,0.0
+CONTROL,dynamic panel two-stage gmm,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,economics,5,0,0.0,EXPLORED,False,1.0,0.0
+CONTROL,engagement,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+CONTROL,f62,5,0,0.0,NOISE,False,1.0,0.0
+CONTROL,feature selection,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,finance,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+CONTROL,generalized method of moments,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,inclusion,5,0,0.0,EXPLORED,False,1.0,0.0
+CONTROL,o,5,0,0.0,NOISE,True,1.0,0.0
+CONTROL,panel data,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,panel data analysis,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,panel regression analysis,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,principal component analysis,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,system gmm,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,systematic literature review,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,z-score,5,0,0.0,METHOD,True,1.0,0.0

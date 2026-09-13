@@ -1,0 +1,147 @@
+keyword_set,keyword,n_annotators,gap_votes,gap_share,majority_label,unanimous,mean_novelty,std_novelty
+CONTROL,digital dynamic capabilities,5,5,1.0,GAP,True,7.6,1.1401754250991378
+CONTROL,dynamic digital capability,5,5,1.0,GAP,True,7.2,0.8366600265340756
+CONTROL,digital-oriented human resources practices,5,5,1.0,GAP,True,7.0,0.7071067811865476
+CONTROL,dynamic managerial capabilities,5,5,1.0,GAP,True,7.0,0.7071067811865476
+SELECTED,ecosystem orchestration,5,5,1.0,GAP,True,7.0,1.224744871391589
+CONTROL,design capabilities,5,5,1.0,GAP,True,6.2,1.7888543819998317
+CONTROL,digital culture,5,5,1.0,GAP,True,6.2,0.8366600265340756
+CONTROL,dynamic operational capability,5,5,1.0,GAP,True,6.2,1.0954451150103321
+CONTROL,microfoundations,5,5,1.0,GAP,True,6.2,1.4832396974191326
+CONTROL,organisational remodelling,5,5,1.0,GAP,True,6.2,0.44721359549995787
+CONTROL,digital process innovation,5,5,1.0,GAP,True,6.0,0.7071067811865476
+SELECTED,digital leadership,5,5,1.0,GAP,True,6.0,1.5811388300841898
+CONTROL,digital maturity,5,5,1.0,GAP,True,5.8,0.4472135954999579
+CONTROL,iiot,5,5,1.0,GAP,True,5.8,2.16794833886788
+CONTROL,process digitalization initiative,5,5,1.0,GAP,True,5.8,0.8366600265340756
+CONTROL,staged resource allocation,5,5,1.0,GAP,True,5.8,0.4472135954999579
+CONTROL,digital innovation management,5,5,1.0,GAP,True,5.6,0.8944271909999159
+CONTROL,strategic aggressiveness,5,5,1.0,GAP,True,5.6,0.8944271909999157
+SELECTED,dt vision,5,5,1.0,GAP,True,5.6,1.1401754250991378
+CONTROL,digital capabilities,5,5,1.0,GAP,True,5.4,1.140175425099138
+SELECTED,family firms,5,5,1.0,GAP,True,5.4,1.1401754250991378
+CONTROL,emerging market firms,5,5,1.0,GAP,True,5.2,0.4472135954999579
+CONTROL,emerging technologies,5,5,1.0,GAP,True,5.2,2.280350850198276
+CONTROL,esg performance,5,5,1.0,GAP,True,5.0,2.0
+CONTROL,strategic agility,5,5,1.0,GAP,True,5.0,0.7071067811865476
+CONTROL,“business model innovation”,4,4,1.0,GAP,True,5.0,1.632993161855452
+SELECTED,design thinking,5,5,1.0,GAP,True,4.8,1.3038404810405297
+SELECTED,steel industry,5,5,1.0,GAP,True,4.6,1.1401754250991378
+SELECTED,agrifood businesses,5,5,1.0,GAP,True,4.4,1.3416407864998738
+CONTROL,micro-foundations,5,4,0.8,GAP,False,5.6,2.701851217221259
+CONTROL,mittelstand firms,5,4,0.8,GAP,False,5.2,2.280350850198276
+CONTROL,digital barriers,5,4,0.8,GAP,False,5.0,2.0
+CONTROL,esg,5,4,0.8,GAP,False,5.0,2.7386127875258306
+CONTROL,managerial cognition,5,4,0.8,GAP,False,5.0,1.8708286933869707
+CONTROL,digital literacy,5,4,0.8,GAP,False,4.8,1.6431676725154984
+CONTROL,organizational resilience,5,4,0.8,GAP,False,4.8,1.7888543819998317
+CONTROL,manufacturing digitalization,5,4,0.8,GAP,False,4.6,1.816590212458495
+CONTROL,strategic renewal,5,4,0.8,GAP,False,4.6,1.6733200530681511
+CONTROL,family business,5,4,0.8,GAP,False,4.4,1.816590212458495
+CONTROL,relational collaboration,5,4,0.8,GAP,False,4.4,1.816590212458495
+CONTROL,digital business performance,5,4,0.8,GAP,False,4.2,1.9235384061671346
+CONTROL,emerging market,5,4,0.8,GAP,False,4.2,1.4832396974191326
+CONTROL,organizational adaptability,5,4,0.8,GAP,False,4.2,1.9235384061671346
+CONTROL,intellectual capital,5,4,0.8,GAP,False,4.0,1.8708286933869707
+CONTROL,responsiveness,5,4,0.8,GAP,False,3.8,2.280350850198276
+CONTROL,small and medium-sized enterprises,5,4,0.8,GAP,False,3.8,1.3038404810405297
+CONTROL,collaborative innovation,5,3,0.6,GAP,False,4.2,2.16794833886788
+CONTROL,enterprise agility,5,3,0.6,GAP,False,4.2,2.16794833886788
+CONTROL,reconfiguring,5,3,0.6,GAP,False,4.2,2.588435821108957
+CONTROL,seizing,5,3,0.6,GAP,False,4.2,2.588435821108957
+CONTROL,sensing,5,3,0.6,GAP,False,4.2,2.588435821108957
+CONTROL,absorptive capacity,5,3,0.6,GAP,False,3.8,2.04939015319192
+CONTROL,born-digital,5,3,0.6,GAP,False,3.8,2.280350850198276
+CONTROL,business model innovation,5,3,0.6,GAP,False,3.8,2.04939015319192
+CONTROL,smart factory,5,3,0.6,GAP,False,3.8,2.3874672772626644
+SELECTED,process digitization,5,3,0.6,GAP,False,3.8,1.7888543819998317
+CONTROL,digital platforms,5,3,0.6,GAP,False,3.6,2.073644135332772
+CONTROL,innovative culture,5,3,0.6,GAP,False,3.6,1.6733200530681511
+CONTROL,resources-processes-values (rpv) framework,5,3,0.6,GAP,False,3.6,1.9493588689617927
+SELECTED,digital innovation,5,3,0.6,GAP,False,3.6,2.701851217221259
+CONTROL,cyber-security,5,3,0.6,GAP,False,3.4,1.6733200530681511
+CONTROL,enterprise dynamic capabilities,5,3,0.6,GAP,False,3.4,1.9493588689617927
+CONTROL,innovation performance,5,3,0.6,GAP,False,3.4,1.6733200530681511
+CONTROL,organizational readiness,5,3,0.6,GAP,False,3.4,1.6733200530681511
+CONTROL,smes,5,3,0.6,GAP,False,3.4,1.5165750888103102
+SELECTED,human capital,5,3,0.6,GAP,False,3.4,1.6733200530681511
+CONTROL,customer value creation,5,3,0.6,GAP,False,3.2,1.3038404810405297
+CONTROL,sme,5,3,0.6,GAP,False,3.2,1.0954451150103321
+CONTROL,technology disruption,5,3,0.6,GAP,False,3.2,1.6431676725154984
+SELECTED,manufacturing firms,5,3,0.6,GAP,False,2.8,1.4832396974191326
+CONTROL,green innovation,5,3,0.6,GAP,False,2.6,1.140175425099138
+CONTROL,information system strategy,5,3,0.6,GAP,False,2.6,0.5477225575051661
+CONTROL,internationalization,5,3,0.6,GAP,False,2.6,1.140175425099138
+SELECTED,common language,5,2,0.4,LOW IMPORTANCE,False,3.4,2.4083189157584592
+CONTROL,market-sensing,5,2,0.4,EXPLORED,False,3.2,1.6431676725154984
+CONTROL,small to medium-sized enterprises,5,2,0.4,EXPLORED,False,3.2,1.7888543819998317
+CONTROL,small- and medium-sized enterprise (sme),5,2,0.4,EXPLORED,False,3.2,2.3874672772626644
+CONTROL,lean production mechanism,5,2,0.4,EXPLORED,False,3.0,1.4142135623730951
+CONTROL,process-based perspective,5,2,0.4,GAP,False,3.0,1.4142135623730951
+SELECTED,business model,5,2,0.4,EXPLORED,False,3.0,2.0
+CONTROL,routines,5,2,0.4,EXPLORED,False,2.8,1.0954451150103321
+SELECTED,automotive industry,5,2,0.4,EXPLORED,False,2.8,1.3038404810405297
+CONTROL,response performance,5,2,0.4,LOW IMPORTANCE,False,2.6,1.8165902124584952
+CONTROL,change management,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+CONTROL,new product development (npd),5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+CONTROL,process development,5,2,0.4,GAP,False,2.4,0.5477225575051661
+CONTROL,supply chain management,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+SELECTED,industry 4.0,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+SELECTED,it alignment,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+SELECTED,operational efficiency,5,2,0.4,EXPLORED,False,2.2,0.8366600265340756
+CONTROL,production system development,5,1,0.2,LOW IMPORTANCE,False,2.4,0.8944271909999161
+SELECTED,social attention,5,1,0.2,LOW IMPORTANCE,False,2.4,1.5165750888103102
+CONTROL,differentiation strategy,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,digital disruption,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,public value creation,5,1,0.2,LOW IMPORTANCE,False,2.2,1.6431676725154984
+CONTROL,social capital,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,social media,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+CONTROL,configurational approach,5,1,0.2,METHOD,False,2.0,0.7071067811865476
+CONTROL,thailand,5,1,0.2,LOW IMPORTANCE,False,2.0,1.224744871391589
+CONTROL,dynamic capability theory,5,1,0.2,EXPLORED,False,1.8,0.8366600265340756
+CONTROL,telecom,5,1,0.2,LOW IMPORTANCE,False,1.8,0.8366600265340756
+CONTROL,yemen,5,1,0.2,LOW IMPORTANCE,False,1.8,1.7888543819998322
+CONTROL,dynamic capabilities of the resourcebased view,5,1,0.2,EXPLORED,False,1.6,0.8944271909999159
+CONTROL,market performance,5,1,0.2,EXPLORED,False,1.6,0.8944271909999159
+CONTROL,multimedia mindset,5,1,0.2,NOISE,False,1.4,0.8944271909999161
+CONTROL,national recovery and resilience plan,5,1,0.2,LOW IMPORTANCE,False,1.4,0.8944271909999161
+CONTROL,entrepreneurship,5,0,0.0,EXPLORED,False,2.0,0.0
+CONTROL,organizational innovation,5,0,0.0,EXPLORED,True,2.0,0.0
+CONTROL,strategic planning,4,0,0.0,EXPLORED,True,2.0,0.0
+CONTROL,technology adoption,5,0,0.0,EXPLORED,True,2.0,0.0
+SELECTED,dynamic capabilities,5,0,0.0,EXPLORED,True,2.0,1.7320508075688772
+SELECTED,dynamic capability,5,0,0.0,EXPLORED,True,2.0,1.7320508075688772
+CONTROL,digital technology,5,0,0.0,EXPLORED,True,1.8,0.44721359549995804
+CONTROL,digitalization,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+CONTROL,innovation,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+SELECTED,organizational capabilities,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+SELECTED,technological innovation,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+CONTROL,digital transformation,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+CONTROL,disruptive innovation,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+CONTROL,leadership,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+CONTROL,made in italy,5,0,0.0,LOW IMPORTANCE,False,1.6,0.5477225575051661
+CONTROL,technology and innovation management,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+CONTROL,autonomous growth group,5,0,0.0,NOISE,False,1.4,0.5477225575051661
+CONTROL,digitization,5,0,0.0,EXPLORED,True,1.4,0.5477225575051661
+CONTROL,financial performance,5,0,0.0,EXPLORED,True,1.4,0.5477225575051661
+CONTROL,knowledge,5,0,0.0,EXPLORED,False,1.4,0.5477225575051661
+CONTROL,company performance,5,0,0.0,EXPLORED,True,1.2,0.44721359549995804
+CONTROL,digital technologies,5,0,0.0,EXPLORED,True,1.2,0.44721359549995804
+CONTROL,digital transformation (dt),5,0,0.0,EXPLORED,False,1.2,0.4472135954999579
+CONTROL,performance,5,0,0.0,EXPLORED,False,1.2,0.4472135954999579
+CONTROL,technology,5,0,0.0,EXPLORED,False,1.2,0.44721359549995804
+SELECTED,competitive advantage,5,0,0.0,EXPLORED,True,1.2,0.44721359549995804
+SELECTED,firm performance,5,0,0.0,EXPLORED,True,1.2,0.44721359549995804
+CONTROL,case study,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,conceptual framework,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,design science research,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,fsqca,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,mixed method,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,multiple case study,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,qualitative interpretive research,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,qualitative research,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,qualitative study,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,sequential explanatory approach,5,0,0.0,METHOD,True,1.0,0.0
+CONTROL,structural equation model,5,0,0.0,METHOD,True,1.0,0.0
+SELECTED,pär ågerfalk,5,0,0.0,NOISE,True,1.0,0.0
+SELECTED,ryad titah,5,0,0.0,NOISE,True,1.0,0.0

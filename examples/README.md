@@ -10,7 +10,9 @@ not library code; `pip install -e .` is enough to run them.
 | `run_case.py` | `results/<corpus>/` — both modes, tables, figures, diagnostics |
 | `run_sensitivity.py` | `results/sensitivity/` — corpus-size and seed stability |
 | `run_validation.py` | LLM panel study, candidates vs full-corpus control |
-| `run_matched.py` | frequency-matched arm (filters vs ranking) |
+| `run_matched.py` | filter-eligible arm (filters vs ranking) |
+| `recompute_validation.py` | recomputes every comparison against a control set disjoint from the candidates, from the annotations already on disk (no API calls) |
+| `run_consensus.py` | consensus over five seeds and four corpus sizes, with the seed/size overlap decomposition |
 | `repair_validation.py` | re-runs one annotator and recomputes a study whose panel lost a model |
 | `make_figures.py` | `figures/fig1..fig6` — the manuscript figures |
 | `build_supplementary.py` | the supplementary workbook |

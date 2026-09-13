@@ -1,0 +1,63 @@
+gap_type,keyword,n_runs_found,n_seeds_found,n_sizes_found,mean_score,min_score,max_score,mean_frequency,cluster_labels,support
+Emerging Concept,business model,5,5,1,0.7925292038579007,0.6210867213227567,0.9258824829146857,1.0,Competitive advantage & Dynamic managerial capabilities | Digitalization & Firm performance | Digitalization & Microfoundations | Dynamic managerial capabilities & Innovation,1.0
+Emerging Concept,social attention,5,5,1,0.7100641148620197,0.7,0.7125801435775245,1.0,Dynamic capability theory & ESG performance | ESG performance & Digital Technology | ESG performance & Firm performance,1.0
+Emerging Concept,dt vision,5,5,1,0.6797057071249919,0.6456782808715213,0.7,1.0,Digital Technology & Internationalization | Digital capabilities & Dynamic capability | Digital culture & Dynamic capability | Digital transformation (DT) & Dynamic capability | Dynamic capability & digital capabilities,1.0
+Emerging Concept,agrifood businesses,5,5,1,0.5870517242261764,0.49800694848609806,0.739835862474018,1.0,Performance & SMEs | SMEs & Family firms | SMEs & Innovation | SMEs & digital innovation,1.0
+Emerging Concept,pär ågerfalk,5,5,1,0.5623811334438944,0.49508582526830625,0.6574837810750165,1.0,Family firms & digital innovation | SMEs & Family firms | SMEs & Innovation | SMEs & digital innovation,1.0
+Cross-Cluster Concept,firm performance,5,5,1,0.5467333055879887,0.5467333055879887,0.5467333055879887,3.0,Digitalization & Dynamic capability | Dynamic capability theory & ESG performance | Family firms & digital innovation | SMEs & digital innovation,1.0
+Cross-Cluster Concept,digital leadership,5,5,1,0.5349640967632,0.5349640967632,0.5349640967632,3.0,Dynamic capability theory & ESG performance | Dynamic managerial capabilities & Innovation | Family firms & digital innovation | SMEs & digital innovation,1.0
+Cross-Cluster Concept,competitive advantage,5,5,1,0.5322526393351861,0.5322526393351861,0.5322526393351861,3.0,Dynamic capability theory & ESG performance | Dynamic managerial capabilities & Innovation | Family firms & digital innovation | SMEs & digital innovation,1.0
+Cross-Cluster Concept,technological innovation,5,5,1,0.530151458021491,0.530151458021491,0.530151458021491,3.0,Case study & Dynamic capability | Digitalization & Dynamic capability | Digitalization & Microfoundations | Dynamic capability & digital capabilities | SMEs & digital innovation,1.0
+Cross-Cluster Concept,industry 4.0,5,5,1,0.502930982528374,0.502930982528374,0.502930982528374,2.0,Competitive advantage & Dynamic managerial capabilities | Digital maturity & Innovation | Digital maturity & competitive advantage | Dynamic capability & digital capabilities | ESG performance & Firm performance,1.0
+Cross-Cluster Concept,family firms,5,5,1,0.4979339525992713,0.49793395259927126,0.49793395259927126,2.0,Competitive advantage & Dynamic managerial capabilities | Digitalization & Dynamic capability | Digitalization & Firm performance | Digitalization & Microfoundations | Dynamic capability & Digitalization,1.0
+Emerging Concept,strategic aggressiveness,4,4,1,0.7051723666497914,0.6717194098920964,0.762254738748234,1.0,Dynamic capability & Case study | ESG performance & Digital Technology | ESG performance & Firm performance,0.8
+Emerging Concept,common language,4,4,1,0.6534050976736143,0.5974760032696875,0.7,1.0,Digital Technology & Internationalization | Digital capabilities & Dynamic capability | Dynamic capability & Digitalization | Dynamic managerial capabilities & Innovation,0.8
+Conceptual Combination,dynamic capabilities x industry 4.0,4,4,1,0.6487274926896223,0.6262274926896223,0.6562274926896223,12.0,Digitalization & Dynamic capability | Digitalization & Microfoundations | Dynamic capability & Case study,0.8
+Conceptual Combination,digital transformation x digital capabilities,4,4,1,0.6234042895005224,0.4884042895005224,0.6684042895005224,8.75,Digital capabilities & Dynamic capability | Digital culture & Dynamic capability | Digital transformation (DT) & Dynamic capability | Dynamic capability & digital capabilities,0.8
+Cross-Cluster Concept,digital maturity,4,4,1,0.48664906300313493,0.48664906300313493,0.48664906300313493,2.0,Digital culture & Dynamic capability | Digital transformation (DT) & Dynamic capability | Digitalization & Microfoundations | Dynamic capability & Case study,0.8
+Emerging Concept,automotive industry,3,3,1,0.7082011798304594,0.6696899933776181,0.7381256078542335,1.0,Digital culture & Dynamic capability | Digitalization & Dynamic capability | Digitalization & Microfoundations,0.6
+Emerging Concept,emerging market,3,3,1,0.6800630475951701,0.5615889878177134,0.7767546402081609,1.0,Case study & Dynamic capability | Digitalization & Dynamic capability | Dynamic capability & Digitalization,0.6
+Emerging Concept,steel industry,3,3,1,0.6731957343959806,0.655111088016735,0.7,1.0,Digitalization & Dynamic capability | Digitalization & Microfoundations | Dynamic capability & Digitalization,0.6
+Emerging Concept,social media,3,3,1,0.6693463797211869,0.590754311328521,0.7451259502118653,1.0,Digital maturity & Innovation | Dynamic managerial capabilities & Innovation | SMEs & Innovation,0.6
+Emerging Concept,it alignment,3,3,1,0.654174460097376,0.6372507691791783,0.6750078998869534,1.0,Competitive advantage & Dynamic managerial capabilities | Digital capabilities & Dynamic capability | Digital transformation (DT) & Dynamic capability,0.6
+Emerging Concept,manufacturing firms,3,3,1,0.6430013507580744,0.6123439398954673,0.6637134428358384,1.0,Digital Technology & Internationalization | Digital maturity & competitive advantage,0.6
+Conceptual Combination,dynamic capabilities x digital capabilities,3,3,1,0.5804897737579221,0.5604897737579221,0.6204897737579221,7.666666666666667,Digital culture & Dynamic capability | Digital transformation (DT) & Dynamic capability | Dynamic capability & digital capabilities,0.6
+Conceptual Combination,dynamic capability x digital capabilities,3,3,1,0.512013596077845,0.512013596077845,0.512013596077845,4.0,Digital culture & Dynamic capability | Digital transformation (DT) & Dynamic capability | Dynamic capability & digital capabilities,0.6
+Emerging Concept,human capital,3,3,1,0.5084286464290336,0.4771029367595785,0.529884677605523,1.0,ESG performance & Digital Technology | ESG performance & Firm performance,0.6
+Emerging Concept,digital innovation,3,3,1,0.4569086349340434,0.44999999999999996,0.47072590480213017,1.0,Family firms & digital innovation | SMEs & Family firms | SMEs & digital innovation,0.6
+Emerging Concept,managerial cognition,2,2,1,0.6891540280514511,0.6776655687468269,0.7006424873560753,1.0,Digital maturity & Innovation | Dynamic managerial capabilities & Innovation,0.4
+Emerging Concept,social capital,2,2,1,0.6812389278197348,0.6717637581588156,0.6907140974806539,1.0,Digital maturity & Innovation | Dynamic capability & Case study,0.4
+Emerging Concept,relational collaboration,2,2,1,0.6784622739859265,0.6569245479718531,0.7,1.0,Digital maturity & Innovation performance | Digital maturity & competitive advantage,0.4
+Emerging Concept,ecosystem orchestration,2,2,1,0.6770595083386814,0.6489581415924462,0.7051608750849165,1.0,Digital transformation (DT) & Dynamic capability | Performance & SMEs,0.4
+Emerging Concept,response performance,2,2,1,0.6721176486259326,0.6698588918721697,0.6743764053796955,1.0,Dynamic capability & Case study | Dynamic managerial capabilities & Innovation,0.4
+Emerging Concept,intellectual capital,2,2,1,0.633694486213108,0.6127247195536276,0.6546642528725883,1.0,Digitalization & Firm performance | Digitalization & Microfoundations,0.4
+Emerging Concept,absorptive capacity,2,2,1,0.6203787246237589,0.5843403522155264,0.6564170970319915,1.0,Digital Technology & Internationalization | Digital maturity & competitive advantage,0.4
+Emerging Concept,firm performance,2,2,1,0.5993784819044803,0.5490695955004433,0.6496873683085174,1.0,Competitive advantage & Dynamic managerial capabilities | ESG performance & Digital Technology,0.4
+Emerging Concept,process digitization,2,2,1,0.5614216262674165,0.5426845138062532,0.5801587387285798,1.0,Dynamic capability & digital capabilities | Performance & SMEs,0.4
+Conceptual Combination,dynamic capabilities x esg performance,2,2,1,0.5257930945744553,0.5257930945744553,0.5257930945744553,5.0,ESG performance & Digital Technology,0.4
+Conceptual Combination,dynamic capability x industry 4.0,2,2,1,0.47756590405194893,0.4625659040519489,0.49256590405194894,5.5,Digitalization & Dynamic capability | Digitalization & Microfoundations,0.4
+Cross-Cluster Concept,esg performance,2,2,1,0.4718268834771194,0.4718268834771194,0.4718268834771194,2.0,Digitalization & Microfoundations | Dynamic capability & Digitalization,0.4
+Emerging Concept,ryad titah,2,2,1,0.41779781381704295,0.31623338013087676,0.5193622475032091,1.0,Family firms & digital innovation | SMEs & digital innovation,0.4
+Emerging Concept,innovation performance,1,1,1,0.7317280013346552,0.7317280013346552,0.7317280013346552,1.0,Digital maturity & Innovation performance,0.2
+Emerging Concept,differentiation strategy,1,1,1,0.7,0.7,0.7,1.0,Digital Technology & Internationalization,0.2
+Emerging Concept,digital barriers,1,1,1,0.7,0.7,0.7,1.0,Case study & Dynamic capability,0.2
+Conceptual Combination,dynamic capabilities x human capital,1,1,1,0.6777688495297206,0.6777688495297206,0.6777688495297206,9.0,Dynamic capability & Case study,0.2
+Emerging Concept,industry 4.0,1,1,1,0.6758670448752607,0.6758670448752607,0.6758670448752607,1.0,Digital culture & Dynamic capability,0.2
+Emerging Concept,strategic renewal,1,1,1,0.6288913727220187,0.6288913727220187,0.6288913727220187,1.0,Digitalization & Firm performance,0.2
+Emerging Concept,design thinking,1,1,1,0.6234091154947308,0.6234091154947308,0.6234091154947308,1.0,Digitalization & Microfoundations,0.2
+Conceptual Combination,dynamic capability x organizational capabilities,1,1,1,0.6154753940997157,0.6154753940997157,0.6154753940997157,6.0,Dynamic capability & Digitalization,0.2
+Emerging Concept,organizational resilience,1,1,1,0.6119357820538165,0.6119357820538165,0.6119357820538165,1.0,Digitalization & Microfoundations,0.2
+Emerging Concept,strategic planning,1,1,1,0.5846874032821121,0.5846874032821121,0.5846874032821121,1.0,Dynamic capability & digital capabilities,0.2
+Emerging Concept,process-based perspective,1,1,1,0.5816477550810827,0.5816477550810827,0.5816477550810827,1.0,Case study & Dynamic capability,0.2
+Conceptual Combination,dynamic capability x competitive advantage,1,1,1,0.5482381038391717,0.5482381038391717,0.5482381038391717,6.0,Dynamic capability & Digitalization,0.2
+Conceptual Combination,technological innovation x industry 4.0,1,1,1,0.5340333604984087,0.5340333604984087,0.5340333604984087,4.0,Dynamic capability & Case study,0.2
+Emerging Concept,green innovation,1,1,1,0.5276540716721332,0.5276540716721332,0.5276540716721332,1.0,Dynamic capability theory & ESG performance,0.2
+Conceptual Combination,competitive advantage x organizational capabilities,1,1,1,0.5060099713945885,0.5060099713945885,0.5060099713945885,4.0,Dynamic capability & Digitalization,0.2
+Conceptual Combination,esg performance x dynamic capabilities,1,1,1,0.4957930945744553,0.4957930945744553,0.4957930945744553,4.0,ESG performance & Firm performance,0.2
+Emerging Concept,operational efficiency,1,1,1,0.4844669659063664,0.4844669659063664,0.4844669659063664,1.0,ESG performance & Firm performance,0.2
+Conceptual Combination,digital leadership x industry 4.0,1,1,1,0.4793071399857885,0.4793071399857885,0.4793071399857885,4.0,Digitalization & Microfoundations,0.2
+Cross-Cluster Concept,organizational capabilities,1,1,1,0.471891666008537,0.471891666008537,0.471891666008537,2.0,Competitive advantage & Dynamic managerial capabilities,0.2
+Conceptual Combination,firm performance x dynamic capability,1,1,1,0.44079018196975484,0.44079018196975484,0.44079018196975484,4.0,Digitalization & Microfoundations,0.2
+Conceptual Combination,dynamic capability x family firms,1,1,1,0.4060056552180199,0.4060056552180199,0.4060056552180199,4.0,Case study & Dynamic capability,0.2
+Emerging Concept,collaborative innovation,1,1,1,0.3399496126245331,0.3399496126245331,0.3399496126245331,1.0,Digital maturity & Innovation performance,0.2
+Emerging Concept,esg performance,1,1,1,0.3,0.3,0.3,1.0,Dynamic capability theory & ESG performance,0.2

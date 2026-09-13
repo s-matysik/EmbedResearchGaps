@@ -1,0 +1,295 @@
+{
+  "mode": "articles_first",
+  "seeds": [
+    42,
+    7,
+    123,
+    2026,
+    31337
+  ],
+  "corpus_sizes": [
+    30,
+    50,
+    100,
+    150
+  ],
+  "min_support": 0.0,
+  "n_candidates": 161,
+  "n_unanimous": 2,
+  "n_majority": 12,
+  "stability": {
+    "n_seeds": 5,
+    "n_corpus_sizes": 4,
+    "corpus_sizes": [
+      30,
+      50,
+      100,
+      150
+    ],
+    "n_runs": 20,
+    "mean_pairwise_jaccard": 0.2335238143816472,
+    "min_pairwise_jaccard": 0.037037037037037035,
+    "max_pairwise_jaccard": 0.6923076923076923,
+    "mean_jaccard_same_size": 0.45096872346314176,
+    "mean_jaccard_across_sizes": 0.17553850529324866,
+    "candidates_per_support": {
+      "1.0": 2,
+      "0.85": 1,
+      "0.75": 2,
+      "0.7": 3,
+      "0.6": 1,
+      "0.55": 1,
+      "0.5": 2,
+      "0.45": 3,
+      "0.4": 2,
+      "0.35": 10,
+      "0.3": 5,
+      "0.25": 23,
+      "0.2": 13,
+      "0.15": 16,
+      "0.1": 23,
+      "0.05": 54
+    },
+    "mean_candidates_per_run": 29.6
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "top_n": 30,
+      "k": 6,
+      "n_gaps": 24,
+      "gap_types": {
+        "Emerging Concept": 17,
+        "Cross-Cluster Concept": 6,
+        "Conceptual Combination": 1
+      },
+      "silhouette": 0.06904831057288104
+    },
+    {
+      "seed": 7,
+      "top_n": 30,
+      "k": 6,
+      "n_gaps": 24,
+      "gap_types": {
+        "Emerging Concept": 17,
+        "Cross-Cluster Concept": 7
+      },
+      "silhouette": 0.046842621152844294
+    },
+    {
+      "seed": 123,
+      "top_n": 30,
+      "k": 6,
+      "n_gaps": 24,
+      "gap_types": {
+        "Emerging Concept": 17,
+        "Cross-Cluster Concept": 7
+      },
+      "silhouette": 0.04890571823486765
+    },
+    {
+      "seed": 2026,
+      "top_n": 30,
+      "k": 6,
+      "n_gaps": 26,
+      "gap_types": {
+        "Emerging Concept": 17,
+        "Cross-Cluster Concept": 8,
+        "Conceptual Combination": 1
+      },
+      "silhouette": 0.05186312581069772
+    },
+    {
+      "seed": 31337,
+      "top_n": 30,
+      "k": 6,
+      "n_gaps": 25,
+      "gap_types": {
+        "Emerging Concept": 17,
+        "Cross-Cluster Concept": 7,
+        "Conceptual Combination": 1
+      },
+      "silhouette": 0.063234322361216
+    },
+    {
+      "seed": 42,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 27,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 7,
+        "Conceptual Combination": 2
+      },
+      "silhouette": 0.032569518633881835
+    },
+    {
+      "seed": 7,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 33,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 8,
+        "Conceptual Combination": 7
+      },
+      "silhouette": 0.024593033918753667
+    },
+    {
+      "seed": 123,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 31,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 7,
+        "Conceptual Combination": 6
+      },
+      "silhouette": 0.027487891566304153
+    },
+    {
+      "seed": 2026,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 32,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 8,
+        "Conceptual Combination": 6
+      },
+      "silhouette": 0.026012827162478838
+    },
+    {
+      "seed": 31337,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 31,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 7,
+        "Conceptual Combination": 6
+      },
+      "silhouette": 0.028653696949848206
+    },
+    {
+      "seed": 42,
+      "top_n": 100,
+      "k": 7,
+      "n_gaps": 38,
+      "gap_types": {
+        "Emerging Concept": 20,
+        "Conceptual Combination": 11,
+        "Cross-Cluster Concept": 7
+      },
+      "silhouette": 0.036090644174583686
+    },
+    {
+      "seed": 7,
+      "top_n": 100,
+      "k": 6,
+      "n_gaps": 32,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Conceptual Combination": 9,
+        "Cross-Cluster Concept": 5
+      },
+      "silhouette": 0.020844271809433098
+    },
+    {
+      "seed": 123,
+      "top_n": 100,
+      "k": 6,
+      "n_gaps": 34,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Conceptual Combination": 9,
+        "Cross-Cluster Concept": 7
+      },
+      "silhouette": 0.039007483481599145
+    },
+    {
+      "seed": 2026,
+      "top_n": 100,
+      "k": 6,
+      "n_gaps": 32,
+      "gap_types": {
+        "Emerging Concept": 17,
+        "Conceptual Combination": 9,
+        "Cross-Cluster Concept": 6
+      },
+      "silhouette": 0.0128195912648804
+    },
+    {
+      "seed": 31337,
+      "top_n": 100,
+      "k": 6,
+      "n_gaps": 34,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Conceptual Combination": 10,
+        "Cross-Cluster Concept": 6
+      },
+      "silhouette": 0.025977559669602582
+    },
+    {
+      "seed": 42,
+      "top_n": 150,
+      "k": 4,
+      "n_gaps": 28,
+      "gap_types": {
+        "Conceptual Combination": 12,
+        "Emerging Concept": 12,
+        "Cross-Cluster Concept": 4
+      },
+      "silhouette": 0.0404397537754095
+    },
+    {
+      "seed": 7,
+      "top_n": 150,
+      "k": 7,
+      "n_gaps": 44,
+      "gap_types": {
+        "Emerging Concept": 21,
+        "Conceptual Combination": 19,
+        "Cross-Cluster Concept": 4
+      },
+      "silhouette": 0.029063476024422455
+    },
+    {
+      "seed": 123,
+      "top_n": 150,
+      "k": 5,
+      "n_gaps": 34,
+      "gap_types": {
+        "Conceptual Combination": 15,
+        "Emerging Concept": 15,
+        "Cross-Cluster Concept": 4
+      },
+      "silhouette": 0.04005106175845435
+    },
+    {
+      "seed": 2026,
+      "top_n": 150,
+      "k": 6,
+      "n_gaps": 38,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Conceptual Combination": 16,
+        "Cross-Cluster Concept": 4
+      },
+      "silhouette": 0.03626974285883462
+    },
+    {
+      "seed": 31337,
+      "top_n": 150,
+      "k": 6,
+      "n_gaps": 39,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Conceptual Combination": 17,
+        "Cross-Cluster Concept": 4
+      },
+      "silhouette": 0.03572112392840381
+    }
+  ]
+}

@@ -138,24 +138,36 @@ result file or a log. Register a custom backend with
 ## Validation
 
 The validation subpackage reproduces the evaluation design of the two source
-papers: a panel of LLM annotators labels the keywords the pipeline selected and,
-as a control, the unfiltered keyword set, at `temperature=0`.
+papers: a panel of LLM annotators labels the keywords the pipeline selected
+and, as a control, the author keywords of the same corpus that it did *not*
+select, at `temperature=0`. The control set is disjoint from the candidate set
+by construction — comparing a candidate set against a population that contains
+it nests the two samples, and no two-sample statistic on them has a defined
+null distribution.
 
 ```python
-from embedresearchgaps.validation import get_annotator, validate_gaps
+from embedresearchgaps.validation import (
+    get_annotator, selected_and_control_keywords, validate_gaps,
+)
 
+# Example configuration. The exact model identifiers used for the published
+# study are listed under "Reproducing the published study" below; model names
+# change, so pin them explicitly rather than relying on a provider default.
 panel = [
-    get_annotator("openai",   model="gpt-4o",                key_env="OPENAI_API_KEY"),
-    get_annotator("anthropic",model="claude-sonnet-4-5",     key_env="ANTHROPIC_API_KEY"),
-    get_annotator("google",   model="gemini-2.5-flash",      key_env="GOOGLE_API_KEY"),
-    get_annotator("deepseek", model="deepseek-chat",         key_env="DEEPSEEK_API_KEY"),
-    get_annotator("xai",      model="grok-4",                key_env="XAI_API_KEY"),
+    get_annotator("openai",   model="gpt-4o",            key_env="OPENAI_API_KEY"),
+    get_annotator("anthropic",model="claude-sonnet-4-6", key_env="ANTHROPIC_API_KEY"),
+    get_annotator("google",   model="gemini-2.5-flash",  key_env="GOOGLE_API_KEY"),
+    get_annotator("deepseek", model="deepseek-v4-pro",   key_env="DEEPSEEK_API_KEY"),
+    get_annotator("xai",      model="grok-4.5",          key_env="XAI_API_KEY"),
 ]
 
-report = validate_gaps(result, panel, config.problem_description, domain="management")
+selected, control = selected_and_control_keywords(result)
+report = validate_gaps(result, panel, config.problem_description,
+                       domain="management", selected=selected, all_keywords=control)
 
 print(report.comparison.gap_rate_delta_pp)     # percentage-point gain in GAP rate
 print(report.comparison.novelty_increase_pct)  # relative gain in mean Novelty Score
+print(report.comparison.novelty_test)          # Welch, Mann-Whitney, permutation, d
 print(report.reliability)                      # Fleiss' kappa, Krippendorff's alpha
 report.save("validation/")
 ```
@@ -166,6 +178,16 @@ Each keyword receives one of five labels — `GAP`, `EXPLORED`, `LOW IMPORTANCE`
 `report.failures` and skipped; the study continues with the rest and the report
 states which models contributed. `CallableAnnotator` wraps any `str -> str`
 function, for locally hosted models and for offline tests.
+
+### Reproducing the published study
+
+The article used `text-embedding-3-large` for every embedding and this panel at
+`temperature=0`: `openai:gpt-4o`, `anthropic:claude-sonnet-4-6`,
+`deepseek:deepseek-v4-pro`, `xai:grok-4.5`, `google:gemini-2.5-flash`.
+Moonshot (Kimi) was probed and excluded because its current models reject
+`temperature=0`, which would break the determinism the protocol depends on.
+The scripts in `examples/` regenerate every reported table and figure; run them
+in the order given in `examples/README.md`.
 
 ### Expert validation
 
@@ -229,16 +251,27 @@ seed gives a list whose reproducibility is unknown, so measure it:
 from embedresearchgaps import consensus_gaps
 
 consensus = consensus_gaps(corpus, "articles_first", config,
-                           seeds=(42, 7, 123, 2026, 31337), min_support=0.5)
+                           seeds=(42, 7, 123, 2026, 31337),
+                           top_n=(30, 50, 100, 150),   # pool over corpus size too
+                           min_support=0.5)
 
-print(consensus.stability["mean_pairwise_jaccard"])   # overlap across seeds
+print(consensus.stability["mean_pairwise_jaccard"])        # overlap across runs
+print(consensus.stability["mean_jaccard_same_size"])       # seed effect alone
+print(consensus.stability["mean_jaccard_across_sizes"])    # corpus-size effect
 print(consensus.gaps[["keyword_display", "gap_type", "support", "mean_score"]])
 consensus.save("out/consensus")
 ```
 
-`support` is the fraction of seeds that produced the candidate. `at_support(1.0)`
-keeps only the seed-invariant ones. Reporting a candidate list without its
-support is reporting one draw from a distribution.
+`support` is the fraction of runs that produced the candidate, and
+`at_support(1.0)` keeps only the invariant ones. Reporting a candidate list
+without its support is reporting one draw from a distribution. The analysis
+corpus size `N` is as arbitrary a choice as the seed and moves the candidate
+list more, so pass `top_n=` as well unless you have a reason to fix `N`.
+
+A run whose partition has a silhouette below 0.10 also returns a
+`LOW_CLUSTER_SEPARATION` entry in `result.diagnostics["warnings"]` and raises
+it as a Python warning: candidates read off a partition that weak should not be
+interpreted as a single-run ranking.
 
 ## Reproducibility and audit trail
 
@@ -287,7 +320,7 @@ pip install -e ".[dev]"
 pytest --cov=embedresearchgaps
 ```
 
-The suite runs offline: 289 tests, 93% statement coverage. Detector behaviour is
+The suite runs offline: 306 tests, 93% statement coverage. Detector behaviour is
 tested on keyword spaces with designed embeddings placed at exact angles, so the
 similarity criteria are checked against the published thresholds rather than
 against whatever an embedding model happens to produce. Hosted backends are

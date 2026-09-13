@@ -55,10 +55,11 @@ class ConsensusResult:
     reference:
         The run of the first seed, kept for figures and diagnostics.
     per_seed:
-        Summary of every individual run.
+        Summary of every individual run, one entry per ``(seed, top_n)`` pair.
     stability:
         Mean, minimum and maximum pairwise Jaccard overlap of the candidate
-        sets across seeds, plus the number of candidates at each support
+        sets across runs, the overlap attributable to the seed alone versus
+        to the corpus size, and the number of candidates at each support
         level.
     """
 
@@ -68,19 +69,21 @@ class ConsensusResult:
     stability: dict[str, Any] = field(default_factory=dict)
     seeds: tuple[int, ...] = DEFAULT_SEEDS
     min_support: float = 0.0
+    corpus_sizes: tuple[int, ...] = ()
 
     @property
     def mode(self) -> str:
         return self.reference.mode
 
     def at_support(self, threshold: float) -> pd.DataFrame:
-        """Candidates found in at least ``threshold`` of the seeds."""
+        """Candidates found in at least ``threshold`` of the runs."""
         return self.gaps[self.gaps["support"] >= threshold].reset_index(drop=True)
 
     def summary(self) -> dict[str, Any]:
         return {
             "mode": self.mode,
             "seeds": list(self.seeds),
+            "corpus_sizes": list(self.corpus_sizes),
             "min_support": self.min_support,
             "n_candidates": int(len(self.gaps)),
             "n_unanimous": int((self.gaps["support"] == 1.0).sum()),
@@ -113,8 +116,10 @@ def consensus_gaps(
     config: RunConfig | None = None,
     seeds: Sequence[int] = DEFAULT_SEEDS,
     min_support: float = 0.0,
+    top_n: Sequence[int] | None = None,
 ) -> ConsensusResult:
-    """Run one mode across ``seeds`` and pool the candidates by support.
+    """Run one mode across seeds -- and optionally corpus sizes -- and pool
+    the candidates by support.
 
     Parameters
     ----------
@@ -126,9 +131,18 @@ def consensus_gaps(
     seeds:
         At least two seeds; the first one provides the reference run.
     min_support:
-        Drop candidates found in a smaller fraction of the seeds.  ``0.5``
+        Drop candidates found in a smaller fraction of the runs.  ``0.5``
         keeps the majority-supported candidates, ``1.0`` only the unanimous
         ones.
+    top_n:
+        Analysis-corpus sizes to pool over, e.g. ``(30, 50, 100, 150)``.  The
+        candidate set of both modes is as sensitive to this arbitrary cut-off
+        as it is to the k-means seed, so pooling over seeds alone measures
+        only half the instability.  When given, one run is executed per
+        ``(seed, size)`` pair and support is the fraction of those runs that
+        produced the candidate; ``stability`` then also reports the overlap
+        attributable to the seed alone (pairs sharing a size) separately from
+        the overlap across sizes.  ``None`` keeps ``config.top_n_articles``.
 
     Returns
     -------
@@ -149,27 +163,40 @@ def consensus_gaps(
         raise ValueError("min_support must lie in [0, 1]")
     config = config or RunConfig()
 
+    sizes = tuple(dict.fromkeys(int(n) for n in top_n)) if top_n else (
+        int(config.top_n_articles),
+    )
+    if any(n < 2 for n in sizes):
+        raise ValueError("every top_n value must be >= 2")
+    settings = [(seed, size) for size in sizes for seed in seeds]
+
     frames: list[pd.DataFrame] = []
-    candidate_sets: dict[int, set[str]] = {}
+    candidate_sets: dict[tuple[int, int], set[str]] = {}
     per_seed: list[dict[str, Any]] = []
     reference: PipelineResult | None = None
 
-    for seed in seeds:
+    for seed, size in settings:
         seeded = dataclasses.replace(
             config,
             clustering=dataclasses.replace(config.clustering, random_state=seed),
             random_state=seed,
+            top_n_articles=size,
         )
         result = run(corpus, mode, seeded)
         if reference is None:
             reference = result
         frame = result.gaps.copy()
         frame["seed"] = seed
+        frame["top_n"] = size
+        frame["run"] = f"{seed}@{size}"
         frames.append(frame)
-        candidate_sets[seed] = set(frame["keyword"].astype(str)) if not frame.empty else set()
+        candidate_sets[(seed, size)] = (
+            set(frame["keyword"].astype(str)) if not frame.empty else set()
+        )
         per_seed.append(
             {
                 "seed": seed,
+                "top_n": size,
                 "k": result.n_clusters,
                 "n_gaps": result.n_gaps,
                 "gap_types": result.gap_type_counts(),
@@ -181,13 +208,16 @@ def consensus_gaps(
     pooled = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
     if pooled.empty:
         gaps = pd.DataFrame(
-            columns=["gap_type", "keyword", "support", "n_seeds_found",
-                     "mean_score", "min_score", "max_score", "cluster_labels"]
+            columns=["gap_type", "keyword", "support", "n_runs_found",
+                     "n_seeds_found", "n_sizes_found", "mean_score",
+                     "min_score", "max_score", "cluster_labels"]
         )
     else:
         grouped = pooled.groupby(["gap_type", "keyword"], dropna=False)
         gaps = grouped.agg(
+            n_runs_found=("run", "nunique"),
             n_seeds_found=("seed", "nunique"),
+            n_sizes_found=("top_n", "nunique"),
             mean_score=("score", "mean"),
             min_score=("score", "min"),
             max_score=("score", "max"),
@@ -197,16 +227,31 @@ def consensus_gaps(
             lambda values: " | ".join(sorted({str(v) for v in values if pd.notna(v)}))
         )
         gaps = gaps.merge(labels.rename("cluster_labels"), on=["gap_type", "keyword"])
-        gaps["support"] = gaps["n_seeds_found"] / len(seeds)
+        # An empty per-run frame contributes object-dtype columns to the
+        # concatenation, which would leave the aggregates unsortable.
+        for column in ("mean_score", "min_score", "max_score", "mean_frequency"):
+            gaps[column] = pd.to_numeric(gaps[column], errors="coerce")
+        gaps["support"] = gaps["n_runs_found"] / len(settings)
         gaps = gaps[gaps["support"] >= min_support]
         gaps = gaps.sort_values(
             ["support", "mean_score"], ascending=False, ignore_index=True
         )
 
-    overlaps = [
-        jaccard(candidate_sets[a], candidate_sets[b]) for a, b in combinations(seeds, 2)
-    ]
+    keys = list(candidate_sets)
+    overlaps = [jaccard(candidate_sets[a], candidate_sets[b]) for a, b in combinations(keys, 2)]
     finite = [value for value in overlaps if not np.isnan(value)]
+    within_size = [
+        jaccard(candidate_sets[a], candidate_sets[b])
+        for a, b in combinations(keys, 2)
+        if a[1] == b[1]
+    ]
+    across_size = [
+        jaccard(candidate_sets[a], candidate_sets[b])
+        for a, b in combinations(keys, 2)
+        if a[1] != b[1]
+    ]
+    within_size = [v for v in within_size if not np.isnan(v)]
+    across_size = [v for v in across_size if not np.isnan(v)]
     support_counts = (
         gaps["support"].round(3).value_counts().sort_index(ascending=False).to_dict()
         if not gaps.empty
@@ -214,12 +259,23 @@ def consensus_gaps(
     )
     stability = {
         "n_seeds": len(seeds),
+        "n_corpus_sizes": len(sizes),
+        "corpus_sizes": list(sizes),
+        "n_runs": len(settings),
         "mean_pairwise_jaccard": float(np.mean(finite)) if finite else float("nan"),
         "min_pairwise_jaccard": float(np.min(finite)) if finite else float("nan"),
         "max_pairwise_jaccard": float(np.max(finite)) if finite else float("nan"),
+        # seed effect: pairs that share a corpus size; size effect: pairs that
+        # do not.  With a single size the second is empty by construction.
+        "mean_jaccard_same_size": (
+            float(np.mean(within_size)) if within_size else float("nan")
+        ),
+        "mean_jaccard_across_sizes": (
+            float(np.mean(across_size)) if across_size else float("nan")
+        ),
         "candidates_per_support": {str(k): int(v) for k, v in support_counts.items()},
-        "mean_candidates_per_seed": float(
-            np.mean([len(candidate_sets[seed]) for seed in seeds])
+        "mean_candidates_per_run": float(
+            np.mean([len(candidate_sets[key]) for key in keys])
         ),
     }
 
@@ -230,4 +286,5 @@ def consensus_gaps(
         stability=stability,
         seeds=seeds,
         min_support=min_support,
+        corpus_sizes=sizes,
     )

@@ -1,0 +1,58 @@
+gap_type,keyword,n_runs_found,n_seeds_found,n_sizes_found,mean_score,min_score,max_score,mean_frequency,cluster_labels,support
+Emerging Concept,artificial intelligence,5,5,1,0.7478452068185012,0.6661038066192673,0.8008288568460169,1.0,Financial technology & Income inequality | Financial technology & financial innovation | Financial technology & panel data | Income inequality & Financial technology,1.0
+Emerging Concept,banks’ risk-taking,5,5,1,0.7115123993919149,0.6598008172085355,0.7341064478785471,1.0,Credit risk & Digitalization | Credit risk & Financial technology | Financial technology & Sub-Saharan Africa,1.0
+Emerging Concept,black swan,5,5,1,0.6627944194254308,0.6353691402186343,0.7,1.0,Banking stability & Digital inclusive finance | Credit risk & Digitalization | Financial technology & Sub-Saharan Africa,1.0
+Cross-Cluster Concept,banks’ risk-taking,5,5,1,0.6375290038949116,0.6375290038949116,0.6375290038949116,1.0,Credit risk & Digitalization | Financial technology & Bank performance | Financial technology & panel data | Income inequality & Big tech | Income inequality & Financial technology,1.0
+Cross-Cluster Concept,financial innovation,5,5,1,0.5842158444101582,0.5842158444101582,0.5842158444101582,3.0,Credit risk & Bank FinTech | Credit risk & Digitalization | Credit risk & Financial technology | Financial technology & Bank performance | Income inequality & Big tech,1.0
+Cross-Cluster Concept,sub-saharan africa,5,5,1,0.5437422783212031,0.5437422783212031,0.5437422783212031,3.0,Credit risk & Digitalization | Financial technology & Bank performance | Financial technology & panel data | Income inequality & Big tech | Income inequality & Financial technology,1.0
+Cross-Cluster Concept,inclusive finance,5,5,1,0.521988790200158,0.521988790200158,0.521988790200158,2.0,Alternative credit & Bigtech credit | Credit risk & Financial technology | Financial technology & financial innovation | Financial technology & panel data,1.0
+Cross-Cluster Concept,commercial banks,5,5,1,0.5048861925315545,0.5048861925315545,0.5048861925315545,2.0,Credit risk & Financial technology | Financial technology & Income inequality | Financial technology & Sub-Saharan Africa | Financial technology & financial innovation | Income inequality & Financial technology,1.0
+Conceptual Combination,financial technology x financial innovation,5,5,1,0.433913807246634,0.42791380724663397,0.45791380724663394,4.2,Financial technology & Income inequality | Financial technology & financial innovation | Financial technology & panel data | Income inequality & Financial technology,1.0
+Emerging Concept,disadvantaged communities,4,4,1,0.7109570085630373,0.6264139212354145,0.7923998954274627,1.0,Financial technology & Income inequality | Financial technology & financial innovation | Financial technology & panel data,0.8
+Emerging Concept,soft information,4,4,1,0.6874970625264749,0.6027870836021911,0.7446672439035917,1.0,Alternative credit & Bigtech | Alternative credit & Bigtech credit | Credit risk & Financial technology | Credit risk & alternative credit,0.8
+Emerging Concept,regulatory arbitrage,4,4,1,0.662543697162717,0.6515591369727483,0.6762760403423815,1.0,Alternative credit & Bigtech | Alternative credit & Bigtech credit | Credit risk & alternative credit,0.8
+Emerging Concept,output volatility,4,4,1,0.6470298745952708,0.6059405385803445,0.6997354544174694,1.0,Financial technology & panel data | Income inequality & Big tech | Income inequality & Financial technology | Panel data & Alternative information,0.8
+Cross-Cluster Concept,bigtech credit,4,4,1,0.5018263514129284,0.5018263514129284,0.5018263514129284,2.0,Financial technology & Income inequality | Financial technology & Sub-Saharan Africa,0.8
+Emerging Concept,sustainable development,3,3,1,0.7128242604406786,0.6669335395881159,0.7550487127575229,1.0,China & Commercial banks | Credit risk & Bank FinTech | Credit risk & China,0.6
+Emerging Concept,debt trap,3,3,1,0.7055597185654362,0.7055597185654363,0.7055597185654363,1.0,Credit risk & Digitalization,0.6
+Emerging Concept,big tech,3,3,1,0.5851141129852323,0.55,0.6378467298314812,1.0,Income inequality & Big tech,0.6
+Emerging Concept,credit risk,3,3,1,0.5191491543454346,0.49055673141017275,0.5410662758628697,1.0,Credit risk & Digitalization,0.6
+Emerging Concept,digital lending,3,3,1,0.4288871754263155,0.3675699688025137,0.5059078686803615,1.0,Credit risk & Digitalization | Income inequality & Big tech,0.6
+Emerging Concept,loan size,2,2,1,0.6972478562110732,0.6852898577438424,0.709205854678304,1.0,Credit risk & China | Financial technology & Bank performance,0.4
+Emerging Concept,bank concentration,2,2,1,0.697022234066881,0.6575478011809395,0.7364966669528226,1.0,Income inequality & Big tech | Panel data & Alternative information,0.4
+Emerging Concept,regulatory resources,2,2,1,0.6899028821996162,0.6635166893992896,0.7162890749999427,1.0,Financial technology & Income inequality | Financial technology & financial innovation,0.4
+Emerging Concept,sub-saharan africa,2,2,1,0.6825150618154967,0.6650301236309935,0.7,1.0,Alternative credit & Bigtech credit | Credit risk & Financial technology,0.4
+Emerging Concept,green innovation,2,2,1,0.6758987011833196,0.621307253365107,0.7304901490015323,1.0,China & Commercial banks | Credit risk & Bank FinTech,0.4
+Emerging Concept,financial regulation,2,2,1,0.6709833347216883,0.5966745346221831,0.7452921348211934,1.0,China & Commercial banks | Credit risk & Bank FinTech,0.4
+Emerging Concept,risk-taking behavior,2,2,1,0.6691984825062525,0.656150973534749,0.6822459914777559,1.0,Credit risk & Financial technology | Financial technology & Sub-Saharan Africa,0.4
+Emerging Concept,alternative data,2,2,1,0.6619327970813416,0.6295474891391676,0.6943181050235157,1.0,Credit risk & Financial technology | Credit risk & alternative credit,0.4
+Emerging Concept,alternative information,2,2,1,0.6539837259833652,0.6479204594560188,0.6600469925107115,1.0,Alternative information & Digital inclusion | Banking stability & Digital inclusive finance,0.4
+Emerging Concept,account ownership,2,2,1,0.6533032136547414,0.6448969138545826,0.6617095134549003,1.0,Financial technology & Sub-Saharan Africa,0.4
+Emerging Concept,gdp growth,2,2,1,0.6511598878557481,0.6211151418672098,0.6812046338442864,1.0,Credit risk & Bank FinTech | Financial technology & Bank performance,0.4
+Emerging Concept,system gmm,2,2,1,0.6118249647697369,0.5821849998485821,0.6414649296908919,1.0,Alternative credit & Bigtech | Alternative credit & Bigtech credit,0.4
+Emerging Concept,financial constraints,2,2,1,0.5683423531715603,0.5350570063199419,0.6016277000231789,1.0,Credit risk & Bank FinTech | Income inequality & Big tech,0.4
+Emerging Concept,banking stability,2,2,1,0.5389732890244342,0.4454702725510023,0.6324763054978662,1.0,Banking stability & Digital inclusive finance | Credit risk & Digitalization,0.4
+Cross-Cluster Concept,bank fintech,2,2,1,0.4979370700342781,0.4979370700342781,0.4979370700342781,2.0,Financial technology & Sub-Saharan Africa,0.4
+Conceptual Combination,income inequality x financial innovation,2,2,1,0.48005034288943593,0.48005034288943593,0.48005034288943593,5.0,Financial technology & Income inequality | Income inequality & Financial technology,0.4
+Conceptual Combination,commercial banks x financial technology,2,2,1,0.4501665228448831,0.4501665228448831,0.4501665228448831,4.0,Credit risk & Bank FinTech | Credit risk & China,0.4
+Emerging Concept,south asia,1,1,1,0.7700000345845694,0.7700000345845694,0.7700000345845694,1.0,Panel data & Alternative information,0.2
+Conceptual Combination,credit risk x financial inclusion,1,1,1,0.7117009979166558,0.7117009979166558,0.7117009979166558,10.0,Credit risk & Financial technology,0.2
+Emerging Concept,financial sustainability,1,1,1,0.7039207090853921,0.7039207090853921,0.7039207090853921,1.0,Financial technology & financial innovation,0.2
+Emerging Concept,financial technology,1,1,1,0.7,0.7,0.7,1.0,Alternative data Sources & credit scoring,0.2
+Conceptual Combination,financial inclusion x credit risk,1,1,1,0.6817009979166557,0.6817009979166557,0.6817009979166557,9.0,Credit risk & alternative credit,0.2
+Emerging Concept,entrepreneurial risk,1,1,1,0.6749772025099153,0.6749772025099153,0.6749772025099153,1.0,Income inequality & Financial technology,0.2
+Emerging Concept,risky behaviour,1,1,1,0.6487191003235202,0.6487191003235202,0.6487191003235202,1.0,Credit risk & Financial technology,0.2
+Emerging Concept,income inequality,1,1,1,0.6486446017429738,0.6486446017429738,0.6486446017429738,1.0,Alternative credit & Bigtech credit,0.2
+Conceptual Combination,credit risk x fintech credit,1,1,1,0.6420377078669098,0.6420377078669098,0.6420377078669098,7.0,Credit risk & Financial technology,0.2
+Emerging Concept,rural bank,1,1,1,0.6378657588394112,0.6378657588394112,0.6378657588394112,1.0,Credit risk & China,0.2
+Conceptual Combination,commercial banks x financial inclusion,1,1,1,0.6354584834575043,0.6354584834575043,0.6354584834575043,7.0,Credit risk & Financial technology,0.2
+Emerging Concept,brics economies,1,1,1,0.6032087262543275,0.6032087262543275,0.6032087262543275,1.0,Financial technology & Bank performance,0.2
+Emerging Concept,non-financial firms,1,1,1,0.5885169837491728,0.5885169837491728,0.5885169837491728,1.0,Credit risk & Bank FinTech,0.2
+Emerging Concept,peer-to-peer lending,1,1,1,0.5604318393426925,0.5604318393426925,0.5604318393426925,1.0,Credit risk & Digitalization,0.2
+Emerging Concept,social responsibilities,1,1,1,0.5551927056804757,0.5551927056804757,0.5551927056804757,1.0,Alternative information & Digital inclusion,0.2
+Conceptual Combination,credit risk x p2p lending,1,1,1,0.5528758888367574,0.5528758888367574,0.5528758888367574,5.0,Credit risk & alternative credit,0.2
+Conceptual Combination,alternative credit x credit risk,1,1,1,0.5332431911864449,0.5332431911864449,0.5332431911864449,5.0,Credit risk & alternative credit,0.2
+Emerging Concept,public policy,1,1,1,0.5107796812366217,0.5107796812366217,0.5107796812366217,1.0,Alternative information & Digital inclusion,0.2
+Conceptual Combination,commercial banks x financial constraints,1,1,1,0.46464321195416464,0.46464321195416464,0.46464321195416464,4.0,China & Commercial banks,0.2
+Conceptual Combination,credit risk x financial technology,1,1,1,0.44449551748443694,0.44449551748443694,0.44449551748443694,4.0,Credit risk & Financial technology,0.2
+Emerging Concept,credit scoring,1,1,1,0.3,0.3,0.3,1.0,Alternative data Sources & credit scoring,0.2

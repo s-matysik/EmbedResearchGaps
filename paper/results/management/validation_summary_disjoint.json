@@ -1,0 +1,185 @@
+{
+  "corpus": null,
+  "domain": null,
+  "control": "disjoint (candidates removed from the control arm)",
+  "articles_first": {
+    "annotators": [
+      "anthropic:claude-sonnet-4-6",
+      "deepseek:deepseek-v4-pro",
+      "google:gemini-2.5-flash",
+      "openai:gpt-4o",
+      "xai:grok-4.5"
+    ],
+    "n_annotations": 728,
+    "n_candidates": 26,
+    "n_control": 120,
+    "n_candidate_judgements_removed_from_control": 130,
+    "comparison": {
+      "n_annotators": 5,
+      "n_selected_keywords": 26,
+      "n_all_keywords": 120,
+      "gap_rate_selected": 0.46153846153846156,
+      "gap_rate_all": 0.47324414715719065,
+      "gap_rate_delta_pp": -1.170568561872909,
+      "explored_rate_selected": 0.4076923076923077,
+      "explored_rate_all": 0.3294314381270903,
+      "explored_rate_delta_pp": 7.826086956521738,
+      "mean_novelty_selected": 3.1538461538461537,
+      "mean_novelty_all": 3.277591973244147,
+      "novelty_increase_pct": -3.775510204081637,
+      "selected_rates": {
+        "GAP": 0.46153846153846156,
+        "EXPLORED": 0.4076923076923077,
+        "LOW IMPORTANCE": 0.046153846153846156,
+        "METHOD": 0.0,
+        "NOISE": 0.08461538461538462
+      },
+      "all_rates": {
+        "GAP": 0.47324414715719065,
+        "EXPLORED": 0.3294314381270903,
+        "LOW IMPORTANCE": 0.07525083612040134,
+        "METHOD": 0.1020066889632107,
+        "NOISE": 0.020066889632107024
+      },
+      "selected_novelty": {
+        "mean": 3.1538461538461537,
+        "std": 2.0287145602192433,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 5.0,
+        "share_ge_5": 0.2846153846153846,
+        "share_ge_8": 0.03076923076923077,
+        "n": 130
+      },
+      "all_novelty": {
+        "mean": 3.277591973244147,
+        "std": 2.119511231401232,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 5.0,
+        "share_ge_5": 0.3076923076923077,
+        "share_ge_8": 0.02508361204013378,
+        "n": 598
+      },
+      "novelty_test": {
+        "overlapping_samples": 0.0,
+        "welch_t": -0.6252392797859059,
+        "welch_p": 0.5325446134029778,
+        "mannwhitney_u": 37814.5,
+        "mannwhitney_p": 0.6199686091129925,
+        "cohens_d": -0.05964775964740349,
+        "permutation_p": 0.5494225288735564
+      }
+    },
+    "reliability": {
+      "fleiss_kappa_selected": 0.5785755757693051,
+      "krippendorff_alpha_selected": 0.5643458826548586,
+      "fleiss_kappa_control": 0.49733620993307515,
+      "krippendorff_alpha_control": 0.6294093704904358
+    },
+    "leave_out": {
+      "n_shared_keywords": 26,
+      "n_experts": 2,
+      "n_llm_annotators": 3,
+      "spearman_rho": 0.7606517185025122,
+      "spearman_p": 6.472989368668696e-06,
+      "mean_novelty_expert": 3.576923076923077,
+      "mean_novelty_llm": 2.8717948717948727,
+      "expert_dispersion": 1.5229992210171797,
+      "llm_dispersion": 0.7194973595360762,
+      "label_agreement": 0.6538461538461539,
+      "expert_gap_share": 0.5769230769230769,
+      "llm_gap_share": 0.3076923076923077
+    }
+  },
+  "keywords_first": {
+    "annotators": [
+      "anthropic:claude-sonnet-4-6",
+      "deepseek:deepseek-v4-pro",
+      "google:gemini-2.5-flash",
+      "openai:gpt-4o",
+      "xai:grok-4.5"
+    ],
+    "n_annotations": 728,
+    "n_candidates": 6,
+    "n_control": 140,
+    "n_candidate_judgements_removed_from_control": 30,
+    "comparison": {
+      "n_annotators": 5,
+      "n_selected_keywords": 6,
+      "n_all_keywords": 140,
+      "gap_rate_selected": 0.4,
+      "gap_rate_all": 0.4799426934097421,
+      "gap_rate_delta_pp": -7.994269340974208,
+      "explored_rate_selected": 0.23333333333333334,
+      "explored_rate_all": 0.336676217765043,
+      "explored_rate_delta_pp": -10.334288443170964,
+      "mean_novelty_selected": 2.8666666666666667,
+      "mean_novelty_all": 3.306590257879656,
+      "novelty_increase_pct": -13.304448295782786,
+      "selected_rates": {
+        "GAP": 0.4,
+        "EXPLORED": 0.23333333333333334,
+        "LOW IMPORTANCE": 0.03333333333333333,
+        "METHOD": 0.0,
+        "NOISE": 0.3333333333333333
+      },
+      "all_rates": {
+        "GAP": 0.4799426934097421,
+        "EXPLORED": 0.336676217765043,
+        "LOW IMPORTANCE": 0.07879656160458452,
+        "METHOD": 0.08739255014326648,
+        "NOISE": 0.017191977077363897
+      },
+      "selected_novelty": {
+        "mean": 2.8666666666666667,
+        "std": 2.0465839213495345,
+        "median": 2.0,
+        "q25": 1.0,
+        "q75": 4.75,
+        "share_ge_5": 0.26666666666666666,
+        "share_ge_8": 0.0,
+        "n": 30
+      },
+      "all_novelty": {
+        "mean": 3.306590257879656,
+        "std": 2.1212830382979697,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 5.0,
+        "share_ge_5": 0.3108882521489971,
+        "share_ge_8": 0.024355300859598854,
+        "n": 698
+      },
+      "novelty_test": {
+        "overlapping_samples": 0.0,
+        "welch_t": -1.1510818807460927,
+        "welch_p": 0.2582972414335886,
+        "mannwhitney_u": 8978.0,
+        "mannwhitney_p": 0.17669975151887962,
+        "cohens_d": -0.2110686143551978,
+        "permutation_p": 0.2782360881955902
+      }
+    },
+    "reliability": {
+      "fleiss_kappa_selected": 0.6534653465346533,
+      "krippendorff_alpha_selected": 0.8446099459802987,
+      "fleiss_kappa_control": 0.4852393825419213,
+      "krippendorff_alpha_control": 0.6071237673710141
+    },
+    "leave_out": {
+      "n_shared_keywords": 6,
+      "n_experts": 2,
+      "n_llm_annotators": 3,
+      "spearman_rho": 1.0,
+      "spearman_p": 0.0,
+      "mean_novelty_expert": 3.1666666666666665,
+      "mean_novelty_llm": 2.6666666666666665,
+      "expert_dispersion": 0.47140452079103173,
+      "llm_dispersion": 0.802286134505835,
+      "label_agreement": 0.8333333333333334,
+      "expert_gap_share": 0.5,
+      "llm_gap_share": 0.3333333333333333
+    }
+  }
+}

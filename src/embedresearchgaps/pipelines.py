@@ -17,9 +17,10 @@ corpus-level TF-IDF salience, document frequencies and the core-domain filter.
 from __future__ import annotations
 
 import dataclasses
+import warnings
 from collections import Counter
 from dataclasses import dataclass
-from typing import Callable, Mapping, Sequence
+from typing import Any, Callable, Mapping, Sequence
 
 import numpy as np
 import pandas as pd
@@ -54,6 +55,8 @@ from .text import (
 )
 
 __all__ = [
+    "LOW_SEPARATION_SILHOUETTE",
+    "cluster_separation_warning",
     "keywords_first",
     "articles_first",
     "run",
@@ -215,6 +218,49 @@ def _keyword_table(
     return frame
 
 
+#: Silhouette below which a partition is reported as poorly separated.  The
+#: value is the conventional boundary for "no substantial structure" in
+#: Kaufman and Rousseeuw's reading of the coefficient; on author-keyword
+#: corpora real partitions routinely fall below it, which is exactly the
+#: situation a user must be told about rather than left to infer.
+LOW_SEPARATION_SILHOUETTE = 0.10
+
+
+def cluster_separation_warning(
+    quality: Mapping[str, float],
+    n_clusters: int,
+    space: str,
+) -> str | None:
+    """A warning string when a partition has no substantial cluster structure.
+
+    Returns ``None`` when the silhouette is at or above
+    :data:`LOW_SEPARATION_SILHOUETTE`, and otherwise a message naming the
+    measured value.  Callers put it in ``PipelineResult.diagnostics['warnings']``
+    and it is also raised as a :class:`UserWarning`, because a candidate list
+    read off a partition this weak is one draw from a broad distribution: see
+    :func:`~embedresearchgaps.consensus.consensus_gaps`.
+    """
+    silhouette = quality.get("silhouette")
+    if silhouette is None or silhouette >= LOW_SEPARATION_SILHOUETTE:
+        return None
+    return (
+        f"LOW_CLUSTER_SEPARATION: silhouette of the {space} partition is "
+        f"{silhouette:.3f} over {n_clusters} clusters, below the "
+        f"{LOW_SEPARATION_SILHOUETTE:g} threshold for substantial structure. "
+        "Candidates read off a single partition this weak are unstable across "
+        "initialisations; pool across seeds with consensus_gaps() and report "
+        "per-candidate support instead of a single-run ranking."
+    )
+
+
+def _emit_warnings(diagnostics: dict[str, Any], messages: Sequence[str | None]) -> None:
+    """Record non-empty warnings in ``diagnostics`` and raise them once each."""
+    collected = [message for message in messages if message]
+    diagnostics["warnings"] = collected
+    for message in collected:
+        warnings.warn(message, UserWarning, stacklevel=3)
+
+
 def keywords_first(
     corpus: Corpus,
     config: RunConfig | None = None,
@@ -311,6 +357,11 @@ def keywords_first(
         "ranking": prepared.ranking,
         "keyword_encoder": encoder.describe(),
     }
+    _emit_warnings(diagnostics, [
+        cluster_separation_warning(
+            space.assignment.quality, space.assignment.n_clusters, "keyword"
+        ),
+    ])
 
     return PipelineResult(
         mode="keywords_first",
@@ -443,6 +494,9 @@ def articles_first(
         "keyword_encoder": keyword_encoder.describe(),
         "n_unique_keywords_encoded": len(keyword_cache),
     }
+    _emit_warnings(diagnostics, [
+        cluster_separation_warning(assignment.quality, assignment.n_clusters, "article"),
+    ])
 
     return PipelineResult(
         mode="articles_first",

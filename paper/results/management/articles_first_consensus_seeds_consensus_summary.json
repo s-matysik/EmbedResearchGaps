@@ -1,0 +1,100 @@
+{
+  "mode": "articles_first",
+  "seeds": [
+    42,
+    7,
+    123,
+    2026,
+    31337
+  ],
+  "corpus_sizes": [
+    50
+  ],
+  "min_support": 0.0,
+  "n_candidates": 62,
+  "n_unanimous": 11,
+  "n_majority": 26,
+  "stability": {
+    "n_seeds": 5,
+    "n_corpus_sizes": 1,
+    "corpus_sizes": [
+      50
+    ],
+    "n_runs": 5,
+    "mean_pairwise_jaccard": 0.44115316932390103,
+    "min_pairwise_jaccard": 0.29545454545454547,
+    "max_pairwise_jaccard": 0.5555555555555556,
+    "mean_jaccard_same_size": 0.44115316932390103,
+    "mean_jaccard_across_sizes": NaN,
+    "candidates_per_support": {
+      "1.0": 11,
+      "0.8": 5,
+      "0.6": 10,
+      "0.4": 13,
+      "0.2": 23
+    },
+    "mean_candidates_per_run": 30.2
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 27,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 7,
+        "Conceptual Combination": 2
+      },
+      "silhouette": 0.032569518633881835
+    },
+    {
+      "seed": 7,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 33,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 8,
+        "Conceptual Combination": 7
+      },
+      "silhouette": 0.024593033918753667
+    },
+    {
+      "seed": 123,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 31,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 7,
+        "Conceptual Combination": 6
+      },
+      "silhouette": 0.027487891566304153
+    },
+    {
+      "seed": 2026,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 32,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 8,
+        "Conceptual Combination": 6
+      },
+      "silhouette": 0.026012827162478838
+    },
+    {
+      "seed": 31337,
+      "top_n": 50,
+      "k": 6,
+      "n_gaps": 31,
+      "gap_types": {
+        "Emerging Concept": 18,
+        "Cross-Cluster Concept": 7,
+        "Conceptual Combination": 6
+      },
+      "silhouette": 0.028653696949848206
+    }
+  ]
+}

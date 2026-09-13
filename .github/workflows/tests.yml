@@ -1,0 +1,36 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install the package and its test extras
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev,agreement]"
+
+      # No network access is needed: hosted embedding and chat backends are
+      # exercised through a recorded transport, and the offline tfidf-svd
+      # encoder drives the end-to-end runs.
+      - name: Run the test suite
+        run: python -m pytest tests/ -q --cov=embedresearchgaps --cov-report=term
+
+      - name: Check that both modes stay reproducible across hash seeds
+        run: python -m pytest tests/test_determinism.py -q

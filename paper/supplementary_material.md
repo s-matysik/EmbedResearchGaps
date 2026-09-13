@@ -20,8 +20,10 @@ export ANTROPIC=... DEEPSEEK=... XAI=... GOOGLE=...   # annotation panel
 python fetch_scopus.py                  # corpora/*.csv
 python run_case.py                      # results/<corpus>/, both modes
 python run_sensitivity.py               # results/sensitivity/
-python run_validation.py                # LLM panel, SELECTED vs control
-python run_matched.py                   # frequency-matched arm
+python run_validation.py                # LLM panel annotation
+python run_matched.py                   # filter-eligible arm
+python recompute_validation.py          # comparisons against a disjoint control
+python run_consensus.py                 # consensus over seeds and corpus sizes
 python make_figures.py                  # figures/fig1..fig6
 python build_supplementary.py           # this workbook
 ```
@@ -79,25 +81,58 @@ Claude Sonnet 5 was likewise excluded because `temperature` is deprecated for
 it; `claude-sonnet-4-6` accepts the parameter and was used instead.
 
 Each keyword is labelled `GAP`, `EXPLORED`, `LOW IMPORTANCE`, `METHOD` or
-`NOISE` and scored 1–10 for novelty against the rubric reproduced in S8. The
-control set is every unique author keyword of the same analysis corpus (146,
-168 and 172 keywords), annotated once per corpus and shared by both modes so
-that the two are compared against an identical baseline. The sheet reports
-label rates, Novelty means, the Welch and Mann-Whitney tests, Cohen's *d*,
-Fleiss' κ, Krippendorff's α, the leave-out concordance and any annotator
-failures (none in the final run).
+`NOISE` and scored 1–10 for novelty against the rubric reproduced in S8.
 
-## S4. Frequency-matched arm (sheet `S4_matched_arm`)
+Every unique author keyword of the analysis corpus was annotated (146, 168 and
+172 keywords), once per corpus and shared by both modes so that the two are
+compared against an identical baseline. The **control arm excludes the
+candidates**: comparing the candidate set against the whole population would
+nest one sample inside the other, every candidate would contribute to both
+arms, and a Welch or Mann-Whitney statistic computed on them would have no
+defined null distribution. Restricting the control to the non-selected
+keywords removes 20 to 130 judgements per corpus and mode from the control arm
+and leaves 120 to 166 control keywords. `compare_keyword_sets` now refuses to
+report parametric p-values when the two arms it is handed share a keyword, and
+`selected_and_all_keywords` — which returned the nested control in v1.0.0 — is
+deprecated in favour of `selected_and_control_keywords`.
 
-The eligible pool is every keyword of the analysis corpus that passes the
-frequency ceiling, the token-count rule, the methodological blocklist and the
-core-domain filter, minus the candidates the ranking selected: 45 keywords for
-management (all annotated) and 64 for economics and finance (60 sampled with
-seed 2026). Two contrasts are reported:
+The sheet reports label rates, Novelty means, the Welch and Mann-Whitney tests,
+Cohen's *d*, a permutation test on the difference of means (20 000 resamples,
+seed 42, which assumes neither normality nor equal variance), Fleiss' κ,
+Krippendorff's α, the leave-out concordance and any annotator failures (none in
+the final run).
 
-- `eligible vs all` — what the lexical and frequency filters contribute.
-- `selected vs eligible` — what the embedding-based ranking contributes on top
-  of them.
+Six comparisons were run (three corpora × two modes). One is nominally
+significant — economics and finance Mode B, +12.7 pp GAP rate and +12.5 % mean
+novelty, Welch *p* = 0.032, Mann-Whitney *p* = 0.014, permutation *p* = 0.046,
+*d* = 0.21 — and none survives Holm correction across the six (smallest
+adjusted *p* = 0.19). The `welch_p_holm` column of
+`results/manuscript_numbers_disjoint.csv` carries the adjusted values.
+
+## S4. Filter-eligible comparison (sheet `S4_matched_arm`)
+
+This is an eligibility-matched comparison, not a frequency-matched one: the
+distributions of document frequency are not matched between arms, the arms are
+defined by which filters a keyword passes. The *eligible pool* is every keyword
+of the analysis corpus that passes the frequency ceiling, the token-count rule,
+the methodological blocklist and the core-domain filter, minus the candidates
+the ranking selected: 45 keywords for management (all annotated) and 64 for
+economics and finance (60 sampled with seed 2026). Two fully disjoint contrasts
+are reported:
+
+- `eligible vs not_eligible` — the eligible pool against the keywords that
+  fail at least one filter: what the lexical and frequency filters contribute.
+  Management +7.8 pp GAP and +8.3 % novelty (permutation *p* = 0.149);
+  economics and finance +10.6 pp and +9.2 % (*p* = 0.069).
+- `selected vs eligible` — the candidates against the eligible pool they were
+  selected from: what the embedding-based ranking contributes on top of the
+  filters. Management −6.1 pp and −8.4 % (*p* = 0.192); economics and finance
+  +6.8 pp and +8.6 % (*p* = 0.150).
+
+The filters move both corpora in the same direction by a similar amount; the
+ranking moves them in opposite directions. The earlier `eligible vs all`
+contrast was dropped because the eligible pool is a subset of the population it
+was compared against.
 
 ## S5. Sensitivity to corpus size (sheet `S5_size_sensitivity`)
 
@@ -113,6 +148,30 @@ Five k-means seeds (42, 7, 123, 2026, 31337) with corpus, embeddings and every
 threshold held fixed. Reported: mean, minimum and maximum pairwise Jaccard
 overlap of the candidate sets and the mean candidate count. This is the
 measurement `consensus_gaps` exposes as a per-candidate support value.
+
+## S6b. Consensus across seeds and corpus sizes (sheet `S6b_consensus`)
+
+`consensus_gaps(..., seeds=(42, 7, 123, 2026, 31337), top_n=(30, 50, 100, 150))`
+executes twenty runs per corpus and mode and pools the candidates by support,
+the fraction of runs that produced them. Reported per corpus and mode: the
+number of pooled candidates, how many reach majority and unanimous support, the
+mean pairwise Jaccard overlap, and its decomposition into run pairs that share
+a corpus size (the seed effect) and pairs that do not (the size effect).
+
+| Corpus | Mode | Pooled | Support ≥ 0.5 | Unanimous | Mean J | Same size | Across sizes |
+|--------|------|--------|----------------|-----------|--------|-----------|--------------|
+| Management | B | 161 | 12 | 2 | 0.234 | 0.451 | 0.176 |
+| Management | A | 50 | 2 | 0 | 0.158 | 0.288 | 0.123 |
+| Economics & finance | B | 166 | 11 | 2 | 0.194 | 0.385 | 0.143 |
+| Economics & finance | A | 37 | 1 | 0 | 0.140 | 0.262 | 0.108 |
+
+Full tables: `results/<corpus>/<mode>_consensus_seeds_sizes_consensus_gaps.csv`
+(support over both factors) and `..._consensus_seeds_consensus_gaps.csv` (seeds
+only), with `consensus_summary.json` beside them.
+
+High support is not validity. The two personal names that a metadata error left
+in the management keyword field reach support 0.85 and 0.75, because a data
+defect reproduces perfectly across initialisations.
 
 ## S7. Full candidate tables (sheets `S7_*`)
 
@@ -205,7 +264,7 @@ cosine similarity of cluster centroids.
 
 ## S11. Test suite
 
-289 tests, 93 % statement coverage, no network access required. Coverage
+306 tests, 93 % statement coverage, no network access required. Coverage
 includes: the three scoring formulae against hand-computed values; the four
 detectors on keyword spaces with embeddings placed at exact angles, so the
 similarity window is tested against the published thresholds rather than
@@ -213,4 +272,7 @@ against whatever a model produces; both modes end-to-end on a synthetic corpus
 with planted gaps; cross-process determinism under differing `PYTHONHASHSEED`
 values; every hosted backend's request payload and reply parsing through a
 recorded HTTP transport, including rate-limit retries and the malformed-reply
-salvage path; and the full validation and figure stacks.
+salvage path; the disjointness of the control set and the refusal to report
+parametric p-values on overlapping arms; the permutation test; consensus
+pooling over seeds and corpus sizes including the seed/size decomposition; and
+the full validation and figure stacks.

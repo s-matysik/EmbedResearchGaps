@@ -1,0 +1,15 @@
+gap_type,keyword,n_runs_found,n_seeds_found,n_sizes_found,mean_score,min_score,max_score,mean_frequency,cluster_labels,support
+Peripheral Keyword,ryad titah,3,3,1,0.598670670692922,0.5558625182390301,0.6753126332428783,1.0,Microfoundations & family business | Seizing & Sensing,0.6
+Peripheral Keyword,multimedia mindset,3,3,1,0.41719837083581107,0.4131656089393415,0.41935128440699565,1.0,Digitalization & Digital Technology,0.6
+Peripheral Keyword,social attention,2,2,1,0.5915205623247481,0.5799232632319427,0.6031178614175535,1.0,Microfoundations & Strategic agility | Strategic agility & Strategic renewal,0.4
+Peripheral Keyword,dt vision,2,2,1,0.5195951538396593,0.5140550298188326,0.5251352778604859,1.0,Digitalization & Digital Technology | Firm performance & performance,0.4
+Peripheral Keyword,steel industry,2,2,1,0.48811011868658916,0.4695199422966071,0.5067002950765712,1.0,Emerging market & family business | Microfoundations & family business,0.4
+Peripheral Keyword,automotive industry,2,2,1,0.46736469987648394,0.45141210603297444,0.48331729371999343,1.0,Emerging market & family business | Technology and innovation management & Emerging market,0.4
+Peripheral Keyword,pär ågerfalk,1,1,1,0.6092407574347953,0.6092407574347953,0.6092407574347953,1.0,Strategic agility & Strategic renewal,0.2
+Peripheral Keyword,differentiation strategy,1,1,1,0.4991900348629634,0.4991900348629634,0.4991900348629634,1.0,Microfoundations & Strategic agility,0.2
+Peripheral Keyword,social capital,1,1,1,0.46262820600163335,0.46262820600163335,0.46262820600163335,1.0,Firm performance & Organisational remodelling,0.2
+Peripheral Keyword,managerial cognition,1,1,1,0.45181965164886084,0.45181965164886084,0.45181965164886084,1.0,Firm performance & competitive advantage,0.2
+Peripheral Keyword,social media,1,1,1,0.4413247742324363,0.4413247742324363,0.4413247742324363,1.0,Digitalization & Digital Technology,0.2
+Peripheral Keyword,relational collaboration,1,1,1,0.43741719202033646,0.43741719202033646,0.43741719202033646,1.0,Firm performance & Organisational remodelling,0.2
+Peripheral Keyword,response performance,1,1,1,0.3082796460264887,0.3082796460264887,0.3082796460264887,1.0,Firm performance & performance,0.2
+Peripheral Keyword,enterprise agility,1,1,1,0.3060907222151874,0.3060907222151874,0.3060907222151874,1.0,Dynamic capability & Enterprise Dynamic Capabilities,0.2
