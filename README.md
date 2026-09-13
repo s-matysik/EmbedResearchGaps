@@ -281,7 +281,8 @@ tables.
 ## Stability-aware consensus
 
 The clustering both modes rest on is k-means, and on real bibliographic corpora
-its silhouette is small (0.02–0.07 in the case studies). The partition — and
+its silhouette is small (0.017–0.103 over the three corpora shipped with this
+package; 0.033–0.069 on the two case studies). The partition — and
 with it the candidate list — therefore depends on the initialisation. A single
 seed gives a list whose reproducibility is unknown, so measure it:
 
@@ -358,7 +359,7 @@ pip install -e ".[dev]"
 pytest --cov=embedresearchgaps
 ```
 
-The suite runs offline: 315 tests, 93% statement coverage. Detector behaviour is
+The suite runs offline: 316 tests, 93% statement coverage. Detector behaviour is
 tested on keyword spaces with designed embeddings placed at exact angles, so the
 similarity criteria are checked against the published thresholds rather than
 against whatever an embedding model happens to produce. Hosted backends are

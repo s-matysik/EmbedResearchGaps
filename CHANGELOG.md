@@ -54,7 +54,7 @@ First public release: the version described in the accompanying article.
   insertion-ordered throughout rather than set-ordered, and
   `tests/test_determinism.py` runs both pipelines in subprocesses under
   different `PYTHONHASHSEED` values and requires identical candidate tables.
-- **Test suite and CI.** 315 tests, 93 % statement coverage, no network access
+- **Test suite and CI.** 316 tests, 93 % statement coverage, no network access
   required: detectors are exercised on keyword spaces with embeddings placed at
   designed angles, and every hosted backend is tested against a recorded HTTP
   transport that checks the request payload and the reply parsing. GitHub

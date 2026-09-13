@@ -315,7 +315,7 @@ cosine similarity of cluster centroids.
 
 ## S11. Test suite
 
-315 tests, 93 % statement coverage, no network access required. Coverage
+316 tests, 93 % statement coverage, no network access required. Coverage
 includes: the three scoring formulae against hand-computed values; the four
 detectors on keyword spaces with embeddings placed at exact angles, so the
 similarity window is tested against the published thresholds rather than

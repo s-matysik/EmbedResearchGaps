@@ -1,0 +1,403 @@
+{
+  "1": {
+    "reference": "[1] Westgate MJ, Barton PS, Pierson JC, Lindenmayer DB. Text analysis tools for identification of emerging topics and research gaps in conservation science. Conserv Biol 2015;29:1606-14. https://doi.org/10.1111/cobi.12605.",
+    "doi": "10.1111/cobi.12605",
+    "crossref": {
+      "DOI": "10.1111/cobi.12605",
+      "title": "Text analysis tools for identification of emerging topics and research gaps in conservation science",
+      "container-title": "Conservation Biology",
+      "short-container-title": "Conservation Biology",
+      "volume": "29",
+      "issue": "6",
+      "page": "1606-1614",
+      "issued": 2015,
+      "author": [
+        "Westgate Martin J.",
+        "Barton Philip S.",
+        "Pierson Jennifer C.",
+        "Lindenmayer David B."
+      ],
+      "type": "journal-article"
+    }
+  },
+  "2": {
+    "reference": "[2] Robinson KA, Saldanha IJ, McKoy NA. Development of a framework to identify research gaps from systematic reviews. J Clin Epidemiol 2011;64:1325-30. https://doi.org/10.1016/j.jclinepi.2011.06.009.",
+    "doi": "10.1016/j.jclinepi.2011.06.009",
+    "crossref": {
+      "DOI": "10.1016/j.jclinepi.2011.06.009",
+      "title": "Development of a framework to identify research gaps from systematic reviews",
+      "container-title": "Journal of Clinical Epidemiology",
+      "short-container-title": "Journal of Clinical Epidemiology",
+      "volume": "64",
+      "issue": "12",
+      "page": "1325-1330",
+      "issued": 2011,
+      "author": [
+        "Robinson Karen A.",
+        "Saldanha Ian J.",
+        "Mckoy Naomi A."
+      ],
+      "type": "journal-article"
+    }
+  },
+  "3": {
+    "reference": "[3] Sandberg J, Alvesson M. Ways of constructing research questions: gap-spotting or problematization? Organization 2011;18:23-44. https://doi.org/10.1177/1350508410372151.",
+    "doi": "10.1177/1350508410372151",
+    "crossref": {
+      "DOI": "10.1177/1350508410372151",
+      "title": "Ways of constructing research questions: gap-spotting or problematization?",
+      "container-title": "Organization",
+      "short-container-title": "Organization",
+      "volume": "18",
+      "issue": "1",
+      "page": "23-44",
+      "issued": 2010,
+      "author": [
+        "Sandberg Jörgen",
+        "Alvesson Mats"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "4": {
+    "reference": "[4] Page MJ, McKenzie JE, Bossuyt PM, Boutron I, Hoffmann TC, Mulrow CD, et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. BMJ 2021;372:n71. https://doi.org/10.1136/bmj.n71.",
+    "doi": "10.1136/bmj.n71",
+    "crossref": {
+      "DOI": "10.1136/bmj.n71",
+      "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "container-title": "BMJ",
+      "short-container-title": "BMJ",
+      "volume": null,
+      "issue": null,
+      "page": "n71",
+      "issued": 2021,
+      "author": [
+        "Page Matthew J",
+        "McKenzie Joanne E",
+        "Bossuyt Patrick M",
+        "Boutron Isabelle",
+        "Hoffmann Tammy C",
+        "Mulrow Cynthia D",
+        "Shamseer Larissa",
+        "Tetzlaff Jennifer M"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "5": {
+    "reference": "[5] van de Schoot R, de Bruin J, Schram R, Zahedi P, de Boer J, Weijdema F, et al. An open source machine learning framework for efficient and transparent systematic reviews. Nat Mach Intell 2021;3:125-33. https://doi.org/10.1038/s42256-020-00287-7.",
+    "doi": "10.1038/s42256-020-00287-7",
+    "crossref": {
+      "DOI": "10.1038/s42256-020-00287-7",
+      "title": "An open source machine learning framework for efficient and transparent systematic reviews",
+      "container-title": "Nature Machine Intelligence",
+      "short-container-title": "Nat Mach Intell",
+      "volume": "3",
+      "issue": "2",
+      "page": "125-133",
+      "issued": 2021,
+      "author": [
+        "van de Schoot Rens",
+        "de Bruin Jonathan",
+        "Schram Raoul",
+        "Zahedi Parisa",
+        "de Boer Jan",
+        "Weijdema Felix",
+        "Kramer Bianca",
+        "Huijts Martijn"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "6": {
+    "reference": "[6] Matysik S, Wiśniewska J, Frankowski PK. EmbedSLR: an open-source python framework for efficient embedding-based screening and bibliometric validation in systematic literature review. SoftwareX 2025;32:102416. https://doi.org/10.1016/j.softx.2025.102416.",
+    "doi": "10.1016/j.softx.2025.102416",
+    "crossref": {
+      "DOI": "10.1016/j.softx.2025.102416",
+      "title": "EmbedSLR: an open-source python framework for efficient embedding-based screening and bibliometric validation in systematic literature review",
+      "container-title": "SoftwareX",
+      "short-container-title": "SoftwareX",
+      "volume": "32",
+      "issue": null,
+      "page": "102416",
+      "issued": 2025,
+      "author": [
+        "Matysik Sebastian",
+        "Wiśniewska Joanna",
+        "Frankowski Paweł Karol"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "7": {
+    "reference": "[7] Matysik S, Wiśniewska J, Frankowski PK. Version 2.0 - EmbedSLR: an open-source python framework for efficient embedding-based screening and bibliometric validation in systematic literature review. SoftwareX 2026;34:102563. https://doi.org/10.1016/j.softx.2026.102563.",
+    "doi": "10.1016/j.softx.2026.102563",
+    "crossref": {
+      "DOI": "10.1016/j.softx.2026.102563",
+      "title": "Version 2.0 - EmbedSLR: An open-source python framework for efficient embedding-based screening and bibliometric validation in systematic literature review",
+      "container-title": "SoftwareX",
+      "short-container-title": "SoftwareX",
+      "volume": "34",
+      "issue": null,
+      "page": "102563",
+      "issued": 2026,
+      "author": [
+        "Matysik Sebastian",
+        "Wiśniewska Joanna",
+        "Frankowski Paweł Karol"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "8": {
+    "reference": "[8] van Eck NJ, Waltman L. Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics 2010;84:523-38. https://doi.org/10.1007/s11192-009-0146-3.",
+    "doi": "10.1007/s11192-009-0146-3",
+    "crossref": {
+      "DOI": "10.1007/s11192-009-0146-3",
+      "title": "Software survey: VOSviewer, a computer program for bibliometric mapping",
+      "container-title": "Scientometrics",
+      "short-container-title": "Scientometrics",
+      "volume": "84",
+      "issue": "2",
+      "page": "523-538",
+      "issued": 2009,
+      "author": [
+        "van Eck Nees Jan",
+        "Waltman Ludo"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "9": {
+    "reference": "[9] Aria M, Cuccurullo C. bibliometrix: an R-tool for comprehensive science mapping analysis. J Informetr 2017;11:959-75. https://doi.org/10.1016/j.joi.2017.08.007.",
+    "doi": "10.1016/j.joi.2017.08.007",
+    "crossref": {
+      "DOI": "10.1016/j.joi.2017.08.007",
+      "title": "bibliometrix : An R-tool for comprehensive science mapping analysis",
+      "container-title": "Journal of Informetrics",
+      "short-container-title": "Journal of Informetrics",
+      "volume": "11",
+      "issue": "4",
+      "page": "959-975",
+      "issued": 2017,
+      "author": [
+        "Aria Massimo",
+        "Cuccurullo Corrado"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "10": {
+    "reference": "[10] Chen C. CiteSpace II: detecting and visualizing emerging trends and transient patterns in scientific literature. J Am Soc Inf Sci Technol 2006;57:359-77. https://doi.org/10.1002/asi.20317.",
+    "doi": "10.1002/asi.20317",
+    "crossref": {
+      "DOI": "10.1002/asi.20317",
+      "title": "CiteSpace II: Detecting and visualizing emerging trends and transient patterns in scientific literature",
+      "container-title": "Journal of the American Society for Information Science and Technology",
+      "short-container-title": "J. Am. Soc. Inf. Sci.",
+      "volume": "57",
+      "issue": "3",
+      "page": "359-377",
+      "issued": 2005,
+      "author": [
+        "Chen Chaomei"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "11": {
+    "reference": "[11] Donthu N, Kumar S, Mukherjee D, Pandey N, Lim WM. How to conduct a bibliometric analysis: an overview and guidelines. J Bus Res 2021;133:285-96. https://doi.org/10.1016/j.jbusres.2021.04.070.",
+    "doi": "10.1016/j.jbusres.2021.04.070",
+    "crossref": {
+      "DOI": "10.1016/j.jbusres.2021.04.070",
+      "title": "How to conduct a bibliometric analysis: An overview and guidelines",
+      "container-title": "Journal of Business Research",
+      "short-container-title": "Journal of Business Research",
+      "volume": "133",
+      "issue": null,
+      "page": "285-296",
+      "issued": 2021,
+      "author": [
+        "Donthu Naveen",
+        "Kumar Satish",
+        "Mukherjee Debmalya",
+        "Pandey Nitesh",
+        "Lim Weng Marc"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "12": {
+    "reference": "[12] Small H, Boyack KW, Klavans R. Identifying emerging topics in science and technology. Res Policy 2014;43:1450-67. https://doi.org/10.1016/j.respol.2014.02.005.",
+    "doi": "10.1016/j.respol.2014.02.005",
+    "crossref": {
+      "DOI": "10.1016/j.respol.2014.02.005",
+      "title": "Identifying emerging topics in science and technology",
+      "container-title": "Research Policy",
+      "short-container-title": "Research Policy",
+      "volume": "43",
+      "issue": "8",
+      "page": "1450-1467",
+      "issued": 2014,
+      "author": [
+        "Small Henry",
+        "Boyack Kevin W.",
+        "Klavans Richard"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "13": {
+    "reference": "[13] Devlin J, Chang MW, Lee K, Toutanova K. BERT: pre-training of deep bidirectional transformers for language understanding. In: Proceedings of NAACL-HLT 2019. Minneapolis: Association for Computational Linguistics; 2019, p. 4171-86. https://doi.org/10.18653/v1/N19-1423.",
+    "doi": "10.18653/v1/N19-1423",
+    "crossref": {
+      "DOI": "10.18653/v1/n19-1423",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "container-title": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+      "short-container-title": null,
+      "volume": null,
+      "issue": null,
+      "page": "4171-4186",
+      "issued": 2019,
+      "author": [
+        "Devlin Jacob",
+        "Chang Ming-Wei",
+        "Lee Kenton",
+        "Toutanova Kristina"
+      ],
+      "type": "proceedings-article"
+    }
+  },
+  "14": {
+    "reference": "[14] Reimers N, Gurevych I. Sentence-BERT: sentence embeddings using Siamese BERT-networks. In: Proceedings of EMNLP-IJCNLP 2019. Hong Kong: Association for Computational Linguistics; 2019, p. 3980-90. https://doi.org/10.18653/v1/D19-1410.",
+    "doi": "10.18653/v1/D19-1410",
+    "crossref": {
+      "DOI": "10.18653/v1/d19-1410",
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "container-title": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+      "short-container-title": null,
+      "volume": null,
+      "issue": null,
+      "page": "3980-3990",
+      "issued": 2019,
+      "author": [
+        "Reimers Nils",
+        "Gurevych Iryna"
+      ],
+      "type": "proceedings-article"
+    }
+  },
+  "15": {
+    "reference": "[15] Petukhova A, Matos-Carvalho JP, Fachada N. Text clustering with large language model embeddings. Int J Cogn Comput Eng 2025;6:100-8. https://doi.org/10.1016/j.ijcce.2024.11.004.",
+    "doi": "10.1016/j.ijcce.2024.11.004",
+    "crossref": {
+      "DOI": "10.1016/j.ijcce.2024.11.004",
+      "title": "Text clustering with large language model embeddings",
+      "container-title": "International Journal of Cognitive Computing in Engineering",
+      "short-container-title": "International Journal of Cognitive Computing in Engineering",
+      "volume": "6",
+      "issue": null,
+      "page": "100-108",
+      "issued": 2025,
+      "author": [
+        "Petukhova Alina",
+        "Matos-Carvalho João P.",
+        "Fachada Nuno"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "16": {
+    "reference": "[16] Frankowski PK, Wiśniewska J, Matysik S. Automated identification of research gaps using keyword clustering and an embedding model. In: PACIS 2026 Proceedings, paper 7. https://aisel.aisnet.org/pacis2026/adv_theory/adv_theory/7 [accessed 13 September 2026].",
+    "doi": null,
+    "crossref": null,
+    "note": "no DOI: conference proceedings or software release"
+  },
+  "17": {
+    "reference": "[17] Frankowski PK, Wiśniewska J, Matysik S. Semantic periphery detection in academic keyword space: an embedding-driven framework for automated research gap identification. In: AMCIS 2026 Proceedings, paper 7. https://aisel.aisnet.org/amcis2026/ai_aiaa/ai_aiaa/7 [accessed 13 September 2026].",
+    "doi": null,
+    "crossref": null,
+    "note": "no DOI: conference proceedings or software release"
+  },
+  "18": {
+    "reference": "[18] Gilardi F, Alizadeh M, Kubli M. ChatGPT outperforms crowd workers for text-annotation tasks. Proc Natl Acad Sci U S A 2023;120:e2305016120. https://doi.org/10.1073/pnas.2305016120.",
+    "doi": "10.1073/pnas.2305016120",
+    "crossref": {
+      "DOI": "10.1073/pnas.2305016120",
+      "title": "ChatGPT outperforms crowd workers for text-annotation tasks",
+      "container-title": "Proceedings of the National Academy of Sciences",
+      "short-container-title": "Proc. Natl. Acad. Sci. U.S.A.",
+      "volume": "120",
+      "issue": "30",
+      "page": null,
+      "issued": 2023,
+      "author": [
+        "Gilardi Fabrizio",
+        "Alizadeh Meysam",
+        "Kubli Maël"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "19": {
+    "reference": "[19] Törnberg P. Large language models outperform expert coders and supervised classifiers at annotating political social media messages. Soc Sci Comput Rev 2024;43:1181-95. https://doi.org/10.1177/08944393241286471.",
+    "doi": "10.1177/08944393241286471",
+    "crossref": {
+      "DOI": "10.1177/08944393241286471",
+      "title": "Large Language Models Outperform Expert Coders and Supervised Classifiers at Annotating Political Social Media Messages",
+      "container-title": "Social Science Computer Review",
+      "short-container-title": "Social Science Computer Review",
+      "volume": "43",
+      "issue": "6",
+      "page": "1181-1195",
+      "issued": 2024,
+      "author": [
+        "Törnberg Petter"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "20": {
+    "reference": "[20] Heseltine M, Clemm von Hohenberg B. Large language models as a substitute for human experts in annotating political text. Res Polit 2024;11. https://doi.org/10.1177/20531680241236239.",
+    "doi": "10.1177/20531680241236239",
+    "crossref": {
+      "DOI": "10.1177/20531680241236239",
+      "title": "Large language models as a substitute for human experts in annotating political text",
+      "container-title": "Research &amp; Politics",
+      "short-container-title": "Research &amp; Politics",
+      "volume": "11",
+      "issue": "1",
+      "page": null,
+      "issued": 2024,
+      "author": [
+        "Heseltine Michael",
+        "Clemm von Hohenberg Bernhard"
+      ],
+      "type": "journal-article"
+    }
+  },
+  "21": {
+    "reference": "[21] Rousseeuw PJ. Silhouettes: a graphical aid to the interpretation and validation of cluster analysis. J Comput Appl Math 1987;20:53-65. https://doi.org/10.1016/0377-0427(87)90125-7.",
+    "doi": "10.1016/0377-0427(87)90125-7",
+    "crossref": {
+      "DOI": "10.1016/0377-0427(87)90125-7",
+      "title": "Silhouettes: A graphical aid to the interpretation and validation of cluster analysis",
+      "container-title": "Journal of Computational and Applied Mathematics",
+      "short-container-title": "Journal of Computational and Applied Mathematics",
+      "volume": "20",
+      "issue": null,
+      "page": "53-65",
+      "issued": 1987,
+      "author": [
+        "Rousseeuw Peter J."
+      ],
+      "type": "journal-article"
+    }
+  },
+  "22": {
+    "reference": "[22] Matysik S, Wiśniewska J, Frankowski PK. EmbedResearchGaps. Version 1.0.0 [software]. GitHub; 2026. https://github.com/s-matysik/EmbedResearchGaps/releases/tag/v1.0.0.",
+    "doi": null,
+    "crossref": null,
+    "note": "no DOI: conference proceedings or software release"
+  }
+}

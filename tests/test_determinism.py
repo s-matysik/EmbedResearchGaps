@@ -110,3 +110,20 @@ def test_document_frequency_order_follows_first_appearance() -> None:
     counter = keyword_frequencies(records)
     assert list(counter) == ["beta term", "alpha term", "gamma term"]
     assert counter["alpha term"] == 2
+
+
+def test_repeated_runs_at_one_seed_are_identical(synthetic_corpus, offline_config) -> None:
+    """A fixed seed must reproduce the candidate table exactly, in-process.
+
+    This is the property the support statistic of ``consensus_gaps`` rests on:
+    if two runs at the same seed disagreed, support would measure interpreter
+    state rather than initialisation sensitivity.  Keyword ordering is
+    insertion-ordered throughout the package precisely so that this holds.
+    """
+    from embedresearchgaps import articles_first, keywords_first
+
+    for mode in (articles_first, keywords_first):
+        tables = [mode(synthetic_corpus, offline_config).gaps for _ in range(3)]
+        first = tables[0][["keyword", "gap_type", "score"]]
+        for other in tables[1:]:
+            pd.testing.assert_frame_equal(first, other[["keyword", "gap_type", "score"]])

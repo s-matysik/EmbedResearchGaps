@@ -12,16 +12,16 @@
 ## Abstract
 
 EmbedResearchGaps identifies candidate research gaps in the author-keyword
-space of a screened literature corpus. It implements two published procedures
-as two modes: clustering author keywords and flagging the periphery of each
-cluster, or clustering articles first and then mining a keyword sub-space in
-every cluster for emerging concepts, unrealised conceptual combinations and
-cross-cluster concepts. It adds seven embedding backends, a five-provider
-annotation panel, blinded expert sheets, and a consensus mode pooling
-candidates across k-means seeds and corpus sizes. In two Scopus case studies
-candidate sets proved sensitive to both, and the ranking gave no reliable
-novelty enrichment beyond lexical filtering; the software therefore reports
-support explicitly and treats candidates as hypotheses for expert screening.
+space of a screened literature corpus. It implements two published procedures:
+clustering author keywords and flagging each cluster's periphery, or clustering
+articles first and then mining each cluster's keyword sub-space for emerging
+concepts, unrealised conceptual combinations and cross-cluster concepts. It adds
+seven embedding backends, a five-provider annotation panel, blinded expert
+sheets and a consensus mode pooling candidates across k-means seeds and corpus
+sizes. In two Scopus case studies candidate sets were sensitive to both and the
+ranking added no reliable novelty enrichment over lexical filtering, so the
+software reports support explicitly and treats candidates as hypotheses for
+expert screening.
 
 **Keywords:** research gaps; semantic embeddings; keyword clustering;
 literature review; bibliometrics; reproducibility
