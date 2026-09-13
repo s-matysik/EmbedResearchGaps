@@ -1,0 +1,125 @@
+{
+  "domain": "economics, finance and banking",
+  "annotators": [
+    "anthropic:claude-sonnet-4-6",
+    "deepseek:deepseek-v4-pro",
+    "google:gemini-2.5-flash",
+    "openai:gpt-4o",
+    "xai:grok-4.5"
+  ],
+  "n_annotations": 957,
+  "per_set": {
+    "SELECTED": {
+      "label_rates": {
+        "GAP": 0.6470588235294118,
+        "EXPLORED": 0.3025210084033613,
+        "LOW IMPORTANCE": 0.03361344537815126,
+        "METHOD": 0.008403361344537815,
+        "NOISE": 0.008403361344537815
+      },
+      "novelty": {
+        "mean": 4.025210084033613,
+        "std": 2.0644783675463736,
+        "median": 4.0,
+        "q25": 2.0,
+        "q75": 6.0,
+        "share_ge_5": 0.46218487394957986,
+        "share_ge_8": 0.03361344537815126,
+        "n": 119
+      }
+    },
+    "ALL": {
+      "label_rates": {
+        "GAP": 0.5429594272076372,
+        "EXPLORED": 0.2684964200477327,
+        "LOW IMPORTANCE": 0.06443914081145585,
+        "METHOD": 0.08233890214797136,
+        "NOISE": 0.041766109785202864
+      },
+      "novelty": {
+        "mean": 3.7052505966587113,
+        "std": 2.3104864309577815,
+        "median": 3.0,
+        "q25": 2.0,
+        "q75": 6.0,
+        "share_ge_5": 0.39498806682577564,
+        "share_ge_8": 0.059665871121718374,
+        "n": 838
+      }
+    }
+  },
+  "reliability": {
+    "fleiss_kappa_selected": 0.7029778182923125,
+    "krippendorff_alpha_selected": 0.6249200866882899
+  },
+  "comparison": {
+    "n_annotators": 5,
+    "n_selected_keywords": 24,
+    "n_all_keywords": 168,
+    "gap_rate_selected": 0.6470588235294118,
+    "gap_rate_all": 0.5429594272076372,
+    "gap_rate_delta_pp": 10.409939632177457,
+    "explored_rate_selected": 0.3025210084033613,
+    "explored_rate_all": 0.2684964200477327,
+    "explored_rate_delta_pp": 3.4024588355628604,
+    "mean_novelty_selected": 4.025210084033613,
+    "mean_novelty_all": 3.7052505966587113,
+    "novelty_increase_pct": 8.635299530440191,
+    "selected_rates": {
+      "GAP": 0.6470588235294118,
+      "EXPLORED": 0.3025210084033613,
+      "LOW IMPORTANCE": 0.03361344537815126,
+      "METHOD": 0.008403361344537815,
+      "NOISE": 0.008403361344537815
+    },
+    "all_rates": {
+      "GAP": 0.5429594272076372,
+      "EXPLORED": 0.2684964200477327,
+      "LOW IMPORTANCE": 0.06443914081145585,
+      "METHOD": 0.08233890214797136,
+      "NOISE": 0.041766109785202864
+    },
+    "selected_novelty": {
+      "mean": 4.025210084033613,
+      "std": 2.0644783675463736,
+      "median": 4.0,
+      "q25": 2.0,
+      "q75": 6.0,
+      "share_ge_5": 0.46218487394957986,
+      "share_ge_8": 0.03361344537815126,
+      "n": 119
+    },
+    "all_novelty": {
+      "mean": 3.7052505966587113,
+      "std": 2.3104864309577815,
+      "median": 3.0,
+      "q25": 2.0,
+      "q75": 6.0,
+      "share_ge_5": 0.39498806682577564,
+      "share_ge_8": 0.059665871121718374,
+      "n": 838
+    },
+    "novelty_test": {
+      "welch_t": 1.5577956341189985,
+      "welch_p": 0.12122138867647071,
+      "mannwhitney_u": 54977.0,
+      "mannwhitney_p": 0.06573496052980847,
+      "cohens_d": 0.14603767430850464
+    }
+  },
+  "unanimous_gaps": [
+    "bigtech credit",
+    "big tech",
+    "debt trap",
+    "disadvantaged communities",
+    "soft information",
+    "alternative data",
+    "bank fintech",
+    "sub-saharan africa",
+    "south asia",
+    "banks’ risk-taking",
+    "bank concentration",
+    "risk-taking behavior"
+  ],
+  "failures": {}
+}

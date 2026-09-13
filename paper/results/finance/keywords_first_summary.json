@@ -1,0 +1,114 @@
+{
+  "mode": "keywords_first",
+  "n_articles": 50,
+  "n_keywords": 168,
+  "n_clusters": 6,
+  "n_gaps": 4,
+  "gap_types": {
+    "Peripheral Keyword": 4
+  },
+  "cluster_labels": {
+    "0": "Commercial banks & bank lending",
+    "1": "Alternative credit & Bigtech credit",
+    "2": "Bank FinTech & Fintech credit",
+    "3": "China & Economics",
+    "4": "Credit risk & Bank credit risk",
+    "5": "Development Economics & Dr David McMillan, University of Stirling, United Kingdom of Great Britain and Northern Ireland"
+  },
+  "diagnostics": {
+    "n_clusters": 6,
+    "cluster_sizes": {
+      "0": 15,
+      "1": 27,
+      "2": 31,
+      "3": 37,
+      "4": 30,
+      "5": 28
+    },
+    "cluster_quality": {
+      "silhouette": 0.050999050546188106,
+      "davies_bouldin": 3.437042650255142,
+      "calinski_harabasz": 6.89943734416939
+    },
+    "k_selection": {
+      "k": 6,
+      "k_range": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "wcss": [
+        112.53030866974974,
+        107.80540515787442,
+        104.84978608408635,
+        102.12904737652758,
+        99.79008070828206,
+        97.65480128722878,
+        94.94673381725082,
+        93.52697372450515,
+        90.9574999869968
+      ],
+      "silhouette": [
+        0.06705953475775372,
+        0.042286787930962626,
+        0.044823891066096314,
+        0.04999006512348896,
+        0.050999050546188106,
+        0.052913502444297045,
+        0.06651027809319207,
+        0.0664084643551715,
+        0.07260151612765935
+      ],
+      "k_elbow": null,
+      "k_silhouette": 10,
+      "rule": "elbow (max silhouette 0.073 < 0.25)"
+    },
+    "distance_metric": "cosine",
+    "frequency_threshold": 1,
+    "periphery_percentile": 95.0,
+    "peripheral_share": 0.023809523809523808,
+    "n_core_domain_terms": 2,
+    "core_domain_terms": [
+      "financial inclusion",
+      "fintech"
+    ],
+    "tfidf_match_statistics": {
+      "exact": 164,
+      "contains": 4
+    },
+    "corpus": {
+      "n_articles": 50,
+      "n_unique_keywords": 168,
+      "mean_keywords_per_article": 5.34,
+      "articles_without_keywords": 0,
+      "has_abstracts": true,
+      "has_citations": true,
+      "year_range": [
+        2020,
+        2026
+      ],
+      "dropped_empty_text": 0,
+      "dropped_empty_keywords": 0
+    },
+    "ranking": {
+      "ranked": true,
+      "encoder": {
+        "encoder": "precomputed",
+        "model": null
+      },
+      "min_distance": 0.25696099164587505,
+      "max_distance": 0.6827862038077324,
+      "cutoff_distance": 0.3351982590031404
+    },
+    "keyword_encoder": {
+      "encoder": "precomputed",
+      "model": null
+    }
+  }
+}

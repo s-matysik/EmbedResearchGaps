@@ -1,0 +1,114 @@
+{
+  "domain": "marketing",
+  "annotators": [
+    "anthropic:claude-sonnet-4-6",
+    "deepseek:deepseek-v4-pro",
+    "google:gemini-2.5-flash",
+    "openai:gpt-4o",
+    "xai:grok-4.5"
+  ],
+  "n_annotations": 890,
+  "per_set": {
+    "SELECTED": {
+      "label_rates": {
+        "GAP": 0.4,
+        "EXPLORED": 0.4,
+        "LOW IMPORTANCE": 0.16666666666666666,
+        "METHOD": 0.0,
+        "NOISE": 0.03333333333333333
+      },
+      "novelty": {
+        "mean": 3.1333333333333333,
+        "std": 2.2702473408212036,
+        "median": 2.0,
+        "q25": 1.25,
+        "q75": 5.0,
+        "share_ge_5": 0.3,
+        "share_ge_8": 0.03333333333333333,
+        "n": 30
+      }
+    },
+    "ALL": {
+      "label_rates": {
+        "GAP": 0.4372093023255814,
+        "EXPLORED": 0.3802325581395349,
+        "LOW IMPORTANCE": 0.10697674418604651,
+        "METHOD": 0.05,
+        "NOISE": 0.02558139534883721
+      },
+      "novelty": {
+        "mean": 3.0267441860465114,
+        "std": 1.9565670690864256,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 4.0,
+        "share_ge_5": 0.2441860465116279,
+        "share_ge_8": 0.022093023255813953,
+        "n": 860
+      }
+    }
+  },
+  "reliability": {
+    "fleiss_kappa_selected": 0.5392491467576793,
+    "krippendorff_alpha_selected": 0.5208914087723443
+  },
+  "comparison": {
+    "n_annotators": 5,
+    "n_selected_keywords": 6,
+    "n_all_keywords": 172,
+    "gap_rate_selected": 0.4,
+    "gap_rate_all": 0.4372093023255814,
+    "gap_rate_delta_pp": -3.7209302325581395,
+    "explored_rate_selected": 0.4,
+    "explored_rate_all": 0.3802325581395349,
+    "explored_rate_delta_pp": 1.976744186046514,
+    "mean_novelty_selected": 3.1333333333333333,
+    "mean_novelty_all": 3.0267441860465114,
+    "novelty_increase_pct": 3.5215776667947307,
+    "selected_rates": {
+      "GAP": 0.4,
+      "EXPLORED": 0.4,
+      "LOW IMPORTANCE": 0.16666666666666666,
+      "METHOD": 0.0,
+      "NOISE": 0.03333333333333333
+    },
+    "all_rates": {
+      "GAP": 0.4372093023255814,
+      "EXPLORED": 0.3802325581395349,
+      "LOW IMPORTANCE": 0.10697674418604651,
+      "METHOD": 0.05,
+      "NOISE": 0.02558139534883721
+    },
+    "selected_novelty": {
+      "mean": 3.1333333333333333,
+      "std": 2.2702473408212036,
+      "median": 2.0,
+      "q25": 1.25,
+      "q75": 5.0,
+      "share_ge_5": 0.3,
+      "share_ge_8": 0.03333333333333333,
+      "n": 30
+    },
+    "all_novelty": {
+      "mean": 3.0267441860465114,
+      "std": 1.9565670690864256,
+      "median": 2.0,
+      "q25": 2.0,
+      "q75": 4.0,
+      "share_ge_5": 0.2441860465116279,
+      "share_ge_8": 0.022093023255813953,
+      "n": 860
+    },
+    "novelty_test": {
+      "welch_t": 0.2538901351248453,
+      "welch_p": 0.8012830351851604,
+      "mannwhitney_u": 12835.0,
+      "mannwhitney_p": 0.96184804410408,
+      "cohens_d": 0.05029643051361679
+    }
+  },
+  "unanimous_gaps": [
+    "impulse buying"
+  ],
+  "failures": {}
+}

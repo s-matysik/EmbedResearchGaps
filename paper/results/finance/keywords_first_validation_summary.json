@@ -1,0 +1,114 @@
+{
+  "domain": "economics, finance and banking",
+  "annotators": [
+    "anthropic:claude-sonnet-4-6",
+    "deepseek:deepseek-v4-pro",
+    "google:gemini-2.5-flash",
+    "openai:gpt-4o",
+    "xai:grok-4.5"
+  ],
+  "n_annotations": 858,
+  "per_set": {
+    "SELECTED": {
+      "label_rates": {
+        "GAP": 0.45,
+        "EXPLORED": 0.35,
+        "LOW IMPORTANCE": 0.2,
+        "METHOD": 0.0,
+        "NOISE": 0.0
+      },
+      "novelty": {
+        "mean": 3.3,
+        "std": 1.8666040089734592,
+        "median": 2.0,
+        "q25": 2.0,
+        "q75": 5.0,
+        "share_ge_5": 0.3,
+        "share_ge_8": 0.0,
+        "n": 20
+      }
+    },
+    "ALL": {
+      "label_rates": {
+        "GAP": 0.5429594272076372,
+        "EXPLORED": 0.2684964200477327,
+        "LOW IMPORTANCE": 0.06443914081145585,
+        "METHOD": 0.08233890214797136,
+        "NOISE": 0.041766109785202864
+      },
+      "novelty": {
+        "mean": 3.7052505966587113,
+        "std": 2.3104864309577815,
+        "median": 3.0,
+        "q25": 2.0,
+        "q75": 6.0,
+        "share_ge_5": 0.39498806682577564,
+        "share_ge_8": 0.059665871121718374,
+        "n": 838
+      }
+    }
+  },
+  "reliability": {
+    "fleiss_kappa_selected": 0.4488188976377953,
+    "krippendorff_alpha_selected": 0.47663934426229504
+  },
+  "comparison": {
+    "n_annotators": 5,
+    "n_selected_keywords": 4,
+    "n_all_keywords": 168,
+    "gap_rate_selected": 0.45,
+    "gap_rate_all": 0.5429594272076372,
+    "gap_rate_delta_pp": -9.295942720763723,
+    "explored_rate_selected": 0.35,
+    "explored_rate_all": 0.2684964200477327,
+    "explored_rate_delta_pp": 8.150357995226726,
+    "mean_novelty_selected": 3.3,
+    "mean_novelty_all": 3.7052505966587113,
+    "novelty_increase_pct": -10.937198067632854,
+    "selected_rates": {
+      "GAP": 0.45,
+      "EXPLORED": 0.35,
+      "LOW IMPORTANCE": 0.2,
+      "METHOD": 0.0,
+      "NOISE": 0.0
+    },
+    "all_rates": {
+      "GAP": 0.5429594272076372,
+      "EXPLORED": 0.2684964200477327,
+      "LOW IMPORTANCE": 0.06443914081145585,
+      "METHOD": 0.08233890214797136,
+      "NOISE": 0.041766109785202864
+    },
+    "selected_novelty": {
+      "mean": 3.3,
+      "std": 1.8666040089734592,
+      "median": 2.0,
+      "q25": 2.0,
+      "q75": 5.0,
+      "share_ge_5": 0.3,
+      "share_ge_8": 0.0,
+      "n": 20
+    },
+    "all_novelty": {
+      "mean": 3.7052505966587113,
+      "std": 2.3104864309577815,
+      "median": 3.0,
+      "q25": 2.0,
+      "q75": 6.0,
+      "share_ge_5": 0.39498806682577564,
+      "share_ge_8": 0.059665871121718374,
+      "n": 838
+    },
+    "novelty_test": {
+      "welch_t": -0.9536473209971824,
+      "welch_p": 0.35141875754398205,
+      "mannwhitney_u": 7975.0,
+      "mannwhitney_p": 0.7075753336075024,
+      "cohens_d": -0.1929484960994009
+    }
+  },
+  "unanimous_gaps": [
+    "digital inclusion"
+  ],
+  "failures": {}
+}

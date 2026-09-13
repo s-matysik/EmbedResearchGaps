@@ -1,0 +1,117 @@
+{
+  "mode": "keywords_first",
+  "n_articles": 50,
+  "n_keywords": 172,
+  "n_clusters": 8,
+  "n_gaps": 6,
+  "gap_types": {
+    "Peripheral Keyword": 6
+  },
+  "cluster_labels": {
+    "0": "POPMART & Community",
+    "1": "Gamification in marketing & gamification marketing",
+    "2": "Brand loyalty & Brand love",
+    "3": "Social commerce & Retailing",
+    "4": "Customer engagement & Consumer–brand engagement",
+    "5": "USE model & Value",
+    "6": "Elemental tetrad model & Hedonic motivation",
+    "7": "Customer buying intentions & consumer experience"
+  },
+  "diagnostics": {
+    "n_clusters": 8,
+    "cluster_sizes": {
+      "0": 35,
+      "1": 18,
+      "2": 15,
+      "3": 16,
+      "4": 15,
+      "5": 30,
+      "6": 21,
+      "7": 22
+    },
+    "cluster_quality": {
+      "silhouette": 0.06936243705438662,
+      "davies_bouldin": 3.081725603409045,
+      "calinski_harabasz": 6.911167055069078
+    },
+    "k_selection": {
+      "k": 8,
+      "k_range": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "wcss": [
+        117.4652011009844,
+        111.35135579739789,
+        107.37855275938658,
+        104.45332619000429,
+        101.23069486683193,
+        99.56008700413824,
+        96.31275632188621,
+        95.3566043063249,
+        93.90589574413843
+      ],
+      "silhouette": [
+        0.04834720618452525,
+        0.0633527447453832,
+        0.05013337758034963,
+        0.06776018333536994,
+        0.0628080857782202,
+        0.06695458338925687,
+        0.06936243705438662,
+        0.07295738154746605,
+        0.07169587437367797
+      ],
+      "k_elbow": 8,
+      "k_silhouette": 9,
+      "rule": "elbow (max silhouette 0.073 < 0.25)"
+    },
+    "distance_metric": "cosine",
+    "frequency_threshold": 1,
+    "periphery_percentile": 95.0,
+    "peripheral_share": 0.03488372093023256,
+    "n_core_domain_terms": 1,
+    "core_domain_terms": [
+      "gamification"
+    ],
+    "tfidf_match_statistics": {
+      "exact": 169,
+      "contains": 3
+    },
+    "corpus": {
+      "n_articles": 50,
+      "n_unique_keywords": 172,
+      "mean_keywords_per_article": 5.32,
+      "articles_without_keywords": 0,
+      "has_abstracts": true,
+      "has_citations": true,
+      "year_range": [
+        2014,
+        2026
+      ],
+      "dropped_empty_text": 0,
+      "dropped_empty_keywords": 0
+    },
+    "ranking": {
+      "ranked": true,
+      "encoder": {
+        "encoder": "precomputed",
+        "model": null
+      },
+      "min_distance": 0.22506814382509122,
+      "max_distance": 0.7717120867988465,
+      "cutoff_distance": 0.36377723634645065
+    },
+    "keyword_encoder": {
+      "encoder": "precomputed",
+      "model": null
+    }
+  }
+}

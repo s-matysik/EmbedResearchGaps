@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: EmbedResearchGaps
+message: If you use this software, please cite both the software and the article.
+type: software
+version: 1.0.0
+license: MIT
+repository-code: https://github.com/s-matysik/EmbedResearchGaps
+abstract: >-
+  Embedding-driven identification of candidate research gaps in author-keyword
+  space. Two operating modes over the same semantic space: clustering author
+  keywords directly, and clustering articles first and then their keywords.
+authors:
+  - family-names: Matysik
+    given-names: Sebastian
+    affiliation: University of Szczecin
+  - family-names: Wiśniewska
+    given-names: Joanna
+    affiliation: University of Szczecin
+  - family-names: Frankowski
+    given-names: Paweł Karol
+    affiliation: Maritime University of Szczecin
+keywords:
+  - research gaps
+  - text embeddings
+  - systematic literature review
+  - bibliometrics
+  - author keywords

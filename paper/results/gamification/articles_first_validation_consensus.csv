@@ -1,0 +1,199 @@
+keyword_set,keyword,n_annotators,gap_votes,gap_share,majority_label,unanimous,mean_novelty,std_novelty
+ALL,perceived brand coolness,5,5,1.0,GAP,True,7.0,1.224744871391589
+ALL,fomo,5,5,1.0,GAP,True,6.4,1.51657508881031
+ALL,gameful experience (gamex),5,5,1.0,GAP,True,6.4,0.8944271909999159
+ALL,psychological distance,5,5,1.0,GAP,True,6.2,1.3038404810405297
+ALL,time poverty,5,5,1.0,GAP,True,6.2,1.9235384061671346
+ALL,construal level theory,5,5,1.0,GAP,True,6.0,1.7320508075688772
+ALL,behaviour maintenance,5,5,1.0,GAP,True,5.8,1.0954451150103321
+ALL,gameful experience,5,5,1.0,GAP,True,5.8,1.0954451150103321
+ALL,gamified tourism activities,5,5,1.0,GAP,True,5.8,1.3038404810405297
+SELECTED,sustainability behavior,5,5,1.0,GAP,True,5.8,1.6431676725154984
+SELECTED,time poverty,5,5,1.0,GAP,True,5.8,1.6431676725154984
+ALL,brand advocacy,5,5,1.0,GAP,True,5.6,1.1401754250991378
+ALL,immersion,5,5,1.0,GAP,True,5.6,0.8944271909999159
+ALL,brand value co-creation,5,5,1.0,GAP,True,5.4,1.3416407864998738
+ALL,mobile in-store marketing,5,5,1.0,GAP,True,5.4,0.8944271909999159
+ALL,story,5,5,1.0,GAP,True,5.4,1.6733200530681511
+SELECTED,environmental awareness,5,5,1.0,GAP,True,5.2,1.4832396974191326
+SELECTED,location-based technology,5,5,1.0,GAP,True,5.2,0.8366600265340756
+ALL,location-based technology,5,5,1.0,GAP,True,5.0,1.224744871391589
+ALL,social commerce,5,5,1.0,GAP,True,5.0,1.7320508075688772
+ALL,tourism app experience,5,5,1.0,GAP,True,5.0,1.224744871391589
+ALL,brand love,5,5,1.0,GAP,True,4.8,1.3038404810405297
+ALL,co-creation,5,5,1.0,GAP,True,4.8,1.0954451150103321
+ALL,impulse buying,5,5,1.0,GAP,True,4.8,1.0954451150103321
+ALL,branded app,5,5,1.0,GAP,True,4.6,0.8944271909999159
+ALL,aesthetics,5,5,1.0,GAP,True,4.4,1.1401754250991378
+ALL,ant forest,5,4,0.8,GAP,False,6.6,3.2093613071762426
+ALL,regulation,5,4,0.8,GAP,False,6.6,2.9664793948382653
+ALL,ethics,5,4,0.8,GAP,False,6.2,2.588435821108957
+ALL,luxury,5,4,0.8,GAP,False,6.0,2.345207879911715
+ALL,self-system model of motivational development,5,4,0.8,GAP,False,6.0,2.8284271247461903
+SELECTED,ant forest,5,4,0.8,GAP,False,5.4,2.701851217221259
+ALL,gamification feature,5,4,0.8,GAP,False,5.2,2.16794833886788
+ALL,destination marketing organization,5,4,0.8,GAP,False,5.0,2.345207879911715
+ALL,gamified marketing practices,5,4,0.8,GAP,False,5.0,2.23606797749979
+ALL,gamified mobile apps,5,4,0.8,GAP,False,4.8,1.9235384061671346
+ALL,customer characteristics,5,4,0.8,GAP,False,4.6,1.9493588689617927
+ALL,gamification marketing activities,5,4,0.8,GAP,False,4.6,2.3021728866442674
+ALL,gamified applications,5,4,0.8,GAP,False,4.6,1.6733200530681511
+ALL,stealth marketing,5,4,0.8,GAP,False,4.6,2.073644135332772
+ALL,retail food products,5,4,0.8,GAP,False,4.4,1.51657508881031
+SELECTED,travel agencies,5,4,0.8,GAP,False,4.4,1.9493588689617927
+ALL,app experience,5,4,0.8,GAP,False,4.2,1.3038404810405297
+SELECTED,brand love,5,4,0.8,GAP,False,4.2,2.3874672772626644
+ALL,brand app,5,4,0.8,GAP,False,4.0,1.224744871391589
+ALL,customer value creation,5,4,0.8,GAP,False,4.0,1.5811388300841898
+ALL,online marketplace,5,4,0.8,GAP,False,4.0,1.5811388300841898
+ALL,perceived playfulness,5,4,0.8,GAP,False,4.0,1.224744871391589
+ALL,re-visit intention,5,4,0.8,GAP,False,4.0,1.224744871391589
+ALL,self-efficacy,5,4,0.8,GAP,False,4.0,1.4142135623730951
+ALL,innovative brand management,5,4,0.8,GAP,False,3.8,1.9235384061671346
+ALL,mobile apps,5,4,0.8,GAP,False,3.4,1.140175425099138
+ALL,badge,5,3,0.6,GAP,False,4.0,1.8708286933869707
+ALL,elemental tetrad model,5,3,0.6,GAP,False,4.0,2.5495097567963922
+ALL,game element,5,3,0.6,GAP,False,3.8,2.16794833886788
+ALL,leaderboard,5,3,0.6,GAP,False,3.8,1.6431676725154984
+ALL,game elements,5,3,0.6,GAP,False,3.6,2.701851217221259
+ALL,mechanics,5,3,0.6,GAP,False,3.6,2.073644135332772
+ALL,brand application,5,3,0.6,GAP,False,3.4,1.3416407864998738
+ALL,cognitive engagement,5,3,0.6,GAP,False,3.4,1.5165750888103102
+ALL,customer buying intentions,5,3,0.6,GAP,False,3.4,1.6733200530681511
+ALL,environmental awareness,5,3,0.6,GAP,False,3.4,2.1908902300206647
+ALL,game design,5,3,0.6,GAP,False,3.4,1.6733200530681511
+ALL,hedonic motivation,5,3,0.6,GAP,False,3.4,1.6733200530681511
+ALL,sharing economy,5,3,0.6,GAP,False,3.4,2.0736441353327724
+ALL,social marketing,5,3,0.6,GAP,False,3.4,1.8165902124584952
+ALL,sustainability behavior,5,3,0.6,GAP,False,3.4,1.949358868961793
+ALL,utilitarian motivation,5,3,0.6,GAP,False,3.4,1.6733200530681511
+ALL,behavioural engagement,5,3,0.6,GAP,False,3.2,1.3038404810405297
+ALL,consumer brand engagement,5,3,0.6,GAP,False,3.2,1.3038404810405297
+ALL,crowdsourcing,5,3,0.6,GAP,False,3.2,1.9235384061671346
+ALL,emotional engagement,5,3,0.6,GAP,False,3.2,1.3038404810405297
+ALL,gamified experience,5,3,0.6,GAP,False,3.2,1.0954451150103321
+ALL,online shopping behavior,5,3,0.6,GAP,False,3.2,1.3038404810405297
+ALL,brand attitude,5,3,0.6,GAP,False,3.0,1.0
+ALL,brand trust,5,3,0.6,GAP,False,3.0,1.0
+ALL,digital experience,5,3,0.6,GAP,False,3.0,1.0
+ALL,intrinsic motivation,5,3,0.6,GAP,False,3.0,1.8708286933869707
+ALL,consumer brand satisfaction,5,3,0.6,GAP,False,2.8,0.8366600265340756
+ALL,retail,5,3,0.6,GAP,False,2.8,1.4832396974191326
+ALL,retailing,5,3,0.6,GAP,False,2.8,0.8366600265340756
+ALL,community,5,2,0.4,EXPLORED,False,3.4,2.1908902300206643
+ALL,uses and gratifications theory,5,2,0.4,EXPLORED,False,3.4,2.1908902300206643
+ALL,cause-related marketing,5,2,0.4,EXPLORED,False,3.2,1.6431676725154984
+ALL,consumer experience,5,2,0.4,EXPLORED,False,3.2,2.16794833886788
+ALL,user experience,5,2,0.4,EXPLORED,False,3.2,2.16794833886788
+ALL,content marketing,5,2,0.4,EXPLORED,False,3.0,1.4142135623730951
+ALL,desirable consumer behaviors,5,2,0.4,LOW IMPORTANCE,False,3.0,2.0
+ALL,tourism exposition,5,2,0.4,LOW IMPORTANCE,False,3.0,2.345207879911715
+ALL,customer brand engagement,5,2,0.4,EXPLORED,False,2.8,1.3038404810405297
+ALL,customer experience,5,2,0.4,EXPLORED,False,2.8,1.3038404810405297
+ALL,digital destination image,5,2,0.4,LOW IMPORTANCE,False,2.8,2.4899799195977463
+ALL,e-commerce platforms,5,2,0.4,EXPLORED,False,2.8,1.3038404810405297
+ALL,enjoyment,5,2,0.4,EXPLORED,False,2.8,1.3038404810405297
+ALL,favorability,5,2,0.4,EXPLORED,False,2.8,1.0954451150103321
+ALL,purchasing decisions,5,2,0.4,EXPLORED,False,2.8,1.3038404810405297
+ALL,self-determination theory,5,2,0.4,EXPLORED,False,2.8,1.9235384061671348
+ALL,user participation,5,2,0.4,EXPLORED,False,2.8,1.0954451150103321
+ALL,word-of-mouth,5,2,0.4,EXPLORED,False,2.8,1.3038404810405297
+SELECTED,stealth marketing,5,2,0.4,LOW IMPORTANCE,False,2.8,1.9235384061671348
+ALL,brand experience,5,2,0.4,EXPLORED,False,2.6,0.8944271909999159
+ALL,cultural heritage sites,5,2,0.4,LOW IMPORTANCE,False,2.6,2.6076809620810595
+ALL,online retailing,5,2,0.4,EXPLORED,False,2.6,0.8944271909999159
+ALL,social media marketing,5,2,0.4,EXPLORED,False,2.6,0.8944271909999159
+ALL,sustainable retail,5,2,0.4,GAP,False,2.6,1.51657508881031
+ALL,consumer motivation,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+ALL,consumer-brand engagement,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+ALL,consumer–brand engagement,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+ALL,customer benefits,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+ALL,gamified marketing,5,2,0.4,EXPLORED,False,2.4,1.6733200530681511
+ALL,mobile,5,2,0.4,EXPLORED,False,2.4,0.5477225575051661
+ALL,protection motivation,5,2,0.4,LOW IMPORTANCE,False,2.4,1.949358868961793
+SELECTED,e-commerce platforms,5,2,0.4,EXPLORED,False,2.4,1.140175425099138
+ALL,perceived value,5,2,0.4,EXPLORED,False,2.2,0.8366600265340756
+ALL,psychological fear,5,2,0.4,LOW IMPORTANCE,False,2.2,1.6431676725154984
+ALL,purchase intentions,5,2,0.4,EXPLORED,False,2.2,0.8366600265340756
+SELECTED,mobile apps,5,2,0.4,EXPLORED,False,2.2,0.8366600265340756
+ALL,travel agencies,5,2,0.4,LOW IMPORTANCE,False,2.0,1.4142135623730951
+ALL,popmart,5,1,0.2,NOISE,False,2.6,3.0495901363953815
+ALL,brand awareness,5,1,0.2,EXPLORED,False,2.4,0.8944271909999161
+ALL,brand engagement,5,1,0.2,EXPLORED,False,2.4,0.8944271909999161
+ALL,gamification marketing,5,1,0.2,EXPLORED,False,2.4,0.8944271909999161
+ALL,s-o-r model,5,1,0.2,METHOD,False,2.4,1.6733200530681511
+SELECTED,psychological fear,5,1,0.2,LOW IMPORTANCE,False,2.4,2.073644135332772
+ALL,brand equity,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+ALL,covid-19,5,1,0.2,EXPLORED,False,2.2,1.0954451150103321
+ALL,customer perceptions,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+ALL,customer service,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+ALL,stimulus-organism-response,5,1,0.2,EXPLORED,False,2.2,0.44721359549995787
+ALL,tam,5,1,0.2,METHOD,False,2.2,1.6431676725154984
+ALL,technology acceptance model,5,1,0.2,EXPLORED,False,2.2,1.0954451150103321
+ALL,wom,5,1,0.2,EXPLORED,False,2.2,1.0954451150103321
+SELECTED,brand equity,5,1,0.2,EXPLORED,False,2.2,1.0954451150103321
+SELECTED,gamification marketing,5,1,0.2,EXPLORED,False,2.2,1.6431676725154984
+SELECTED,purchasing decisions,5,1,0.2,EXPLORED,False,2.2,1.0954451150103321
+ALL,e-commerce,5,1,0.2,EXPLORED,False,2.0,0.7071067811865476
+ALL,gamification in marketing,5,1,0.2,EXPLORED,False,2.0,0.7071067811865476
+SELECTED,brand attitude,5,1,0.2,EXPLORED,False,2.0,0.7071067811865476
+SELECTED,customer experience,5,1,0.2,EXPLORED,False,2.0,0.7071067811865476
+SELECTED,mobile communication,5,1,0.2,EXPLORED,False,2.0,0.7071067811865476
+SELECTED,service business,5,1,0.2,LOW IMPORTANCE,False,2.0,1.224744871391589
+ALL,digitization,5,1,0.2,LOW IMPORTANCE,False,1.8,0.8366600265340756
+ALL,gamified,5,1,0.2,EXPLORED,False,1.6,0.8944271909999159
+ALL,user engagement,5,1,0.2,EXPLORED,False,1.6,0.8944271909999159
+ALL,egypt,5,1,0.2,LOW IMPORTANCE,False,1.4,0.8944271909999161
+ALL,behavioral intention,5,0,0.0,EXPLORED,True,2.0,0.0
+ALL,brand loyalty,5,0,0.0,EXPLORED,True,2.0,0.0
+ALL,consumer engagement,5,0,0.0,EXPLORED,True,2.0,0.0
+ALL,customer engagement,5,0,0.0,EXPLORED,True,2.0,0.0
+ALL,marketing effectiveness,5,0,0.0,EXPLORED,True,2.0,0.0
+ALL,attitude,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+ALL,gamification,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+ALL,mobile communication,5,0,0.0,EXPLORED,True,1.8,0.4472135954999579
+ALL,smartphone,5,0,0.0,EXPLORED,False,1.8,0.4472135954999579
+ALL,customer satisfaction,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+ALL,digital marketing,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+ALL,e-marketing,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+ALL,gaming,5,0,0.0,EXPLORED,False,1.6,0.5477225575051661
+ALL,loyalty,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+ALL,purchase intention,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+ALL,satisfaction,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+ALL,value,5,0,0.0,EXPLORED,False,1.6,0.5477225575051661
+SELECTED,brand engagement,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+SELECTED,brand loyalty,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+SELECTED,consumer behavior,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+SELECTED,consumer behaviour,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+SELECTED,consumer–brand engagement,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+SELECTED,customer engagement,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+SELECTED,digital marketing,5,0,0.0,EXPLORED,True,1.6,0.5477225575051661
+ALL,customer behavior,5,0,0.0,EXPLORED,True,1.4,0.5477225575051661
+ALL,service business,5,0,0.0,LOW IMPORTANCE,False,1.4,0.5477225575051661
+ALL,technology,5,0,0.0,LOW IMPORTANCE,False,1.4,0.5477225575051661
+ALL,tourism advertising effects (aieda) model,5,0,0.0,LOW IMPORTANCE,False,1.4,0.5477225575051661
+ALL,consumer behavior,5,0,0.0,EXPLORED,True,1.2,0.44721359549995804
+ALL,engagement,5,0,0.0,EXPLORED,True,1.2,0.4472135954999579
+ALL,heterogeneous treatment effect,5,0,0.0,METHOD,True,1.2,0.44721359549995804
+ALL,intention,5,0,0.0,LOW IMPORTANCE,False,1.2,0.44721359549995804
+ALL,marketing strategy,5,0,0.0,EXPLORED,True,1.2,0.44721359549995804
+ALL,online users,5,0,0.0,LOW IMPORTANCE,False,1.2,0.44721359549995804
+ALL,randomized field experiment,5,0,0.0,METHOD,True,1.2,0.44721359549995804
+ALL,technology in business,5,0,0.0,LOW IMPORTANCE,False,1.2,0.44721359549995804
+SELECTED,educational technology,5,0,0.0,LOW IMPORTANCE,True,1.2,0.44721359549995804
+ALL,application,5,0,0.0,LOW IMPORTANCE,True,1.0,0.0
+ALL,brand,5,0,0.0,EXPLORED,False,1.0,0.0
+ALL,business,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+ALL,companies,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+ALL,consumer behaviour,5,0,0.0,EXPLORED,True,1.0,0.0
+ALL,educational technology,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+ALL,field experiment,5,0,0.0,METHOD,True,1.0,0.0
+ALL,instructional strategy,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+ALL,internet,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+ALL,marketing,5,0,0.0,EXPLORED,True,1.0,0.0
+ALL,meta-analysis,5,0,0.0,METHOD,True,1.0,0.0
+ALL,pls-sem,5,0,0.0,METHOD,True,1.0,0.0
+ALL,sem,5,0,0.0,METHOD,True,1.0,0.0
+ALL,seminr,5,0,0.0,METHOD,False,1.0,0.0
+ALL,student engagement,5,0,0.0,LOW IMPORTANCE,False,1.0,0.0
+ALL,use model,5,0,0.0,NOISE,False,1.0,0.0

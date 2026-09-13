@@ -1,0 +1,147 @@
+keyword,frequency,n_tokens,cluster,distance_from_subcentroid,centrality,tfidf,global_frequency,is_core_domain,cluster_label
+digital transformation,42,2,2,0.16793841735933923,0.3093809292630636,0.04723341300078426,42,True,Digitalization & Digital Technology
+digitalization,5,1,2,0.17061096335380643,0.36909530263846546,0.0157996667883006,5,False,Digitalization & Digital Technology
+dynamic capabilities,30,2,4,0.27302067945618314,0.37212865098954195,0.04652296179299104,30,True,Strategic agility & Strategic renewal
+microfoundations,3,1,3,0.4162867038652751,0.4690926976112689,0.0079815856446649,3,False,Microfoundations & family business
+qualitative interpretive research,1,3,5,0.29042177745994047,0.6029970823883005,0.002493953701260798,1,False,Qualitative interpretive research & Seizing
+strategic agility,1,2,4,0.3461857582458676,0.41301454980450425,0.002493953701260798,1,False,Strategic agility & Strategic renewal
+strategic renewal,1,2,4,0.39618231320014763,0.4192048128539436,0.002493953701260798,1,False,Strategic agility & Strategic renewal
+technology and innovation management,1,4,0,0.2656068397776772,0.3599482435479654,0.002493953701260798,1,False,Technology and innovation management & Internationalization
+reconfiguring,1,1,4,0.45719345340638773,0.5338235501254226,0.005004127282972913,1,False,Strategic agility & Strategic renewal
+seizing,1,1,5,0.5980561797437773,0.6491706321965962,0.005004127282972913,1,False,Qualitative interpretive research & Seizing
+sensing,1,1,5,0.46223164555993224,0.5423338417248688,0.005004127282972913,1,False,Qualitative interpretive research & Seizing
+digital technology,1,2,2,0.1812243152209806,0.40018687398530806,0.0052118625833561995,1,False,Digitalization & Digital Technology
+internationalization,1,1,0,0.4464689108845721,0.44686175615578927,0.0052118625833561995,1,False,Technology and innovation management & Internationalization
+firm performance,3,2,1,0.32783160995686644,0.42717485721661963,0.01099710490204713,3,False,Firm performance & Organisational remodelling
+digital innovation management,1,3,2,0.2057948141421495,0.29208804405880817,0.004816522088305911,1,False,Digitalization & Digital Technology
+case study,3,2,5,0.3249412422612252,0.5457856121521892,0.010289425568330462,3,False,Qualitative interpretive research & Seizing
+dynamic capability,6,2,4,0.27671705463082263,0.38769317811617765,0.019790523260593183,6,False,Strategic agility & Strategic renewal
+emerging market,1,2,0,0.4413723439938413,0.49002480219321076,0.007143520042875603,1,False,Technology and innovation management & Internationalization
+organisational remodelling,1,2,1,0.39357608127617305,0.4326828720665401,0.003748544895853194,1,False,Firm performance & Organisational remodelling
+digital transformation (dt),2,3,2,0.24222680767506777,0.3682256435632846,0.06494355948868537,2,False,Digitalization & Digital Technology
+mixed method,1,2,5,0.28280363643371775,0.46722348362334043,0.0022091347515356633,1,False,Qualitative interpretive research & Seizing
+multiple case study,1,3,5,0.3115120183556862,0.5592971376069238,0.0022091347515356633,1,False,Qualitative interpretive research & Seizing
+new product development (npd),1,4,0,0.373416322772657,0.45396431464872133,0.006033889940639775,1,False,Technology and innovation management & Internationalization
+sequential explanatory approach,1,3,5,0.30135315250443195,0.48498702384561976,0.0022091347515356633,1,False,Qualitative interpretive research & Seizing
+structural equation model,1,3,5,0.41009393192410815,0.5617191540461286,0.0022091347515356633,1,False,Qualitative interpretive research & Seizing
+emerging technologies,1,2,0,0.34501649092215514,0.3835253741779452,0.005074152515544022,1,False,Technology and innovation management & Internationalization
+iiot,1,1,0,0.4678417574319287,0.5108469007777874,0.005074152515544022,1,False,Technology and innovation management & Internationalization
+digital innovation,1,2,2,0.1329648031245032,0.26337796414397197,0.006679228088870498,1,False,Digitalization & Digital Technology
+family business,1,2,3,0.3334109844651054,0.5143967514543137,0.0025692134907704983,1,False,Microfoundations & family business
+mittelstand firms,1,2,3,0.24522944059956808,0.5088224544941268,0.0025692134907704983,1,False,Microfoundations & family business
+pär ågerfalk,1,2,4,0.6092407574347953,0.6325075062429895,0.0025692134907704983,1,False,Strategic agility & Strategic renewal
+ryad titah,1,2,3,0.6753126332428783,0.769678114903186,0.0025692134907704983,1,False,Microfoundations & family business
+smes,4,1,3,0.2704865285241962,0.4813068961391558,0.011386653917105515,4,False,Microfoundations & family business
+technology adoption,1,2,0,0.31052432817077524,0.34290288485891396,0.0025692134907704983,1,False,Technology and innovation management & Internationalization
+competitive advantage,3,2,1,0.35669046468078647,0.41337231145794284,0.008646039876485417,3,False,Firm performance & Organisational remodelling
+digital maturity,2,2,2,0.23767362705286343,0.3420845839001956,0.008223326090475675,2,False,Digitalization & Digital Technology
+strategic planning,1,2,1,0.4039277374493435,0.44165987704426424,0.003921811847327148,1,False,Firm performance & Organisational remodelling
+design science research,1,3,5,0.34081540797327536,0.43057435282989553,0.0036437911114602286,1,False,Qualitative interpretive research & Seizing
+information system strategy,1,3,4,0.4515599561369671,0.45083366562164395,0.0036437911114602286,1,False,Strategic agility & Strategic renewal
+enterprise dynamic capabilities,1,3,1,0.2359866783458524,0.29812218895865716,0.004274879791187585,1,False,Firm performance & Organisational remodelling
+“business model innovation”,1,3,0,0.27898869432194306,0.3959596581081395,0.02959974305140611,1,False,Technology and innovation management & Internationalization
+digital culture,2,2,2,0.2519524181815611,0.40269864758061735,0.005561971672379939,2,False,Digitalization & Digital Technology
+digital leadership,3,2,2,0.26063395356234076,0.3457750606536152,0.009086269118428565,3,False,Digitalization & Digital Technology
+small and medium-sized enterprises,1,4,3,0.21673745533473854,0.4739143948098834,0.0034248567284321063,1,False,Microfoundations & family business
+innovation,5,1,0,0.20456835727186884,0.37599306992417314,0.02959974305140611,5,False,Technology and innovation management & Internationalization
+qualitative research,1,2,5,0.28307180415830346,0.5602525969483387,0.00367974573235731,1,False,Qualitative interpretive research & Seizing
+routines,1,1,4,0.4679349708197217,0.5746731031472,0.00367974573235731,1,False,Strategic agility & Strategic renewal
+technology,1,1,0,0.37356307541754075,0.43379155446235274,0.01374362246227748,1,False,Technology and innovation management & Internationalization
+change management,1,2,4,0.37134557094487797,0.39577096787577104,0.004487946020878883,1,False,Strategic agility & Strategic renewal
+telecom,1,1,0,0.5036614165899691,0.5236383722489496,0.004487946020878883,1,False,Technology and innovation management & Internationalization
+yemen,1,1,3,0.6139033661847302,0.7530622959565633,0.004487946020878883,1,False,Microfoundations & family business
+family firms,2,2,3,0.2738281451614306,0.500050497427299,0.010055528337500487,2,False,Microfoundations & family business
+performance,3,1,4,0.4192311947409276,0.48951703042781025,0.030542791118635844,3,False,Strategic agility & Strategic renewal
+business model,1,2,0,0.3958834526903191,0.43025877161174353,0.010149256794475973,1,False,Technology and innovation management & Internationalization
+dynamic managerial capabilities,2,3,1,0.22509919663211397,0.3221689450019246,0.006084895461738792,2,False,Firm performance & Organisational remodelling
+entrepreneurship,1,1,0,0.3487311277828806,0.39178360006572843,0.0036709640120188886,1,False,Technology and innovation management & Internationalization
+micro-foundations,2,1,3,0.4006917638012413,0.45660548238141097,0.007442968541341317,2,False,Microfoundations & family business
+supply chain management,1,3,4,0.505385231555898,0.47677005596017585,0.004508672292140478,1,False,Strategic agility & Strategic renewal
+innovation performance,1,2,0,0.2634102130335986,0.3328704550770981,0.007744960255783678,1,False,Technology and innovation management & Internationalization
+esg performance,2,2,4,0.4038268140702882,0.4720433087757432,0.005816813345976259,2,False,Strategic agility & Strategic renewal
+human capital,2,2,1,0.404015516594076,0.48551917930843835,0.005522798393907178,2,False,Firm performance & Organisational remodelling
+operational efficiency,1,2,1,0.3935706983899717,0.4538531284020646,0.003049410105258905,1,False,Firm performance & Organisational remodelling
+technological innovation,3,2,0,0.21891393932474257,0.32959981318190956,0.008304894392379237,3,False,Technology and innovation management & Internationalization
+conceptual framework,1,2,5,0.45632022564142116,0.49176510926249195,0.004631733851228498,1,False,Qualitative interpretive research & Seizing
+organizational capabilities,2,2,1,0.1814181433411557,0.3610092341930221,0.005827331366433628,2,False,Firm performance & Organisational remodelling
+absorptive capacity,1,2,1,0.3592065205060767,0.4413804365859011,0.0027717928138592286,1,False,Firm performance & Organisational remodelling
+differentiation strategy,1,2,0,0.4775448890209699,0.4958824509971048,0.0027717928138592286,1,False,Technology and innovation management & Internationalization
+dynamic operational capability,1,3,1,0.35208689027104434,0.4139861413037582,0.0027717928138592286,1,False,Firm performance & Organisational remodelling
+lean production mechanism,1,3,4,0.4651193047783887,0.470579161052348,0.0027717928138592286,1,False,Strategic agility & Strategic renewal
+process digitalization initiative,1,3,2,0.190967663504223,0.34189012474164127,0.0027717928138592286,1,False,Digitalization & Digital Technology
+dynamic capability theory,1,3,4,0.3683588712842687,0.451424106818048,0.0033826872441053714,1,False,Strategic agility & Strategic renewal
+green innovation,1,2,0,0.3261943941694816,0.44571891728683866,0.0033826872441053714,1,False,Technology and innovation management & Internationalization
+social attention,1,2,4,0.5799232632319427,0.6134746765815183,0.0033826872441053714,1,False,Strategic agility & Strategic renewal
+manufacturing digitalization,1,2,2,0.2621145614764062,0.38497470279694745,0.0038574087153734936,1,False,Digitalization & Digital Technology
+manufacturing firms,1,2,3,0.3237332852521638,0.4734172229765661,0.0038574087153734936,1,False,Microfoundations & family business
+esg,1,1,4,0.45899513616025844,0.5133309341420134,0.012403913104696965,1,False,Strategic agility & Strategic renewal
+born-digital,1,1,2,0.34673314589921533,0.5043848693312091,0.00286363729553877,1,False,Digitalization & Digital Technology
+collaborative innovation,1,2,0,0.2750428545409018,0.3797597108982216,0.00286363729553877,1,False,Technology and innovation management & Internationalization
+relational collaboration,1,2,1,0.43741719202033646,0.4483856285528014,0.00286363729553877,1,False,Firm performance & Organisational remodelling
+small- and medium-sized enterprise (sme),1,5,3,0.24069002367502534,0.502401339237448,0.009559394861488157,1,False,Microfoundations & family business
+financial performance,1,2,1,0.3828646205224103,0.4824949250809152,0.004347163745665616,1,False,Firm performance & Organisational remodelling
+market performance,1,2,1,0.3878094684686887,0.455087193619486,0.004347163745665616,1,False,Firm performance & Organisational remodelling
+strategic aggressiveness,1,2,4,0.4569683686494572,0.5036134081563536,0.006342135754032423,1,False,Strategic agility & Strategic renewal
+organizational resilience,1,2,1,0.32047241922639014,0.4465966084340287,0.0045973165031683635,1,False,Firm performance & Organisational remodelling
+technology disruption,1,2,2,0.3029363992460362,0.3790797903956974,0.0045973165031683635,1,False,Digitalization & Digital Technology
+design capabilities,1,2,1,0.35707712433138994,0.3907096101331816,0.003462127503133707,1,False,Firm performance & Organisational remodelling
+design thinking,1,2,0,0.3779356582872311,0.4043722411403796,0.003462127503133707,1,False,Technology and innovation management & Internationalization
+digital technologies,1,2,2,0.15983742384682476,0.33365385011445814,0.003462127503133707,1,False,Digitalization & Digital Technology
+enterprise agility,1,2,4,0.2996759299887537,0.34175385156647375,0.004289728191952258,1,False,Strategic agility & Strategic renewal
+it alignment,1,2,4,0.37919213663351536,0.42202337929501843,0.004289728191952258,1,False,Strategic agility & Strategic renewal
+intellectual capital,1,2,1,0.3609317949245159,0.44209893270706235,0.0030216726272935556,1,False,Firm performance & Organisational remodelling
+organizational adaptability,1,2,1,0.32279228593145204,0.4253383879003365,0.0030216726272935556,1,False,Firm performance & Organisational remodelling
+digital business performance,1,3,2,0.29210156523720077,0.3400776074255202,0.003362685041693381,1,False,Digitalization & Digital Technology
+digital capabilities,2,2,2,0.20244157464929902,0.29221979246738816,0.005505747228388988,2,False,Digitalization & Digital Technology
+ecosystem orchestration,1,2,4,0.4361711917047759,0.4918205677413452,0.003362685041693381,1,False,Strategic agility & Strategic renewal
+process digitization,1,2,2,0.29314581942244866,0.47653802816593094,0.003362685041693381,1,False,Digitalization & Digital Technology
+responsiveness,1,1,4,0.422780089966468,0.5110559000259797,0.003362685041693381,1,False,Strategic agility & Strategic renewal
+dynamic digital capability,1,3,4,0.27129329102255684,0.2892632209740029,0.0028109985456394168,1,False,Strategic agility & Strategic renewal
+fsqca,1,1,5,0.44320173978366295,0.5576973570489497,0.0028109985456394168,1,False,Qualitative interpretive research & Seizing
+organizational innovation,1,2,0,0.3076924625101155,0.3778187096813467,0.0028109985456394168,1,False,Technology and innovation management & Internationalization
+configurational approach,1,2,5,0.4315140208048657,0.5211575000798527,0.0028109985456394168,1,False,Qualitative interpretive research & Seizing
+small to medium-sized enterprises,1,4,3,0.20458780885033123,0.47053980912030346,0.0028109985456394168,1,False,Microfoundations & family business
+digital-oriented human resources practices,1,4,2,0.3453311136519952,0.39728001537831037,0.0027254426061513915,1,False,Digitalization & Digital Technology
+dt vision,1,2,4,0.5204631963814542,0.5417418102792328,0.0027254426061513915,1,False,Strategic agility & Strategic renewal
+leadership,1,1,1,0.42293474011042487,0.4544249961500926,0.010650684212296101,1,False,Firm performance & Organisational remodelling
+managerial cognition,1,2,1,0.4088914195149811,0.4887831851916773,0.0030575723261262377,1,False,Firm performance & Organisational remodelling
+social capital,1,2,1,0.46262820600163335,0.5319887680590233,0.0030575723261262377,1,False,Firm performance & Organisational remodelling
+business model innovation,1,3,0,0.2828418646020109,0.4013114388415513,0.007652955260180743,1,False,Technology and innovation management & Internationalization
+company performance,1,2,1,0.30017001740794014,0.39741716246315884,0.004187580720436483,1,False,Firm performance & Organisational remodelling
+autonomous growth group,1,3,4,0.4625857962598866,0.4994780703630891,0.0018119940813229117,1,False,Strategic agility & Strategic renewal
+common language,1,2,4,0.5573533533224616,0.6181110303939239,0.0018119940813229117,1,False,Strategic agility & Strategic renewal
+digital disruption,1,2,2,0.20306378070927578,0.32932917416149654,0.0018119940813229117,1,False,Digitalization & Digital Technology
+digital platforms,1,2,2,0.22176390605784158,0.356449820332303,0.0018119940813229117,1,False,Digitalization & Digital Technology
+digitization,1,1,2,0.2361041693456154,0.4453951559440139,0.004679677708373129,1,False,Digitalization & Digital Technology
+disruptive innovation,1,2,0,0.31937571095519646,0.4313716908726052,0.0018119940813229117,1,False,Technology and innovation management & Internationalization
+innovative culture,1,2,0,0.3110676298549735,0.39061173117215797,0.0018119940813229117,1,False,Technology and innovation management & Internationalization
+multimedia mindset,1,2,2,0.4141992193297266,0.4287530203062495,0.0018119940813229117,1,False,Digitalization & Digital Technology
+resources-processes-values (rpv) framework,1,3,1,0.39969332161950755,0.48306554630115073,0.008864482791918345,1,False,Firm performance & Organisational remodelling
+response performance,1,2,4,0.44536033886756465,0.5532286727263439,0.0018119940813229117,1,False,Strategic agility & Strategic renewal
+staged resource allocation,1,3,4,0.40953378761151893,0.5050144951449208,0.0018119940813229117,1,False,Strategic agility & Strategic renewal
+national recovery and resilience plan,1,5,4,0.552080287398298,0.5746852710473491,0.0028468321912866533,1,False,Strategic agility & Strategic renewal
+organizational readiness,1,2,1,0.3615936816872607,0.45300876188353323,0.0028468321912866533,1,False,Firm performance & Organisational remodelling
+public value creation,1,3,0,0.48278728036703045,0.4776346243388174,0.0028468321912866533,1,False,Technology and innovation management & Internationalization
+qualitative study,2,2,5,0.249158798476243,0.5814375403824474,0.00682184672401593,2,False,Qualitative interpretive research & Seizing
+customer value creation,1,3,1,0.40267064277702524,0.4321909501195128,0.0033688488579400296,1,False,Firm performance & Organisational remodelling
+made in italy,1,3,0,0.6127025369701148,0.6643543511427124,0.0033688488579400296,1,False,Technology and innovation management & Internationalization
+sme,1,1,3,0.32223845002253304,0.4996416793799201,0.005636296633438057,1,False,Microfoundations & family business
+cyber-security,1,1,2,0.47731285983453864,0.5214064755357077,0.00317056297919225,1,False,Digitalization & Digital Technology
+digital literacy,1,2,2,0.28159496002908524,0.45199191362047986,0.00317056297919225,1,False,Digitalization & Digital Technology
+dynamic capabilities of the resourcebased view,1,6,1,0.29198131959173557,0.3921962369120906,0.04928434435405537,1,False,Firm performance & Organisational remodelling
+automotive industry,1,2,0,0.4754877397708418,0.5332495961380463,0.0037766497828046228,1,False,Technology and innovation management & Internationalization
+industry 4.0,2,2,0,0.3838460028463375,0.4147483124235557,0.010866840613669057,2,False,Technology and innovation management & Internationalization
+thailand,1,1,3,0.6404324699240969,0.729853595358064,0.0054856990826184825,1,False,Microfoundations & family business
+digital dynamic capabilities,1,3,2,0.2003244488038386,0.27711535833294565,0.0044160946553217515,1,False,Digitalization & Digital Technology
+emerging market firms,1,3,3,0.3532742323371447,0.46867645931179935,0.004150593962486628,1,False,Microfoundations & family business
+agrifood businesses,1,2,3,0.40725698800840904,0.5060494272526409,0.005065645250369705,1,False,Microfoundations & family business
+digital barriers,1,2,2,0.36950661746755553,0.4638765095521975,0.0037215897738203663,1,False,Digitalization & Digital Technology
+process-based perspective,1,2,1,0.4103757450008072,0.44049367999658595,0.0037215897738203663,1,False,Firm performance & Organisational remodelling
+digital process innovation,1,3,2,0.16878567877751416,0.2992378119931194,0.0022315004319083264,1,False,Digitalization & Digital Technology
+process development,1,2,4,0.3715693941077165,0.37298032511993784,0.0022315004319083264,1,False,Strategic agility & Strategic renewal
+production system development,1,3,4,0.3712404314853436,0.4100413908883511,0.0022315004319083264,1,False,Strategic agility & Strategic renewal
+smart factory,1,2,0,0.45340033053155604,0.4708541989931978,0.0022315004319083264,1,False,Technology and innovation management & Internationalization
+steel industry,1,2,3,0.5065263765248402,0.5934926469193117,0.0022315004319083264,1,False,Microfoundations & family business
+knowledge,1,1,0,0.5647162550741858,0.5568232222239832,0.004667451376565912,1,False,Technology and innovation management & Internationalization
+market-sensing,1,1,0,0.44020149364977357,0.43121594910681627,0.004667451376565912,1,False,Technology and innovation management & Internationalization
+social media,1,2,2,0.4413247742324363,0.4812456070057154,0.004667451376565912,1,False,Digitalization & Digital Technology
