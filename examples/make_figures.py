@@ -3,7 +3,7 @@
 Fig. 1  software architecture and the two operating modes
 Fig. 2  management case: author-keyword space with candidates outlined
 Fig. 3  finance case: candidates per type and top-ranked candidates
-Fig. 4  LLM panel validation, SELECTED vs control, both case studies
+Fig. 4  inter-cluster centroid similarity, both case studies
 Fig. 5  stability: candidate-set overlap across seeds and corpus sizes
 Fig. 6  inter-cluster thematic overlap, both case studies
 """
@@ -162,19 +162,33 @@ def figure_keyword_space() -> str:
             linewidths=0.3, edgecolors="white",
             label=f"{result.cluster_labels[cluster]}",
         )
-    top = gaps.nlargest(8, "score")
+    # Outline every candidate, but only label the highest-scoring ones, and
+    # drop a label whose anchor sits closer than `spacing` to one already
+    # placed: three labels stacked on one dense corner are unreadable, and a
+    # missing label costs less than an illegible one.
+    top = gaps.nlargest(6, "score")
+    span = max(float(np.ptp(coords[:, 0])), float(np.ptp(coords[:, 1])))
+    spacing = 0.16 * span
+    placed: list[np.ndarray] = []
     for i, keyword in enumerate(keywords):
         if keyword not in gaps.index:
             continue
-        ax.scatter(coords[i, 0], coords[i, 1], s=95, facecolors="none",
+        point = coords[i]
+        ax.scatter(point[0], point[1], s=95, facecolors="none",
                    edgecolors="black", linewidths=1.0, zorder=3)
-        if keyword in top.index:
-            ax.annotate(
-                keyword, (coords[i, 0], coords[i, 1]), fontsize=TICK,
-                xytext=(7, 5), textcoords="offset points", zorder=4,
-                arrowprops=dict(arrowstyle="-", lw=0.5, color=GREY,
-                                shrinkA=0, shrinkB=2),
-            )
+        if keyword not in top.index:
+            continue
+        if any(np.linalg.norm(point - other) < spacing for other in placed):
+            continue
+        placed.append(point)
+        ax.annotate(
+            gaps.loc[keyword, "keyword_display"] if "keyword_display" in gaps.columns
+            else keyword,
+            (point[0], point[1]), fontsize=TICK,
+            xytext=(8, 6), textcoords="offset points", zorder=4,
+            arrowprops=dict(arrowstyle="-", lw=0.5, color=GREY,
+                            shrinkA=0, shrinkB=2),
+        )
     ax.scatter([], [], s=95, facecolors="none", edgecolors="black",
                linewidths=1.0, label="candidate gap")
     ax.set_xticks([])
@@ -236,12 +250,13 @@ def figure_finance_gaps() -> str:
 # Fig. 4 -- LLM panel validation
 # --------------------------------------------------------------------------- #
 def figure_validation() -> str:
-    """Panel A: GAP-rate shift against the full-corpus control, with p-values.
+    """Panel A: GAP-rate shift against a control set disjoint from the
+    candidates, with the permutation p-value of the Novelty Score test.
 
-    Panel B: the three-arm decomposition of mean Novelty Score, which
-    separates the contribution of the lexical filters (ALL -> ELIGIBLE) from
-    that of the semantic ranking applied on top of them (ELIGIBLE ->
-    SELECTED).
+    Panel B: the decomposition of mean Novelty Score into what the lexical and
+    frequency filters contribute (keywords failing a filter -> eligible pool)
+    and what the embedding-based ranking adds on top of them (eligible pool ->
+    selected candidates).
     """
     modes = {"articles_first": "Mode B", "keywords_first": "Mode A"}
     corpora = {"management": "Management", "finance": "Economics\n& finance",
@@ -249,17 +264,18 @@ def figure_validation() -> str:
 
     deltas: list[dict[str, object]] = []
     for name, pretty in corpora.items():
-        payload = json.loads(Path(f"results/{name}/validation_summary.json").read_text())
+        payload = json.loads(
+            Path(f"results/{name}/validation_summary_disjoint.json").read_text()
+        )
         for mode, label in modes.items():
             comparison = payload[mode]["comparison"]
             deltas.append({
                 "corpus": pretty, "mode": label,
                 "delta": comparison["gap_rate_delta_pp"],
-                "p": comparison["novelty_test"]["welch_p"],
-                "n": comparison["n_selected_keywords"],
+                "p": comparison["novelty_test"]["permutation_p"],
             })
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.1, 3.6), width_ratios=[1.25, 1])
+    fig, axes = plt.subplots(1, 2, figsize=(7.1, 3.7), width_ratios=[1.2, 1])
 
     ax = axes[0]
     positions = np.arange(len(corpora))
@@ -268,42 +284,49 @@ def figure_validation() -> str:
         subset = [d for d in deltas if d["mode"] == label]
         colour = PALETTE[1] if label == "Mode B" else PALETTE[0]
         values = [float(d["delta"]) for d in subset]
-        pretty_mode = "Mode B (articles first)" if label == "Mode B" else "Mode A (keywords first)"
+        pretty_mode = ("Mode B (articles first)" if label == "Mode B"
+                       else "Mode A (keywords first)")
         ax.bar(positions + offset, values, width, color=colour, edgecolor="black",
                linewidth=0.4, label=pretty_mode)
         for x, d in zip(positions + offset, subset):
             value = float(d["delta"])
-            ax.text(x, value + (0.7 if value >= 0 else -1.6),
+            ax.text(x, value + (0.8 if value >= 0 else -1.9),
                     f"p={float(d['p']):.2f}", ha="center", fontsize=TICK - 1, color=GREY)
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xticks(positions, list(corpora.values()), fontsize=TICK)
     ax.set_ylabel("GAP rate of candidates minus control (pp)")
-    ax.set_ylim(-14, 16)
-    ax.set_title("No consistent enrichment over the\nfull author-keyword population")
-    ax.legend(frameon=False, fontsize=TICK, loc="upper left")
+    ax.set_ylim(-15, 18)
+    ax.set_title("No reliable enrichment over the\nnon-candidate keyword population")
+    ax.legend(frameon=False, fontsize=TICK - 1, loc="upper left")
 
     ax = axes[1]
-    arms = ["ALL", "ELIGIBLE", "SELECTED"]
-    arm_labels = ["all corpus\nkeywords", "filters only\n(eligible)", "filters +\nranking"]
+    arms = ["NOT_ELIGIBLE", "ELIGIBLE", "SELECTED"]
+    arm_labels = ["fails a\nfilter", "passes filters,\nnot selected", "selected by\nthe ranking"]
     for index, (name, pretty) in enumerate([("management", "Management"),
                                             ("finance", "Economics & finance")]):
-        payload = json.loads(Path(f"results/{name}/matched_arm_summary.json").read_text())
-        means = [payload["novelty"][arm]["mean"] for arm in arms]
+        payload = json.loads(
+            Path(f"results/{name}/matched_arm_summary_disjoint.json").read_text()
+        )
+        filters = payload["eligible_vs_not_eligible"]
+        ranking = payload["selected_vs_eligible"]
+        means = [filters["all_novelty"]["mean"],
+                 filters["selected_novelty"]["mean"],
+                 ranking["selected_novelty"]["mean"]]
         errors = [
-            payload["novelty"][arm]["std"] / np.sqrt(payload["novelty"][arm]["n"])
-            for arm in arms
+            filters["all_novelty"]["std"] / np.sqrt(filters["all_novelty"]["n"]),
+            filters["selected_novelty"]["std"] / np.sqrt(filters["selected_novelty"]["n"]),
+            ranking["selected_novelty"]["std"] / np.sqrt(ranking["selected_novelty"]["n"]),
         ]
         ax.errorbar(np.arange(3) + (index - 0.5) * 0.08, means, yerr=errors,
                     fmt="o-", capsize=3, markersize=5, linewidth=1.2,
                     color=PALETTE[index * 2], label=pretty)
-    ax.set_xticks(range(3), arm_labels, fontsize=TICK)
+    ax.set_xticks(range(3), arm_labels, fontsize=TICK - 1)
     ax.set_ylabel("mean Novelty Score (1-10)")
-    ax.set_ylim(2.6, 4.6)
-    ax.set_title("Filters raise novelty; the ranking\non top of them does not")
+    ax.set_title("Filters raise novelty on both corpora;\nthe ranking then diverges")
     ax.legend(frameon=False, fontsize=TICK, loc="lower right")
     ax.grid(alpha=0.2, axis="y")
     fig.tight_layout()
-    return save(fig, "fig4_validation.png")
+    return save(fig, "fig6_validation.png")
 
 
 # --------------------------------------------------------------------------- #
@@ -387,16 +410,16 @@ def figure_centroids() -> str:
     fig.suptitle("Article clusters overlap thematically but stay distinct",
                  fontsize=BASE, x=0.01, ha="left")
     fig.tight_layout(rect=(0, 0, 1, 0.94))
-    return save(fig, "fig6_centroids.png")
+    return save(fig, "fig4_centroids.png")
 
 
 BUILDERS = {
     "fig1": figure_architecture,
     "fig2": figure_keyword_space,
     "fig3": figure_finance_gaps,
-    "fig4": figure_validation,
+    "fig4": figure_centroids,
     "fig5": figure_stability,
-    "fig6": figure_centroids,
+    "fig6": figure_validation,
 }
 
 if __name__ == "__main__":

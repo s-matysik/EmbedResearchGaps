@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "embedresearchgaps"
-version = "1.1.0"
+version = "1.1.1"
 description = "Embedding-driven identification of research gaps in author-keyword space"
 readme = "README.md"
 requires-python = ">=3.10"
