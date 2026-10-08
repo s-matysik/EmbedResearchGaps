@@ -33,6 +33,11 @@ def _build_config(
     min_tfidf: float,
     max_frequency: Optional[int],
     token_count: Optional[int],
+    min_citations: Optional[int],
+    max_citations: Optional[int],
+    min_citations_per_year: Optional[float],
+    citation_year: Optional[int],
+    drop_uncited: bool,
     seed: int,
 ) -> RunConfig:
     encoder_config = EncoderConfig(
@@ -54,6 +59,11 @@ def _build_config(
             min_tfidf=min_tfidf,
             max_keyword_frequency=max_frequency,
             gap_token_count=token_count,
+            min_citations=min_citations,
+            max_citations=max_citations,
+            min_citations_per_year=min_citations_per_year,
+            citation_year_reference=citation_year,
+            keep_uncited_candidates=not drop_uncited,
         ),
         random_state=seed,
     )
@@ -108,6 +118,26 @@ def run_command(
     token_count: Optional[int] = typer.Option(
         2, "--tokens", help="Restrict gaps to keywords of this many tokens; 0 disables."
     ),
+    min_citations: Optional[int] = typer.Option(
+        None, "--min-citations",
+        help="Keep only candidates whose best-cited source record has at least this many citations.",
+    ),
+    max_citations: Optional[int] = typer.Option(
+        None, "--max-citations",
+        help="Keep only candidates whose best-cited source record has at most this many citations.",
+    ),
+    min_citations_per_year: Optional[float] = typer.Option(
+        None, "--min-citations-per-year",
+        help="Keep only candidates whose best source record gains at least this many citations per year.",
+    ),
+    citation_year: Optional[int] = typer.Option(
+        None, "--citation-year",
+        help="Year the citation counts are current for; defaults to the most recent year in the corpus.",
+    ),
+    drop_uncited: bool = typer.Option(
+        False, "--drop-uncited/--keep-uncited",
+        help="With a citation bound set, also drop candidates whose citation support is unknown.",
+    ),
     seed: int = typer.Option(42, "--seed", help="Random seed."),
     figures: bool = typer.Option(True, "--figures/--no-figures", help="Render figures."),
 ) -> None:
@@ -118,7 +148,9 @@ def run_command(
     config = _build_config(
         mode, top_n, problem, encoder, model, api_key_env, n_clusters,
         percentile, max_gaps, min_tfidf, max_frequency,
-        None if token_count in (0, None) else token_count, seed,
+        None if token_count in (0, None) else token_count,
+        min_citations, max_citations, min_citations_per_year, citation_year,
+        drop_uncited, seed,
     )
 
     corpus = load_csv(csv)

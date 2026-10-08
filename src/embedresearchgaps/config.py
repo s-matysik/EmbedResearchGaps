@@ -121,6 +121,37 @@ class GapConfig:
     #: Drop duplicated keywords that surface in several clusters, keeping the
     #: highest-scoring occurrence.
     deduplicate_cross_cluster: bool = True
+    #: Minimum citation support a candidate must have: at least one source
+    #: record with at least this many citations.  ``None`` disables the lower
+    #: bound, which is the default and reproduces the published runs.
+    min_citations: int | None = None
+    #: Maximum citation support: the best-cited source record of the candidate
+    #: must have at most this many citations.  ``None`` disables the upper
+    #: bound.  Use it to exclude keywords whose source literature is already
+    #: well cited, when the review is looking for under-studied terms rather
+    #: than established ones.
+    max_citations: int | None = None
+    #: Minimum citation *velocity*: the best source record of the candidate
+    #: must accumulate at least this many citations per year.  ``None``
+    #: disables the bound.  Unlike a raw citation count, a rate separates a
+    #: recent paper that is being cited quickly from an old paper whose total
+    #: merely had time to accumulate; only the former is evidence that the
+    #: surrounding topic is currently moving.  Fractional values are allowed,
+    #: so ``0.5`` admits one citation every two years.
+    min_citations_per_year: float | None = None
+    #: Reference year for the velocity, i.e. the year the citation counts were
+    #: harvested.  ``None`` takes the most recent publication year present in
+    #: the corpus, which keeps a run reproducible: deriving it from the system
+    #: clock would make the same export yield different candidates on
+    #: different days.  Age is ``reference - publication_year + 1``, so a paper
+    #: published in the reference year is one year old rather than zero.
+    citation_year_reference: int | None = None
+    #: What to do with candidates whose citation support is unknown, either
+    #: because the export carries no citation column or because no source
+    #: record has a citation value.  ``True`` keeps them, which is the safe
+    #: default: on a corpus without citation data a citation bound would
+    #: otherwise silently remove every candidate.
+    keep_uncited_candidates: bool = True
     #: Remove methodological terms from candidates.
     filter_methodological: bool = True
     #: Extra domain-specific stop keywords.
@@ -141,6 +172,20 @@ class GapConfig:
             raise ValueError("combination_similarity_range must satisfy 0 <= lo < hi <= 1")
         if self.gap_token_count is not None and self.gap_token_count < 1:
             raise ValueError("gap_token_count must be >= 1 or None")
+        for name in ("min_citations", "max_citations"):
+            value = getattr(self, name)
+            if value is not None and value < 0:
+                raise ValueError(f"{name} must be >= 0 or None")
+        if (
+            self.min_citations is not None
+            and self.max_citations is not None
+            and self.min_citations > self.max_citations
+        ):
+            raise ValueError("min_citations must not exceed max_citations")
+        if self.min_citations_per_year is not None and self.min_citations_per_year < 0:
+            raise ValueError("min_citations_per_year must be >= 0 or None")
+        if self.citation_year_reference is not None and self.citation_year_reference < 1:
+            raise ValueError("citation_year_reference must be a positive year or None")
 
 
 @dataclass

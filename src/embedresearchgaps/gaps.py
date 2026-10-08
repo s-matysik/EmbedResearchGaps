@@ -233,6 +233,139 @@ def _article_evidence(
     )
 
 
+def keyword_citations(keyword: str, articles: pd.DataFrame) -> float | None:
+    """Citation support of ``keyword``: the best-cited record carrying it.
+
+    Returns ``None`` when the frame has no ``citations`` column, when no record
+    carries the keyword, or when every matching record lacks a citation value.
+    """
+    if articles.empty or "citations" not in articles.columns:
+        return None
+    hits = articles[
+        articles["keywords_normalized"].apply(lambda kws: normalize_keyword(keyword) in kws)
+    ]
+    if hits.empty or not hits["citations"].notna().any():
+        return None
+    return float(hits["citations"].max())
+
+
+def reference_year(articles: pd.DataFrame, config: GapConfig) -> int | None:
+    """Year the citation counts are treated as current for.
+
+    ``config.citation_year_reference`` wins; otherwise the most recent
+    publication year in the frame is used, which keeps the velocity filter
+    reproducible — reading the system clock would make the same export yield
+    different candidates on different days.
+    """
+    if config.citation_year_reference is not None:
+        return int(config.citation_year_reference)
+    if articles.empty or "year" not in articles.columns:
+        return None
+    years = pd.to_numeric(articles["year"], errors="coerce").dropna()
+    return int(years.max()) if len(years) else None
+
+
+def keyword_citation_velocity(
+    keyword: str,
+    articles: pd.DataFrame,
+    config: GapConfig,
+    year: int | None = None,
+) -> float | None:
+    """Fastest citation accumulation among the records carrying ``keyword``.
+
+    A record's velocity is its citation count divided by its age in years,
+    ``reference - publication_year + 1``, so a paper published in the
+    reference year counts as one year old instead of zero.  Returns ``None``
+    when the frame carries no citation or year data, when no record carries
+    the keyword, or when no matching record has both values.
+    """
+    if articles.empty or not {"citations", "year"} <= set(articles.columns):
+        return None
+    reference = reference_year(articles, config) if year is None else year
+    if reference is None:
+        return None
+    hits = articles[
+        articles["keywords_normalized"].apply(lambda kws: normalize_keyword(keyword) in kws)
+    ]
+    if hits.empty:
+        return None
+    citations = pd.to_numeric(hits["citations"], errors="coerce")
+    years = pd.to_numeric(hits["year"], errors="coerce")
+    usable = citations.notna() & years.notna()
+    if not usable.any():
+        return None
+    age = (reference - years[usable] + 1).clip(lower=1)
+    return float((citations[usable] / age).max())
+
+
+def passes_citation_filter(
+    citations: float | None,
+    config: GapConfig,
+    velocity: float | None = None,
+) -> bool:
+    """Whether a candidate with this citation support survives the bounds.
+
+    Three optional, inclusive bounds: the raw-count window
+    ``min_citations``/``max_citations`` and the rate floor
+    ``min_citations_per_year``.  A candidate whose support is unknown is kept
+    or dropped according to ``config.keep_uncited_candidates``; when no bound
+    is set the filter is inactive and everything passes.
+    """
+    if not citation_filter_active(config):
+        return True
+    if config.min_citations is not None or config.max_citations is not None:
+        if citations is None:
+            if not config.keep_uncited_candidates:
+                return False
+        else:
+            if config.min_citations is not None and citations < config.min_citations:
+                return False
+            if config.max_citations is not None and citations > config.max_citations:
+                return False
+    if config.min_citations_per_year is not None:
+        if velocity is None:
+            return config.keep_uncited_candidates
+        if velocity < config.min_citations_per_year:
+            return False
+    return True
+
+
+def citation_filter_active(config: GapConfig) -> bool:
+    """Whether any citation bound is configured."""
+    return (
+        config.min_citations is not None
+        or config.max_citations is not None
+        or config.min_citations_per_year is not None
+    )
+
+
+def citation_mask(
+    keywords: Sequence[str],
+    articles: pd.DataFrame,
+    config: GapConfig,
+) -> np.ndarray:
+    """Boolean mask of keywords whose citation support lies inside the bounds.
+
+    Short-circuits to all-``True`` when no bound is configured, so the default
+    configuration costs nothing and reproduces the published runs exactly.
+    The reference year is resolved once per call rather than per keyword.
+    """
+    if not citation_filter_active(config):
+        return np.ones(len(keywords), dtype=bool)
+    year = reference_year(articles, config)
+    return np.array(
+        [
+            passes_citation_filter(
+                keyword_citations(kw, articles),
+                config,
+                keyword_citation_velocity(kw, articles, config, year),
+            )
+            for kw in keywords
+        ],
+        dtype=bool,
+    )
+
+
 def detect_emerging_concepts(
     space: KeywordSpace,
     cluster_articles: pd.DataFrame,
@@ -252,6 +385,7 @@ def detect_emerging_concepts(
     mask = candidate_mask(space.keywords, config, core_terms)
     if max_frequency is not None:
         mask &= frame["frequency"].to_numpy() <= max_frequency
+    mask &= citation_mask(space.keywords, cluster_articles, config)
     if not mask.any():
         return []
 
@@ -328,6 +462,7 @@ def detect_conceptual_combinations(
     """
     frame = space.to_frame()
     eligible = candidate_mask(space.keywords, config) & (frame["frequency"].to_numpy() >= 2)
+    eligible &= citation_mask(space.keywords, cluster_articles, config)
     if eligible.sum() < 2:
         return []
 
@@ -442,6 +577,12 @@ def detect_cross_cluster_concepts(
         keyword_tfidf = tfidf.get(keyword)
         if keyword_tfidf < config.min_tfidf:
             continue
+        if not passes_citation_filter(
+            keyword_citations(keyword, others),
+            config,
+            keyword_citation_velocity(keyword, others, config),
+        ):
+            continue
         scored.append(
             {
                 "keyword": keyword,
@@ -503,6 +644,9 @@ def detect_peripheral_keywords(
     is computed inside each cluster, so clusters of different semantic density
     are judged on their own scale; the share of flagged keywords is therefore
     approximately ``100 - periphery_percentile`` per cent by construction.
+
+    When ``config.min_citations`` or ``config.max_citations`` is set, the
+    candidate must also carry citation support inside those bounds.
     """
     frame = space.to_frame()
     labels = space.subcluster_labels
@@ -510,6 +654,7 @@ def detect_peripheral_keywords(
     eligible = candidate_mask(space.keywords, config, core_terms)
     if config.max_keyword_frequency is not None:
         eligible &= frame["frequency"].to_numpy() <= config.max_keyword_frequency
+    eligible &= citation_mask(space.keywords, articles, config)
 
     thresholds: dict[int, float] = {
         int(cluster): periphery_threshold(distances[labels == cluster], config.periphery_percentile)
