@@ -1,5 +1,36 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- **Optional citation filter.** `GapConfig.min_citations` and
+  `GapConfig.max_citations` bound the citation support of a candidate — the
+  citation count of its best-cited source record — and may be combined into a
+  window. Both are `None` by default, in which case the filter short-circuits
+  and the published runs are reproduced exactly. The bounds are applied to
+  candidate eligibility in all four detectors, before ranking and before the
+  per-cluster cap. Candidates whose citation support is unknown are kept unless
+  `keep_uncited_candidates=False`, so a bound cannot silently empty the
+  candidate list on a corpus without citation data. Exposed on the CLI as
+  `--min-citations`, `--max-citations` and `--drop-uncited/--keep-uncited`.
+- **Citation velocity.** `GapConfig.min_citations_per_year` bounds the rate
+  rather than the level: a record's citations divided by its age in years,
+  `citation_year_reference - publication_year + 1`. Two records with the same
+  total but different ages are no longer equivalent, which is what the level
+  form cannot express. The reference year defaults to the most recent
+  publication year in the corpus rather than to the system clock, so a
+  deposited export reproduces the same candidates on any day. Fractional
+  thresholds are allowed. Exposed as `--min-citations-per-year` and
+  `--citation-year`. There is deliberately no upper rate bound.
+
+### Fixed
+
+- The README described a citation filter as part of `keywords_first`. No such
+  filter existed: citation counts were read, reported and used as a ranking
+  tie-breaker only. The sentence now matches the code, and the filter it
+  described is the optional feature added above.
+
 ## 1.0.0 - 2026-09-13
 
 First public release: the version described in the accompanying article.

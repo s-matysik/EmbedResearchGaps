@@ -28,9 +28,10 @@ annotation plus human-expert concordance).
 
 **Mode A** embeds the author keywords of the analysis corpus, clusters them with
 k-means, and flags keywords whose distance from their own cluster centroid
-exceeds a cluster-specific percentile (default: p95). Frequency, citation and
+exceeds a cluster-specific percentile (default: p95). Frequency and
 methodological-term filters then remove the terms that are peripheral for
-uninteresting reasons.
+uninteresting reasons, and an optional citation filter — off by default — can
+narrow the candidates to a citation window (see *Citation filter* below).
 
 **Mode B** clusters the articles first, labels each cluster from its dominant
 keywords, then builds a keyword sub-space inside every cluster and applies three
@@ -132,6 +133,75 @@ fields are resolved through `COLUMN_ALIASES`:
 | Scopus Search API (`view=COMPLETE`) | `dc:title` | `authkeywords` | `citedby-count` |
 | Web of Science, tab-delimited `savedrecs.txt` | `TI` | `DE` | `TC` |
 | Web of Science, full record | `Article Title` | `Author Keywords` | `Times Cited, All Databases` |
+
+### Citation filter
+
+Citation counts are reported for every candidate and, in `keywords_first`,
+break ties in the ranking. They do **not** exclude anything unless you ask
+for it: `min_citations` and `max_citations` are `None` by default, and with
+both unset the filter short-circuits, so the published runs are reproduced
+exactly.
+
+A candidate's citation support is the citation count of its best-cited source
+record. Bounds are inclusive and may be combined:
+
+| Option | Bounds | Unit |
+|--------|--------|------|
+| `min_citations` / `max_citations` | citation *level* | citations |
+| `min_citations_per_year` | citation *rate* | citations per year |
+
+The rate is the one to reach for when the question is whether a topic is
+moving. A citation count rewards age: a paper from 2005 with 60 citations and
+one from 2023 with 60 citations look identical by level, but accumulate at 3
+and 30 citations per year. Dividing by age separates them, so
+`min_citations_per_year` admits recent work that is being picked up quickly
+while excluding old work whose total merely had time to accrue. There is no
+upper rate bound: fast accumulation is the signal being sought, so capping it
+would discard the evidence.
+
+A record's age is `reference_year - publication_year + 1`, which makes a paper
+published in the reference year one year old rather than zero. The reference
+year defaults to the most recent publication year in the corpus rather than to
+the system clock, so re-running a deposited export reproduces the same
+candidates; set `citation_year_reference` when you know the date the counts
+were harvested.
+
+```python
+from embedresearchgaps import GapConfig, RunConfig
+
+# topics that are currently moving: at least two citations per year
+config = RunConfig(gaps=GapConfig(min_citations_per_year=2.0))
+
+# keywords whose literature is not yet well cited
+config = RunConfig(gaps=GapConfig(max_citations=20))
+
+# both at once: moving, but not yet saturated
+config = RunConfig(gaps=GapConfig(min_citations_per_year=1.0, max_citations=100))
+```
+
+```bash
+embedresearchgaps run scopus.csv --min-citations-per-year 2
+embedresearchgaps run scopus.csv --max-citations 20
+embedresearchgaps run scopus.csv --min-citations 50 --drop-uncited
+```
+
+Candidates whose citation support is unknown — no citation column in the
+export, no publication year for the rate, or no value on any source record —
+are **kept** by default,
+because a bound would otherwise silently empty the candidate list on a corpus
+without citation data. Pass `keep_uncited_candidates=False` (`--drop-uncited`)
+to require explicit citation evidence instead.
+
+The filter is applied to candidate eligibility, before ranking and before the
+per-cluster cap, so the number of candidates reported per cluster is unchanged
+as long as enough keywords survive the bounds.
+
+None of these bounds is a neutral operation on a gap-detection task, and the
+package takes no position on whether they should be used. A floor on the raw
+count systematically favours older literature, because recent work has few
+citations by construction; the rate form corrects that specific bias but
+inherits others, since a citation count describes the *article* a keyword
+appeared in, not the keyword itself. Report which bounds a run used.
 
 ```python
 from embedresearchgaps import load_csv
