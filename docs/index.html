@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EmbedResearchGaps · EmbedResearchGaps</title>
+<meta name="description" content="EmbedResearchGaps: embedding-driven identification of candidate research gaps in author-keyword space.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html">EmbedResearchGaps</a>
+    <nav><a href="index.html" class="active">Overview</a><a href="guide.html">Guide</a><a href="api.html">API reference</a><a href="changelog.html">Changelog</a></nav>
+    <a class="gh" href="https://github.com/s-matysik/EmbedResearchGaps">GitHub</a>
+  </div>
+</header>
+<main>
+  <div class="page">
+    <h1>EmbedResearchGaps</h1>
+    <p class="lede">Embedding-driven identification of candidate research gaps in author-keyword space.</p>
+    
+<p>EmbedResearchGaps turns the author-keyword space of a screened corpus into a short,
+typed, source-linked list of candidate research gaps, and measures how reproducible that
+list is. Formulating a gap stays a creative act; what the package contributes is a
+shortlist stripped of trivial and already-covered terms, with its stability reported
+rather than assumed.</p>
+
+<div class="cards">
+  <div class="card"><h3><a href="guide.html">Guide</a></h3>
+    <p>Install it, point it at a CSV export, run either mode, read the candidate table.</p></div>
+  <div class="card"><h3><a href="api.html">API reference</a></h3>
+    <p>Every public object, with signatures and docstrings read from the package itself.</p></div>
+  <div class="card"><h3><a href="https://github.com/s-matysik/EmbedResearchGaps">Source</a></h3>
+    <p>Repository, test suite and the deposited runs behind the published study.</p></div>
+</div>
+
+<h2 id="install">Install<a class="anchor" href="#install">#</a></h2>
+<pre><code>git clone https://github.com/s-matysik/EmbedResearchGaps.git
+cd EmbedResearchGaps
+pip install -e .</code></pre>
+
+<h2 id="quick-start">Quick start<a class="anchor" href="#quick-start">#</a></h2>
+<pre><code>from embedresearchgaps import load_csv, RunConfig, articles_first
+
+corpus = load_csv("scopus.csv")
+result = articles_first(corpus, RunConfig(top_n_articles=50))
+
+print(result.gaps[["gap_type", "keyword", "score", "rationale"]].head())
+result.save("results")</code></pre>
+<p>Or from the shell:</p>
+<pre><code>embedresearchgaps run scopus.csv --mode articles_first --top-n 50 --figures</code></pre>
+
+<h2 id="the-two-modes">The two modes<a class="anchor" href="#the-two-modes">#</a></h2>
+<table><thead><tr><th>Mode</th><th>What it clusters</th><th>What it flags</th></tr></thead>
+<tbody>
+<tr><td><code>keywords_first</code></td><td>the unique author keywords</td>
+    <td>keywords whose distance from their own cluster centroid exceeds a
+        cluster-specific percentile</td></tr>
+<tr><td><code>articles_first</code></td><td>the articles</td>
+    <td>emerging concepts, unrealised combinations and cross-cluster concepts inside each
+        cluster's keyword sub-space</td></tr>
+</tbody></table>
+<p>Both return a <code>PipelineResult</code>: a candidate table with scores, metrics,
+rationales and source records, plus the diagnostics a methods section needs. A ranking
+produced by another tool enters the same object through
+<a href="api.html#embedresearchgaps-load-external-ranking"><code>load_external_ranking</code></a>,
+so the assessment layer applies to it unchanged.</p>
+
+<h2 id="module-map">Module map<a class="anchor" href="#module-map">#</a></h2>
+<table><thead><tr><th>Module</th><th>Purpose</th></tr></thead><tbody><tr><td><code>embedresearchgaps.config</code></td><td>Configuration objects for EmbedResearchGaps.</td></tr><tr><td><code>embedresearchgaps.corpus</code></td><td>Loading and normalising bibliographic corpora.</td></tr><tr><td><code>embedresearchgaps.text</code></td><td>Keyword normalisation, lexical filters and corpus-level TF-IDF salience.</td></tr><tr><td><code>embedresearchgaps.keywords</code></td><td>The keyword semantic space: embeddings, frequencies, centrality, sub-clusters.</td></tr><tr><td><code>embedresearchgaps.clustering</code></td><td>Semantic ranking, k-selection, k-means clustering and cluster diagnostics.</td></tr><tr><td><code>embedresearchgaps.encoders</code></td><td>Embedding backends.</td></tr><tr><td><code>embedresearchgaps.gaps</code></td><td>Gap candidates: scoring formulae and the four detectors.</td></tr><tr><td><code>embedresearchgaps.external</code></td><td>Load a candidate ranking produced somewhere else.</td></tr><tr><td><code>embedresearchgaps.pipelines</code></td><td>The two operating modes of EmbedResearchGaps.</td></tr><tr><td><code>embedresearchgaps.consensus</code></td><td>Stability-aware consensus over several k-means initialisations.</td></tr><tr><td><code>embedresearchgaps.results</code></td><td>Result container shared by both pipeline modes.</td></tr><tr><td><code>embedresearchgaps.viz</code></td><td>Figures for a pipeline run and for a validation study.</td></tr><tr><td><code>embedresearchgaps.cli</code></td><td>Command-line interface: `<code>embedresearchgaps</code>`.</td></tr></tbody></table>
+<p>The assessment subpackage:</p>
+<table><thead><tr><th>Module</th><th>Purpose</th></tr></thead><tbody><tr><td><code>embedresearchgaps.validation.annotators</code></td><td>LLM annotators used to validate candidate gaps.</td></tr><tr><td><code>embedresearchgaps.validation.protocol</code></td><td>The annotation protocol used to validate candidate gaps.</td></tr><tr><td><code>embedresearchgaps.validation.runner</code></td><td>Orchestration of a multi-annotator validation study.</td></tr><tr><td><code>embedresearchgaps.validation.metrics</code></td><td>Validation metrics: label rates, novelty, annotator agreement, expert concordance.</td></tr><tr><td><code>embedresearchgaps.validation.experts</code></td><td>Expert validation: assessment sheets and concordance with the LLM panel.</td></tr></tbody></table>
+
+<h2 id="citing">Citing<a class="anchor" href="#citing">#</a></h2>
+<p>Citation metadata is in
+<a href="https://github.com/s-matysik/EmbedResearchGaps/blob/main/CITATION.cff"><code>CITATION.cff</code></a>.</p>
+
+  </div>
+  <aside class="toc"><p>On this page</p><a class="" href="#install">Install</a><a class="" href="#quick-start">Quick start</a><a class="" href="#the-two-modes">The two modes</a><a class="" href="#module-map">Module map</a><a class="" href="#citing">Citing</a></aside>
+</main>
+<footer>
+  <p>EmbedResearchGaps · MIT licence ·
+     <a href="https://github.com/s-matysik/EmbedResearchGaps">source</a> ·
+     generated from the package by <code>tools/build_docs.py</code></p>
+</footer>
+</body>
+</html>
