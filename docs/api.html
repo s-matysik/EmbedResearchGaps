@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API reference · EmbedResearchGaps</title>
+<meta name="description" content="EmbedResearchGaps: embedding-driven identification of candidate research gaps in author-keyword space.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html">EmbedResearchGaps</a>
+    <nav><a href="index.html">Overview</a><a href="guide.html">Guide</a><a href="api.html" class="active">API reference</a><a href="changelog.html">Changelog</a></nav>
+    <a class="gh" href="https://github.com/s-matysik/EmbedResearchGaps">GitHub</a>
+  </div>
+</header>
+<main>
+  <div class="page">
+    <h1>API reference</h1>
+    <p class="lede">74 public objects, generated from the installed package (version 1.0.0).</p>
+    <h2 id="corpus">Corpus<a class="anchor" href="#corpus">#</a></h2>
+<p>Load a bibliographic export and normalise its keyword fields.</p>
+<section class="entry" id="embedresearchgaps-load-csv">
+<h3><span class="kind">function</span> <code class="sym">load_csv</code><code class="sig">(path: 'str | Path', column_map: 'Mapping[str, str] | None' = None, require_keywords: 'bool' = True, **read_csv_kwargs: 'Any') -&gt; 'Corpus'</code><a class="anchor" href="#embedresearchgaps-load-csv">#</a></h3>
+<p>Load a Scopus/WoS style CSV export into a :class:<code>Corpus</code>.</p>
+<p>Any keyword argument is forwarded to :func:<code>pandas.read_csv</code>, so unusual separators or encodings can be handled by the caller.</p>
+</section>
+<section class="entry" id="embedresearchgaps-from-dataframe">
+<h3><span class="kind">function</span> <code class="sym">from_dataframe</code><code class="sig">(frame: 'pd.DataFrame', column_map: 'Mapping[str, str] | None' = None, require_keywords: 'bool' = True, source_path: 'str | None' = None) -&gt; 'Corpus'</code><a class="anchor" href="#embedresearchgaps-from-dataframe">#</a></h3>
+<p>Normalise an arbitrary bibliographic frame into a :class:<code>Corpus</code>.</p>
+<p class="doc-section">Parameters</p><dl class="params">
+<dt>frame:</dt><dd>Source records, one row per publication.</dd>
+<dt>column_map:</dt><dd>Optional explicit mapping of canonical field names (`<code>title</code><code>, </code><code>abstract</code><code>, </code><code>author_keywords</code><code>, </code><code>year</code><code>, </code><code>citations</code><code>, </code><code>doi</code><code>, </code><code>authors</code><code>, </code><code>source</code><code>) onto column names of </code><code>frame</code>`.</dd>
+<dt>require_keywords:</dt><dd>Drop records without any author keyword.  Records without title and abstract are always dropped because they cannot be embedded.</dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-corpus">
+<h3><span class="kind">class</span> <code class="sym">Corpus</code><code class="sig">(frame: 'pd.DataFrame', source_path: 'str | None' = None, column_map: 'dict[str, str]' = &lt;factory&gt;, dropped_empty_text: 'int' = 0, dropped_empty_keywords: 'int' = 0, _spelling: 'dict[str, str] | None' = None) -&gt; None</code><a class="anchor" href="#embedresearchgaps-corpus">#</a></h3>
+<p>A normalised bibliographic corpus.</p>
+<p>The frame always carries the columns `<code>title</code><code>, </code><code>abstract</code><code>, </code><code>author_keywords</code><code> (list of strings), </code><code>keywords_normalized</code><code> (list of normalised strings), </code><code>combined_text</code><code>, </code><code>year</code><code>, </code><code>citations</code><code>, </code><code>doi</code><code>, </code><code>authors</code><code> and </code><code>source</code>`; missing source fields are filled with empty values so that downstream code never has to branch on availability.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>frame</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>source_path</code></td><td><code>str | None</code></td><td><code>None</code></td></tr><tr><td><code>column_map</code></td><td><code>dict[str, str]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>dropped_empty_text</code></td><td><code>int</code></td><td><code>0</code></td></tr><tr><td><code>dropped_empty_keywords</code></td><td><code>int</code></td><td><code>0</code></td></tr><tr><td><code>_spelling</code></td><td><code>dict[str, str] | None</code></td><td><code>None</code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>has_abstracts</code></dt><dd></dd>
+<dt><code>has_citations</code></dt><dd></dd>
+<dt><code>head(self, n: 'int') -&gt; "'Corpus'"</code></dt><dd>A corpus restricted to the first `<code>n</code>` records, order preserved.</dd>
+<dt><code>keyword_lists</code></dt><dd></dd>
+<dt><code>n_articles</code></dt><dd></dd>
+<dt><code>spelling</code></dt><dd>Normalised keyword -&gt; its most frequent spelling in the source data.</dd>
+<dt><code>subset(self, mask: 'Sequence[bool] | pd.Series') -&gt; "'Corpus'"</code></dt><dd></dd>
+<dt><code>summary(self) -&gt; 'dict[str, Any]'</code></dt><dd></dd>
+<dt><code>unique_keywords(self) -&gt; 'list[str]'</code></dt><dd>Normalised keywords in order of first appearance.</dd>
+</dl>
+</section>
+<h2 id="configuration">Configuration<a class="anchor" href="#configuration">#</a></h2>
+<p>Every threshold, weight and seed of a run lives here.</p>
+<section class="entry" id="embedresearchgaps-runconfig">
+<h3><span class="kind">class</span> <code class="sym">RunConfig</code><code class="sig">(top_n_articles: 'int' = 50, problem_description: 'str | None' = None, article_encoder: 'EncoderConfig' = &lt;factory&gt;, keyword_encoder: 'EncoderConfig' = &lt;factory&gt;, clustering: 'ClusteringConfig' = &lt;factory&gt;, gaps: 'GapConfig' = &lt;factory&gt;, random_state: 'int' = 42, use_citations: 'bool' = True) -&gt; None</code><a class="anchor" href="#embedresearchgaps-runconfig">#</a></h3>
+<p>Top-level configuration of a pipeline run.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>top_n_articles</code></td><td><code>int</code></td><td><code>50</code></td></tr><tr><td><code>problem_description</code></td><td><code>str | None</code></td><td><code>None</code></td></tr><tr><td><code>article_encoder</code></td><td><code>EncoderConfig</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>keyword_encoder</code></td><td><code>EncoderConfig</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>clustering</code></td><td><code>ClusteringConfig</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>gaps</code></td><td><code>GapConfig</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>random_state</code></td><td><code>int</code></td><td><code>42</code></td></tr><tr><td><code>use_citations</code></td><td><code>bool</code></td><td><code>True</code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>replace(self, **changes: 'Any') -&gt; "'RunConfig'"</code></dt><dd></dd>
+<dt><code>to_dict(self) -&gt; 'dict[str, Any]'</code></dt><dd>JSON-ready view of the configuration.</dd>
+<dt><code>to_json(self, indent: 'int' = 2) -&gt; 'str'</code></dt><dd></dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-gapconfig">
+<h3><span class="kind">class</span> <code class="sym">GapConfig</code><code class="sig">(periphery_percentile: 'float' = 95.0, max_gaps_per_cluster: 'int' = 3, min_tfidf: 'float' = 0.005, max_keyword_frequency: 'int | None' = 1, gap_token_count: 'int | None' = 2, core_domain_share: 'float' = 0.5, max_presence_ratio: 'float' = 0.1, max_frequency_other_clusters: 'int' = 3, combination_similarity_range: 'tuple[float, float]' = (0.25, 0.65), combination_similarity_optimum: 'float' = 0.45, deduplicate_cross_cluster: 'bool' = True, min_citations: 'int | None' = None, max_citations: 'int | None' = None, min_citations_per_year: 'float | None' = None, citation_year_reference: 'int | None' = None, keep_uncited_candidates: 'bool' = True, filter_methodological: 'bool' = True, extra_stop_keywords: 'tuple[str, ...]' = (), methodological_patterns: 'tuple[str, ...]' = ('equation model', 'factor analysis', 'regression', 'anova', 'manova', 'ancova', 'mediation', 'moderation', 'path analysis', 'multilevel model', 'hierarchical model', 'survey method', 'questionnaire', 'experiment', 'quasi-experiment', 'case study', 'interview', 'focus group', 'content analysis', 'thematic analysis', 'grounded theory', 'literature review', 'meta-analysis', 'bibliometric', 'longitudinal', 'cross-sectional', 'panel data', 'cronbach', 'composite reliability', 'convergent validity', 'discriminant validity', 'measurement model', 'sample size', 'sampling method', 'likert scale', 'semantic differential', 'conceptual framework', 'research agenda', 'future research', 'systematic review', 'qualitative', 'quantitative', 'mixed method', 'configurational', 'fuzzy set', 'fuzzy-set', 'necessary condition', 'feature selection', 'structural equation', 'multi-group', 'robustness check', 'instrumental variable', 'difference-in-differences', 'propensity score', 'text mining', 'topic model'), methodological_tools: 'frozenset[str]' = frozenset({'pls', 'mplus', 'lisrel', 'spss', 'hlm', 'amos', 'nvivo', 'cfa', 'sem', 'stata', 'smartpls', 'efa', 'tam'}), emerging_weights: 'EmergingWeights' = &lt;factory&gt;, combination_weights: 'CombinationWeights' = &lt;factory&gt;, cross_cluster_weights: 'CrossClusterWeights' = &lt;factory&gt;) -&gt; None</code><a class="anchor" href="#embedresearchgaps-gapconfig">#</a></h3>
+<p>Thresholds shared by both pipeline modes.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>periphery_percentile</code></td><td><code>float</code></td><td><code>95.0</code></td></tr><tr><td><code>max_gaps_per_cluster</code></td><td><code>int</code></td><td><code>3</code></td></tr><tr><td><code>min_tfidf</code></td><td><code>float</code></td><td><code>0.005</code></td></tr><tr><td><code>max_keyword_frequency</code></td><td><code>int | None</code></td><td><code>1</code></td></tr><tr><td><code>gap_token_count</code></td><td><code>int | None</code></td><td><code>2</code></td></tr><tr><td><code>core_domain_share</code></td><td><code>float</code></td><td><code>0.5</code></td></tr><tr><td><code>max_presence_ratio</code></td><td><code>float</code></td><td><code>0.1</code></td></tr><tr><td><code>max_frequency_other_clusters</code></td><td><code>int</code></td><td><code>3</code></td></tr><tr><td><code>combination_similarity_range</code></td><td><code>tuple[float, float]</code></td><td><code>(0.25, 0.65)</code></td></tr><tr><td><code>combination_similarity_optimum</code></td><td><code>float</code></td><td><code>0.45</code></td></tr><tr><td><code>deduplicate_cross_cluster</code></td><td><code>bool</code></td><td><code>True</code></td></tr><tr><td><code>min_citations</code></td><td><code>int | None</code></td><td><code>None</code></td></tr><tr><td><code>max_citations</code></td><td><code>int | None</code></td><td><code>None</code></td></tr><tr><td><code>min_citations_per_year</code></td><td><code>float | None</code></td><td><code>None</code></td></tr><tr><td><code>citation_year_reference</code></td><td><code>int | None</code></td><td><code>None</code></td></tr><tr><td><code>keep_uncited_candidates</code></td><td><code>bool</code></td><td><code>True</code></td></tr><tr><td><code>filter_methodological</code></td><td><code>bool</code></td><td><code>True</code></td></tr><tr><td><code>extra_stop_keywords</code></td><td><code>tuple[str, ...]</code></td><td><code>()</code></td></tr><tr><td><code>methodological_patterns</code></td><td><code>tuple[str, ...]</code></td><td><code>('equation model', 'factor analysis', 'regression', 'anova', 'manova', 'ancova', 'mediation', 'moderation', 'path analysis', 'multilevel model', 'hierarchical model', 'survey method', 'questionnaire', 'experiment', 'quasi-experiment', 'case study', 'interview', 'focus group', 'content analysis', 'thematic analysis', 'grounded theory', 'literature review', 'meta-analysis', 'bibliometric', 'longitudinal', 'cross-sectional', 'panel data', 'cronbach', 'composite reliability', 'convergent validity', 'discriminant validity', 'measurement model', 'sample size', 'sampling method', 'likert scale', 'semantic differential', 'conceptual framework', 'research agenda', 'future research', 'systematic review', 'qualitative', 'quantitative', 'mixed method', 'configurational', 'fuzzy set', 'fuzzy-set', 'necessary condition', 'feature selection', 'structural equation', 'multi-group', 'robustness check', 'instrumental variable', 'difference-in-differences', 'propensity score', 'text mining', 'topic model')</code></td></tr><tr><td><code>methodological_tools</code></td><td><code>frozenset[str]</code></td><td><code>frozenset({'pls', 'mplus', 'lisrel', 'spss', 'hlm', 'amos', 'nvivo', 'cfa', 'sem', 'stata', 'smartpls', 'efa', 'tam'})</code></td></tr><tr><td><code>emerging_weights</code></td><td><code>EmergingWeights</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>combination_weights</code></td><td><code>CombinationWeights</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>cross_cluster_weights</code></td><td><code>CrossClusterWeights</code></td><td><code><em>factory</em></code></td></tr></tbody></table>
+</section>
+<section class="entry" id="embedresearchgaps-clusteringconfig">
+<h3><span class="kind">class</span> <code class="sym">ClusteringConfig</code><code class="sig">(n_clusters: 'int | None' = None, k_selection: 'KSelection' = 'auto', k_min: 'int' = 2, k_max: 'int' = 10, silhouette_floor: 'float' = 0.25, n_init: 'int' = 10, random_state: 'int' = 42, distance_metric: 'DistanceMetric' = 'cosine', n_keyword_subclusters: 'int | None' = None) -&gt; None</code><a class="anchor" href="#embedresearchgaps-clusteringconfig">#</a></h3>
+<p>Clustering of articles and of keywords.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>n_clusters</code></td><td><code>int | None</code></td><td><code>None</code></td></tr><tr><td><code>k_selection</code></td><td><code>KSelection</code></td><td><code>'auto'</code></td></tr><tr><td><code>k_min</code></td><td><code>int</code></td><td><code>2</code></td></tr><tr><td><code>k_max</code></td><td><code>int</code></td><td><code>10</code></td></tr><tr><td><code>silhouette_floor</code></td><td><code>float</code></td><td><code>0.25</code></td></tr><tr><td><code>n_init</code></td><td><code>int</code></td><td><code>10</code></td></tr><tr><td><code>random_state</code></td><td><code>int</code></td><td><code>42</code></td></tr><tr><td><code>distance_metric</code></td><td><code>DistanceMetric</code></td><td><code>'cosine'</code></td></tr><tr><td><code>n_keyword_subclusters</code></td><td><code>int | None</code></td><td><code>None</code></td></tr></tbody></table>
+</section>
+<section class="entry" id="embedresearchgaps-encoderconfig">
+<h3><span class="kind">class</span> <code class="sym">EncoderConfig</code><code class="sig">(name: 'str' = 'tfidf-svd', model: 'str | None' = None, api_key_env: 'str | None' = None, batch_size: 'int' = 96, normalize: 'bool' = True, dimensions: 'int | None' = None, extra: 'dict[str, Any]' = &lt;factory&gt;) -&gt; None</code><a class="anchor" href="#embedresearchgaps-encoderconfig">#</a></h3>
+<p>Which embedding model to use and how to call it.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>name</code></td><td><code>str</code></td><td><code>'tfidf-svd'</code></td></tr><tr><td><code>model</code></td><td><code>str | None</code></td><td><code>None</code></td></tr><tr><td><code>api_key_env</code></td><td><code>str | None</code></td><td><code>None</code></td></tr><tr><td><code>batch_size</code></td><td><code>int</code></td><td><code>96</code></td></tr><tr><td><code>normalize</code></td><td><code>bool</code></td><td><code>True</code></td></tr><tr><td><code>dimensions</code></td><td><code>int | None</code></td><td><code>None</code></td></tr><tr><td><code>extra</code></td><td><code>dict[str, Any]</code></td><td><code><em>factory</em></code></td></tr></tbody></table>
+</section>
+<section class="entry" id="embedresearchgaps-emergingweights">
+<h3><span class="kind">class</span> <code class="sym">EmergingWeights</code><code class="sig">(distance: 'float' = 0.25, centrality: 'float' = 0.15, tfidf: 'float' = 0.3, rarity: 'float' = 0.3) -&gt; None</code><a class="anchor" href="#embedresearchgaps-emergingweights">#</a></h3>
+<p>Weights of equation (7) -- Type 1, Emerging Concepts.</p>
+<p>`<code>S_em = distance * d + centrality * c + tfidf * t + rarity * r</code>` where every component is min-max normalised within the candidate set.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>distance</code></td><td><code>float</code></td><td><code>0.25</code></td></tr><tr><td><code>centrality</code></td><td><code>float</code></td><td><code>0.15</code></td></tr><tr><td><code>tfidf</code></td><td><code>float</code></td><td><code>0.3</code></td></tr><tr><td><code>rarity</code></td><td><code>float</code></td><td><code>0.3</code></td></tr></tbody></table>
+</section>
+<section class="entry" id="embedresearchgaps-combinationweights">
+<h3><span class="kind">class</span> <code class="sym">CombinationWeights</code><code class="sig">(similarity: 'float' = 0.4, frequency: 'float' = 0.3, tfidf: 'float' = 0.3) -&gt; None</code><a class="anchor" href="#embedresearchgaps-combinationweights">#</a></h3>
+<p>Weights of equation (9) -- Type 2, Conceptual Combinations.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>similarity</code></td><td><code>float</code></td><td><code>0.4</code></td></tr><tr><td><code>frequency</code></td><td><code>float</code></td><td><code>0.3</code></td></tr><tr><td><code>tfidf</code></td><td><code>float</code></td><td><code>0.3</code></td></tr></tbody></table>
+</section>
+<section class="entry" id="embedresearchgaps-crossclusterweights">
+<h3><span class="kind">class</span> <code class="sym">CrossClusterWeights</code><code class="sig">(frequency: 'float' = 0.25, specificity: 'float' = 0.35, tfidf: 'float' = 0.4) -&gt; None</code><a class="anchor" href="#embedresearchgaps-crossclusterweights">#</a></h3>
+<p>Weights of equation (10) -- Type 3, Cross-Cluster Concepts.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>frequency</code></td><td><code>float</code></td><td><code>0.25</code></td></tr><tr><td><code>specificity</code></td><td><code>float</code></td><td><code>0.35</code></td></tr><tr><td><code>tfidf</code></td><td><code>float</code></td><td><code>0.4</code></td></tr></tbody></table>
+</section>
+<h2 id="embedding-backends">Embedding backends<a class="anchor" href="#embedding-backends">#</a></h2>
+<p>Interchangeable encoders, from offline TF-IDF to hosted models.</p>
+<section class="entry" id="embedresearchgaps-available-encoders">
+<h3><span class="kind">function</span> <code class="sym">available_encoders</code><code class="sig">() -&gt; 'list[str]'</code><a class="anchor" href="#embedresearchgaps-available-encoders">#</a></h3>
+
+</section>
+<section class="entry" id="embedresearchgaps-get-encoder">
+<h3><span class="kind">function</span> <code class="sym">get_encoder</code><code class="sig">(config: 'EncoderConfig | str') -&gt; 'Encoder'</code><a class="anchor" href="#embedresearchgaps-get-encoder">#</a></h3>
+<p>Instantiate the encoder named by `<code>config</code>`.</p>
+</section>
+<section class="entry" id="embedresearchgaps-register-encoder">
+<h3><span class="kind">function</span> <code class="sym">register_encoder</code><code class="sig">(name: 'str', factory: 'Callable[[EncoderConfig], Encoder]') -&gt; 'None'</code><a class="anchor" href="#embedresearchgaps-register-encoder">#</a></h3>
+<p>Register a custom encoder factory under `<code>name</code>`.</p>
+</section>
+<section class="entry" id="embedresearchgaps-encoder">
+<h3><span class="kind">class</span> <code class="sym">Encoder</code><code class="sig">(config: 'EncoderConfig | None' = None)</code><a class="anchor" href="#embedresearchgaps-encoder">#</a></h3>
+<p>Turns texts into a dense matrix of shape `<code>(len(texts), dim)</code>`.</p>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>describe(self) -&gt; 'dict[str, object]'</code></dt><dd></dd>
+<dt><code>encode(self, texts: 'Sequence[str]') -&gt; 'np.ndarray'</code></dt><dd>Encode `<code>texts</code>`, optionally L2-normalising the result.</dd>
+</dl>
+</section>
+<h2 id="pipelines">Pipelines<a class="anchor" href="#pipelines">#</a></h2>
+<p>The two mining modes and the object they return.</p>
+<section class="entry" id="embedresearchgaps-run">
+<h3><span class="kind">function</span> <code class="sym">run</code><code class="sig">(corpus: 'Corpus', mode: 'str' = 'articles_first', config: 'RunConfig | None' = None, cluster_labeler: 'ClusterLabeler | None' = None) -&gt; 'PipelineResult'</code><a class="anchor" href="#embedresearchgaps-run">#</a></h3>
+<p>Dispatch to :func:<code>keywords_first</code> or :func:<code>articles_first</code> by name.</p>
+</section>
+<section class="entry" id="embedresearchgaps-keywords-first">
+<h3><span class="kind">function</span> <code class="sym">keywords_first</code><code class="sig">(corpus: 'Corpus', config: 'RunConfig | None' = None, cluster_labeler: 'ClusterLabeler | None' = None) -&gt; 'PipelineResult'</code><a class="anchor" href="#embedresearchgaps-keywords-first">#</a></h3>
+<p>Mode A: cluster author keywords directly, then flag the periphery.</p>
+<p>Steps -----</p>
+<ol><li>Optionally rank records against `<code>config.problem_description</code><code> and keep the top </code><code>config.top_n_articles</code>`.</li><li>Embed every unique author keyword and cluster the keyword space with k-means, choosing k by elbow/silhouette unless fixed in the config.</li><li>Flag keywords whose distance from their cluster centroid exceeds the cluster-specific percentile and whose frequency is low.</li><li>Attach source articles and their citation counts to every candidate.</li></ol>
+<p class="doc-section">Notes</p>
+<p>Candidates are ranked by centroid distance.  Citations are reported as a relevance signal and, unless `<code>config.use_citations</code>` is false, used as the tie-breaker; they are never used to exclude a candidate, because a recent paper has few citations by construction.</p>
+</section>
+<section class="entry" id="embedresearchgaps-articles-first">
+<h3><span class="kind">function</span> <code class="sym">articles_first</code><code class="sig">(corpus: 'Corpus', config: 'RunConfig | None' = None, cluster_labeler: 'ClusterLabeler | None' = None) -&gt; 'PipelineResult'</code><a class="anchor" href="#embedresearchgaps-articles-first">#</a></h3>
+<p>Mode B: cluster articles, then mine keyword sub-spaces for three gap types.</p>
+<p>Steps -----</p>
+<ol><li>Optionally rank records against `<code>config.problem_description</code><code> and keep the top </code><code>config.top_n_articles</code>`.</li><li>Embed title+abstract of each record and cluster the articles.</li><li>Inside every article cluster, build a keyword sub-space, sub-cluster it and run the three detectors (emerging, combination, cross-cluster).</li><li>Optionally de-duplicate keywords that surface in several clusters.</li></ol>
+</section>
+<section class="entry" id="embedresearchgaps-pipelineresult">
+<h3><span class="kind">class</span> <code class="sym">PipelineResult</code><code class="sig">(mode: 'str', config: 'RunConfig', articles: 'pd.DataFrame', keywords: 'pd.DataFrame', gaps: 'pd.DataFrame', gap_objects: 'list[Gap]' = &lt;factory&gt;, cluster_labels: 'dict[int, str]' = &lt;factory&gt;, centroid_similarity: 'np.ndarray | None' = None, diagnostics: 'dict[str, Any]' = &lt;factory&gt;, embeddings: 'dict[str, np.ndarray]' = &lt;factory&gt;, keyword_index: 'list[str]' = &lt;factory&gt;) -&gt; None</code><a class="anchor" href="#embedresearchgaps-pipelineresult">#</a></h3>
+<p>Everything one pipeline run produced.</p>
+<p class="doc-section">Attributes</p><dl class="params">
+<dt>mode:</dt><dd>`<code>'keywords_first'</code><code> or </code><code>'articles_first'</code>`.</dd>
+<dt>articles:</dt><dd>The analysis corpus, with a `<code>cluster</code><code> column in articles-first mode and a </code><code>rank</code><code>/</code><code>query_distance</code>` column when a problem description was supplied.</dd>
+<dt>keywords:</dt><dd>One row per unique author keyword with frequency, cluster, centroid distance, centrality and TF-IDF salience.</dd>
+<dt>gaps:</dt><dd>Candidate gaps, flattened by :func:<code>~embedresearchgaps.gaps.gaps_to_frame</code>.</dd>
+<dt>cluster_labels:</dt><dd>Human-readable label per cluster.</dd>
+<dt>centroid_similarity:</dt><dd>Pairwise cosine similarity of cluster centroids, equation (11).</dd>
+<dt>diagnostics:</dt><dd>Cluster-quality indices, k-selection trace, filter counts and corpus statistics -- everything needed to report the run in a paper.</dd>
+</dl>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>mode</code></td><td><code>str</code></td><td><code></code></td></tr><tr><td><code>config</code></td><td><code>RunConfig</code></td><td><code></code></td></tr><tr><td><code>articles</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>keywords</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>gaps</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>gap_objects</code></td><td><code>list[Gap]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>cluster_labels</code></td><td><code>dict[int, str]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>centroid_similarity</code></td><td><code>np.ndarray | None</code></td><td><code>None</code></td></tr><tr><td><code>diagnostics</code></td><td><code>dict[str, Any]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>embeddings</code></td><td><code>dict[str, np.ndarray]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>keyword_index</code></td><td><code>list[str]</code></td><td><code><em>factory</em></code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>gap_type_counts(self) -&gt; 'dict[str, int]'</code></dt><dd></dd>
+<dt><code>n_clusters</code></dt><dd></dd>
+<dt><code>n_gaps</code></dt><dd></dd>
+<dt><code>save(self, directory: 'str | Path', prefix: 'str | None' = None) -&gt; 'dict[str, str]'</code></dt><dd>Write tables, run configuration and summary to `<code>directory</code>`.</dd>
+<dt><code>summary(self) -&gt; 'dict[str, Any]'</code></dt><dd>Compact, JSON-serialisable description of the run.</dd>
+<dt><code>to_json(self, indent: 'int' = 2) -&gt; 'str'</code></dt><dd></dd>
+<dt><code>top_gaps(self, n: 'int' = 10) -&gt; 'pd.DataFrame'</code></dt><dd>The `<code>n</code>` highest-scoring gaps across all types.</dd>
+</dl>
+</section>
+<h2 id="detectors-and-scoring">Detectors and scoring<a class="anchor" href="#detectors-and-scoring">#</a></h2>
+<p>The four detectors, their scores, and the candidate type.</p>
+<section class="entry" id="embedresearchgaps-detect-emerging-concepts">
+<h3><span class="kind">function</span> <code class="sym">detect_emerging_concepts</code><code class="sig">(space: 'KeywordSpace', cluster_articles: 'pd.DataFrame', cluster_id: 'int', tfidf: 'TfidfSalience', global_frequency: 'Mapping[str, int]', core_terms: 'Iterable[str]', config: 'GapConfig') -&gt; 'list[Gap]'</code><a class="anchor" href="#embedresearchgaps-detect-emerging-concepts">#</a></h3>
+<p>Type 1: rare, peripheral and lexically salient keywords.</p>
+<p>Candidates occur at most `<code>config.max_keyword_frequency</code><code> times inside the cluster, pass :func:</code>candidate_mask`, and are ranked by equation (7).</p>
+</section>
+<section class="entry" id="embedresearchgaps-detect-conceptual-combinations">
+<h3><span class="kind">function</span> <code class="sym">detect_conceptual_combinations</code><code class="sig">(space: 'KeywordSpace', cluster_articles: 'pd.DataFrame', cluster_id: 'int', tfidf: 'TfidfSalience', config: 'GapConfig') -&gt; 'list[Gap]'</code><a class="anchor" href="#embedresearchgaps-detect-conceptual-combinations">#</a></h3>
+<p>Type 2: established keyword pairs that never co-occur.</p>
+<p>Both members must occur at least twice in the cluster, must never appear together in one record, and their cosine similarity must fall inside `<code>config.combination_similarity_range</code>`.</p>
+</section>
+<section class="entry" id="embedresearchgaps-detect-cross-cluster-concepts">
+<h3><span class="kind">function</span> <code class="sym">detect_cross_cluster_concepts</code><code class="sig">(space: 'KeywordSpace', all_articles: 'pd.DataFrame', cluster_id: 'int', tfidf: 'TfidfSalience', global_frequency: 'Mapping[str, int]', core_terms: 'Iterable[str]', config: 'GapConfig') -&gt; 'list[Gap]'</code><a class="anchor" href="#embedresearchgaps-detect-cross-cluster-concepts">#</a></h3>
+<p>Type 3: keywords used in other clusters but absent from this one.</p>
+<p>The candidate must be rare in the rest of the corpus (at most `<code>config.max_frequency_other_clusters</code><code> records) and cover less than </code><code>config.max_presence_ratio</code>` of the corpus.</p>
+</section>
+<section class="entry" id="embedresearchgaps-detect-peripheral-keywords">
+<h3><span class="kind">function</span> <code class="sym">detect_peripheral_keywords</code><code class="sig">(space: 'KeywordSpace', articles: 'pd.DataFrame', tfidf: 'TfidfSalience', core_terms: 'Iterable[str]', config: 'GapConfig') -&gt; 'list[Gap]'</code><a class="anchor" href="#embedresearchgaps-detect-peripheral-keywords">#</a></h3>
+<p>Percentile rule of the keywords-first mode.</p>
+<p>A keyword is a candidate when its distance from its own cluster centroid exceeds the cluster-specific `<code>config.periphery_percentile</code><code> and its frequency does not exceed </code><code>config.max_keyword_frequency</code><code>.  The threshold is computed inside each cluster, so clusters of different semantic density are judged on their own scale; the share of flagged keywords is therefore approximately </code><code>100 - periphery_percentile</code>` per cent by construction.</p>
+<p>When `<code>config.min_citations</code><code> or </code><code>config.max_citations</code>` is set, the candidate must also carry citation support inside those bounds.</p>
+</section>
+<section class="entry" id="embedresearchgaps-score-emerging">
+<h3><span class="kind">function</span> <code class="sym">score_emerging</code><code class="sig">(distance: 'float', centrality: 'float', tfidf: 'float', rarity: 'float', weights: 'EmergingWeights | None' = None) -&gt; 'float'</code><a class="anchor" href="#embedresearchgaps-score-emerging">#</a></h3>
+<p>Equation (7): composite score of a Type 1 Emerging Concept.</p>
+<p>All four arguments are expected to be min-max normalised within the candidate set of one cluster.</p>
+</section>
+<section class="entry" id="embedresearchgaps-score-combination">
+<h3><span class="kind">function</span> <code class="sym">score_combination</code><code class="sig">(similarity: 'float', frequency_1: 'int', frequency_2: 'int', mean_tfidf: 'float', weights: 'CombinationWeights | None' = None, optimum: 'float' = 0.45) -&gt; 'float'</code><a class="anchor" href="#embedresearchgaps-score-combination">#</a></h3>
+<p>Equation (9): composite score of a Type 2 Conceptual Combination.</p>
+<p>The similarity term peaks at `<code>optimum</code>` and decays linearly: pairs that are near-synonymous carry no novelty, pairs that are unrelated carry no plausibility.</p>
+</section>
+<section class="entry" id="embedresearchgaps-score-cross-cluster">
+<h3><span class="kind">function</span> <code class="sym">score_cross_cluster</code><code class="sig">(frequency_other: 'int', presence_ratio: 'float', tfidf: 'float', tfidf_max: 'float', weights: 'CrossClusterWeights | None' = None) -&gt; 'float'</code><a class="anchor" href="#embedresearchgaps-score-cross-cluster">#</a></h3>
+<p>Equation (10): composite score of a Type 3 Cross-Cluster Concept.</p>
+</section>
+<section class="entry" id="embedresearchgaps-gap">
+<h3><span class="kind">class</span> <code class="sym">Gap</code><code class="sig">(gap_type: 'str', keyword: 'str', cluster: 'int', score: 'float', frequency: 'int', rationale: 'str', metrics: 'dict[str, float]' = &lt;factory&gt;, members: 'tuple[str, ...]' = (), n_articles: 'int' = 0, article_titles: 'tuple[str, ...]' = (), article_dois: 'tuple[str, ...]' = (), citations: 'float | None' = None, cluster_label: 'str | None' = None) -&gt; None</code><a class="anchor" href="#embedresearchgaps-gap">#</a></h3>
+<p>One candidate research gap.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>gap_type</code></td><td><code>str</code></td><td><code></code></td></tr><tr><td><code>keyword</code></td><td><code>str</code></td><td><code></code></td></tr><tr><td><code>cluster</code></td><td><code>int</code></td><td><code></code></td></tr><tr><td><code>score</code></td><td><code>float</code></td><td><code></code></td></tr><tr><td><code>frequency</code></td><td><code>int</code></td><td><code></code></td></tr><tr><td><code>rationale</code></td><td><code>str</code></td><td><code></code></td></tr><tr><td><code>metrics</code></td><td><code>dict[str, float]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>members</code></td><td><code>tuple[str, ...]</code></td><td><code>()</code></td></tr><tr><td><code>n_articles</code></td><td><code>int</code></td><td><code>0</code></td></tr><tr><td><code>article_titles</code></td><td><code>tuple[str, ...]</code></td><td><code>()</code></td></tr><tr><td><code>article_dois</code></td><td><code>tuple[str, ...]</code></td><td><code>()</code></td></tr><tr><td><code>citations</code></td><td><code>float | None</code></td><td><code>None</code></td></tr><tr><td><code>cluster_label</code></td><td><code>str | None</code></td><td><code>None</code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>to_dict(self) -&gt; 'dict[str, Any]'</code></dt><dd></dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-gap-types">
+<h3><span class="kind">constant</span> <code class="sym">GAP_TYPES</code><code class="sig"></code><a class="anchor" href="#embedresearchgaps-gap-types">#</a></h3>
+<pre><code>('Emerging Concept', 'Conceptual Combination', 'Cross-Cluster Concept', 'Peripheral Keyword')</code></pre>
+<p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple. If iterable is specified the tuple is initialized from iterable's items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+</section>
+<section class="entry" id="embedresearchgaps-gaps-to-frame">
+<h3><span class="kind">function</span> <code class="sym">gaps_to_frame</code><code class="sig">(gaps: 'Sequence[Gap]') -&gt; 'pd.DataFrame'</code><a class="anchor" href="#embedresearchgaps-gaps-to-frame">#</a></h3>
+<p>Flatten gaps into a table, expanding `<code>metrics</code>` into columns.</p>
+</section>
+<section class="entry" id="embedresearchgaps-deduplicate-gaps">
+<h3><span class="kind">function</span> <code class="sym">deduplicate_gaps</code><code class="sig">(gaps: 'Sequence[Gap]') -&gt; 'list[Gap]'</code><a class="anchor" href="#embedresearchgaps-deduplicate-gaps">#</a></h3>
+<p>Keep the highest-scoring occurrence of every keyword across clusters.</p>
+</section>
+<h2 id="stability-aware-consensus">Stability-aware consensus<a class="anchor" href="#stability-aware-consensus">#</a></h2>
+<p>Repeat a mode across seeds and corpus sizes, pool by support.</p>
+<section class="entry" id="embedresearchgaps-consensus-gaps">
+<h3><span class="kind">function</span> <code class="sym">consensus_gaps</code><code class="sig">(corpus: 'Corpus', mode: 'str' = 'articles_first', config: 'RunConfig | None' = None, seeds: 'Sequence[int]' = (42, 7, 123, 2026, 31337), min_support: 'float' = 0.0, top_n: 'Sequence[int] | None' = None) -&gt; 'ConsensusResult'</code><a class="anchor" href="#embedresearchgaps-consensus-gaps">#</a></h3>
+<p>Run one mode across seeds -- and optionally corpus sizes -- and pool the candidates by support.</p>
+<p class="doc-section">Parameters</p><dl class="params">
+<dt>corpus, mode, config:</dt><dd>As for :func:<code>~embedresearchgaps.pipelines.run</code>.  Only the k-means initialisation changes between runs; the corpus, the embeddings and every threshold stay fixed, so differences in the candidate set are attributable to the partition alone.</dd>
+<dt>seeds:</dt><dd>At least two seeds; the first one provides the reference run.</dd>
+<dt>min_support:</dt><dd>Drop candidates found in a smaller fraction of the runs.  `<code>0.5</code><code> keeps the majority-supported candidates, </code><code>1.0</code>` only the unanimous ones.</dd>
+<dt>top_n:</dt><dd>Analysis-corpus sizes to pool over, e.g. `<code>(30, 50, 100, 150)</code><code>.  The candidate set of both modes is as sensitive to this arbitrary cut-off as it is to the k-means seed, so pooling over seeds alone measures only half the instability.  When given, one run is executed per </code><code>(seed, size)</code><code> pair and support is the fraction of those runs that produced the candidate; </code><code>stability</code><code> then also reports the overlap attributable to the seed alone (pairs sharing a size) separately from the overlap across sizes.  </code><code>None</code><code> keeps </code><code>config.top_n_articles</code>`.</dd>
+</dl>
+<p class="doc-section">Returns</p><dl class="params">
+<dt>ConsensusResult</dt><dd></dd>
+</dl>
+<p class="doc-section">Examples</p>
+<pre><code>&gt;&gt;&gt; result = consensus_gaps(corpus, "articles_first", config,       # doctest: +SKIP
+...                         min_support=0.5)
+&gt;&gt;&gt; result.gaps[["keyword", "gap_type", "support", "mean_score"]]   # doctest: +SKIP</code></pre>
+</section>
+<section class="entry" id="embedresearchgaps-consensusresult">
+<h3><span class="kind">class</span> <code class="sym">ConsensusResult</code><code class="sig">(gaps: 'pd.DataFrame', reference: 'PipelineResult', per_seed: 'list[dict[str, Any]]' = &lt;factory&gt;, stability: 'dict[str, Any]' = &lt;factory&gt;, seeds: 'tuple[int, ...]' = (42, 7, 123, 2026, 31337), min_support: 'float' = 0.0, corpus_sizes: 'tuple[int, ...]' = ()) -&gt; None</code><a class="anchor" href="#embedresearchgaps-consensusresult">#</a></h3>
+<p>Candidates pooled over several seeds, with their support.</p>
+<p class="doc-section">Attributes</p><dl class="params">
+<dt>gaps:</dt><dd>One row per `<code>(gap_type, keyword)</code><code> with </code><code>support</code><code> (fraction of seeds that produced it), </code><code>n_seeds_found</code>`, score statistics and the cluster labels it was attributed to.</dd>
+<dt>reference:</dt><dd>The run of the first seed, kept for figures and diagnostics.</dd>
+<dt>per_seed:</dt><dd>Summary of every individual run, one entry per `<code>(seed, top_n)</code>` pair.</dd>
+<dt>stability:</dt><dd>Mean, minimum and maximum pairwise Jaccard overlap of the candidate sets across runs, the overlap attributable to the seed alone versus to the corpus size, and the number of candidates at each support level.</dd>
+</dl>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>gaps</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>reference</code></td><td><code>PipelineResult</code></td><td><code></code></td></tr><tr><td><code>per_seed</code></td><td><code>list[dict[str, Any]]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>stability</code></td><td><code>dict[str, Any]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>seeds</code></td><td><code>tuple[int, ...]</code></td><td><code>(42, 7, 123, 2026, 31337)</code></td></tr><tr><td><code>min_support</code></td><td><code>float</code></td><td><code>0.0</code></td></tr><tr><td><code>corpus_sizes</code></td><td><code>tuple[int, ...]</code></td><td><code>()</code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>at_support(self, threshold: 'float') -&gt; 'pd.DataFrame'</code></dt><dd>Candidates found in at least `<code>threshold</code>` of the runs.</dd>
+<dt><code>mode</code></dt><dd></dd>
+<dt><code>save(self, directory: 'str | Path', prefix: 'str | None' = None) -&gt; 'dict[str, str]'</code></dt><dd></dd>
+<dt><code>summary(self) -&gt; 'dict[str, Any]'</code></dt><dd></dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-default-seeds">
+<h3><span class="kind">constant</span> <code class="sym">DEFAULT_SEEDS</code><code class="sig"></code><a class="anchor" href="#embedresearchgaps-default-seeds">#</a></h3>
+<pre><code>(42, 7, 123, 2026, 31337)</code></pre>
+<p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple. If iterable is specified the tuple is initialized from iterable's items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+</section>
+<section class="entry" id="embedresearchgaps-jaccard">
+<h3><span class="kind">function</span> <code class="sym">jaccard</code><code class="sig">(left: 'set[str]', right: 'set[str]') -&gt; 'float'</code><a class="anchor" href="#embedresearchgaps-jaccard">#</a></h3>
+<p>Jaccard overlap of two candidate sets; `<code>nan</code>` when both are empty.</p>
+</section>
+<h2 id="external-rankings">External rankings<a class="anchor" href="#external-rankings">#</a></h2>
+<p>Assess a candidate list produced outside this package.</p>
+<section class="entry" id="embedresearchgaps-load-external-ranking">
+<h3><span class="kind">function</span> <code class="sym">load_external_ranking</code><code class="sig">(source: 'Any', corpus: 'Corpus | None' = None, *, keyword_column: 'str | None' = None, score_column: 'str | None' = None, rank_column: 'str | None' = None, type_column: 'str | None' = None, top_n: 'int | None' = None, config: 'RunConfig | None' = None, name: 'str' = 'external', normalize: 'bool' = True) -&gt; 'PipelineResult'</code><a class="anchor" href="#embedresearchgaps-load-external-ranking">#</a></h3>
+<p>Read a ranking produced outside this package.</p>
+<p class="doc-section">Parameters</p><dl class="params">
+<dt>source:</dt><dd>A path to a CSV, TSV or Excel export, a :class:<code>pandas.DataFrame</code>, or a plain sequence of keywords in rank order.</dd>
+<dt>corpus:</dt><dd>The corpus the ranking refers to.  Supplying it attaches document frequency, source titles, DOIs and citation counts to every candidate and gives :func:<code>selected_and_control_keywords</code> a population to draw a control set from.  Without it the result still validates and still compares against another ranking, but no control set can be built.</dd>
+<dt>keyword_column, score_column, rank_column, type_column:</dt><dd>Column names.  Each is resolved from a short alias table when omitted, so ordinary exports load without a column map.</dd>
+<dt>top_n:</dt><dd>Keep only the first `<code>top_n</code>` rows after ordering.  Ordering follows the rank column when present, then the score column in descending order, and otherwise the order of the file.</dd>
+<dt>config:</dt><dd>Recorded on the result so a deposited external run documents its own settings.  A default :class:<code>RunConfig</code> is used when omitted.</dd>
+<dt>name:</dt><dd>Label for this ranking, written to `<code>diagnostics['external']['name']</code>` and used in comparison tables.</dd>
+<dt>normalize:</dt><dd>Apply :func:<code>~embedresearchgaps.text.normalize_keyword</code> to every keyword, which is required for the keywords to match corpus evidence. Disable only when the ranking is already normalised.</dd>
+</dl>
+<p class="doc-section">Returns</p><dl class="params">
+<dt>PipelineResult</dt><dd>`<code>mode='external'</code><code>.  </code><code>cluster</code>` is -1 for every candidate and no partition diagnostics are produced: an external ranking carries no clustering of ours, and inventing one would misreport its provenance.</dd>
+</dl>
+<p class="doc-section">Raises</p><dl class="params">
+<dt>ValueError</dt><dd>When the ranking is empty, or when no keyword column can be resolved.</dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-external-gap-type">
+<h3><span class="kind">constant</span> <code class="sym">EXTERNAL_GAP_TYPE</code><code class="sig"></code><a class="anchor" href="#embedresearchgaps-external-gap-type">#</a></h3>
+<pre><code>'External Candidate'</code></pre>
+<p>str(object='') -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or errors is specified, then the object must expose a data buffer that will be decoded using the given encoding and error handler. Otherwise, returns the result of object.__str__() (if defined) or repr(object). encoding defaults to sys.getdefaultencoding(). errors defaults to 'strict'.</p>
+</section>
+<h2 id="keyword-space-and-clustering">Keyword space and clustering<a class="anchor" href="#keyword-space-and-clustering">#</a></h2>
+<p>Embedding, k-selection and cluster diagnostics.</p>
+<section class="entry" id="embedresearchgaps-build-keyword-space">
+<h3><span class="kind">function</span> <code class="sym">build_keyword_space</code><code class="sig">(keyword_lists: 'Sequence[Sequence[str]]', encoder: 'Encoder', metric: 'str' = 'cosine', cache: 'Mapping[str, Sequence[float]] | None' = None) -&gt; 'KeywordSpace'</code><a class="anchor" href="#embedresearchgaps-build-keyword-space">#</a></h3>
+<p>Embed the unique author keywords of `<code>keyword_lists</code>`.</p>
+<p class="doc-section">Parameters</p><dl class="params">
+<dt>keyword_lists:</dt><dd>One sequence of keywords per record; keywords are normalised and de-duplicated, and their document frequency is counted.</dd>
+<dt>encoder:</dt><dd>Embedding backend used for keywords.</dd>
+<dt>metric:</dt><dd>Distance used for the global-centrality component.</dd>
+<dt>cache:</dt><dd>Optional mapping of already-embedded keywords, which lets both modes and several article clusters share one round of embedding calls.</dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-keywordspace">
+<h3><span class="kind">class</span> <code class="sym">KeywordSpace</code><code class="sig">(keywords: 'list[str]', embeddings: 'np.ndarray', frequency: 'np.ndarray', centrality: 'np.ndarray', assignment: 'ClusterAssignment | None' = None, index: 'dict[str, int]' = &lt;factory&gt;) -&gt; None</code><a class="anchor" href="#embedresearchgaps-keywordspace">#</a></h3>
+<p>Author keywords embedded in a semantic space.</p>
+<p class="doc-section">Attributes</p><dl class="params">
+<dt>keywords:</dt><dd>Normalised keywords, unique and in order of first appearance.</dd>
+<dt>embeddings:</dt><dd>Row-aligned embedding matrix.</dd>
+<dt>frequency:</dt><dd>Document frequency of each keyword inside the scope the space was built for (a whole corpus, or a single article cluster).</dd>
+<dt>centrality:</dt><dd>Distance of each keyword from the centroid of the whole keyword space -- the global-centrality component of equation (7).</dd>
+<dt>assignment:</dt><dd>Keyword sub-clustering, when one was fitted.</dd>
+</dl>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>keywords</code></td><td><code>list[str]</code></td><td><code></code></td></tr><tr><td><code>embeddings</code></td><td><code>np.ndarray</code></td><td><code></code></td></tr><tr><td><code>frequency</code></td><td><code>np.ndarray</code></td><td><code></code></td></tr><tr><td><code>centrality</code></td><td><code>np.ndarray</code></td><td><code></code></td></tr><tr><td><code>assignment</code></td><td><code>ClusterAssignment | None</code></td><td><code>None</code></td></tr><tr><td><code>index</code></td><td><code>dict[str, int]</code></td><td><code><em>factory</em></code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>embedding(self, keyword: 'str') -&gt; 'np.ndarray | None'</code></dt><dd></dd>
+<dt><code>fit_subclusters(self, config: 'ClusteringConfig', n_clusters: 'int | None' = None) -&gt; "'KeywordSpace'"</code></dt><dd>Sub-cluster the keyword space in place and return `<code>self</code>`.</dd>
+<dt><code>position(self, keyword: 'str') -&gt; 'int | None'</code></dt><dd></dd>
+<dt><code>subcluster_distances</code></dt><dd>Distance of each keyword from its own sub-cluster centroid.</dd>
+<dt><code>subcluster_labels</code></dt><dd></dd>
+<dt><code>to_frame(self) -&gt; 'pd.DataFrame'</code></dt><dd>Tabular view of the keyword space, one row per keyword.</dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-select-k">
+<h3><span class="kind">function</span> <code class="sym">select_k</code><code class="sig">(matrix: 'np.ndarray', config: 'ClusteringConfig') -&gt; 'KSelectionResult'</code><a class="anchor" href="#embedresearchgaps-select-k">#</a></h3>
+<p>Choose the number of clusters for `<code>matrix</code>`.</p>
+<p>With `<code>k_selection='auto'</code><code> the silhouette maximum is used when it exceeds </code><code>silhouette_floor</code><code> and the WCSS elbow otherwise -- the rule stated in the AMCIS paper.  </code><code>'fixed'</code><code> requires </code><code>n_clusters</code>`.</p>
+</section>
+<section class="entry" id="embedresearchgaps-fit-kmeans">
+<h3><span class="kind">function</span> <code class="sym">fit_kmeans</code><code class="sig">(matrix: 'np.ndarray', config: 'ClusteringConfig', n_clusters: 'int | None' = None) -&gt; 'ClusterAssignment'</code><a class="anchor" href="#embedresearchgaps-fit-kmeans">#</a></h3>
+<p>Cluster `<code>matrix</code>` with k-means++ and describe the partition.</p>
+<p>`<code>n_clusters</code><code> overrides both </code><code>config.n_clusters</code>` and automatic selection; it is used to cluster keyword sub-spaces with a size-derived k.</p>
+</section>
+<section class="entry" id="embedresearchgaps-rank-by-similarity">
+<h3><span class="kind">function</span> <code class="sym">rank_by_similarity</code><code class="sig">(query: 'np.ndarray', matrix: 'np.ndarray') -&gt; 'tuple[np.ndarray, np.ndarray]'</code><a class="anchor" href="#embedresearchgaps-rank-by-similarity">#</a></h3>
+<p>Rank rows of `<code>matrix</code><code> by cosine distance to </code><code>query</code>`.</p>
+<p>Implements equation (1) of both source papers: `<code>d(u, v) = 1 - cos(u, v)</code><code>, bounded in </code><code>[0, 2]</code>`.</p>
+<p class="doc-section">Returns</p><dl class="params">
+<dt>order:</dt><dd>Row indices sorted by ascending distance (most similar first).</dd>
+<dt>distances:</dt><dd>Cosine distance of every row to the query, in original row order.</dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-centroid-similarity-matrix">
+<h3><span class="kind">function</span> <code class="sym">centroid_similarity_matrix</code><code class="sig">(centroids: 'np.ndarray') -&gt; 'np.ndarray'</code><a class="anchor" href="#embedresearchgaps-centroid-similarity-matrix">#</a></h3>
+<p>Pairwise cosine similarity between cluster centroids, equation (11).</p>
+</section>
+<section class="entry" id="embedresearchgaps-clusterassignment">
+<h3><span class="kind">class</span> <code class="sym">ClusterAssignment</code><code class="sig">(labels: 'np.ndarray', centroids: 'np.ndarray', distances: 'np.ndarray', n_clusters: 'int', inertia: 'float', metric: 'DistanceMetric', selection: 'KSelectionResult | None' = None, quality: 'dict[str, float]' = &lt;factory&gt;) -&gt; None</code><a class="anchor" href="#embedresearchgaps-clusterassignment">#</a></h3>
+<p>Cluster labels, centroids and per-point centroid distances.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>labels</code></td><td><code>np.ndarray</code></td><td><code></code></td></tr><tr><td><code>centroids</code></td><td><code>np.ndarray</code></td><td><code></code></td></tr><tr><td><code>distances</code></td><td><code>np.ndarray</code></td><td><code></code></td></tr><tr><td><code>n_clusters</code></td><td><code>int</code></td><td><code></code></td></tr><tr><td><code>inertia</code></td><td><code>float</code></td><td><code></code></td></tr><tr><td><code>metric</code></td><td><code>DistanceMetric</code></td><td><code></code></td></tr><tr><td><code>selection</code></td><td><code>KSelectionResult | None</code></td><td><code>None</code></td></tr><tr><td><code>quality</code></td><td><code>dict[str, float]</code></td><td><code><em>factory</em></code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>sizes(self) -&gt; 'dict[int, int]'</code></dt><dd></dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-kselectionresult">
+<h3><span class="kind">class</span> <code class="sym">KSelectionResult</code><code class="sig">(k: 'int', k_range: 'list[int]', wcss: 'list[float]', silhouette: 'list[float]', k_elbow: 'int | None', k_silhouette: 'int | None', rule: 'str') -&gt; None</code><a class="anchor" href="#embedresearchgaps-kselectionresult">#</a></h3>
+<p>Outcome of automatic selection of the number of clusters.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>k</code></td><td><code>int</code></td><td><code></code></td></tr><tr><td><code>k_range</code></td><td><code>list[int]</code></td><td><code></code></td></tr><tr><td><code>wcss</code></td><td><code>list[float]</code></td><td><code></code></td></tr><tr><td><code>silhouette</code></td><td><code>list[float]</code></td><td><code></code></td></tr><tr><td><code>k_elbow</code></td><td><code>int | None</code></td><td><code></code></td></tr><tr><td><code>k_silhouette</code></td><td><code>int | None</code></td><td><code></code></td></tr><tr><td><code>rule</code></td><td><code>str</code></td><td><code></code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>to_dict(self) -&gt; 'dict[str, object]'</code></dt><dd></dd>
+</dl>
+</section>
+<h2 id="text-utilities">Text utilities<a class="anchor" href="#text-utilities">#</a></h2>
+<p>Keyword normalisation, filters and salience.</p>
+<section class="entry" id="embedresearchgaps-normalize-keyword">
+<h3><span class="kind">function</span> <code class="sym">normalize_keyword</code><code class="sig">(keyword: 'str') -&gt; 'str'</code><a class="anchor" href="#embedresearchgaps-normalize-keyword">#</a></h3>
+<p>Lower-case a keyword and collapse internal whitespace.</p>
+<p>Multi-word terms are kept as atomic units -- no stemming and no synonym merging, because synonymy is handled implicitly by embedding similarity.</p>
+<blockquote>normalize_keyword("  Purchase   Intention ")</blockquote>
+<p>'purchase intention'</p>
+</section>
+<section class="entry" id="embedresearchgaps-is-methodological-term">
+<h3><span class="kind">function</span> <code class="sym">is_methodological_term</code><code class="sig">(keyword: 'str', config: 'GapConfig | None' = None) -&gt; 'bool'</code><a class="anchor" href="#embedresearchgaps-is-methodological-term">#</a></h3>
+<p>Whether a keyword names a method, tool or study design rather than a topic.</p>
+<p>A term matches when it equals one of the configured tool acronyms, or when it contains (or is contained in) one of the configured phrases.</p>
+<blockquote>is_methodological_term("structural equation model")</blockquote>
+<p>True</p>
+<blockquote>is_methodological_term("customer engagement")</blockquote>
+<p>False</p>
+</section>
+<section class="entry" id="embedresearchgaps-keyword-frequencies">
+<h3><span class="kind">function</span> <code class="sym">keyword_frequencies</code><code class="sig">(keyword_lists: 'Iterable[Sequence[str]]') -&gt; 'Counter'</code><a class="anchor" href="#embedresearchgaps-keyword-frequencies">#</a></h3>
+<p>Document frequency of every normalised keyword in the corpus.</p>
+<p>A keyword repeated inside one record is counted once for that record, so the values are document frequencies rather than raw occurrence counts.</p>
+</section>
+<section class="entry" id="embedresearchgaps-core-domain-terms">
+<h3><span class="kind">function</span> <code class="sym">core_domain_terms</code><code class="sig">(frequencies: 'Mapping[str, int]', n_documents: 'int', share: 'float' = 0.5) -&gt; 'set[str]'</code><a class="anchor" href="#embedresearchgaps-core-domain-terms">#</a></h3>
+<p>Keywords present in more than `<code>share</code>` of the documents.</p>
+<p>These are the labels of the field itself (for a gamification-in-marketing corpus: "gamification", "marketing") and are never research gaps.</p>
+</section>
+<section class="entry" id="embedresearchgaps-compute-tfidf-salience">
+<h3><span class="kind">function</span> <code class="sym">compute_tfidf_salience</code><code class="sig">(keyword_lists: 'Sequence[Sequence[str]]', ngram_range: 'tuple[int, int]' = (1, 5), max_features: 'int' = 10000) -&gt; 'TfidfSalience'</code><a class="anchor" href="#embedresearchgaps-compute-tfidf-salience">#</a></h3>
+<p>Mean TF-IDF weight of every author keyword in the corpus.</p>
+<p class="doc-section">Parameters</p><dl class="params">
+<dt>keyword_lists:</dt><dd>One sequence of author keywords per record.</dd>
+<dt>ngram_range:</dt><dd>Token n-gram range of the vectoriser; the default `<code>(1, 5)</code>` lets multi-word author keywords match a single vocabulary entry.</dd>
+<dt>max_features:</dt><dd>Vocabulary cap passed to :class:<code>~sklearn.feature_extraction.text.TfidfVectorizer</code>.</dd>
+</dl>
+</section>
+<h2 id="assessment">Assessment<a class="anchor" href="#assessment">#</a></h2>
+<p>Annotation panel, agreement coefficients, control sets and expert sheets. Importable from <code>embedresearchgaps.validation</code>.</p>
+<section class="entry" id="embedresearchgaps-validation-validate-gaps">
+<h3><span class="kind">function</span> <code class="sym">validate_gaps</code><code class="sig">(result: 'PipelineResult', annotators: 'Sequence[Annotator]', problem_description: 'str', domain: 'str' = '', max_all_keywords: 'int | None' = 60, selected: 'Sequence[str] | None' = None, all_keywords: 'Sequence[str] | None' = None, all_annotations: 'Sequence[Annotation] | None' = None, selected_annotations: 'Sequence[Annotation] | None' = None) -&gt; 'ValidationReport'</code><a class="anchor" href="#embedresearchgaps-validation-validate-gaps">#</a></h3>
+<p>Annotate the SELECTED and ALL keyword sets with every annotator.</p>
+<p>An annotator that raises (missing credential, transport error, malformed reply) is recorded in `<code>ValidationReport.failures</code>` and skipped; the study continues with the remaining annotators rather than aborting, and the report states explicitly which models contributed.</p>
+<p>Pass `<code>all_annotations</code><code> to reuse judgements of the control set that were obtained earlier. Both modes of a run share one analysis corpus and hence one control set, so reusing it halves the annotation cost and makes the two modes comparable against an identical baseline. </code><code>selected_annotations</code><code> does the same for the candidate set, which lets a study that lost one annotator to a transport error be completed by re-running that annotator alone: supply the judgements already on disk, pass only the missing annotator in </code><code>annotators</code>`, and the report is recomputed over the union.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-validationreport">
+<h3><span class="kind">class</span> <code class="sym">ValidationReport</code><code class="sig">(annotations: 'pd.DataFrame', consensus: 'pd.DataFrame', agreement: 'pd.DataFrame', comparison: 'SetComparison | None', reliability: 'dict[str, float]' = &lt;factory&gt;, per_set: 'dict[str, dict[str, Any]]' = &lt;factory&gt;, failures: 'dict[str, str]' = &lt;factory&gt;, problem_description: 'str' = '', domain: 'str' = '') -&gt; None</code><a class="anchor" href="#embedresearchgaps-validation-validationreport">#</a></h3>
+<p>Annotations and every derived metric of one validation study.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>annotations</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>consensus</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>agreement</code></td><td><code>pd.DataFrame</code></td><td><code></code></td></tr><tr><td><code>comparison</code></td><td><code>SetComparison | None</code></td><td><code></code></td></tr><tr><td><code>reliability</code></td><td><code>dict[str, float]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>per_set</code></td><td><code>dict[str, dict[str, Any]]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>failures</code></td><td><code>dict[str, str]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>problem_description</code></td><td><code>str</code></td><td><code>''</code></td></tr><tr><td><code>domain</code></td><td><code>str</code></td><td><code>''</code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>annotators</code></dt><dd></dd>
+<dt><code>save(self, directory: 'str | Path', prefix: 'str' = 'validation') -&gt; 'dict[str, str]'</code></dt><dd></dd>
+<dt><code>summary(self) -&gt; 'dict[str, Any]'</code></dt><dd></dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-validation-selected-and-control-keywords">
+<h3><span class="kind">function</span> <code class="sym">selected_and_control_keywords</code><code class="sig">(result: 'PipelineResult', max_control: 'int | None' = None, random_state: 'int' = 42, exclude_selected: 'bool' = True) -&gt; 'tuple[list[str], list[str]]'</code><a class="anchor" href="#embedresearchgaps-validation-selected-and-control-keywords">#</a></h3>
+<p>Split a run into the candidate set and a disjoint control set.</p>
+<p>SELECTED are the keywords the pipeline flagged as candidate gaps (members of a conceptual combination are expanded into individual keywords). CONTROL is every <em>other</em> unique author keyword of the analysis corpus, ordered by corpus-level document frequency.</p>
+<p>The two sets must be disjoint for a two-sample comparison to mean anything.  Earlier versions of this function returned the whole keyword population as the control, which nests the candidate set inside it: the candidates then contribute to both arms, the two samples are not independent, and a Welch or Mann-Whitney statistic computed on them has no defined null distribution.  Pass `<code>exclude_selected=False</code>` only to reproduce such a nested comparison deliberately.</p>
+<p>`<code>max_control</code><code> bounds the annotation cost on large corpora. The cap is applied by drawing a *random* sample with </code><code>random_state</code>`, not by taking the head of the ordered list: a head would be either all-frequent or -- where document frequencies tie at one, as they do for most author keywords -- an arbitrary subset of rare terms, and either choice makes the control set unrepresentative of the keyword population the pipeline filtered.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-selected-and-all-keywords">
+<h3><span class="kind">function</span> <code class="sym">selected_and_all_keywords</code><code class="sig">(result: 'PipelineResult', max_all: 'int | None' = None, random_state: 'int' = 42) -&gt; 'tuple[list[str], list[str]]'</code><a class="anchor" href="#embedresearchgaps-validation-selected-and-all-keywords">#</a></h3>
+<p>Deprecated alias returning the <em>nested</em> control set.</p>
+<p>Kept so that a study run with version 1.0.0 can be reproduced exactly. New code should call :func:<code>selected_and_control_keywords</code>, whose control set excludes the candidates.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-compare-keyword-sets">
+<h3><span class="kind">function</span> <code class="sym">compare_keyword_sets</code><code class="sig">(selected: 'pd.DataFrame', everything: 'pd.DataFrame') -&gt; 'SetComparison'</code><a class="anchor" href="#embedresearchgaps-validation-compare-keyword-sets">#</a></h3>
+<p>Compare annotations of the candidate set and a control set.</p>
+<p>`<code>selected</code><code> holds judgements of the keywords the pipeline flagged, </code><code>everything</code><code> judgements of the control keywords.  The two frames must describe *disjoint* keyword sets: see :func:</code>~embedresearchgaps.validation.runner.selected_and_control_keywords<code>. When they are not disjoint the returned comparison carries </code><code>novelty_test['overlapping_samples'] = 1.0</code>` and the parametric p-values are omitted, because a two-sample statistic on nested samples has no defined null distribution.</p>
+<p>Novelty distributions are compared with a Welch t-test and a Mann-Whitney U test -- the two tests reported in the PACIS paper -- and, because the candidate sets are small and the Novelty Score is a bounded ordinal variable, with a two-sided permutation test on the difference of means that assumes neither normality nor equal variance.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-setcomparison">
+<h3><span class="kind">class</span> <code class="sym">SetComparison</code><code class="sig">(selected_rates: 'dict[str, float]', all_rates: 'dict[str, float]', selected_novelty: 'dict[str, float]', all_novelty: 'dict[str, float]', gap_rate_delta_pp: 'float', explored_rate_delta_pp: 'float', novelty_increase_pct: 'float', novelty_test: 'dict[str, float]' = &lt;factory&gt;, n_selected_keywords: 'int' = 0, n_all_keywords: 'int' = 0, n_annotators: 'int' = 0) -&gt; None</code><a class="anchor" href="#embedresearchgaps-validation-setcomparison">#</a></h3>
+<p>SELECTED vs ALL comparison, the headline validation result.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>selected_rates</code></td><td><code>dict[str, float]</code></td><td><code></code></td></tr><tr><td><code>all_rates</code></td><td><code>dict[str, float]</code></td><td><code></code></td></tr><tr><td><code>selected_novelty</code></td><td><code>dict[str, float]</code></td><td><code></code></td></tr><tr><td><code>all_novelty</code></td><td><code>dict[str, float]</code></td><td><code></code></td></tr><tr><td><code>gap_rate_delta_pp</code></td><td><code>float</code></td><td><code></code></td></tr><tr><td><code>explored_rate_delta_pp</code></td><td><code>float</code></td><td><code></code></td></tr><tr><td><code>novelty_increase_pct</code></td><td><code>float</code></td><td><code></code></td></tr><tr><td><code>novelty_test</code></td><td><code>dict[str, float]</code></td><td><code><em>factory</em></code></td></tr><tr><td><code>n_selected_keywords</code></td><td><code>int</code></td><td><code>0</code></td></tr><tr><td><code>n_all_keywords</code></td><td><code>int</code></td><td><code>0</code></td></tr><tr><td><code>n_annotators</code></td><td><code>int</code></td><td><code>0</code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>to_dict(self) -&gt; 'dict[str, Any]'</code></dt><dd></dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-validation-expert-llm-concordance">
+<h3><span class="kind">function</span> <code class="sym">expert_llm_concordance</code><code class="sig">(llm_frame: 'pd.DataFrame', expert_frame: 'pd.DataFrame') -&gt; 'dict[str, Any]'</code><a class="anchor" href="#embedresearchgaps-validation-expert-llm-concordance">#</a></h3>
+<p>Agreement between human experts and the LLM panel.</p>
+<p>`<code>expert_frame</code><code> must carry </code><code>expert</code><code>, </code><code>keyword</code><code>, </code><code>novelty</code><code> and optionally </code><code>label</code>`.  Reports the Spearman correlation between mean expert and mean LLM novelty on the shared keywords, the share of keywords on which the majority labels coincide, and the spread among experts and among models.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-permutation-mean-difference">
+<h3><span class="kind">function</span> <code class="sym">permutation_mean_difference</code><code class="sig">(left: 'np.ndarray', right: 'np.ndarray', n_resamples: 'int' = 20000, random_state: 'int' = 42) -&gt; 'float'</code><a class="anchor" href="#embedresearchgaps-validation-permutation-mean-difference">#</a></h3>
+<p>Two-sided permutation p-value for the difference of two means.</p>
+<p>Labels are shuffled between the pooled observations, which is the exact null of "the two sets are annotated alike" and needs neither normality nor equal variance -- the reason to prefer it over Welch when one arm holds only a few dozen judgements.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-label-rates">
+<h3><span class="kind">function</span> <code class="sym">label_rates</code><code class="sig">(frame: 'pd.DataFrame') -&gt; 'dict[str, float]'</code><a class="anchor" href="#embedresearchgaps-validation-label-rates">#</a></h3>
+<p>Share of judgements carrying each label.</p>
+<p>The GAP rate is the number of GAP labels divided by the total number of (annotator, keyword) judgements -- the definition used in the PACIS paper.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-mean-novelty">
+<h3><span class="kind">function</span> <code class="sym">mean_novelty</code><code class="sig">(frame: 'pd.DataFrame') -&gt; 'dict[str, float]'</code><a class="anchor" href="#embedresearchgaps-validation-mean-novelty">#</a></h3>
+<p>Mean, standard deviation and quartiles of the Novelty Score.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-per-keyword-consensus">
+<h3><span class="kind">function</span> <code class="sym">per_keyword_consensus</code><code class="sig">(frame: 'pd.DataFrame') -&gt; 'pd.DataFrame'</code><a class="anchor" href="#embedresearchgaps-validation-per-keyword-consensus">#</a></h3>
+<p>Majority label, unanimity and mean novelty per keyword.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-fleiss-kappa">
+<h3><span class="kind">function</span> <code class="sym">fleiss_kappa</code><code class="sig">(frame: 'pd.DataFrame') -&gt; 'float'</code><a class="anchor" href="#embedresearchgaps-validation-fleiss-kappa">#</a></h3>
+<p>Fleiss' kappa over the nominal label assignments.</p>
+<p>Returns `<code>nan</code>` when fewer than two annotators rated every keyword, or when all annotators agree on a single label for the whole set (in which case chance agreement is 1 and kappa is undefined).</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-krippendorff-alpha-ordinal">
+<h3><span class="kind">function</span> <code class="sym">krippendorff_alpha_ordinal</code><code class="sig">(frame: 'pd.DataFrame') -&gt; 'float'</code><a class="anchor" href="#embedresearchgaps-validation-krippendorff-alpha-ordinal">#</a></h3>
+<p>Krippendorff's alpha for the ordinal Novelty Score.</p>
+<p>Uses the `<code>krippendorff</code><code> package when installed; otherwise returns </code><code>nan</code>` rather than substituting a different coefficient.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-pairwise-agreement">
+<h3><span class="kind">function</span> <code class="sym">pairwise_agreement</code><code class="sig">(frame: 'pd.DataFrame') -&gt; 'pd.DataFrame'</code><a class="anchor" href="#embedresearchgaps-validation-pairwise-agreement">#</a></h3>
+<p>Label agreement and novelty correlation for every annotator pair.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-annotations-to-frame">
+<h3><span class="kind">function</span> <code class="sym">annotations_to_frame</code><code class="sig">(annotations: 'Sequence[Annotation]') -&gt; 'pd.DataFrame'</code><a class="anchor" href="#embedresearchgaps-validation-annotations-to-frame">#</a></h3>
+<p>Long-format table with one row per (annotator, keyword) judgement.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-build-expert-sheet">
+<h3><span class="kind">function</span> <code class="sym">build_expert_sheet</code><code class="sig">(result: 'PipelineResult', problem_description: 'str', include_scores: 'bool' = False, shuffle_seed: 'int | None' = 42) -&gt; 'pd.DataFrame'</code><a class="anchor" href="#embedresearchgaps-validation-build-expert-sheet">#</a></h3>
+<p>Blinded assessment sheet for one expert.</p>
+<p>Keywords of conceptual combinations are presented as the pair, exactly as the pipeline reports them.  Pipeline scores, gap types and cluster labels are withheld by default so that the expert judgement stays independent of the model output; rows are shuffled for the same reason.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-write-expert-sheet">
+<h3><span class="kind">function</span> <code class="sym">write_expert_sheet</code><code class="sig">(sheet: 'pd.DataFrame', path: 'str | Path', problem_description: 'str', experts: 'Sequence[str]' = ('expert_1', 'expert_2')) -&gt; 'str'</code><a class="anchor" href="#embedresearchgaps-validation-write-expert-sheet">#</a></h3>
+<p>Write an `<code>.xlsx</code>` workbook with the rubric and one tab per expert.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-load-expert-sheet">
+<h3><span class="kind">function</span> <code class="sym">load_expert_sheet</code><code class="sig">(path: 'str | Path', expert: 'str | None' = None) -&gt; 'pd.DataFrame'</code><a class="anchor" href="#embedresearchgaps-validation-load-expert-sheet">#</a></h3>
+<p>Read completed expert sheets into the long format the metrics expect.</p>
+<p>Accepts a CSV or an `<code>.xlsx</code><code> workbook whose tabs are experts.  Rows with an empty </code><code>novelty</code>` cell are dropped, so a partially completed sheet contributes only the items the expert actually rated.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-expert-report">
+<h3><span class="kind">function</span> <code class="sym">expert_report</code><code class="sig">(llm_annotations: 'pd.DataFrame', expert_frame: 'pd.DataFrame', keyword_set: 'str' = 'SELECTED') -&gt; 'dict[str, Any]'</code><a class="anchor" href="#embedresearchgaps-validation-expert-report">#</a></h3>
+<p>Concordance between experts and the LLM panel on one keyword set.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-available-providers">
+<h3><span class="kind">function</span> <code class="sym">available_providers</code><code class="sig">() -&gt; 'list[str]'</code><a class="anchor" href="#embedresearchgaps-validation-available-providers">#</a></h3>
+
+</section>
+<section class="entry" id="embedresearchgaps-validation-get-annotator">
+<h3><span class="kind">function</span> <code class="sym">get_annotator</code><code class="sig">(provider: 'str', **kwargs: 'object') -&gt; 'Annotator'</code><a class="anchor" href="#embedresearchgaps-validation-get-annotator">#</a></h3>
+<p>Instantiate a :class:<code>ChatAnnotator</code> for `<code>provider</code>`.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-chatannotator">
+<h3><span class="kind">class</span> <code class="sym">ChatAnnotator</code><code class="sig">(provider: 'str', model: 'str | None' = None, key_env: 'str | None' = None, temperature: 'float | None' = 0.0, batch_size: 'int' = 25, timeout: 'int' = 300, name: 'str | None' = None, max_retries: 'int' = 4, retry_delay: 'float' = 2.0, max_output_tokens: 'int' = 16384)</code><a class="anchor" href="#embedresearchgaps-validation-chatannotator">#</a></h3>
+<p>Annotator backed by a hosted chat-completions endpoint.</p>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>annotate(self, keywords: 'Sequence[str]', problem_description: 'str', domain: 'str | None' = None, keyword_set: 'str' = '') -&gt; 'list[Annotation]'</code></dt><dd>Annotate `<code>keywords</code><code> in batches of </code><code>batch_size</code>`.</dd>
+<dt><code>complete(self, prompt: 'str') -&gt; 'str'</code></dt><dd>Send one prompt and return the raw reply text.</dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-validation-callableannotator">
+<h3><span class="kind">class</span> <code class="sym">CallableAnnotator</code><code class="sig">(name: 'str', completion: 'Callable[[str], str]', batch_size: 'int' = 25)</code><a class="anchor" href="#embedresearchgaps-validation-callableannotator">#</a></h3>
+<p>Annotator wrapping any `<code>str -&gt; str</code>` completion function.</p>
+<p>Useful for models reachable only from the caller's own runtime, and for unit tests, which can supply a deterministic stub.</p>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>annotate(self, keywords: 'Sequence[str]', problem_description: 'str', domain: 'str | None' = None, keyword_set: 'str' = '') -&gt; 'list[Annotation]'</code></dt><dd>Annotate `<code>keywords</code><code> in batches of </code><code>batch_size</code>`.</dd>
+<dt><code>complete(self, prompt: 'str') -&gt; 'str'</code></dt><dd>Send one prompt and return the raw reply text.</dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-validation-annotation">
+<h3><span class="kind">class</span> <code class="sym">Annotation</code><code class="sig">(keyword: 'str', label: 'str', novelty: 'float', annotator: 'str', rationale: 'str' = '', keyword_set: 'str' = '', raw: 'dict[str, Any]' = &lt;factory&gt;) -&gt; None</code><a class="anchor" href="#embedresearchgaps-validation-annotation">#</a></h3>
+<p>One (annotator, keyword) judgement.</p>
+<p class="doc-section">Fields</p><table class="fields"><thead><tr><th>Name</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>keyword</code></td><td><code>str</code></td><td><code></code></td></tr><tr><td><code>label</code></td><td><code>str</code></td><td><code></code></td></tr><tr><td><code>novelty</code></td><td><code>float</code></td><td><code></code></td></tr><tr><td><code>annotator</code></td><td><code>str</code></td><td><code></code></td></tr><tr><td><code>rationale</code></td><td><code>str</code></td><td><code>''</code></td></tr><tr><td><code>keyword_set</code></td><td><code>str</code></td><td><code>''</code></td></tr><tr><td><code>raw</code></td><td><code>dict[str, Any]</code></td><td><code><em>factory</em></code></td></tr></tbody></table>
+<p class="doc-section">Methods</p><dl class="methods">
+<dt><code>is_gap</code></dt><dd></dd>
+</dl>
+</section>
+<section class="entry" id="embedresearchgaps-validation-labels">
+<h3><span class="kind">constant</span> <code class="sym">LABELS</code><code class="sig"></code><a class="anchor" href="#embedresearchgaps-validation-labels">#</a></h3>
+<pre><code>('GAP', 'EXPLORED', 'LOW IMPORTANCE', 'METHOD', 'NOISE')</code></pre>
+<p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple. If iterable is specified the tuple is initialized from iterable's items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+</section>
+<section class="entry" id="embedresearchgaps-validation-build-prompt">
+<h3><span class="kind">function</span> <code class="sym">build_prompt</code><code class="sig">(keywords: 'Sequence[str]', problem_description: 'str', domain: 'str | None' = None) -&gt; 'str'</code><a class="anchor" href="#embedresearchgaps-validation-build-prompt">#</a></h3>
+<p>Compose the annotation prompt for one batch of keywords.</p>
+</section>
+  </div>
+  <aside class="toc"><p>On this page</p><a class="" href="#corpus">Corpus</a><a class="sub" href="#embedresearchgaps-load-csv">load_csv</a><a class="sub" href="#embedresearchgaps-from-dataframe">from_dataframe</a><a class="sub" href="#embedresearchgaps-corpus">Corpus</a><a class="" href="#configuration">Configuration</a><a class="sub" href="#embedresearchgaps-runconfig">RunConfig</a><a class="sub" href="#embedresearchgaps-gapconfig">GapConfig</a><a class="sub" href="#embedresearchgaps-clusteringconfig">ClusteringConfig</a><a class="sub" href="#embedresearchgaps-encoderconfig">EncoderConfig</a><a class="sub" href="#embedresearchgaps-emergingweights">EmergingWeights</a><a class="sub" href="#embedresearchgaps-combinationweights">CombinationWeights</a><a class="sub" href="#embedresearchgaps-crossclusterweights">CrossClusterWeights</a><a class="" href="#embedding-backends">Embedding backends</a><a class="sub" href="#embedresearchgaps-available-encoders">available_encoders</a><a class="sub" href="#embedresearchgaps-get-encoder">get_encoder</a><a class="sub" href="#embedresearchgaps-register-encoder">register_encoder</a><a class="sub" href="#embedresearchgaps-encoder">Encoder</a><a class="" href="#pipelines">Pipelines</a><a class="sub" href="#embedresearchgaps-run">run</a><a class="sub" href="#embedresearchgaps-keywords-first">keywords_first</a><a class="sub" href="#embedresearchgaps-articles-first">articles_first</a><a class="sub" href="#embedresearchgaps-pipelineresult">PipelineResult</a><a class="" href="#detectors-and-scoring">Detectors and scoring</a><a class="sub" href="#embedresearchgaps-detect-emerging-concepts">detect_emerging_concepts</a><a class="sub" href="#embedresearchgaps-detect-conceptual-combinations">detect_conceptual_combinations</a><a class="sub" href="#embedresearchgaps-detect-cross-cluster-concepts">detect_cross_cluster_concepts</a><a class="sub" href="#embedresearchgaps-detect-peripheral-keywords">detect_peripheral_keywords</a><a class="sub" href="#embedresearchgaps-score-emerging">score_emerging</a><a class="sub" href="#embedresearchgaps-score-combination">score_combination</a><a class="sub" href="#embedresearchgaps-score-cross-cluster">score_cross_cluster</a><a class="sub" href="#embedresearchgaps-gap">Gap</a><a class="sub" href="#embedresearchgaps-gap-types">GAP_TYPES</a><a class="sub" href="#embedresearchgaps-gaps-to-frame">gaps_to_frame</a><a class="sub" href="#embedresearchgaps-deduplicate-gaps">deduplicate_gaps</a><a class="" href="#stability-aware-consensus">Stability-aware consensus</a><a class="sub" href="#embedresearchgaps-consensus-gaps">consensus_gaps</a><a class="sub" href="#embedresearchgaps-consensusresult">ConsensusResult</a><a class="sub" href="#embedresearchgaps-default-seeds">DEFAULT_SEEDS</a><a class="sub" href="#embedresearchgaps-jaccard">jaccard</a><a class="" href="#external-rankings">External rankings</a><a class="sub" href="#embedresearchgaps-load-external-ranking">load_external_ranking</a><a class="sub" href="#embedresearchgaps-external-gap-type">EXTERNAL_GAP_TYPE</a><a class="" href="#keyword-space-and-clustering">Keyword space and clustering</a><a class="sub" href="#embedresearchgaps-build-keyword-space">build_keyword_space</a><a class="sub" href="#embedresearchgaps-keywordspace">KeywordSpace</a><a class="sub" href="#embedresearchgaps-select-k">select_k</a><a class="sub" href="#embedresearchgaps-fit-kmeans">fit_kmeans</a><a class="sub" href="#embedresearchgaps-rank-by-similarity">rank_by_similarity</a><a class="sub" href="#embedresearchgaps-centroid-similarity-matrix">centroid_similarity_matrix</a><a class="sub" href="#embedresearchgaps-clusterassignment">ClusterAssignment</a><a class="sub" href="#embedresearchgaps-kselectionresult">KSelectionResult</a><a class="" href="#text-utilities">Text utilities</a><a class="sub" href="#embedresearchgaps-normalize-keyword">normalize_keyword</a><a class="sub" href="#embedresearchgaps-is-methodological-term">is_methodological_term</a><a class="sub" href="#embedresearchgaps-keyword-frequencies">keyword_frequencies</a><a class="sub" href="#embedresearchgaps-core-domain-terms">core_domain_terms</a><a class="sub" href="#embedresearchgaps-compute-tfidf-salience">compute_tfidf_salience</a><a class="" href="#assessment">Assessment</a><a class="sub" href="#embedresearchgaps-validation-validate-gaps">validate_gaps</a><a class="sub" href="#embedresearchgaps-validation-validationreport">ValidationReport</a><a class="sub" href="#embedresearchgaps-validation-selected-and-control-keywords">selected_and_control_keywords</a><a class="sub" href="#embedresearchgaps-validation-selected-and-all-keywords">selected_and_all_keywords</a><a class="sub" href="#embedresearchgaps-validation-compare-keyword-sets">compare_keyword_sets</a><a class="sub" href="#embedresearchgaps-validation-setcomparison">SetComparison</a><a class="sub" href="#embedresearchgaps-validation-expert-llm-concordance">expert_llm_concordance</a><a class="sub" href="#embedresearchgaps-validation-permutation-mean-difference">permutation_mean_difference</a><a class="sub" href="#embedresearchgaps-validation-label-rates">label_rates</a><a class="sub" href="#embedresearchgaps-validation-mean-novelty">mean_novelty</a><a class="sub" href="#embedresearchgaps-validation-per-keyword-consensus">per_keyword_consensus</a><a class="sub" href="#embedresearchgaps-validation-fleiss-kappa">fleiss_kappa</a><a class="sub" href="#embedresearchgaps-validation-krippendorff-alpha-ordinal">krippendorff_alpha_ordinal</a><a class="sub" href="#embedresearchgaps-validation-pairwise-agreement">pairwise_agreement</a><a class="sub" href="#embedresearchgaps-validation-annotations-to-frame">annotations_to_frame</a><a class="sub" href="#embedresearchgaps-validation-build-expert-sheet">build_expert_sheet</a><a class="sub" href="#embedresearchgaps-validation-write-expert-sheet">write_expert_sheet</a><a class="sub" href="#embedresearchgaps-validation-load-expert-sheet">load_expert_sheet</a><a class="sub" href="#embedresearchgaps-validation-expert-report">expert_report</a><a class="sub" href="#embedresearchgaps-validation-available-providers">available_providers</a><a class="sub" href="#embedresearchgaps-validation-get-annotator">get_annotator</a><a class="sub" href="#embedresearchgaps-validation-chatannotator">ChatAnnotator</a><a class="sub" href="#embedresearchgaps-validation-callableannotator">CallableAnnotator</a><a class="sub" href="#embedresearchgaps-validation-annotation">Annotation</a><a class="sub" href="#embedresearchgaps-validation-labels">LABELS</a><a class="sub" href="#embedresearchgaps-validation-build-prompt">build_prompt</a></aside>
+</main>
+<footer>
+  <p>EmbedResearchGaps · MIT licence ·
+     <a href="https://github.com/s-matysik/EmbedResearchGaps">source</a> ·
+     generated from the package by <code>tools/build_docs.py</code></p>
+</footer>
+</body>
+</html>

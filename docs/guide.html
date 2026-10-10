@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · EmbedResearchGaps</title>
+<meta name="description" content="EmbedResearchGaps: embedding-driven identification of candidate research gaps in author-keyword space.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html">EmbedResearchGaps</a>
+    <nav><a href="index.html">Overview</a><a href="guide.html" class="active">Guide</a><a href="api.html">API reference</a><a href="changelog.html">Changelog</a></nav>
+    <a class="gh" href="https://github.com/s-matysik/EmbedResearchGaps">GitHub</a>
+  </div>
+</header>
+<main>
+  <div class="page">
+    <h1>Guide</h1>
+    <p class="lede">Installation, input formats, the two modes, filters, backends and reproducibility, rendered from the repository README.</p>
+    <p><a href="https://github.com/s-matysik/EmbedResearchGaps/actions/workflows/tests.yml/badge.svg">![tests</a>](https://github.com/s-matysik/EmbedResearchGaps/actions/workflows/tests.yml)</p>
+<p>Embedding-driven identification of research gaps in author-keyword space.</p>
+<p>EmbedResearchGaps turns a bibliographic export (Scopus, Web of Science, or any CSV with titles, abstracts and author keywords) into a ranked, auditable list of candidate research gaps. It is the gap-detection companion to <a href="https://doi.org/10.1016/j.softx.2025.102416">EmbedSLR</a>, which performs the embedding-based screening step of a systematic literature review: EmbedSLR decides <em>which papers belong in the review</em>, EmbedResearchGaps asks <em>what the accepted papers do not talk about</em>.</p>
+<p>The package implements two published procedures as two operating modes over the same semantic space, and adds a reproducible validation layer (multi-model LLM annotation plus human-expert concordance).</p>
+<h2 id="two-operating-modes">Two operating modes<a class="anchor" href="#two-operating-modes">#</a></h2>
+<table><thead><tr><th></th><th><strong>Mode A — <code>keywords_first</code></strong></th><th><strong>Mode B — <code>articles_first</code></strong></th></tr></thead><tbody><tr><td>Clustering order</td><td>author keywords directly</td><td>articles, then keywords inside each article cluster</td></tr><tr><td>Gap criterion</td><td>semantic periphery of a keyword cluster</td><td>three-type gap typology</td></tr><tr><td>Output granularity</td><td>one flat ranked list</td><td>candidates attributed to a named theme</td></tr><tr><td>Best for</td><td>fast periphery scan of a well-defined field</td><td>structured map of a heterogeneous field</td></tr><tr><td>Source</td><td>PACIS 2026 procedure</td><td>AMCIS 2026 procedure</td></tr></tbody></table>
+<p><strong>Mode A</strong> embeds the author keywords of the analysis corpus, clusters them with k-means, and flags keywords whose distance from their own cluster centroid exceeds a cluster-specific percentile (default: p95). Frequency and methodological-term filters then remove the terms that are peripheral for uninteresting reasons, and an optional citation filter — off by default — can narrow the candidates to a citation window (see <em>Citation filter</em> below).</p>
+<p><strong>Mode B</strong> clusters the articles first, labels each cluster from its dominant keywords, then builds a keyword sub-space inside every cluster and applies three detectors:</p>
+<ol><li><strong>Emerging Concepts</strong> — rare, peripheral, lexically salient keywords.</li><li><strong>Conceptual Combinations</strong> — pairs of established keywords that are semantically close enough to be combinable but never co-occur in one record.</li><li><strong>Cross-Cluster Concepts</strong> — keywords well established elsewhere in the corpus but absent from this cluster.</li></ol>
+<h2 id="installation">Installation<a class="anchor" href="#installation">#</a></h2>
+<pre class="lang-bash"><code>pip install embedresearchgaps                     # core
+pip install "embedresearchgaps[all]"              # + sentence-transformers, krippendorff, openpyxl</code></pre>
+<p>From source:</p>
+<pre class="lang-bash"><code>git clone https://github.com/s-matysik/EmbedResearchGaps
+cd EmbedResearchGaps
+pip install -e ".[dev]"
+pytest</code></pre>
+<p>Python 3.10 or newer. The core install needs no network access and no API key: the default <code>tfidf-svd</code> encoder runs entirely offline.</p>
+<h2 id="quick-start">Quick start<a class="anchor" href="#quick-start">#</a></h2>
+<pre class="lang-python"><code>from embedresearchgaps import load_csv, RunConfig, EncoderConfig, articles_first
+
+corpus = load_csv("scopus_export.csv")
+
+config = RunConfig(
+    top_n_articles=50,
+    problem_description=(
+        "How does the use of gamification in marketing influence "
+        "consumer engagement and brand loyalty?"
+    ),
+    article_encoder=EncoderConfig(name="openai", model="text-embedding-3-large",
+                                  api_key_env="OPENAI_API_KEY"),
+    keyword_encoder=EncoderConfig(name="openai", model="text-embedding-3-large",
+                                  api_key_env="OPENAI_API_KEY"),
+)
+
+result = articles_first(corpus, config)
+
+print(result.n_clusters, result.cluster_labels)
+print(result.top_gaps(10)[["gap_type", "keyword", "cluster_label", "score"]])
+result.save("results/", prefix="gamification")</code></pre>
+<p>Mode A is a one-word change:</p>
+<pre class="lang-python"><code>from embedresearchgaps import keywords_first
+
+result = keywords_first(corpus, config)</code></pre>
+<h3 id="figures">Figures<a class="anchor" href="#figures">#</a></h3>
+<pre class="lang-python"><code>from embedresearchgaps.viz import generate_figures
+
+generate_figures(result, "figures/", prefix="gamification")</code></pre>
+<p>Produces the keyword t-SNE map with candidates outlined, the article map, the co-occurrence network, the inter-cluster similarity heatmap, the gap summary, the per-cluster year distribution and the k-selection trace. Figures that do not apply to a run are skipped and listed under the <code>skipped</code> key.</p>
+<h3 id="command-line">Command line<a class="anchor" href="#command-line">#</a></h3>
+<pre class="lang-bash"><code>embedresearchgaps run scopus_export.csv \
+    --mode articles_first \
+    --top-n 50 \
+    --problem-file problem.txt \
+    --encoder openai --model text-embedding-3-large --api-key-env OPENAI_API_KEY \
+    --outdir results/</code></pre>
+<p><code>embedresearchgaps encoders</code> lists the available backends.</p>
+<h2 id="input-formats">Input formats<a class="anchor" href="#input-formats">#</a></h2>
+<p>Scopus and Web of Science exports both load without a column map. Canonical fields are resolved through <code>COLUMN_ALIASES</code>:</p>
+<table><thead><tr><th>Source</th><th>Title</th><th>Author keywords</th><th>Citations</th></tr></thead><tbody><tr><td>Scopus CSV export</td><td><code>Title</code></td><td><code>Author Keywords</code></td><td><code>Cited by</code></td></tr><tr><td>Scopus Search API (<code>view=COMPLETE</code>)</td><td><code>dc:title</code></td><td><code>authkeywords</code></td><td><code>citedby-count</code></td></tr><tr><td>Web of Science, tab-delimited <code>savedrecs.txt</code></td><td><code>TI</code></td><td><code>DE</code></td><td><code>TC</code></td></tr><tr><td>Web of Science, full record</td><td><code>Article Title</code></td><td><code>Author Keywords</code></td><td><code>Times Cited, All Databases</code></td></tr></tbody></table>
+<h3 id="citation-filter">Citation filter<a class="anchor" href="#citation-filter">#</a></h3>
+<p>Citation counts are reported for every candidate and, in <code>keywords_first</code>, break ties in the ranking. They do <strong>not</strong> exclude anything unless you ask for it: <code>min_citations</code> and <code>max_citations</code> are <code>None</code> by default, and with both unset the filter short-circuits, so the published runs are reproduced exactly.</p>
+<p>A candidate's citation support is the citation count of its best-cited source record. Bounds are inclusive and may be combined:</p>
+<table><thead><tr><th>Option</th><th>Bounds</th><th>Unit</th></tr></thead><tbody><tr><td><code>min_citations</code> / <code>max_citations</code></td><td>citation <em>level</em></td><td>citations</td></tr><tr><td><code>min_citations_per_year</code></td><td>citation <em>rate</em></td><td>citations per year</td></tr></tbody></table>
+<p>The rate is the one to reach for when the question is whether a topic is moving. A citation count rewards age: a paper from 2005 with 60 citations and one from 2023 with 60 citations look identical by level, but accumulate at 3 and 30 citations per year. Dividing by age separates them, so <code>min_citations_per_year</code> admits recent work that is being picked up quickly while excluding old work whose total merely had time to accrue. There is no upper rate bound: fast accumulation is the signal being sought, so capping it would discard the evidence.</p>
+<p>A record's age is <code>reference_year - publication_year + 1</code>, which makes a paper published in the reference year one year old rather than zero. The reference year defaults to the most recent publication year in the corpus rather than to the system clock, so re-running a deposited export reproduces the same candidates; set <code>citation_year_reference</code> when you know the date the counts were harvested.</p>
+<pre class="lang-python"><code>from embedresearchgaps import GapConfig, RunConfig
+
+# topics that are currently moving: at least two citations per year
+config = RunConfig(gaps=GapConfig(min_citations_per_year=2.0))
+
+# keywords whose literature is not yet well cited
+config = RunConfig(gaps=GapConfig(max_citations=20))
+
+# both at once: moving, but not yet saturated
+config = RunConfig(gaps=GapConfig(min_citations_per_year=1.0, max_citations=100))</code></pre>
+<pre class="lang-bash"><code>embedresearchgaps run scopus.csv --min-citations-per-year 2
+embedresearchgaps run scopus.csv --max-citations 20
+embedresearchgaps run scopus.csv --min-citations 50 --drop-uncited</code></pre>
+<p>Candidates whose citation support is unknown — no citation column in the export, no publication year for the rate, or no value on any source record — are <strong>kept</strong> by default, because a bound would otherwise silently empty the candidate list on a corpus without citation data. Pass <code>keep_uncited_candidates=False</code> (<code>--drop-uncited</code>) to require explicit citation evidence instead.</p>
+<p>The filter is applied to candidate eligibility, before ranking and before the per-cluster cap, so the number of candidates reported per cluster is unchanged as long as enough keywords survive the bounds.</p>
+<p>None of these bounds is a neutral operation on a gap-detection task, and the package takes no position on whether they should be used. A floor on the raw count systematically favours older literature, because recent work has few citations by construction; the rate form corrects that specific bias but inherits others, since a citation count describes the <em>article</em> a keyword appeared in, not the keyword itself. Report which bounds a run used.</p>
+<pre class="lang-python"><code>from embedresearchgaps import load_csv
+
+scopus = load_csv("scopus.csv")
+wos    = load_csv("savedrecs.txt", sep="\t")        # tab-delimited export
+wos_xl = load_csv("wos_full_record.csv")             # spelled-out headers
+other  = load_csv("export.csv", column_map={"author_keywords": "Index Terms"})</code></pre>
+<p>Web of Science <strong>Keywords Plus</strong> (<code>ID</code>) is deliberately <em>not</em> treated as author keywords: those terms are generated by the database from the titles of cited references rather than assigned by the authors, and both procedures are defined on author-assigned keywords. To use them anyway, ask explicitly and say so when reporting the run:</p>
+<pre class="lang-python"><code>corpus = load_csv("savedrecs.txt", sep="\t",
+                  column_map={"author_keywords": "ID"})</code></pre>
+<p><code>corpus.column_map</code> shows which source column each canonical field resolved to, and <code>corpus.summary()</code> reports how many records were dropped for missing text or missing keywords.</p>
+<h2 id="external-rankings">External rankings<a class="anchor" href="#external-rankings">#</a></h2>
+<p>The assessment machinery does not depend on how a candidate list was produced. <code>load_external_ranking</code> reads a ranking made elsewhere — VOSviewer, BERTopic, a competing implementation, a human reviewer — and returns the same <code>PipelineResult</code> the built-in modes return, so everything downstream applies to it unchanged:</p>
+<pre class="lang-python"><code>from embedresearchgaps import load_csv, load_external_ranking, jaccard
+from embedresearchgaps.validation import selected_and_control_keywords, validate_gaps
+
+corpus   = load_csv("scopus.csv")
+external = load_external_ranking("vosviewer_top50.csv", corpus)
+
+report            = validate_gaps(external, annotators, problem_description=problem)
+selected, control = selected_and_control_keywords(external)
+overlap           = jaccard(set(ours.gaps["keyword"]), set(external.gaps["keyword"]))</code></pre>
+<pre class="lang-bash"><code>embedresearchgaps external vosviewer_top50.csv --corpus scopus.csv --top-n 50</code></pre>
+<p>The input may be a CSV, TSV or Excel export, a <code>DataFrame</code>, or a plain sequence of keywords in rank order. Keyword, score, rank and type columns are resolved from an alias table that also matches compound headers, so <code>Term</code>, <code>Total link strength</code> and <code>Mean novelty score</code> load without a column map; pass <code>keyword_column=</code> and friends when they do not. With no score column, rank order is mapped to a descending scale so that higher is better, as it is for the built-in detectors, and the position in the file is kept in <code>metrics["external_rank"]</code>.</p>
+<p>Passing the corpus is what makes a like-for-like comparison possible: it attaches document frequency, source records and citation counts to each candidate, and gives <code>selected_and_control_keywords</code> a population to draw a disjoint control from. Candidates absent from the corpus are listed in <code>diagnostics["external"]["unmatched_in_corpus"]</code> rather than silently carrying zeros.</p>
+<p>Two things the loader does <strong>not</strong> do. It does not attach a clustering of ours: <code>cluster</code> is -1, <code>cluster_labels</code> is empty, and no partition diagnostic (silhouette, centroid similarity) is computed, because an external ranking carries no partition of ours and inventing one would misreport its provenance. It also does not label foreign candidates with one of the four detector types — they get <code>External Candidate</code>, which is deliberately not a member of <code>GAP_TYPES</code> — unless the file names a type itself.</p>
+<h2 id="embedding-backends">Embedding backends<a class="anchor" href="#embedding-backends">#</a></h2>
+<table><thead><tr><th>Name</th><th>Notes</th></tr></thead><tbody><tr><td><code>tfidf-svd</code></td><td>Offline, deterministic, no credentials. Captures lexical overlap only — adequate for Mode A periphery scans and for reproducing a run without keys, but it cannot support the similarity-window criterion of Type 2.</td></tr><tr><td><code>sbert</code></td><td>Any <code>sentence-transformers</code> checkpoint, e.g. <code>all-mpnet-base-v2</code>. Local, free, genuinely semantic.</td></tr><tr><td><code>openai</code></td><td><code>text-embedding-3-large</code> / <code>-small</code>.</td></tr><tr><td><code>nomic</code></td><td><code>nomic-embed-text-v1.5</code> — the model used in the two source publications.</td></tr><tr><td><code>jina</code>, <code>cohere</code></td><td>Hosted alternatives.</td></tr><tr><td><code>precomputed</code></td><td>Supply your own vectors via <code>EncoderConfig.extra["vectors"]</code>.</td></tr></tbody></table>
+<p>API keys are read from the environment variable named in <code>EncoderConfig.api_key_env</code> and are never written to a configuration object, a result file or a log. Register a custom backend with <code>register_encoder(name, factory)</code>.</p>
+<h2 id="validation">Validation<a class="anchor" href="#validation">#</a></h2>
+<p>The validation subpackage reproduces the evaluation design of the two source papers: a panel of LLM annotators labels the keywords the pipeline selected and, as a control, the author keywords of the same corpus that it did <em>not</em> select, at <code>temperature=0</code>. The control set is disjoint from the candidate set by construction — comparing a candidate set against a population that contains it nests the two samples, and no two-sample statistic on them has a defined null distribution.</p>
+<pre class="lang-python"><code>from embedresearchgaps.validation import (
+    get_annotator, selected_and_control_keywords, validate_gaps,
+)
+
+# Example configuration. The exact model identifiers used for the published
+# study are listed under "Reproducing the published study" below; model names
+# change, so pin them explicitly rather than relying on a provider default.
+panel = [
+    get_annotator("openai",   model="gpt-4o",            key_env="OPENAI_API_KEY"),
+    get_annotator("anthropic",model="claude-sonnet-4-6", key_env="ANTHROPIC_API_KEY"),
+    get_annotator("google",   model="gemini-2.5-flash",  key_env="GOOGLE_API_KEY"),
+    get_annotator("deepseek", model="deepseek-v4-pro",   key_env="DEEPSEEK_API_KEY"),
+    get_annotator("xai",      model="grok-4.5",          key_env="XAI_API_KEY"),
+]
+
+selected, control = selected_and_control_keywords(result)
+report = validate_gaps(result, panel, config.problem_description,
+                       domain="management", selected=selected, all_keywords=control)
+
+print(report.comparison.gap_rate_delta_pp)     # percentage-point gain in GAP rate
+print(report.comparison.novelty_increase_pct)  # relative gain in mean Novelty Score
+print(report.comparison.novelty_test)          # Welch, Mann-Whitney, permutation, d
+print(report.reliability)                      # Fleiss' kappa, Krippendorff's alpha
+report.save("validation/")</code></pre>
+<p>Each keyword receives one of five labels — <code>GAP</code>, <code>EXPLORED</code>, <code>LOW IMPORTANCE</code>, <code>METHOD</code>, <code>NOISE</code> — and a Novelty Score from 1 to 10. An annotator that fails (missing credential, transport error, malformed reply) is recorded in <code>report.failures</code> and skipped; the study continues with the rest and the report states which models contributed. <code>CallableAnnotator</code> wraps any <code>str -&gt; str</code> function, for locally hosted models and for offline tests.</p>
+<h3 id="reproducing-the-published-study">Reproducing the published study<a class="anchor" href="#reproducing-the-published-study">#</a></h3>
+<p>The article used <code>text-embedding-3-large</code> for every embedding and this panel at <code>temperature=0</code>: <code>openai:gpt-4o</code>, <code>anthropic:claude-sonnet-4-6</code>, <code>deepseek:deepseek-v4-pro</code>, <code>xai:grok-4.5</code>, <code>google:gemini-2.5-flash</code>. Moonshot (Kimi) was probed and excluded because its current models reject <code>temperature=0</code>, which would break the determinism the protocol depends on. The scripts in <code>examples/</code> regenerate every reported table and figure; run them in the order given in <code>examples/README.md</code>.</p>
+<h3 id="expert-validation">Expert validation<a class="anchor" href="#expert-validation">#</a></h3>
+<pre class="lang-python"><code>from embedresearchgaps.validation import build_expert_sheet, write_expert_sheet, \
+    load_expert_sheet, expert_report
+
+sheet = build_expert_sheet(result, config.problem_description)   # blinded, shuffled
+write_expert_sheet(sheet, "experts.xlsx", config.problem_description, ("expert_1", "expert_2"))
+
+# ... after the reviewers have filled it in ...
+experts = load_expert_sheet("experts_completed.xlsx")
+print(expert_report(report.annotations, experts))   # Spearman rho, label agreement</code></pre>
+<p>The sheet withholds gap types, cluster labels and pipeline scores by default and shuffles the rows, so that the human judgement is independent of the model output.</p>
+<h2 id="configuration">Configuration<a class="anchor" href="#configuration">#</a></h2>
+<p>Every tunable parameter lives in <code>RunConfig</code>, so one serialisable object fully describes a run; <code>result.save()</code> writes it next to the tables.</p>
+<pre class="lang-python"><code>from embedresearchgaps import RunConfig, GapConfig, ClusteringConfig, EmergingWeights
+
+config = RunConfig(
+    top_n_articles=50,
+    clustering=ClusteringConfig(k_min=2, k_max=10, silhouette_floor=0.25, random_state=42),
+    gaps=GapConfig(
+        periphery_percentile=95.0,
+        max_keyword_frequency=1,          # None applies the proportional rule n/50
+        gap_token_count=2,                # None accepts any keyword length
+        combination_similarity_range=(0.25, 0.65),
+        combination_similarity_optimum=0.45,
+        min_tfidf=0.005,
+        max_gaps_per_cluster=3,
+        emerging_weights=EmergingWeights(distance=0.25, centrality=0.15,
+                                         tfidf=0.30, rarity=0.30),
+    ),
+    random_state=42,
+)</code></pre>
+<p>Defaults reproduce the settings of the source publications. With <code>k_selection="auto"</code> the number of clusters is taken from the WCSS elbow whenever the best silhouette stays below <code>silhouette_floor</code>, and from the silhouette otherwise.</p>
+<p>Runs are deterministic: the same corpus, configuration and seed give identical tables.</p>
+<h2 id="stability-aware-consensus">Stability-aware consensus<a class="anchor" href="#stability-aware-consensus">#</a></h2>
+<p>The clustering both modes rest on is k-means, and on real bibliographic corpora its silhouette is small (0.017–0.103 over the three corpora shipped with this package; 0.033–0.069 on the two case studies). The partition — and with it the candidate list — therefore depends on the initialisation. A single seed gives a list whose reproducibility is unknown, so measure it:</p>
+<pre class="lang-python"><code>from embedresearchgaps import consensus_gaps
+
+consensus = consensus_gaps(corpus, "articles_first", config,
+                           seeds=(42, 7, 123, 2026, 31337),
+                           top_n=(30, 50, 100, 150),   # pool over corpus size too
+                           min_support=0.5)
+
+print(consensus.stability["mean_pairwise_jaccard"])        # overlap across runs
+print(consensus.stability["mean_jaccard_same_size"])       # seed effect alone
+print(consensus.stability["mean_jaccard_across_sizes"])    # corpus-size effect
+print(consensus.gaps[["keyword_display", "gap_type", "support", "mean_score"]])
+consensus.save("out/consensus")</code></pre>
+<p><code>support</code> is the fraction of runs that produced the candidate, and <code>at_support(1.0)</code> keeps only the invariant ones. Reporting a candidate list without its support is reporting one draw from a distribution. The analysis corpus size <code>N</code> is as arbitrary a choice as the seed and moves the candidate list more, so pass <code>top_n=</code> as well unless you have a reason to fix <code>N</code>.</p>
+<p>A run whose partition has a silhouette below 0.10 also returns a <code>LOW_CLUSTER_SEPARATION</code> entry in <code>result.diagnostics["warnings"]</code> and raises it as a Python warning: candidates read off a partition that weak should not be interpreted as a single-run ranking.</p>
+<h2 id="reproducibility-and-audit-trail">Reproducibility and audit trail<a class="anchor" href="#reproducibility-and-audit-trail">#</a></h2>
+<p><code>result.diagnostics</code> carries everything a methods section needs: cluster sizes and quality indices (silhouette, Davies-Bouldin, Calinski-Harabasz), the full k-selection trace, the TF-IDF match-type breakdown, the detected core-domain terms, the counts before and after cross-cluster deduplication, which clusters were skipped and why, and the encoder descriptions. Every candidate gap carries a <code>rationale</code> string and the titles and DOIs of the articles it came from.</p>
+<p>Determinism is enforced across processes, not only within one. Keyword ordering follows first appearance in the corpus rather than set iteration, because set iteration order depends on the interpreter's hash seed and would otherwise change the row order of the embedding matrix, the k-means++ initialisation and hence the candidate list between runs. The test suite checks this by running both modes in subprocesses started with different <code>PYTHONHASHSEED</code> values and requiring identical candidate tables.</p>
+<p>Author keywords are matched in lower case but reported in the spelling the authors used: <code>corpus.spelling</code> maps each normalised keyword to its most frequent source spelling, and every candidate table carries a <code>keyword_display</code> column, so acronyms (<code>ESG</code>, <code>SME</code>, <code>FinTech</code>) survive into cluster labels and into the reported candidates.</p>
+<h2 id="method-summary">Method summary<a class="anchor" href="#method-summary">#</a></h2>
+<p>Article ranking uses cosine distance to the embedded problem statement, <code>d(u, v) = 1 - cos(u, v)</code>. Keyword periphery is measured as distance from the keyword's own cluster centroid, thresholded per cluster so that clusters of different semantic density are treated on their own scale. The three Mode B detectors combine min-max normalised components with the published weights:</p>
+<ul><li>Emerging Concept: <code>0.25·distance + 0.15·centrality + 0.30·tfidf + 0.30·rarity</code></li><li>Conceptual Combination: <code>0.40·similarity + 0.30·frequency + 0.30·tfidf</code>, where the similarity term peaks at cosine 0.45 and vanishes outside <code>(0.25, 0.65)</code></li><li>Cross-Cluster Concept: <code>0.25·frequency + 0.35·specificity + 0.40·tfidf</code></li></ul>
+<p>Inter-cluster thematic overlap is the pairwise cosine similarity of cluster centroids.</p>
+<h2 id="testing">Testing<a class="anchor" href="#testing">#</a></h2>
+<pre class="lang-bash"><code>pip install -e ".[dev]"
+pytest --cov=embedresearchgaps</code></pre>
+<p>The suite runs offline: 316 tests, 93% statement coverage. Detector behaviour is tested on keyword spaces with designed embeddings placed at exact angles, so the similarity criteria are checked against the published thresholds rather than against whatever an embedding model happens to produce. Hosted backends are tested with a recorded HTTP transport that verifies the request payload, reply parsing and rate-limit retries of every provider without contacting any API; the malformed-reply salvage path is tested separately against the annotation parser. Cross-process determinism is tested with subprocesses under differing hash seeds.</p>
+<h2 id="citation">Citation<a class="anchor" href="#citation">#</a></h2>
+<p>If you use EmbedResearchGaps, please cite the software article and the two conference papers that established and validated the method:</p>
+<pre class="lang-bibtex"><code>@article{embedresearchgaps2026,
+  title   = {EmbedResearchGaps: embedding-driven identification of research
+             gaps in author-keyword space},
+  author  = {Matysik, Sebastian and Wisniewska, Joanna and
+             Frankowski, Pawel Karol},
+  journal = {SoftwareX},
+  year    = {2026}
+}</code></pre>
+<pre class="lang-bibtex"><code>@inproceedings{frankowski2026pacis,
+  title     = {Automated Identification of Research Gaps Using Keyword
+               Clustering and an Embedding Model},
+  author    = {Frankowski, Pawel Karol and Wi{\'s}niewska, Joanna and
+               Matysik, Sebastian},
+  booktitle = {PACIS 2026 Proceedings},
+  year      = {2026},
+  url       = {https://aisel.aisnet.org/pacis2026/adv_theory/adv_theory/7}
+}
+
+@inproceedings{frankowski2026amcis,
+  title     = {Semantic Periphery Detection in Academic Keyword Space:
+               An Embedding-Driven Framework for Automated Research Gap
+               Identification},
+  author    = {Frankowski, Pawel Karol and Wi{\'s}niewska, Joanna and
+               Matysik, Sebastian},
+  booktitle = {AMCIS 2026 Proceedings},
+  year      = {2026},
+  url       = {https://aisel.aisnet.org/amcis2026/ai_aiaa/ai_aiaa/7}
+}</code></pre>
+<p>and, for the screening stage of the review pipeline:</p>
+<pre class="lang-bibtex"><code>@article{matysik2025embedslr,
+  title   = {EmbedSLR: an open-source python framework for efficient
+             embedding-based screening and bibliometric validation in
+             systematic literature review},
+  author  = {Matysik, Sebastian and Wi{\'s}niewska, Joanna and
+             Frankowski, Pawel Karol},
+  journal = {SoftwareX},
+  volume  = {32},
+  pages   = {102416},
+  year    = {2025},
+  doi     = {10.1016/j.softx.2025.102416}
+}
+
+@article{matysik2026embedslr2,
+  title   = {Version 2.0 -- EmbedSLR: An open-source python framework for
+             efficient embedding-based screening and bibliometric validation
+             in systematic literature review},
+  author  = {Matysik, Sebastian and Wi{\'s}niewska, Joanna and
+             Frankowski, Pawel Karol},
+  journal = {SoftwareX},
+  volume  = {34},
+  pages   = {102563},
+  year    = {2026},
+  doi     = {10.1016/j.softx.2026.102563}
+}</code></pre>
+<h2 id="license">License<a class="anchor" href="#license">#</a></h2>
+<p>MIT — see <a href="LICENSE">LICENSE</a>.</p>
+  </div>
+  <aside class="toc"><p>On this page</p><a class="" href="#two-operating-modes">Two operating modes</a><a class="" href="#installation">Installation</a><a class="" href="#quick-start">Quick start</a><a class="sub" href="#figures">Figures</a><a class="sub" href="#command-line">Command line</a><a class="" href="#input-formats">Input formats</a><a class="sub" href="#citation-filter">Citation filter</a><a class="" href="#external-rankings">External rankings</a><a class="" href="#embedding-backends">Embedding backends</a><a class="" href="#validation">Validation</a><a class="sub" href="#reproducing-the-published-study">Reproducing the published study</a><a class="sub" href="#expert-validation">Expert validation</a><a class="" href="#configuration">Configuration</a><a class="" href="#stability-aware-consensus">Stability-aware consensus</a><a class="" href="#reproducibility-and-audit-trail">Reproducibility and audit trail</a><a class="" href="#method-summary">Method summary</a><a class="" href="#testing">Testing</a><a class="" href="#citation">Citation</a><a class="" href="#license">License</a></aside>
+</main>
+<footer>
+  <p>EmbedResearchGaps · MIT licence ·
+     <a href="https://github.com/s-matysik/EmbedResearchGaps">source</a> ·
+     generated from the package by <code>tools/build_docs.py</code></p>
+</footer>
+</body>
+</html>
