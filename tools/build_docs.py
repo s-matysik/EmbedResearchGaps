@@ -362,12 +362,15 @@ def shell(title: str, active: str, body: str, subtitle: str = "", toc: str = "")
     )
     aside = f'<aside class="toc"><p>On this page</p>{toc}</aside>' if toc else ""
     lede = f'<p class="lede">{subtitle}</p>' if subtitle else ""
+    # The landing page is already called EmbedResearchGaps; suffixing it again
+    # gives a browser tab reading "EmbedResearchGaps · EmbedResearchGaps".
+    tab = title if title == "EmbedResearchGaps" else f"{title} · EmbedResearchGaps"
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)} · EmbedResearchGaps</title>
+<title>{html.escape(tab)}</title>
 <meta name="description" content="EmbedResearchGaps: embedding-driven identification of candidate research gaps in author-keyword space.">
 <link rel="stylesheet" href="style.css">
 </head>
