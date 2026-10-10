@@ -65,6 +65,18 @@ def slug(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
+def plain_dashes(text: str) -> str:
+    """Render em dashes as plain hyphens.
+
+    The site is typeset with ASCII punctuation throughout. The templates and
+    the package docstrings already use ``--``; the em dashes that reach a page
+    come from ``README.md`` and ``CHANGELOG.md``, which keep theirs. Applying
+    the substitution here rather than editing those files keeps one source of
+    truth for the prose and still gives the site uniform punctuation.
+    """
+    return text.replace("\u2014", "-")
+
+
 def markdown(source: str, heading_offset: int = 0) -> str:
     """Render the markdown subset this project's documents actually use."""
     lines = source.splitlines()
@@ -365,7 +377,7 @@ def shell(title: str, active: str, body: str, subtitle: str = "", toc: str = "")
     # The landing page is already called EmbedResearchGaps; suffixing it again
     # gives a browser tab reading "EmbedResearchGaps · EmbedResearchGaps".
     tab = title if title == "EmbedResearchGaps" else f"{title} · EmbedResearchGaps"
-    return f"""<!DOCTYPE html>
+    page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -398,6 +410,7 @@ def shell(title: str, active: str, body: str, subtitle: str = "", toc: str = "")
 </body>
 </html>
 """
+    return plain_dashes(page)
 
 
 CSS = """
