@@ -42,6 +42,7 @@ from .config import (
 from .consensus import ConsensusResult, DEFAULT_SEEDS, consensus_gaps, jaccard
 from .corpus import Corpus, from_dataframe, load_csv
 from .encoders import Encoder, available_encoders, get_encoder, register_encoder
+from .external import EXTERNAL_GAP_TYPE, load_external_ranking
 from .gaps import (
     Gap,
     GAP_TYPES,
@@ -90,4 +91,6 @@ __all__ = [
     "keywords_first", "articles_first", "run", "PipelineResult",
     # stability-aware consensus
     "consensus_gaps", "ConsensusResult", "DEFAULT_SEEDS", "jaccard",
+    # rankings produced outside this package
+    "load_external_ranking", "EXTERNAL_GAP_TYPE",
 ]

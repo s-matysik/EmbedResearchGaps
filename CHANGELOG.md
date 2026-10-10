@@ -4,6 +4,24 @@
 
 ### Added
 
+- **External rankings.** `load_external_ranking` reads a candidate ranking
+  produced outside this package — VOSviewer, BERTopic, a competing
+  implementation, a human reviewer — from a CSV, TSV or Excel export, a
+  `DataFrame`, or a sequence of keywords, and returns the same `PipelineResult`
+  the built-in modes return (`mode='external'`). The validation subpackage, the
+  disjoint control-set split, the candidate tables, `result.save` and the
+  overlap measures therefore apply to a foreign list unchanged, which is what
+  makes it possible to assess someone else's ranking on a corpus, or to compare
+  it against ours on the same one. Keyword, score, rank and type columns resolve
+  from an alias table that also matches compound headers such as
+  `Total link strength`. Passing a `Corpus` attaches document frequency, source
+  records and citation counts, and reports candidates absent from the corpus in
+  `diagnostics['external']['unmatched_in_corpus']` rather than silently
+  recording zeros. No clustering of ours is attached — `cluster` is -1 and no
+  partition diagnostic is computed — and foreign candidates are typed
+  `External Candidate`, deliberately not one of `GAP_TYPES`, unless the file
+  names a type. Exposed on the CLI as `embedresearchgaps external`.
+
 - **Optional citation filter.** `GapConfig.min_citations` and
   `GapConfig.max_citations` bound the citation support of a candidate — the
   citation count of its best-cited source record — and may be combined into a

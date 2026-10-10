@@ -227,6 +227,54 @@ corpus = load_csv("savedrecs.txt", sep="\t",
 and `corpus.summary()` reports how many records were dropped for missing text
 or missing keywords.
 
+## External rankings
+
+The assessment machinery does not depend on how a candidate list was produced.
+`load_external_ranking` reads a ranking made elsewhere — VOSviewer, BERTopic, a
+competing implementation, a human reviewer — and returns the same
+`PipelineResult` the built-in modes return, so everything downstream applies to
+it unchanged:
+
+```python
+from embedresearchgaps import load_csv, load_external_ranking, jaccard
+from embedresearchgaps.validation import selected_and_control_keywords, validate_gaps
+
+corpus   = load_csv("scopus.csv")
+external = load_external_ranking("vosviewer_top50.csv", corpus)
+
+report            = validate_gaps(external, annotators, problem_description=problem)
+selected, control = selected_and_control_keywords(external)
+overlap           = jaccard(set(ours.gaps["keyword"]), set(external.gaps["keyword"]))
+```
+
+```bash
+embedresearchgaps external vosviewer_top50.csv --corpus scopus.csv --top-n 50
+```
+
+The input may be a CSV, TSV or Excel export, a `DataFrame`, or a plain sequence
+of keywords in rank order. Keyword, score, rank and type columns are resolved
+from an alias table that also matches compound headers, so `Term`,
+`Total link strength` and `Mean novelty score` load without a column map; pass
+`keyword_column=` and friends when they do not. With no score column, rank
+order is mapped to a descending scale so that higher is better, as it is for
+the built-in detectors, and the position in the file is kept in
+`metrics["external_rank"]`.
+
+Passing the corpus is what makes a like-for-like comparison possible: it
+attaches document frequency, source records and citation counts to each
+candidate, and gives `selected_and_control_keywords` a population to draw a
+disjoint control from. Candidates absent from the corpus are listed in
+`diagnostics["external"]["unmatched_in_corpus"]` rather than silently carrying
+zeros.
+
+Two things the loader does **not** do. It does not attach a clustering of ours:
+`cluster` is -1, `cluster_labels` is empty, and no partition diagnostic
+(silhouette, centroid similarity) is computed, because an external ranking
+carries no partition of ours and inventing one would misreport its provenance.
+It also does not label foreign candidates with one of the four detector types —
+they get `External Candidate`, which is deliberately not a member of
+`GAP_TYPES` — unless the file names a type itself.
+
 ## Embedding backends
 
 | Name | Notes |

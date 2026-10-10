@@ -11,6 +11,7 @@ import typer
 from . import __version__
 from .config import ClusteringConfig, EncoderConfig, GapConfig, RunConfig
 from .corpus import load_csv
+from .external import load_external_ranking
 from .pipelines import articles_first, keywords_first
 from .viz import generate_figures
 
@@ -173,6 +174,57 @@ def run_command(
     )
     for name, path in written.items():
         typer.echo(f"  {name}: {path}")
+
+
+@app.command(name="external")
+def external_command(
+    ranking: Path = typer.Argument(
+        ..., exists=True, readable=True,
+        help="Ranking produced elsewhere: CSV, TSV or Excel export.",
+    ),
+    corpus_csv: Optional[Path] = typer.Option(
+        None, "--corpus", "-c", exists=True, readable=True,
+        help="Corpus the ranking refers to; attaches frequency, source records "
+             "and citations, and enables the control set.",
+    ),
+    outdir: Path = typer.Option(Path("results"), "--outdir", "-o", help="Output directory."),
+    keyword_column: Optional[str] = typer.Option(
+        None, "--keyword-column", help="Keyword column; resolved from aliases when omitted."
+    ),
+    score_column: Optional[str] = typer.Option(
+        None, "--score-column", help="Score column; rank order is used when absent."
+    ),
+    top_n: Optional[int] = typer.Option(
+        None, "--top-n", help="Keep only the first N candidates after ordering."
+    ),
+    name: str = typer.Option("external", "--name", help="Label for this ranking."),
+) -> None:
+    """Load a ranking produced outside this package for assessment.
+
+    The result carries the same shape a pipeline run produces, so the
+    validation subpackage, the control-set split and the overlap measures apply
+    to it unchanged. No clustering of ours is attached: cluster is -1 and no
+    partition diagnostics are produced.
+    """
+    corpus = load_csv(corpus_csv) if corpus_csv is not None else None
+    result = load_external_ranking(
+        ranking, corpus,
+        keyword_column=keyword_column, score_column=score_column,
+        top_n=top_n, name=name,
+    )
+    info = result.diagnostics["external"]
+    typer.echo(
+        f"external ranking {name!r}: {info['candidates']} candidates from "
+        f"{info['rows_read']} rows ({info['duplicates_dropped']} duplicates dropped)"
+    )
+    if corpus is not None and info["unmatched_in_corpus"]:
+        typer.echo(
+            f"  warning: {len(info['unmatched_in_corpus'])} candidate(s) absent from the "
+            f"corpus, so they carry no corpus evidence: "
+            f"{', '.join(info['unmatched_in_corpus'][:5])}"
+        )
+    for key, path in result.save(outdir, prefix=f"external_{name}").items():
+        typer.echo(f"  {key}: {path}")
 
 
 def main() -> None:  # pragma: no cover - console entry point
