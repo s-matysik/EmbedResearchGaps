@@ -107,7 +107,7 @@ The k-selection routine evaluates silhouette across the configured range and fal
 
 Across five k-means seeds, mean pairwise Jaccard overlap was 0.44 for Mode B and 0.14 for Mode A in management, and 0.38 and 0.15 in economics and finance (Fig. 5); the least stable Mode A pair shared no candidates. Resizing gave 0.09-0.31 and 0.00-0.38, partly because k was re-selected in every run and ranged from 4 to 9. Pooling five seeds and four sizes, mean overlap was 0.23 and 0.19, decomposing into 0.45 and 0.39 between same-size pairs and 0.18 and 0.14 across sizes (supplementary S6b); the 0.14 above is measured across seeds at N = 50 and is therefore not the 0.288 of that table, which pools all same-size pairs.
 
-Because the output is a reading order, set overlap is not sufficient. On the offline backend, which needs no credentials, rank-biased overlap (p = 0.9) across the same seeds is 0.27-0.38 for Mode B and 0.03-0.14 for Mode A, and top-10 overlap 0.41-0.49 and 0.06-0.16 (supplementary S6c): roughly half of a Mode B top-10 recurs under a different seed, while a Mode A ranking does not recur at all.
+Because the output is a reading order, set overlap is not sufficient. On the offline backend, which needs no credentials, rank-biased overlap (p = 0.9) across five seeds is 0.27-0.38 for Mode B and 0.03-0.14 for Mode A, and top-10 overlap 0.41-0.49 and 0.06-0.16 (S6c): roughly half of a Mode B top-10 recurs under a different seed, while a Mode A ranking does not recur at all.
 
 Consensus support makes this explicit (Table 1): of 161 distinct candidates across twenty management Mode B runs, 12 reach majority support and 2 are unanimous. Support is not validity: the two names left by the metadata error reach 0.85 and 0.75.
 
