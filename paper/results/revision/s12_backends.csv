@@ -1,0 +1,13 @@
+corpus,mode,model,k,silhouette,davies_bouldin,n_candidates,emerging,cross_cluster,combination,peripheral,jaccard_vs_openai,shared_with_openai,n_reference,seconds
+management,articles_first,tfidf-svd (offline),6,-0.0,3.836,23,17,6,0,0,0.116,5,26,7.29
+management,keywords_first,tfidf-svd (offline),5,0.05,3.482,4,0,0,0,4,0.0,0,6,6.34
+management,articles_first,sbert / all-mpnet-base-v2,6,0.036,2.428,26,18,7,1,0,0.13,6,26,0.98
+management,keywords_first,sbert / all-mpnet-base-v2,5,0.056,3.147,5,0,0,0,5,0.0,0,6,0.83
+finance,articles_first,tfidf-svd (offline),6,0.003,3.679,24,18,6,0,0,0.068,3,25,6.94
+finance,keywords_first,tfidf-svd (offline),6,0.041,3.864,5,0,0,0,5,0.0,0,4,6.15
+finance,articles_first,sbert / all-mpnet-base-v2,6,0.058,2.272,29,18,6,5,0,0.209,9,25,1.01
+finance,keywords_first,sbert / all-mpnet-base-v2,5,0.061,2.845,5,0,0,0,5,0.125,1,4,0.82
+gamification,articles_first,tfidf-svd (offline),6,0.003,3.643,24,18,6,0,0,0.225,9,26,4.6
+gamification,keywords_first,tfidf-svd (offline),8,0.055,4.09,3,0,0,0,3,0.0,0,6,4.02
+gamification,articles_first,sbert / all-mpnet-base-v2,6,0.066,1.986,27,17,7,3,0,0.186,8,26,0.91
+gamification,keywords_first,sbert / all-mpnet-base-v2,5,0.07,2.846,6,0,0,0,6,0.091,1,6,0.76

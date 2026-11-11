@@ -1,0 +1,86 @@
+[
+  {
+    "corpus": "management",
+    "ceiling": "1 (reported)",
+    "n_emerging": 17,
+    "shared_with_reported": 17,
+    "jaccard_vs_reported": 1.0
+  },
+  {
+    "corpus": "management",
+    "ceiling": "2",
+    "n_emerging": 18,
+    "shared_with_reported": 17,
+    "jaccard_vs_reported": 0.944
+  },
+  {
+    "corpus": "management",
+    "ceiling": "3",
+    "n_emerging": 17,
+    "shared_with_reported": 16,
+    "jaccard_vs_reported": 0.889
+  },
+  {
+    "corpus": "management",
+    "ceiling": "proportional max(1, round(N/50))",
+    "n_emerging": 17,
+    "shared_with_reported": 15,
+    "jaccard_vs_reported": 0.789
+  },
+  {
+    "corpus": "finance",
+    "ceiling": "1 (reported)",
+    "n_emerging": 18,
+    "shared_with_reported": 18,
+    "jaccard_vs_reported": 1.0
+  },
+  {
+    "corpus": "finance",
+    "ceiling": "2",
+    "n_emerging": 18,
+    "shared_with_reported": 18,
+    "jaccard_vs_reported": 1.0
+  },
+  {
+    "corpus": "finance",
+    "ceiling": "3",
+    "n_emerging": 18,
+    "shared_with_reported": 16,
+    "jaccard_vs_reported": 0.8
+  },
+  {
+    "corpus": "finance",
+    "ceiling": "proportional max(1, round(N/50))",
+    "n_emerging": 17,
+    "shared_with_reported": 15,
+    "jaccard_vs_reported": 0.75
+  },
+  {
+    "corpus": "gamification",
+    "ceiling": "1 (reported)",
+    "n_emerging": 18,
+    "shared_with_reported": 18,
+    "jaccard_vs_reported": 1.0
+  },
+  {
+    "corpus": "gamification",
+    "ceiling": "2",
+    "n_emerging": 18,
+    "shared_with_reported": 18,
+    "jaccard_vs_reported": 1.0
+  },
+  {
+    "corpus": "gamification",
+    "ceiling": "3",
+    "n_emerging": 18,
+    "shared_with_reported": 17,
+    "jaccard_vs_reported": 0.895
+  },
+  {
+    "corpus": "gamification",
+    "ceiling": "proportional max(1, round(N/50))",
+    "n_emerging": 18,
+    "shared_with_reported": 17,
+    "jaccard_vs_reported": 0.895
+  }
+]

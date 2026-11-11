@@ -1,0 +1,50 @@
+{
+  "management|SELECTED": {
+    "n_judgements": 26,
+    "gap_rate_blind": 57.692307692307686,
+    "gap_rate_aware": 92.3076923076923,
+    "label_agreement": 0.6538461538461539,
+    "novelty_blind": 2.8846153846153846,
+    "novelty_aware": 8.5,
+    "novelty_delta": 5.615384615384615,
+    "gap_to_nongap": 0,
+    "nongap_to_gap": 9
+  },
+  "management|CONTROL": {
+    "n_judgements": 26,
+    "gap_rate_blind": 42.30769230769231,
+    "gap_rate_aware": 65.38461538461539,
+    "label_agreement": 0.7307692307692307,
+    "novelty_blind": 2.6153846153846154,
+    "novelty_aware": 6.1923076923076925,
+    "novelty_delta": 3.576923076923077,
+    "gap_to_nongap": 0,
+    "nongap_to_gap": 6
+  },
+  "finance|SELECTED": {
+    "n_judgements": 24,
+    "gap_rate_blind": 66.66666666666666,
+    "gap_rate_aware": 100.0,
+    "label_agreement": 0.6666666666666666,
+    "novelty_blind": 4.291666666666667,
+    "novelty_aware": 8.708333333333334,
+    "novelty_delta": 4.416666666666667,
+    "gap_to_nongap": 0,
+    "nongap_to_gap": 8
+  },
+  "finance|CONTROL": {
+    "n_judgements": 24,
+    "gap_rate_blind": 79.16666666666666,
+    "gap_rate_aware": 91.66666666666666,
+    "label_agreement": 0.875,
+    "novelty_blind": 4.375,
+    "novelty_aware": 8.083333333333334,
+    "novelty_delta": 3.7083333333333335,
+    "gap_to_nongap": 0,
+    "nongap_to_gap": 3
+  },
+  "_annotators_unavailable": {
+    "anthropic:claude-sonnet-4-6": "model no longer served by the provider",
+    "xai:grok-4.5": "no credits on the account at the time of the rerun"
+  }
+}

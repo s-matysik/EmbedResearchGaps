@@ -1,0 +1,16 @@
+corpus,variant,n_candidates,kendall_tau,rbo,top5_overlap,top1_same
+management,equal,18,0.778,0.75,0.8,True
+management,without_distance,18,0.386,0.473,0.4,False
+management,without_centrality,18,0.686,0.714,0.8,True
+management,without_tfidf,18,0.66,0.624,0.8,False
+management,without_rarity,18,0.752,0.596,0.8,False
+finance,equal,16,0.833,0.601,0.8,False
+finance,without_distance,16,0.55,0.483,0.8,False
+finance,without_centrality,16,0.75,0.563,0.8,False
+finance,without_tfidf,16,0.767,0.683,0.6,True
+finance,without_rarity,16,0.767,0.586,0.8,False
+gamification,equal,18,0.869,0.789,0.8,True
+gamification,without_distance,18,0.673,0.557,0.8,False
+gamification,without_centrality,18,0.791,0.612,0.8,False
+gamification,without_tfidf,18,0.843,0.777,0.8,True
+gamification,without_rarity,18,0.856,0.814,1.0,True

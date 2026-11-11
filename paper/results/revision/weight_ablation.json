@@ -1,0 +1,76 @@
+{
+  "per_corpus": {
+    "management": {
+      "n_emerging": 18,
+      "published_top5": [
+        "agrifood businesses",
+        "dt vision",
+        "business model",
+        "p\u00e4r \u00e5gerfalk",
+        "social attention"
+      ]
+    },
+    "finance": {
+      "n_emerging": 16,
+      "published_top5": [
+        "soft information",
+        "south asia",
+        "risk-taking behavior",
+        "sub-saharan africa",
+        "banks\u2019 risk-taking"
+      ]
+    },
+    "gamification": {
+      "n_emerging": 18,
+      "published_top5": [
+        "ant forest",
+        "educational technology",
+        "psychological fear",
+        "consumer\u2013brand engagement",
+        "sustainability behavior"
+      ]
+    }
+  },
+  "aggregate": {
+    "equal": {
+      "kendall_min": 0.778,
+      "kendall_max": 0.869,
+      "rbo_min": 0.601,
+      "rbo_max": 0.789,
+      "top5_min": 0.8,
+      "top5_max": 0.8
+    },
+    "without_centrality": {
+      "kendall_min": 0.686,
+      "kendall_max": 0.791,
+      "rbo_min": 0.563,
+      "rbo_max": 0.714,
+      "top5_min": 0.8,
+      "top5_max": 0.8
+    },
+    "without_distance": {
+      "kendall_min": 0.386,
+      "kendall_max": 0.673,
+      "rbo_min": 0.473,
+      "rbo_max": 0.557,
+      "top5_min": 0.4,
+      "top5_max": 0.8
+    },
+    "without_rarity": {
+      "kendall_min": 0.752,
+      "kendall_max": 0.856,
+      "rbo_min": 0.586,
+      "rbo_max": 0.814,
+      "top5_min": 0.8,
+      "top5_max": 1.0
+    },
+    "without_tfidf": {
+      "kendall_min": 0.66,
+      "kendall_max": 0.843,
+      "rbo_min": 0.624,
+      "rbo_max": 0.777,
+      "top5_min": 0.6,
+      "top5_max": 0.8
+    }
+  }
+}

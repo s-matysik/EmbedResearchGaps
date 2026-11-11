@@ -145,8 +145,26 @@ def parse_blocks(text: str):
             blocks.append(("table", [r for r in table]))
             table.clear()
 
+    in_code = False
+    code: list[str] = []
+
     for line in text.splitlines():
         stripped = line.strip()
+        # Fenced code: keep the raw line, indentation included, and emit it as
+        # its own block. Joining these into a paragraph the way prose is joined
+        # would destroy the line breaks and leave the fences in the document.
+        if stripped.startswith("```"):
+            if in_code:
+                blocks.append(("code", list(code)))
+                code.clear()
+            else:
+                flush()
+                flush_table()
+            in_code = not in_code
+            continue
+        if in_code:
+            code.append(line.rstrip())
+            continue
         if stripped.startswith("|"):
             flush()
             cells = [c.strip() for c in stripped.strip("|").split("|")]
@@ -247,6 +265,18 @@ def build() -> Path:
                 for column, text in enumerate(row):
                     cell = built.rows[row_index].cells[column]
                     cell.paragraphs[0].add_run(text).font.size = Pt(9)
+            document.add_paragraph(style="Body")
+        elif kind == "code":
+            # One paragraph per source line, monospaced, with leading spaces
+            # preserved as non-breaking spaces so Word keeps the indentation.
+            for source_line in payload:
+                par = document.add_paragraph(style="Body")
+                par.paragraph_format.space_after = Pt(0)
+                par.paragraph_format.space_before = Pt(0)
+                indent = len(source_line) - len(source_line.lstrip(" "))
+                run = par.add_run("\u00a0" * indent + source_line.strip())
+                run.font.name = "Consolas"
+                run.font.size = Pt(8.5)
             document.add_paragraph(style="Body")
         elif kind == "p":
             prose(document, payload)

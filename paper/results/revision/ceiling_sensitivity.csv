@@ -1,0 +1,13 @@
+corpus,ceiling,n_emerging,shared_with_reported,jaccard_vs_reported
+management,1 (reported),17,17,1.0
+management,2,18,17,0.944
+management,3,17,16,0.889
+management,"proportional max(1, round(N/50))",17,15,0.789
+finance,1 (reported),18,18,1.0
+finance,2,18,18,1.0
+finance,3,18,16,0.8
+finance,"proportional max(1, round(N/50))",17,15,0.75
+gamification,1 (reported),18,18,1.0
+gamification,2,18,18,1.0
+gamification,3,18,17,0.895
+gamification,"proportional max(1, round(N/50))",18,17,0.895

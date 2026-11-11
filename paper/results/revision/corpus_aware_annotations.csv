@@ -1,0 +1,101 @@
+corpus,prompt,annotator,keyword_set,keyword,label,novelty
+management,corpus_aware,openai:gpt-4o,SELECTED,agrifood businesses,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,automotive industry,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,business model,GAP,10.0
+management,corpus_aware,openai:gpt-4o,SELECTED,common language,GAP,8.0
+management,corpus_aware,openai:gpt-4o,SELECTED,competitive advantage,GAP,10.0
+management,corpus_aware,openai:gpt-4o,SELECTED,design thinking,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,digital innovation,GAP,10.0
+management,corpus_aware,openai:gpt-4o,SELECTED,digital leadership,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,dt vision,GAP,8.0
+management,corpus_aware,openai:gpt-4o,SELECTED,dynamic capabilities,GAP,10.0
+management,corpus_aware,openai:gpt-4o,SELECTED,dynamic capability,GAP,10.0
+management,corpus_aware,openai:gpt-4o,SELECTED,ecosystem orchestration,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,family firms,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,firm performance,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,human capital,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,industry 4.0,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,it alignment,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,manufacturing firms,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,operational efficiency,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,organizational capabilities,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,process digitization,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,pär ågerfalk,NOISE,1.0
+management,corpus_aware,openai:gpt-4o,SELECTED,ryad titah,NOISE,1.0
+management,corpus_aware,openai:gpt-4o,SELECTED,social attention,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,steel industry,GAP,9.0
+management,corpus_aware,openai:gpt-4o,SELECTED,technological innovation,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,case study,METHOD,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,change management,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,design science research,METHOD,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,digital barriers,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,digital business performance,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,digital disruption,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,digital technology,EXPLORED,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,digital transformation (dt),EXPLORED,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,digital-oriented human resources practices,GAP,10.0
+management,corpus_aware,openai:gpt-4o,CONTROL,disruptive innovation,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,dynamic capability theory,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,emerging market,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,mittelstand firms,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,mixed method,METHOD,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,national recovery and resilience plan,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,process development,GAP,8.0
+management,corpus_aware,openai:gpt-4o,CONTROL,qualitative interpretive research,METHOD,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,qualitative study,METHOD,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,sequential explanatory approach,METHOD,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,smart factory,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,social media,GAP,8.0
+management,corpus_aware,openai:gpt-4o,CONTROL,strategic aggressiveness,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,strategic agility,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,structural equation model,METHOD,1.0
+management,corpus_aware,openai:gpt-4o,CONTROL,technology adoption,GAP,9.0
+management,corpus_aware,openai:gpt-4o,CONTROL,technology and innovation management,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,alternative data,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,artificial intelligence,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,bank concentration,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,bank fintech,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,banks’ risk-taking,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,big tech,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,bigtech credit,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,black swan,GAP,7.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,commercial banks,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,credit risk,GAP,10.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,debt trap,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,digital lending,GAP,10.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,disadvantaged communities,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,financial inclusion,GAP,10.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,financial innovation,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,financial technology,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,fintech credit,GAP,10.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,inclusive finance,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,output volatility,GAP,7.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,regulatory resources,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,risk-taking behavior,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,soft information,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,south asia,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,SELECTED,sub-saharan africa,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,alternative information,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,bank credit risk,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,brics economies,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,central and eastern european countries,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,commercial bank,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,corporate investment efficiency,GAP,7.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,development economics,GAP,6.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,digital divide,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,digital economy,GAP,8.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,digital financial inclusion,GAP,10.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,digital inclusive finance,GAP,10.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,fintech ecosystem,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,high-income countries,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,local banks,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,mobile banking,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,non-performing loans,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,panel data analysis,METHOD,1.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,principal component analysis,METHOD,1.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,relationship lending,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,risky behaviour,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,rural bank,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,sustainable development,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,technological innovation,GAP,9.0
+finance,corpus_aware,openai:gpt-4o,CONTROL,total alternative credit,GAP,9.0
