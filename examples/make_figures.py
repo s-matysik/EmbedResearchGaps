@@ -166,7 +166,18 @@ def figure_keyword_space() -> str:
         lambda s: s.value_counts().idxmax()
     )
     frequency = result.keywords.groupby("keyword")["frequency"].max()
-    gaps = result.gaps.set_index("keyword")
+    # Outlines and the count come from the deposited candidate table, not from
+    # this render's run: the figure must mark the candidate set the article
+    # reports. Re-embedding the corpus through a hosted endpoint can shift the
+    # partition slightly, which is exactly the instability Section 3.2 measures,
+    # but a figure that disagreed with Table 1 would be a defect rather than a
+    # finding.
+    deposited = pd.read_csv("results/management/articles_first_gaps.csv")
+    gaps = deposited.set_index("keyword")
+    gaps = gaps[~gaps.index.duplicated(keep="first")]
+    live = set(result.gaps["keyword"])
+    print(f"  deposited candidates {gaps.index.nunique()} | this run {len(live)} | "
+          f"shared {len(live & set(gaps.index))}", flush=True)
 
     fig, ax = plt.subplots(figsize=(7.1, 5.0))
     for cluster in sorted(result.cluster_labels):

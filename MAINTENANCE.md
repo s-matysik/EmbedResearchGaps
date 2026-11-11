@@ -29,6 +29,12 @@ such cases are already recorded: one provider's models stopped accepting
 excluded from the panel rather than replaced by a non-deterministic
 substitute.
 
+Hosted endpoints are not fixed inputs over time. Re-embedding the management
+corpus at the same endpoint, with the same model identifier and the same run
+configuration, months after the deposited run returned 27 candidates sharing 16
+with the deposited 26. Treat any hosted backend as a dated observation, not as
+a reproducible component.
+
 Published embeddings are preserved through the `precomputed` backend, which
 keys vectors by text rather than by row position, so a deposited run can be
 regenerated after a hosted endpoint has changed or disappeared.
