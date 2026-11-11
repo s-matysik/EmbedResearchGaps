@@ -1,0 +1,356 @@
+{
+  "management|articles_first": {
+    "corpus": "management",
+    "mode": "articles_first",
+    "n_candidates": 26,
+    "n_control": 120,
+    "gap_delta_pp": -1.1794871794871824,
+    "gap_ci_pp": [
+      -17.051602564102563,
+      15.090064102564092
+    ],
+    "gap_perm_p": 0.9088182363527294,
+    "gap_holm_p": 1.0,
+    "novelty_delta": -0.12448717948717958,
+    "novelty_ci": [
+      -0.7801346153846157,
+      0.578208333333333
+    ],
+    "novelty_perm_p": 0.7424515096980604,
+    "gap_random_mean": 47.20730769230769,
+    "gap_random_ci": [
+      33.84615384615384,
+      60.769230769230774
+    ],
+    "gap_rare_random_mean": 49.208615384615385,
+    "gap_rare_random_ci": [
+      36.15384615384615,
+      62.30769230769231
+    ],
+    "gap_rare_percentile": 31.06,
+    "novelty_rare_random_mean": 3.33834,
+    "novelty_rare_percentile": 27.3,
+    "mde_gap_pp_80": 23.718127612274426,
+    "tost_gap": {
+      "diff": -1.1794871794871824,
+      "margin": 10.0,
+      "p_tost": 0.15226908324177477,
+      "equivalent": false,
+      "se": 8.46596686009429,
+      "df": 35.365378824697295
+    },
+    "mde_novelty_80": 1.0046532376047301,
+    "tost_novelty": {
+      "diff": -0.12448717948717958,
+      "margin": 0.5,
+      "p_tost": 0.15079841550659565,
+      "equivalent": false,
+      "se": 0.3586017056020244,
+      "df": 38.2610409721381
+    },
+    "alpha_ordinal": 0.6183879874988947,
+    "alpha_ci": [
+      0.544762133671217,
+      0.685754990861531
+    ],
+    "share_singleton": 0.6153846153846154,
+    "share_multitoken": 1.0,
+    "rarity_rho_novelty": -0.05220653082727599,
+    "rarity_p_novelty": 0.5314338687207975
+  },
+  "management|keywords_first": {
+    "corpus": "management",
+    "mode": "keywords_first",
+    "n_candidates": 6,
+    "n_control": 140,
+    "gap_delta_pp": -8.0,
+    "gap_ci_pp": [
+      -37.142857142857146,
+      23.810714285714276
+    ],
+    "gap_perm_p": 0.6566686662667467,
+    "gap_holm_p": 1.0,
+    "novelty_delta": -0.44047619047619024,
+    "novelty_ci": [
+      -1.8443095238095235,
+      1.1014761904761894
+    ],
+    "novelty_perm_p": 0.5532893421315737,
+    "gap_random_mean": 47.741666666666674,
+    "gap_random_ci": [
+      20.0,
+      76.66666666666666
+    ],
+    "gap_rare_random_mean": 49.67266666666667,
+    "gap_rare_random_ci": [
+      23.333333333333332,
+      76.66666666666666
+    ],
+    "gap_rare_percentile": 26.279999999999998,
+    "novelty_rare_random_mean": 3.3514200000000005,
+    "novelty_rare_percentile": 23.26,
+    "mde_gap_pp_80": 48.779001462671374,
+    "tost_gap": {
+      "diff": -8.0,
+      "margin": 10.0,
+      "p_tost": 0.4563723864729349,
+      "equivalent": false,
+      "se": 17.41121460354038,
+      "df": 5.340057656606308
+    },
+    "mde_novelty_80": 2.3314912392894414,
+    "tost_novelty": {
+      "diff": -0.44047619047619024,
+      "margin": 0.5,
+      "p_tost": 0.4727945752190243,
+      "equivalent": false,
+      "se": 0.8322042907050449,
+      "df": 5.32457545032966
+    },
+    "alpha_ordinal": 0.617798495708902,
+    "alpha_ci": [
+      0.5347072261951116,
+      0.6820341098955836
+    ],
+    "share_singleton": 1.0,
+    "share_multitoken": 1.0,
+    "rarity_rho_novelty": -0.034149527344324436,
+    "rarity_p_novelty": 0.682390755662951
+  },
+  "finance|articles_first": {
+    "corpus": "finance",
+    "mode": "articles_first",
+    "n_candidates": 24,
+    "n_control": 144,
+    "gap_delta_pp": 13.020833333333336,
+    "gap_ci_pp": [
+      -5.6258680555555545,
+      30.416666666666664
+    ],
+    "gap_perm_p": 0.14417116576684663,
+    "gap_holm_p": 0.8650269946010798,
+    "novelty_delta": 0.4552083333333332,
+    "novelty_ci": [
+      -0.3038368055555553,
+      1.1958506944444447
+    ],
+    "novelty_perm_p": 0.2641471705658868,
+    "gap_random_mean": 53.662708333333335,
+    "gap_random_ci": [
+      39.16666666666666,
+      67.50000000000001
+    ],
+    "gap_rare_random_mean": 59.93120833333334,
+    "gap_rare_random_ci": [
+      45.83333333333333,
+      73.54166666666666
+    ],
+    "gap_rare_percentile": 74.86,
+    "novelty_rare_random_mean": 3.9413425,
+    "novelty_rare_percentile": 59.84,
+    "mde_gap_pp_80": 26.007011784963,
+    "tost_gap": {
+      "diff": 13.020833333333336,
+      "margin": 10.0,
+      "p_tost": 0.6264262531033777,
+      "equivalent": false,
+      "se": 9.28296295141086,
+      "df": 29.694224694667827
+    },
+    "mde_novelty_80": 1.0854187784829903,
+    "tost_novelty": {
+      "diff": 0.4552083333333332,
+      "margin": 0.5,
+      "p_tost": 0.4543333142204292,
+      "equivalent": false,
+      "se": 0.3874302203857584,
+      "df": 32.714682877949095
+    },
+    "alpha_ordinal": 0.6641933040161411,
+    "alpha_ci": [
+      0.5843297887029655,
+      0.7270398934697337
+    ],
+    "share_singleton": 0.5416666666666666,
+    "share_multitoken": 1.0,
+    "rarity_rho_novelty": -0.025117452485007408,
+    "rarity_p_novelty": 0.7465591221747881
+  },
+  "finance|keywords_first": {
+    "corpus": "finance",
+    "mode": "keywords_first",
+    "n_candidates": 4,
+    "n_control": 164,
+    "gap_delta_pp": -9.268292682926827,
+    "gap_ci_pp": [
+      -35.30564024390244,
+      27.592987804878028
+    ],
+    "gap_perm_p": 0.7144571085782844,
+    "gap_holm_p": 1.0,
+    "novelty_delta": -0.4103658536585364,
+    "novelty_ci": [
+      -1.4683079268292678,
+      1.2738033536585365
+    ],
+    "novelty_perm_p": 0.6866626674665067,
+    "gap_random_mean": 54.20375,
+    "gap_random_ci": [
+      20.0,
+      90.0
+    ],
+    "gap_rare_random_mean": 59.9765,
+    "gap_rare_random_ci": [
+      25.0,
+      90.0
+    ],
+    "gap_rare_percentile": 19.68,
+    "novelty_rare_random_mean": 4.001275,
+    "novelty_rare_percentile": 23.56,
+    "mde_gap_pp_80": 53.70889133685052,
+    "tost_gap": {
+      "diff": -9.268292682926827,
+      "margin": 10.0,
+      "p_tost": 0.48592064890358255,
+      "equivalent": false,
+      "se": 19.170893317686264,
+      "df": 3.1558109604076785
+    },
+    "mde_novelty_80": 2.376500045399021,
+    "tost_novelty": {
+      "diff": -0.4103658536585364,
+      "margin": 0.5,
+      "p_tost": 0.4610626877260737,
+      "equivalent": false,
+      "se": 0.848269768855981,
+      "df": 3.2003576724505836
+    },
+    "alpha_ordinal": 0.6714734669655543,
+    "alpha_ci": [
+      0.6013331585990332,
+      0.7357533539408023
+    ],
+    "share_singleton": 1.0,
+    "share_multitoken": 1.0,
+    "rarity_rho_novelty": 0.019198384228176973,
+    "rarity_p_novelty": 0.8049048083994867
+  },
+  "gamification|articles_first": {
+    "corpus": "gamification",
+    "mode": "articles_first",
+    "n_candidates": 26,
+    "n_control": 146,
+    "gap_delta_pp": -9.135932560590092,
+    "gap_ci_pp": [
+      -23.656743940990516,
+      6.059009483667019
+    ],
+    "gap_perm_p": 0.22835432913417317,
+    "gap_holm_p": 1.0,
+    "novelty_delta": -0.25616438356164384,
+    "novelty_ci": [
+      -0.8601685985247634,
+      0.3907297154899897
+    ],
+    "novelty_perm_p": 0.4337132573485303,
+    "gap_random_mean": 43.06076923076923,
+    "gap_random_ci": [
+      30.75,
+      55.38461538461539
+    ],
+    "gap_rare_random_mean": 48.10569230769231,
+    "gap_rare_random_ci": [
+      36.92307692307692,
+      59.23076923076923
+    ],
+    "gap_rare_percentile": 1.02,
+    "novelty_rare_random_mean": 3.203286153846154,
+    "novelty_rare_percentile": 5.16,
+    "mde_gap_pp_80": 21.96939245286815,
+    "tost_gap": {
+      "diff": -9.135932560590092,
+      "margin": 10.0,
+      "p_tost": 0.4564625220390066,
+      "equivalent": false,
+      "se": 7.841771976390503,
+      "df": 33.1396994556893
+    },
+    "mde_novelty_80": 0.9073778649255715,
+    "tost_novelty": {
+      "diff": -0.25616438356164384,
+      "margin": 0.5,
+      "p_tost": 0.2283106556393486,
+      "equivalent": false,
+      "se": 0.3238801586541578,
+      "df": 34.6431847728127
+    },
+    "alpha_ordinal": 0.5277267510507897,
+    "alpha_ci": [
+      0.45373995404000517,
+      0.5964268149796732
+    ],
+    "share_singleton": 0.6153846153846154,
+    "share_multitoken": 1.0,
+    "rarity_rho_novelty": -0.22664880926510558,
+    "rarity_p_novelty": 0.002791570021288734
+  },
+  "gamification|keywords_first": {
+    "corpus": "gamification",
+    "mode": "keywords_first",
+    "n_candidates": 6,
+    "n_control": 166,
+    "gap_delta_pp": -3.493975903614455,
+    "gap_ci_pp": [
+      -32.77208835341366,
+      28.15361445783131
+    ],
+    "gap_perm_p": 0.8172365526894622,
+    "gap_holm_p": 1.0,
+    "novelty_delta": 0.12008032128514046,
+    "novelty_ci": [
+      -1.1627309236947787,
+      1.5401606425702807
+    ],
+    "novelty_perm_p": 0.862627474505099,
+    "gap_random_mean": 43.093333333333334,
+    "gap_random_ci": [
+      16.666666666666664,
+      70.0
+    ],
+    "gap_rare_random_mean": 50.64933333333333,
+    "gap_rare_random_ci": [
+      26.666666666666668,
+      76.66666666666666
+    ],
+    "gap_rare_percentile": 17.64,
+    "novelty_rare_random_mean": 3.2784933333333335,
+    "novelty_rare_percentile": 41.02,
+    "mde_gap_pp_80": 48.55963069579531,
+    "tost_gap": {
+      "diff": -3.493975903614455,
+      "margin": 10.0,
+      "p_tost": 0.36104973387748784,
+      "equivalent": false,
+      "se": 17.332912231919565,
+      "df": 5.244759986203062
+    },
+    "mde_novelty_80": 2.1155517202244654,
+    "tost_novelty": {
+      "diff": 0.12008032128514046,
+      "margin": 0.5,
+      "p_tost": 0.31763700502240694,
+      "equivalent": false,
+      "se": 0.7551266713383836,
+      "df": 5.250462504426656
+    },
+    "alpha_ordinal": 0.5299130163124811,
+    "alpha_ci": [
+      0.4521406935632845,
+      0.6021402908539478
+    ],
+    "share_singleton": 1.0,
+    "share_multitoken": 1.0,
+    "rarity_rho_novelty": -0.16725931253406515,
+    "rarity_p_novelty": 0.02830286118650791
+  }
+}

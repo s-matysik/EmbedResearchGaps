@@ -214,6 +214,7 @@ def build() -> Path:
     caption = document.add_paragraph(style="Body")
     add_inline(caption, "**Table 1.** Code metadata.")
     rows = next(p for k, p in blocks if k == "table")
+    blocks = [(k, p) for k, p in blocks if not (k == "table" and p is rows)]
     fill_metadata_table(metadata_table, rows[1:])
     document.paragraphs[-1]._p.addnext(metadata_table)
     document.add_paragraph(style="Body")
@@ -228,6 +229,25 @@ def build() -> Path:
         elif kind == "h3":
             heading(document, SECTION_TITLES.get(payload, payload), 2,
                     numbered=payload in SECTION_TITLES)
+        elif kind == "table":
+            # A second markdown table in the body is a results table: build it
+            # with the template's own table style so borders and fonts match
+            # the code-metadata table the template ships.
+            header, *body_rows = payload
+            built = document.add_table(rows=len(payload), cols=len(header))
+            try:
+                built.style = document.tables[0].style
+            except Exception:
+                pass
+            for column, text in enumerate(header):
+                run = built.rows[0].cells[column].paragraphs[0].add_run(text)
+                run.bold = True
+                run.font.size = Pt(9)
+            for row_index, row in enumerate(body_rows, start=1):
+                for column, text in enumerate(row):
+                    cell = built.rows[row_index].cells[column]
+                    cell.paragraphs[0].add_run(text).font.size = Pt(9)
+            document.add_paragraph(style="Body")
         elif kind == "p":
             prose(document, payload)
         elif kind == "figure":

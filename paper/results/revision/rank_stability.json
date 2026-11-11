@@ -1,0 +1,56 @@
+{
+  "management|articles_first": {
+    "mean_list_length": 24.6,
+    "jaccard_mean": 0.4121601570273297,
+    "rbo_mean": 0.34114391256141935,
+    "rbo_min": 0.2436470969264889,
+    "top10_mean": 0.49000000000000005,
+    "kendall_mean": 0.591027306027306,
+    "kendall_n_pairs": 10
+  },
+  "management|keywords_first": {
+    "mean_list_length": 4.4,
+    "jaccard_mean": 0.22555555555555556,
+    "rbo_mean": 0.09595191285714284,
+    "rbo_min": 0.0,
+    "top10_mean": 0.16,
+    "kendall_mean": 1.0,
+    "kendall_n_pairs": 2
+  },
+  "finance|articles_first": {
+    "mean_list_length": 22.0,
+    "jaccard_mean": 0.3639598221986742,
+    "rbo_mean": 0.27222703816476657,
+    "rbo_min": 0.14183260493566358,
+    "top10_mean": 0.41,
+    "kendall_mean": 0.2463092463092463,
+    "kendall_n_pairs": 10
+  },
+  "finance|keywords_first": {
+    "mean_list_length": 4.0,
+    "jaccard_mean": 0.25011904761904763,
+    "rbo_mean": 0.14345159999999996,
+    "rbo_min": 0.0,
+    "top10_mean": 0.14,
+    "kendall_mean": 0.33333333333333337,
+    "kendall_n_pairs": 1
+  },
+  "gamification|articles_first": {
+    "mean_list_length": 23.0,
+    "jaccard_mean": 0.3098125804375805,
+    "rbo_mean": 0.3763310462824111,
+    "rbo_min": 0.1845826154409229,
+    "top10_mean": 0.45000000000000007,
+    "kendall_mean": 0.7469463869463869,
+    "kendall_n_pairs": 10
+  },
+  "gamification|keywords_first": {
+    "mean_list_length": 1.8,
+    "jaccard_mean": 0.21666666666666665,
+    "rbo_mean": 0.031599999999999996,
+    "rbo_min": 0.0,
+    "top10_mean": 0.06000000000000001,
+    "kendall_mean": NaN,
+    "kendall_n_pairs": 0
+  }
+}

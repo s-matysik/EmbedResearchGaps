@@ -1,0 +1,41 @@
+[
+  {
+    "corpus": "management",
+    "k_requested": 26,
+    "k_loaded": 26,
+    "mode_of_result": "external",
+    "n_scored": 26,
+    "external_gap_rate": 50.000000000000014,
+    "external_novelty": 3.146153846153846,
+    "control_gap_rate": 46.5,
+    "package_gap_rate": 50.0,
+    "package_novelty": 3.25,
+    "overlap_with_package": 0.061224489795918366
+  },
+  {
+    "corpus": "finance",
+    "k_requested": 25,
+    "k_loaded": 25,
+    "mode_of_result": "external",
+    "n_scored": 25,
+    "external_gap_rate": 65.8,
+    "external_novelty": 4.126,
+    "control_gap_rate": 51.74825174825175,
+    "package_gap_rate": 73.33333333333334,
+    "package_novelty": 4.292857142857143,
+    "overlap_with_package": 0.0
+  },
+  {
+    "corpus": "gamification",
+    "k_requested": 26,
+    "k_loaded": 26,
+    "mode_of_result": "external",
+    "n_scored": 26,
+    "external_gap_rate": 58.46153846153847,
+    "external_novelty": 3.623076923076923,
+    "control_gap_rate": 40.41095890410959,
+    "package_gap_rate": 39.1304347826087,
+    "package_novelty": 2.9391304347826086,
+    "overlap_with_package": 0.061224489795918366
+  }
+]

@@ -8,10 +8,14 @@ on:
 
 jobs:
   pytest:
-    runs-on: ubuntu-latest
+    # Determinism is guaranteed for fixed data, embeddings and RunConfig, so it
+    # is tested where it could break: across operating systems, whose BLAS and
+    # library builds differ, as well as across interpreter versions.
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: ["3.10", "3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v4

@@ -61,77 +61,95 @@ def save(fig: plt.Figure, name: str) -> str:
 # Fig. 1 -- architecture
 # --------------------------------------------------------------------------- #
 def figure_architecture() -> str:
-    fig, ax = plt.subplots(figsize=(7.1, 5.2))
-    ax.set_xlim(-2, 100)
-    ax.set_ylim(0, 72)
+    """Component diagram: what each stage consumes, produces and hands on.
+
+    Rewritten after review: the first version was a flow of undifferentiated
+    rounded boxes.  This one separates the three stages visually, names the
+    module behind every component, marks the two modes as alternatives rather
+    than a sequence, and numbers the processing order so the diagram can be
+    read without the surrounding text.
+    """
+    fig, ax = plt.subplots(figsize=(7.1, 5.6))
+    ax.set_xlim(0, 100)
+    ax.set_ylim(0, 100)
     ax.axis("off")
 
-    def box(x, y, w, h, text, colour, fontsize=SMALL, weight="normal"):
-        ax.add_patch(
-            FancyBboxPatch(
-                (x, y), w, h, boxstyle="round,pad=0.6,rounding_size=1.5",
-                linewidth=0.9, edgecolor=colour, facecolor=colour + "1A",
-            )
-        )
-        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center",
-                fontsize=fontsize, color="black", weight=weight, linespacing=1.35)
+    band = {"front": "#eef3f8", "modes": "#fdf1e7", "back": "#edf6f1"}
+    edge = {"front": "#2a6099", "modes": "#c45a1a", "back": "#1b7a52"}
 
-    def arrow(x1, y1, x2, y2, colour=GREY, style="-|>"):
-        ax.add_patch(
-            FancyArrowPatch((x1, y1), (x2, y2), arrowstyle=style,
-                            mutation_scale=9, linewidth=0.9, color=colour,
-                            shrinkA=1, shrinkB=1)
-        )
+    def stage(y, height, key, title):
+        ax.add_patch(FancyBboxPatch(
+            (1.5, y), 97, height, boxstyle="round,pad=0.4,rounding_size=1.2",
+            linewidth=0, facecolor=band[key], zorder=0))
+        ax.text(3.0, y + height - 3.4, title, fontsize=TICK, style="italic",
+                color=edge[key], zorder=2)
 
-    # shared front end
-    box(1, 57, 22, 11, "Bibliographic export\n(Scopus / WoS / CSV)", GREY)
-    box(27, 57, 20, 11, "load_csv\nnormalise keywords", GREY)
-    box(51, 57, 18, 11, "encoders\n7 backends", PALETTE[4])
-    box(73, 57, 25, 11, "Semantic ranking to the\nproblem statement\n-> top-N corpus", PALETTE[4])
-    arrow(23, 62.5, 27, 62.5)
-    arrow(47, 62.5, 51, 62.5)
-    arrow(69, 62.5, 73, 62.5)
+    def component(x, y, w, h, title, module, detail, key, fontsize=TICK):
+        ax.add_patch(FancyBboxPatch(
+            (x, y), w, h, boxstyle="round,pad=0.35,rounding_size=0.9",
+            linewidth=1.1, edgecolor=edge[key], facecolor="white", zorder=2))
+        ax.text(x + w / 2, y + h - 3.6, title, ha="center", fontsize=fontsize,
+                weight="bold", zorder=3)
+        ax.text(x + w / 2, y + h - 7.4, module, ha="center", fontsize=fontsize - 1.2,
+                family="monospace", color=edge[key], zorder=3)
+        if detail:
+            ax.text(x + w / 2, y + 2.2, detail, ha="center", va="bottom",
+                    fontsize=fontsize - 1.2, color="#333333", zorder=3)
 
-    # mode A
-    box(1, 33, 44, 13,
-        "Mode A   keywords_first\ncluster the author keywords,\nflag the periphery of each keyword cluster",
-        PALETTE[0], fontsize=SMALL)
-    box(1, 18, 44, 9, "Peripheral Keyword\ndistance from centroid > cluster percentile",
-        PALETTE[0])
-    arrow(23, 33, 23, 27)
+    def arrow(x1, y1, x2, y2, label=None, style="-|>"):
+        ax.add_patch(FancyArrowPatch(
+            (x1, y1), (x2, y2), arrowstyle=style, mutation_scale=11,
+            linewidth=1.0, color="#444444", zorder=4,
+            connectionstyle="arc3,rad=0.0", shrinkA=1, shrinkB=1))
+        if label:
+            ax.text((x1 + x2) / 2 + 1.2, (y1 + y2) / 2, label, fontsize=TICK - 2,
+                    color="#444444", va="center", zorder=4)
 
-    # mode B
-    box(54, 33, 44, 13,
-        "Mode B   articles_first\ncluster the articles, label the themes,\nmine a keyword sub-space in each cluster",
-        PALETTE[1], fontsize=SMALL)
-    box(54, 18, 13, 9, "Emerging\nConcept", PALETTE[1])
-    box(69, 18, 13, 9, "Conceptual\nCombination", PALETTE[1])
-    box(84, 18, 14, 9, "Cross-Cluster\nConcept", PALETTE[1])
-    arrow(76, 33, 60.5, 27)
-    arrow(76, 33, 75.5, 27)
-    arrow(76, 33, 91, 27)
+    stage(70, 28, "front", "1  Shared front end")
+    component(4, 74, 27, 18, "Load and normalise", "corpus / text",
+              "Scopus, WoS, CSV\nauthor keywords only", "front")
+    component(36.5, 74, 27, 18, "Embed", "encoders",
+              "7 backends\noffline default", "front")
+    component(69, 74, 27, 18, "Select analysis corpus", "clustering",
+              "top N nearest to the\nproblem statement", "front")
+    arrow(31, 83, 36.5, 83)
+    arrow(63.5, 83, 69, 83)
 
-    arrow(80, 57, 76, 46)
-    arrow(80, 57, 23, 46)
+    stage(36, 31, "modes", "2  Two alternative modes")
+    component(4, 40, 44, 22, "Mode A  keywords first", "pipelines.keywords_first",
+              "cluster keywords, flag those beyond\nthe 95th distance percentile of their cluster",
+              "modes")
+    component(52, 40, 44, 22, "Mode B  articles first", "pipelines.articles_first",
+              "cluster articles, then mine each cluster's keyword\n"
+              "sub-space: emerging / cross-cluster / combination",
+              "modes")
+    arrow(50, 70, 26, 62)
+    arrow(50, 70, 74, 62)
+    ax.text(50, 66.5, "either or both", fontsize=TICK - 2, ha="center", color="#444444")
 
-    # shared back end
-    box(1, 1, 29, 10, "consensus_gaps\nsupport across seeds", PALETTE[2])
-    box(35, 1, 29, 10, "validation\n5-model LLM panel,\nexpert sheets", PALETTE[3])
-    box(69, 1, 29, 10, "viz + results.save\nfigures, tables,\ndiagnostics", PALETTE[5])
-    arrow(23, 18, 15, 11)
-    arrow(23, 18, 49, 11)
-    arrow(76, 18, 50, 11)
-    arrow(76, 18, 83, 11)
+    stage(2, 32, "back", "3  Shared back end")
+    component(4, 8, 28, 22, "Stability", "consensus",
+              "repeat across seeds\nand corpus sizes;\nper-candidate support", "back")
+    component(36, 8, 28, 22, "Assessment", "validation",
+              "5-model panel,\ndisjoint control,\nblinded expert sheets", "back")
+    component(68, 8, 28, 22, "Outputs", "results / viz",
+              "candidate tables,\nrun configuration,\nfigures, diagnostics", "back")
+    # Both modes return the same result object, so both feed every back-end
+    # component; draw the convergence explicitly rather than implying that
+    # each mode owns a different downstream box.
+    ax.plot([26, 26, 74, 74], [40, 35, 35, 40], color="#444444", linewidth=1.0, zorder=4)
+    for target in (18, 50, 82):
+        arrow(50, 35, target, 30)
+    arrow(32, 19, 36, 19)
+    arrow(64, 19, 68, 19)
 
-    ax.text(-1, 70, "Shared front end", fontsize=SMALL, color=GREY, style="italic")
-    ax.text(-1, 48.5, "Two operating modes", fontsize=SMALL, color=GREY, style="italic")
-    ax.text(-1, 13.5, "Shared back end", fontsize=SMALL, color=GREY, style="italic")
+    ax.text(50, 4.0, "external rankings enter at stage 3 through "
+                     "external.load_external_ranking",
+            ha="center", fontsize=TICK - 1.5, style="italic", color="#444444")
+    fig.tight_layout(pad=0.3)
     return save(fig, "fig1_architecture.png")
 
 
-# --------------------------------------------------------------------------- #
-# Fig. 2 -- keyword space of the management case
-# --------------------------------------------------------------------------- #
 def figure_keyword_space() -> str:
     from embedresearchgaps import articles_first, load_csv
     from embedresearchgaps.viz import embed_2d
@@ -155,11 +173,14 @@ def figure_keyword_space() -> str:
         idx = [i for i, kw in enumerate(keywords) if int(lookup.get(kw, -1)) == cluster]
         if not idx:
             continue
+        # Area grows with the square root of document frequency: the linear
+        # scaling of the first version made a handful of frequent keywords
+        # dominate the panel and obscure their neighbours.
         ax.scatter(
             coords[idx, 0], coords[idx, 1],
-            s=[14 + 9 * float(frequency.get(keywords[i], 1)) for i in idx],
-            color=PALETTE[cluster % len(PALETTE)], alpha=0.55,
-            linewidths=0.3, edgecolors="white",
+            s=[10 + 16 * np.sqrt(float(frequency.get(keywords[i], 1))) for i in idx],
+            color=PALETTE[cluster % len(PALETTE)], alpha=0.75,
+            linewidths=0.4, edgecolors="white",
             label=f"{result.cluster_labels[cluster]}",
         )
     # Outline every candidate, but only label the highest-scoring ones, and
@@ -194,10 +215,19 @@ def figure_keyword_space() -> str:
     ax.set_xticks([])
     ax.set_yticks([])
     ax.margins(0.10)
+    # The earlier title asserted that candidates sit at the edge of every
+    # cluster.  Mode B candidates are not defined by keyword-space periphery,
+    # and t-SNE does not preserve global distance, so the claim is replaced by
+    # the statistic that can be measured: where candidate distances from their
+    # own sub-centroid fall in the distribution of all keyword distances.
+    distances = result.keywords.groupby("keyword")["distance_from_subcentroid"].max()
+    ranks = distances.rank(pct=True) * 100
+    candidate_percentile = float(ranks[ranks.index.isin(gaps.index)].median())
     ax.set_title(
-        "Candidate gaps sit at the edge of every keyword cluster\n"
-        f"{len(keywords)} author keywords, {len(gaps)} candidates, "
-        f"{result.n_clusters} article clusters (management case)"
+        f"Author-keyword space of the management corpus: t-SNE of {len(keywords)} "
+        f"keyword embeddings\n{gaps.index.nunique()} Mode B candidates outlined; their "
+        f"median distance from the sub-cluster centroid falls at the "
+        f"{candidate_percentile:.0f}th percentile of all keywords"
     )
     ax.annotate("", xy=(0.055, 0.055), xytext=(0.055, 0.15), xycoords="axes fraction",
                 arrowprops=dict(arrowstyle="<-", lw=0.7, color=GREY))
@@ -262,17 +292,21 @@ def figure_validation() -> str:
     corpora = {"management": "Management", "finance": "Economics\n& finance",
                "gamification": "Gamification"}
 
+    # The unit of analysis is the keyword, matching Section 3.3: the five
+    # provider judgements of one keyword are aggregated before the arms are
+    # compared.  Reading the judgement-level summary here, as an earlier
+    # version did, annotated the figure with p-values from a different design.
+    stats_path = Path("results/keyword_level_comparisons.json")
+    keyword_level = json.loads(stats_path.read_text())
     deltas: list[dict[str, object]] = []
     for name, pretty in corpora.items():
-        payload = json.loads(
-            Path(f"results/{name}/validation_summary_disjoint.json").read_text()
-        )
         for mode, label in modes.items():
-            comparison = payload[mode]["comparison"]
+            record = keyword_level[f"{name}|{mode}"]
             deltas.append({
                 "corpus": pretty, "mode": label,
-                "delta": comparison["gap_rate_delta_pp"],
-                "p": comparison["novelty_test"]["permutation_p"],
+                "delta": record["gap_delta_pp"],
+                "ci": record["gap_ci_pp"],
+                "p": record["gap_perm_p"],
             })
 
     fig, axes = plt.subplots(1, 2, figsize=(7.1, 3.7), width_ratios=[1.2, 1])
@@ -286,17 +320,21 @@ def figure_validation() -> str:
         values = [float(d["delta"]) for d in subset]
         pretty_mode = ("Mode B (articles first)" if label == "Mode B"
                        else "Mode A (keywords first)")
+        errors = np.array([[value - float(d["ci"][0]) for value, d in zip(values, subset)],
+                           [float(d["ci"][1]) - value for value, d in zip(values, subset)]])
         ax.bar(positions + offset, values, width, color=colour, edgecolor="black",
                linewidth=0.4, label=pretty_mode)
-        for x, d in zip(positions + offset, subset):
-            value = float(d["delta"])
-            ax.text(x, value + (0.8 if value >= 0 else -1.9),
-                    f"p={float(d['p']):.2f}", ha="center", fontsize=TICK - 1, color=GREY)
+        ax.errorbar(positions + offset, values, yerr=errors, fmt="none",
+                    ecolor="black", elinewidth=0.9, capsize=3)
+        for x, value, d in zip(positions + offset, values, subset):
+            top = float(d["ci"][1])
+            ax.text(x, top + 1.4, f"p={float(d['p']):.2f}", ha="center",
+                    fontsize=TICK - 1, color=GREY)
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xticks(positions, list(corpora.values()), fontsize=TICK)
     ax.set_ylabel("GAP rate of candidates minus control (pp)")
-    ax.set_ylim(-15, 18)
-    ax.set_title("No reliable enrichment over the\nnon-candidate keyword population")
+    ax.set_ylim(-75, 55)
+    ax.set_title("Candidate minus control GAP rate,\nkeyword level, with 95 % CI")
     ax.legend(frameon=False, fontsize=TICK - 1, loc="upper left")
 
     ax = axes[1]
@@ -322,7 +360,7 @@ def figure_validation() -> str:
                     color=PALETTE[index * 2], label=pretty)
     ax.set_xticks(range(3), arm_labels, fontsize=TICK - 1)
     ax.set_ylabel("mean Novelty Score (1-10)")
-    ax.set_title("Filters raise novelty on both corpora;\nthe ranking then diverges")
+    ax.set_title("Mean Novelty Score at three stages\nof the pipeline (SE bars)")
     ax.legend(frameon=False, fontsize=TICK, loc="lower right")
     ax.grid(alpha=0.2, axis="y")
     fig.tight_layout()
@@ -400,14 +438,20 @@ def figure_centroids() -> str:
         ax.set_yticks(range(len(values)), ticks, fontsize=TICK)
         for i in range(len(values)):
             for j in range(len(values)):
+                # Choose the annotation colour from the luminance of the cell
+                # it sits on, not from the raw value: the colour map is
+                # rescaled per panel, so a fixed value threshold put white
+                # text on pale cells.
+                rgba = image.cmap(image.norm(values[i, j]))
+                luminance = 0.299 * rgba[0] + 0.587 * rgba[1] + 0.114 * rgba[2]
                 ax.text(j, i, f"{values[i, j]:.2f}", ha="center", va="center",
                         fontsize=TICK - 1,
-                        color="white" if values[i, j] > 0.62 else "black")
+                        color="white" if luminance < 0.5 else "black")
         ax.set_title(pretty)
         fig.colorbar(image, ax=ax, fraction=0.046, pad=0.03).set_label(
             "cosine similarity", fontsize=TICK
         )
-    fig.suptitle("Article clusters overlap thematically but stay distinct",
+    fig.suptitle("Pairwise cosine similarity of the six article-cluster centroids",
                  fontsize=BASE, x=0.01, ha="left")
     fig.tight_layout(rect=(0, 0, 1, 0.94))
     return save(fig, "fig4_centroids.png")
