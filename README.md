@@ -18,7 +18,7 @@ annotation plus human-expert concordance).
 
 ## Two operating modes
 
-| | **Mode A — `keywords_first`** | **Mode B — `articles_first`** |
+| | **Mode A - `keywords_first`** | **Mode B - `articles_first`** |
 |---|---|---|
 | Clustering order | author keywords directly | articles, then keywords inside each article cluster |
 | Gap criterion | semantic periphery of a keyword cluster | three-type gap typology |
@@ -30,17 +30,17 @@ annotation plus human-expert concordance).
 k-means, and flags keywords whose distance from their own cluster centroid
 exceeds a cluster-specific percentile (default: p95). Frequency and
 methodological-term filters then remove the terms that are peripheral for
-uninteresting reasons, and an optional citation filter — off by default — can
+uninteresting reasons, and an optional citation filter - off by default - can
 narrow the candidates to a citation window (see *Citation filter* below).
 
 **Mode B** clusters the articles first, labels each cluster from its dominant
 keywords, then builds a keyword sub-space inside every cluster and applies three
 detectors:
 
-1. **Emerging Concepts** — rare, peripheral, lexically salient keywords.
-2. **Conceptual Combinations** — pairs of established keywords that are
+1. **Emerging Concepts** - rare, peripheral, lexically salient keywords.
+2. **Conceptual Combinations** - pairs of established keywords that are
    semantically close enough to be combinable but never co-occur in one record.
-3. **Cross-Cluster Concepts** — keywords well established elsewhere in the
+3. **Cross-Cluster Concepts** - keywords well established elsewhere in the
    corpus but absent from this cluster.
 
 ## Installation
@@ -113,11 +113,11 @@ apply to a run are skipped and listed under the `skipped` key.
 
 ```bash
 embedresearchgaps run scopus_export.csv \
-    --mode articles_first \
-    --top-n 50 \
-    --problem-file problem.txt \
-    --encoder openai --model text-embedding-3-large --api-key-env OPENAI_API_KEY \
-    --outdir results/
+ --mode articles_first \
+ --top-n 50 \
+ --problem-file problem.txt \
+ --encoder openai --model text-embedding-3-large --api-key-env OPENAI_API_KEY \
+ --outdir results/
 ```
 
 `embedresearchgaps encoders` lists the available backends.
@@ -185,9 +185,8 @@ embedresearchgaps run scopus.csv --max-citations 20
 embedresearchgaps run scopus.csv --min-citations 50 --drop-uncited
 ```
 
-Candidates whose citation support is unknown — no citation column in the
-export, no publication year for the rate, or no value on any source record —
-are **kept** by default,
+Candidates whose citation support is unknown - no citation column in the
+export, no publication year for the rate, or no value on any source record - are **kept** by default,
 because a bound would otherwise silently empty the candidate list on a corpus
 without citation data. Pass `keep_uncited_candidates=False` (`--drop-uncited`)
 to require explicit citation evidence instead.
@@ -230,8 +229,8 @@ or missing keywords.
 ## External rankings
 
 The assessment machinery does not depend on how a candidate list was produced.
-`load_external_ranking` reads a ranking made elsewhere — VOSviewer, BERTopic, a
-competing implementation, a human reviewer — and returns the same
+`load_external_ranking` reads a ranking made elsewhere - VOSviewer, BERTopic, a
+competing implementation, a human reviewer - and returns the same
 `PipelineResult` the built-in modes return, so everything downstream applies to
 it unchanged:
 
@@ -271,18 +270,17 @@ Two things the loader does **not** do. It does not attach a clustering of ours:
 `cluster` is -1, `cluster_labels` is empty, and no partition diagnostic
 (silhouette, centroid similarity) is computed, because an external ranking
 carries no partition of ours and inventing one would misreport its provenance.
-It also does not label foreign candidates with one of the four detector types —
-they get `External Candidate`, which is deliberately not a member of
-`GAP_TYPES` — unless the file names a type itself.
+It also does not label foreign candidates with one of the four detector types - they get `External Candidate`, which is deliberately not a member of
+`GAP_TYPES` - unless the file names a type itself.
 
 ## Embedding backends
 
 | Name | Notes |
 |---|---|
-| `tfidf-svd` | Offline, deterministic, no credentials. Captures lexical overlap only — adequate for Mode A periphery scans and for reproducing a run without keys, but it cannot support the similarity-window criterion of Type 2. |
+| `tfidf-svd` | Offline, deterministic, no credentials. Captures lexical overlap only - adequate for Mode A periphery scans and for reproducing a run without keys, but it cannot support the similarity-window criterion of Type 2. |
 | `sbert` | Any `sentence-transformers` checkpoint, e.g. `all-mpnet-base-v2`. Local, free, genuinely semantic. |
 | `openai` | `text-embedding-3-large` / `-small`. |
-| `nomic` | `nomic-embed-text-v1.5` — the model used in the two source publications. |
+| `nomic` | `nomic-embed-text-v1.5` - the model used in the two source publications. |
 | `jina`, `cohere` | Hosted alternatives. |
 | `precomputed` | Supply your own vectors via `EncoderConfig.extra["vectors"]`. |
 
@@ -297,7 +295,7 @@ The validation subpackage reproduces the evaluation design of the two source
 papers: a panel of LLM annotators labels the keywords the pipeline selected
 and, as a control, the author keywords of the same corpus that it did *not*
 select, at `temperature=0`. The control set is disjoint from the candidate set
-by construction — comparing a candidate set against a population that contains
+by construction - comparing a candidate set against a population that contains
 it nests the two samples, and no two-sample statistic on them has a defined
 null distribution.
 
@@ -328,8 +326,8 @@ print(report.reliability)                      # Fleiss' kappa, Krippendorff's a
 report.save("validation/")
 ```
 
-Each keyword receives one of five labels — `GAP`, `EXPLORED`, `LOW IMPORTANCE`,
-`METHOD`, `NOISE` — and a Novelty Score from 1 to 10. An annotator that fails
+Each keyword receives one of five labels - `GAP`, `EXPLORED`, `LOW IMPORTANCE`,
+`METHOD`, `NOISE` - and a Novelty Score from 1 to 10. An annotator that fails
 (missing credential, transport error, malformed reply) is recorded in
 `report.failures` and skipped; the study continues with the rest and the report
 states which models contributed. `CallableAnnotator` wraps any `str -> str`
@@ -399,9 +397,9 @@ tables.
 ## Stability-aware consensus
 
 The clustering both modes rest on is k-means, and on real bibliographic corpora
-its silhouette is small (0.017–0.103 over the three corpora shipped with this
-package; 0.033–0.069 on the two case studies). The partition — and
-with it the candidate list — therefore depends on the initialisation. A single
+its silhouette is small (0.017-0.103 over the three corpora shipped with this
+package; 0.033-0.069 on the two case studies). The partition - and
+with it the candidate list - therefore depends on the initialisation. A single
 seed gives a list whose reproducibility is unknown, so measure it:
 
 ```python
@@ -558,4 +556,4 @@ and, for the screening stage of the review pipeline:
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).

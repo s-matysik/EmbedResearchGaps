@@ -1,0 +1,530 @@
+rater,programme,keyword,novelty,label
+S01,Informatyka,precuneus,3,GAP
+S01,Informatyka,cognitive load theory,6,METHOD
+S01,Informatyka,delay of gratification,5,METHOD
+S01,Informatyka,media richness,10,EXPLORED
+S01,Informatyka,text comprehension,8,LOW IMPORTANCE
+S01,Informatyka,self-determination theory,7,GAP
+S01,Informatyka,in-class smartphone use,9,EXPLORED
+S01,Informatyka,fear of missing out,10,EXPLORED
+S01,Informatyka,habitual phone use,10,EXPLORED
+S01,Informatyka,social network sites (sns),8,LOW IMPORTANCE
+S01,Informatyka,media effects,9,EXPLORED
+S01,Informatyka,phubbing,8,GAP
+S01,Informatyka,pls-sem,5,METHOD
+S01,Informatyka,self-report bias,6,GAP
+S01,Informatyka,history of mtbi,3,METHOD
+S01,Informatyka,personal factors,7,LOW IMPORTANCE
+S01,Informatyka,organizational culture,7,GAP
+S01,Informatyka,workplace behaviors,8,GAP
+S01,Informatyka,crisis communication,9,GAP
+S01,Informatyka,campus emergency,,GAP
+S01,Informatyka,native advertising,9,GAP
+S01,Informatyka,news frames,7,EXPLORED
+S01,Informatyka,conference publications,5,METHOD
+S02,Informatyka,precuneus,9,GAP
+S02,Informatyka,cognitive load theory,4,EXPLORED
+S02,Informatyka,delay of gratification,8,GAP
+S02,Informatyka,media richness,10,GAP
+S02,Informatyka,text comprehension,2,NOISE
+S02,Informatyka,self-determination theory,10,GAP
+S02,Informatyka,in-class smartphone use,10,EXPLORED
+S02,Informatyka,fear of missing out,10,GAP
+S02,Informatyka,habitual phone use,9,NOISE
+S02,Informatyka,social network sites (sns),10,NOISE
+S02,Informatyka,media effects,9,EXPLORED
+S02,Informatyka,phubbing,8,GAP
+S02,Informatyka,pls-sem,5,METHOD
+S02,Informatyka,self-report bias,5,LOW IMPORTANCE
+S02,Informatyka,history of mtbi,6,METHOD
+S02,Informatyka,personal factors,6,EXPLORED
+S02,Informatyka,organizational culture,9,NOISE
+S02,Informatyka,workplace behaviors,8,NOISE
+S02,Informatyka,crisis communication,8,METHOD
+S02,Informatyka,campus emergency,,NOISE
+S02,Informatyka,native advertising,10,GAP
+S02,Informatyka,news frames,9,EXPLORED
+S02,Informatyka,conference publications,2,NOISE
+S03,Informatyka,precuneus,6,GAP
+S03,Informatyka,cognitive load theory,4,EXPLORED
+S03,Informatyka,delay of gratification,1,EXPLORED
+S03,Informatyka,media richness,5,GAP
+S03,Informatyka,text comprehension,3,GAP
+S03,Informatyka,self-determination theory,4,NOISE
+S03,Informatyka,in-class smartphone use,1,EXPLORED
+S03,Informatyka,fear of missing out,1,EXPLORED
+S03,Informatyka,habitual phone use,2,EXPLORED
+S03,Informatyka,social network sites (sns),1,EXPLORED
+S03,Informatyka,media effects,1,EXPLORED
+S03,Informatyka,phubbing,3,EXPLORED
+S03,Informatyka,pls-sem,7,METHOD
+S03,Informatyka,self-report bias,1,NOISE
+S03,Informatyka,history of mtbi,1,NOISE
+S03,Informatyka,personal factors,5,LOW IMPORTANCE
+S03,Informatyka,organizational culture,7,GAP
+S03,Informatyka,workplace behaviors,6,GAP
+S03,Informatyka,crisis communication,9,GAP
+S03,Informatyka,campus emergency,,NOISE
+S03,Informatyka,native advertising,8,GAP
+S03,Informatyka,news frames,5,EXPLORED
+S03,Informatyka,conference publications,1,NOISE
+S04,Informatyka,precuneus,4,GAP
+S04,Informatyka,cognitive load theory,3,EXPLORED
+S04,Informatyka,delay of gratification,3,EXPLORED
+S04,Informatyka,media richness,4,EXPLORED
+S04,Informatyka,text comprehension,3,EXPLORED
+S04,Informatyka,self-determination theory,2,EXPLORED
+S04,Informatyka,in-class smartphone use,7,GAP
+S04,Informatyka,fear of missing out,6,GAP
+S04,Informatyka,habitual phone use,8,GAP
+S04,Informatyka,social network sites (sns),2,EXPLORED
+S04,Informatyka,media effects,1,EXPLORED
+S04,Informatyka,phubbing,8,GAP
+S04,Informatyka,pls-sem,2,METHOD
+S04,Informatyka,self-report bias,1,METHOD
+S04,Informatyka,history of mtbi,2,EXPLORED
+S04,Informatyka,personal factors,2,LOW IMPORTANCE
+S04,Informatyka,organizational culture,1,EXPLORED
+S04,Informatyka,workplace behaviors,1,EXPLORED
+S04,Informatyka,crisis communication,2,EXPLORED
+S04,Informatyka,campus emergency,,NOISE
+S04,Informatyka,native advertising,5,EXPLORED
+S04,Informatyka,news frames,2,EXPLORED
+S04,Informatyka,conference publications,5,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,precuneus,1,GAP
+S05,Psychologia i komunikacja w biznesie,cognitive load theory,2,GAP
+S05,Psychologia i komunikacja w biznesie,delay of gratification,1,GAP
+S05,Psychologia i komunikacja w biznesie,media richness,3,EXPLORED
+S05,Psychologia i komunikacja w biznesie,text comprehension,5,METHOD
+S05,Psychologia i komunikacja w biznesie,self-determination theory,6,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,in-class smartphone use,4,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,fear of missing out,10,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,habitual phone use,7,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,social network sites (sns),8,METHOD
+S05,Psychologia i komunikacja w biznesie,media effects,9,METHOD
+S05,Psychologia i komunikacja w biznesie,phubbing,6,METHOD
+S05,Psychologia i komunikacja w biznesie,pls-sem,2,EXPLORED
+S05,Psychologia i komunikacja w biznesie,self-report bias,7,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,history of mtbi,7,METHOD
+S05,Psychologia i komunikacja w biznesie,personal factors,9,NOISE
+S05,Psychologia i komunikacja w biznesie,organizational culture,9,NOISE
+S05,Psychologia i komunikacja w biznesie,workplace behaviors,7,METHOD
+S05,Psychologia i komunikacja w biznesie,crisis communication,7,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,campus emergency,5.0,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,native advertising,4,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,news frames,4,LOW IMPORTANCE
+S05,Psychologia i komunikacja w biznesie,conference publications,6,LOW IMPORTANCE
+S06,Psychologia i komunikacja w biznesie,precuneus,5,NOISE
+S06,Psychologia i komunikacja w biznesie,cognitive load theory,6,METHOD
+S06,Psychologia i komunikacja w biznesie,delay of gratification,8,METHOD
+S06,Psychologia i komunikacja w biznesie,media richness,5,METHOD
+S06,Psychologia i komunikacja w biznesie,text comprehension,7,METHOD
+S06,Psychologia i komunikacja w biznesie,self-determination theory,6,METHOD
+S06,Psychologia i komunikacja w biznesie,in-class smartphone use,9,METHOD
+S06,Psychologia i komunikacja w biznesie,fear of missing out,9,LOW IMPORTANCE
+S06,Psychologia i komunikacja w biznesie,habitual phone use,7,METHOD
+S06,Psychologia i komunikacja w biznesie,social network sites (sns),6,EXPLORED
+S06,Psychologia i komunikacja w biznesie,media effects,8,LOW IMPORTANCE
+S06,Psychologia i komunikacja w biznesie,phubbing,9,LOW IMPORTANCE
+S06,Psychologia i komunikacja w biznesie,pls-sem,1,LOW IMPORTANCE
+S06,Psychologia i komunikacja w biznesie,self-report bias,7,GAP
+S06,Psychologia i komunikacja w biznesie,history of mtbi,4,NOISE
+S06,Psychologia i komunikacja w biznesie,personal factors,6,NOISE
+S06,Psychologia i komunikacja w biznesie,organizational culture,6,EXPLORED
+S06,Psychologia i komunikacja w biznesie,workplace behaviors,7,EXPLORED
+S06,Psychologia i komunikacja w biznesie,crisis communication,7,EXPLORED
+S06,Psychologia i komunikacja w biznesie,campus emergency,7.0,METHOD
+S06,Psychologia i komunikacja w biznesie,native advertising,7,METHOD
+S06,Psychologia i komunikacja w biznesie,news frames,5,LOW IMPORTANCE
+S06,Psychologia i komunikacja w biznesie,conference publications,8,NOISE
+S07,Psychologia i komunikacja w biznesie,precuneus,1,LOW IMPORTANCE
+S07,Psychologia i komunikacja w biznesie,cognitive load theory,5,EXPLORED
+S07,Psychologia i komunikacja w biznesie,delay of gratification,7,EXPLORED
+S07,Psychologia i komunikacja w biznesie,media richness,4,LOW IMPORTANCE
+S07,Psychologia i komunikacja w biznesie,text comprehension,3,LOW IMPORTANCE
+S07,Psychologia i komunikacja w biznesie,self-determination theory,2,GAP
+S07,Psychologia i komunikacja w biznesie,in-class smartphone use,10,NOISE
+S07,Psychologia i komunikacja w biznesie,fear of missing out,10,EXPLORED
+S07,Psychologia i komunikacja w biznesie,habitual phone use,10,NOISE
+S07,Psychologia i komunikacja w biznesie,social network sites (sns),10,NOISE
+S07,Psychologia i komunikacja w biznesie,media effects,10,NOISE
+S07,Psychologia i komunikacja w biznesie,phubbing,6,METHOD
+S07,Psychologia i komunikacja w biznesie,pls-sem,1,GAP
+S07,Psychologia i komunikacja w biznesie,self-report bias,7,EXPLORED
+S07,Psychologia i komunikacja w biznesie,history of mtbi,1,GAP
+S07,Psychologia i komunikacja w biznesie,personal factors,10,LOW IMPORTANCE
+S07,Psychologia i komunikacja w biznesie,organizational culture,10,EXPLORED
+S07,Psychologia i komunikacja w biznesie,workplace behaviors,10,EXPLORED
+S07,Psychologia i komunikacja w biznesie,crisis communication,10,LOW IMPORTANCE
+S07,Psychologia i komunikacja w biznesie,campus emergency,7.0,LOW IMPORTANCE
+S07,Psychologia i komunikacja w biznesie,native advertising,5,LOW IMPORTANCE
+S07,Psychologia i komunikacja w biznesie,news frames,8,EXPLORED
+S07,Psychologia i komunikacja w biznesie,conference publications,9,METHOD
+S08,Psychologia i komunikacja w biznesie,precuneus,5,EXPLORED
+S08,Psychologia i komunikacja w biznesie,cognitive load theory,4,EXPLORED
+S08,Psychologia i komunikacja w biznesie,delay of gratification,5,LOW IMPORTANCE
+S08,Psychologia i komunikacja w biznesie,media richness,6,METHOD
+S08,Psychologia i komunikacja w biznesie,text comprehension,9,LOW IMPORTANCE
+S08,Psychologia i komunikacja w biznesie,self-determination theory,5,GAP
+S08,Psychologia i komunikacja w biznesie,in-class smartphone use,4,LOW IMPORTANCE
+S08,Psychologia i komunikacja w biznesie,fear of missing out,6,EXPLORED
+S08,Psychologia i komunikacja w biznesie,habitual phone use,7,LOW IMPORTANCE
+S08,Psychologia i komunikacja w biznesie,social network sites (sns),9,LOW IMPORTANCE
+S08,Psychologia i komunikacja w biznesie,media effects,5,EXPLORED
+S08,Psychologia i komunikacja w biznesie,phubbing,10,EXPLORED
+S08,Psychologia i komunikacja w biznesie,pls-sem,5,EXPLORED
+S08,Psychologia i komunikacja w biznesie,self-report bias,5,EXPLORED
+S08,Psychologia i komunikacja w biznesie,history of mtbi,7,GAP
+S08,Psychologia i komunikacja w biznesie,personal factors,6,LOW IMPORTANCE
+S08,Psychologia i komunikacja w biznesie,organizational culture,3,LOW IMPORTANCE
+S08,Psychologia i komunikacja w biznesie,workplace behaviors,10,EXPLORED
+S08,Psychologia i komunikacja w biznesie,crisis communication,5,EXPLORED
+S08,Psychologia i komunikacja w biznesie,campus emergency,5.0,METHOD
+S08,Psychologia i komunikacja w biznesie,native advertising,6,METHOD
+S08,Psychologia i komunikacja w biznesie,news frames,6,METHOD
+S08,Psychologia i komunikacja w biznesie,conference publications,6,EXPLORED
+S09,Psychologia i komunikacja w biznesie,precuneus,10,NOISE
+S09,Psychologia i komunikacja w biznesie,cognitive load theory,5,GAP
+S09,Psychologia i komunikacja w biznesie,delay of gratification,4,GAP
+S09,Psychologia i komunikacja w biznesie,media richness,2,EXPLORED
+S09,Psychologia i komunikacja w biznesie,text comprehension,2,EXPLORED
+S09,Psychologia i komunikacja w biznesie,self-determination theory,3,EXPLORED
+S09,Psychologia i komunikacja w biznesie,in-class smartphone use,3,EXPLORED
+S09,Psychologia i komunikacja w biznesie,fear of missing out,1,EXPLORED
+S09,Psychologia i komunikacja w biznesie,habitual phone use,9,GAP
+S09,Psychologia i komunikacja w biznesie,social network sites (sns),1,EXPLORED
+S09,Psychologia i komunikacja w biznesie,media effects,1,EXPLORED
+S09,Psychologia i komunikacja w biznesie,phubbing,9,NOISE
+S09,Psychologia i komunikacja w biznesie,pls-sem,10,METHOD
+S09,Psychologia i komunikacja w biznesie,self-report bias,3,GAP
+S09,Psychologia i komunikacja w biznesie,history of mtbi,7,GAP
+S09,Psychologia i komunikacja w biznesie,personal factors,1,EXPLORED
+S09,Psychologia i komunikacja w biznesie,organizational culture,2,EXPLORED
+S09,Psychologia i komunikacja w biznesie,workplace behaviors,3,EXPLORED
+S09,Psychologia i komunikacja w biznesie,crisis communication,2,EXPLORED
+S09,Psychologia i komunikacja w biznesie,campus emergency,4.0,EXPLORED
+S09,Psychologia i komunikacja w biznesie,native advertising,4,GAP
+S09,Psychologia i komunikacja w biznesie,news frames,5,GAP
+S09,Psychologia i komunikacja w biznesie,conference publications,2,EXPLORED
+S10,Psychologia i komunikacja w biznesie,precuneus,2,EXPLORED
+S10,Psychologia i komunikacja w biznesie,cognitive load theory,4,GAP
+S10,Psychologia i komunikacja w biznesie,delay of gratification,3,GAP
+S10,Psychologia i komunikacja w biznesie,media richness,3,GAP
+S10,Psychologia i komunikacja w biznesie,text comprehension,8,METHOD
+S10,Psychologia i komunikacja w biznesie,self-determination theory,7,LOW IMPORTANCE
+S10,Psychologia i komunikacja w biznesie,in-class smartphone use,5,NOISE
+S10,Psychologia i komunikacja w biznesie,fear of missing out,7,LOW IMPORTANCE
+S10,Psychologia i komunikacja w biznesie,habitual phone use,3,NOISE
+S10,Psychologia i komunikacja w biznesie,social network sites (sns),4,NOISE
+S10,Psychologia i komunikacja w biznesie,media effects,4,NOISE
+S10,Psychologia i komunikacja w biznesie,phubbing,3,NOISE
+S10,Psychologia i komunikacja w biznesie,pls-sem,2,EXPLORED
+S10,Psychologia i komunikacja w biznesie,self-report bias,7,NOISE
+S10,Psychologia i komunikacja w biznesie,history of mtbi,3,EXPLORED
+S10,Psychologia i komunikacja w biznesie,personal factors,6,METHOD
+S10,Psychologia i komunikacja w biznesie,organizational culture,6,METHOD
+S10,Psychologia i komunikacja w biznesie,workplace behaviors,6,METHOD
+S10,Psychologia i komunikacja w biznesie,crisis communication,7,METHOD
+S10,Psychologia i komunikacja w biznesie,campus emergency,5.0,METHOD
+S10,Psychologia i komunikacja w biznesie,native advertising,3,EXPLORED
+S10,Psychologia i komunikacja w biznesie,news frames,3,METHOD
+S10,Psychologia i komunikacja w biznesie,conference publications,8,GAP
+S11,Psychologia i komunikacja w biznesie,precuneus,6,GAP
+S11,Psychologia i komunikacja w biznesie,cognitive load theory,6,EXPLORED
+S11,Psychologia i komunikacja w biznesie,delay of gratification,6,EXPLORED
+S11,Psychologia i komunikacja w biznesie,media richness,",6",METHOD
+S11,Psychologia i komunikacja w biznesie,text comprehension,4,METHOD
+S11,Psychologia i komunikacja w biznesie,self-determination theory,5,NOISE
+S11,Psychologia i komunikacja w biznesie,in-class smartphone use,5,EXPLORED
+S11,Psychologia i komunikacja w biznesie,fear of missing out,6,EXPLORED
+S11,Psychologia i komunikacja w biznesie,habitual phone use,5,GAP
+S11,Psychologia i komunikacja w biznesie,social network sites (sns),5,LOW IMPORTANCE
+S11,Psychologia i komunikacja w biznesie,media effects,4,LOW IMPORTANCE
+S11,Psychologia i komunikacja w biznesie,phubbing,4,LOW IMPORTANCE
+S11,Psychologia i komunikacja w biznesie,pls-sem,3,EXPLORED
+S11,Psychologia i komunikacja w biznesie,self-report bias,3,EXPLORED
+S11,Psychologia i komunikacja w biznesie,history of mtbi,4,METHOD
+S11,Psychologia i komunikacja w biznesie,personal factors,4,EXPLORED
+S11,Psychologia i komunikacja w biznesie,organizational culture,4,EXPLORED
+S11,Psychologia i komunikacja w biznesie,workplace behaviors,6,LOW IMPORTANCE
+S11,Psychologia i komunikacja w biznesie,crisis communication,8,GAP
+S11,Psychologia i komunikacja w biznesie,campus emergency,9.0,GAP
+S11,Psychologia i komunikacja w biznesie,native advertising,6,EXPLORED
+S11,Psychologia i komunikacja w biznesie,news frames,8,LOW IMPORTANCE
+S11,Psychologia i komunikacja w biznesie,conference publications,8,GAP
+S12,Psychologia i komunikacja w biznesie,precuneus,9,METHOD
+S12,Psychologia i komunikacja w biznesie,cognitive load theory,8,EXPLORED
+S12,Psychologia i komunikacja w biznesie,delay of gratification,10,LOW IMPORTANCE
+S12,Psychologia i komunikacja w biznesie,media richness,10,EXPLORED
+S12,Psychologia i komunikacja w biznesie,text comprehension,1,METHOD
+S12,Psychologia i komunikacja w biznesie,self-determination theory,9,LOW IMPORTANCE
+S12,Psychologia i komunikacja w biznesie,in-class smartphone use,9,EXPLORED
+S12,Psychologia i komunikacja w biznesie,fear of missing out,1,EXPLORED
+S12,Psychologia i komunikacja w biznesie,habitual phone use,10,EXPLORED
+S12,Psychologia i komunikacja w biznesie,social network sites (sns),9,EXPLORED
+S12,Psychologia i komunikacja w biznesie,media effects,3,EXPLORED
+S12,Psychologia i komunikacja w biznesie,phubbing,8,EXPLORED
+S12,Psychologia i komunikacja w biznesie,pls-sem,10,LOW IMPORTANCE
+S12,Psychologia i komunikacja w biznesie,self-report bias,1,NOISE
+S12,Psychologia i komunikacja w biznesie,history of mtbi,9,NOISE
+S12,Psychologia i komunikacja w biznesie,personal factors,1,EXPLORED
+S12,Psychologia i komunikacja w biznesie,organizational culture,1,EXPLORED
+S12,Psychologia i komunikacja w biznesie,workplace behaviors,1,NOISE
+S12,Psychologia i komunikacja w biznesie,crisis communication,3,EXPLORED
+S12,Psychologia i komunikacja w biznesie,campus emergency,10.0,NOISE
+S12,Psychologia i komunikacja w biznesie,native advertising,3,NOISE
+S12,Psychologia i komunikacja w biznesie,news frames,8,NOISE
+S12,Psychologia i komunikacja w biznesie,conference publications,9,NOISE
+S13,Psychologia i komunikacja w biznesie,precuneus,8,NOISE
+S13,Psychologia i komunikacja w biznesie,cognitive load theory,2,EXPLORED
+S13,Psychologia i komunikacja w biznesie,delay of gratification,8,METHOD
+S13,Psychologia i komunikacja w biznesie,media richness,7,EXPLORED
+S13,Psychologia i komunikacja w biznesie,text comprehension,5,LOW IMPORTANCE
+S13,Psychologia i komunikacja w biznesie,self-determination theory,6,EXPLORED
+S13,Psychologia i komunikacja w biznesie,in-class smartphone use,2,GAP
+S13,Psychologia i komunikacja w biznesie,fear of missing out,3,GAP
+S13,Psychologia i komunikacja w biznesie,habitual phone use,3,GAP
+S13,Psychologia i komunikacja w biznesie,social network sites (sns),5,GAP
+S13,Psychologia i komunikacja w biznesie,media effects,4,GAP
+S13,Psychologia i komunikacja w biznesie,phubbing,4,GAP
+S13,Psychologia i komunikacja w biznesie,pls-sem,9,LOW IMPORTANCE
+S13,Psychologia i komunikacja w biznesie,self-report bias,6,LOW IMPORTANCE
+S13,Psychologia i komunikacja w biznesie,history of mtbi,8,NOISE
+S13,Psychologia i komunikacja w biznesie,personal factors,4,EXPLORED
+S13,Psychologia i komunikacja w biznesie,organizational culture,3,LOW IMPORTANCE
+S13,Psychologia i komunikacja w biznesie,workplace behaviors,4,GAP
+S13,Psychologia i komunikacja w biznesie,crisis communication,6,EXPLORED
+S13,Psychologia i komunikacja w biznesie,campus emergency,5.0,NOISE
+S13,Psychologia i komunikacja w biznesie,native advertising,4,LOW IMPORTANCE
+S13,Psychologia i komunikacja w biznesie,news frames,9,METHOD
+S13,Psychologia i komunikacja w biznesie,conference publications,8,LOW IMPORTANCE
+S14,Psychologia i komunikacja w biznesie,precuneus,2,LOW IMPORTANCE
+S14,Psychologia i komunikacja w biznesie,cognitive load theory,4,METHOD
+S14,Psychologia i komunikacja w biznesie,delay of gratification,3,METHOD
+S14,Psychologia i komunikacja w biznesie,media richness,8,EXPLORED
+S14,Psychologia i komunikacja w biznesie,text comprehension,4,METHOD
+S14,Psychologia i komunikacja w biznesie,self-determination theory,2,METHOD
+S14,Psychologia i komunikacja w biznesie,in-class smartphone use,10,EXPLORED
+S14,Psychologia i komunikacja w biznesie,fear of missing out,9,GAP
+S14,Psychologia i komunikacja w biznesie,habitual phone use,8,EXPLORED
+S14,Psychologia i komunikacja w biznesie,social network sites (sns),7,LOW IMPORTANCE
+S14,Psychologia i komunikacja w biznesie,media effects,10,EXPLORED
+S14,Psychologia i komunikacja w biznesie,phubbing,4,METHOD
+S14,Psychologia i komunikacja w biznesie,pls-sem,8,NOISE
+S14,Psychologia i komunikacja w biznesie,self-report bias,8,METHOD
+S14,Psychologia i komunikacja w biznesie,history of mtbi,9,LOW IMPORTANCE
+S14,Psychologia i komunikacja w biznesie,personal factors,5,METHOD
+S14,Psychologia i komunikacja w biznesie,organizational culture,10,EXPLORED
+S14,Psychologia i komunikacja w biznesie,workplace behaviors,2,NOISE
+S14,Psychologia i komunikacja w biznesie,crisis communication,4,METHOD
+S14,Psychologia i komunikacja w biznesie,campus emergency,1.0,NOISE
+S14,Psychologia i komunikacja w biznesie,native advertising,4,NOISE
+S14,Psychologia i komunikacja w biznesie,news frames,6,EXPLORED
+S14,Psychologia i komunikacja w biznesie,conference publications,8,EXPLORED
+S15,Psychologia i komunikacja w biznesie,precuneus,3,NOISE
+S15,Psychologia i komunikacja w biznesie,cognitive load theory,1,GAP
+S15,Psychologia i komunikacja w biznesie,delay of gratification,1,GAP
+S15,Psychologia i komunikacja w biznesie,media richness,3,METHOD
+S15,Psychologia i komunikacja w biznesie,text comprehension,1,GAP
+S15,Psychologia i komunikacja w biznesie,self-determination theory,3,GAP
+S15,Psychologia i komunikacja w biznesie,in-class smartphone use,1,GAP
+S15,Psychologia i komunikacja w biznesie,fear of missing out,1,GAP
+S15,Psychologia i komunikacja w biznesie,habitual phone use,1,GAP
+S15,Psychologia i komunikacja w biznesie,social network sites (sns),8,METHOD
+S15,Psychologia i komunikacja w biznesie,media effects,1,GAP
+S15,Psychologia i komunikacja w biznesie,phubbing,8,GAP
+S15,Psychologia i komunikacja w biznesie,pls-sem,10,METHOD
+S15,Psychologia i komunikacja w biznesie,self-report bias,1,GAP
+S15,Psychologia i komunikacja w biznesie,history of mtbi,10,METHOD
+S15,Psychologia i komunikacja w biznesie,personal factors,1,GAP
+S15,Psychologia i komunikacja w biznesie,organizational culture,1,GAP
+S15,Psychologia i komunikacja w biznesie,workplace behaviors,1,GAP
+S15,Psychologia i komunikacja w biznesie,crisis communication,4,EXPLORED
+S15,Psychologia i komunikacja w biznesie,campus emergency,8.0,EXPLORED
+S15,Psychologia i komunikacja w biznesie,native advertising,10,METHOD
+S15,Psychologia i komunikacja w biznesie,news frames,8,METHOD
+S15,Psychologia i komunikacja w biznesie,conference publications,1,GAP
+S16,Psychologia i komunikacja w biznesie,precuneus,8,NOISE
+S16,Psychologia i komunikacja w biznesie,cognitive load theory,8,GAP
+S16,Psychologia i komunikacja w biznesie,delay of gratification,6,GAP
+S16,Psychologia i komunikacja w biznesie,media richness,3,NOISE
+S16,Psychologia i komunikacja w biznesie,text comprehension,4,METHOD
+S16,Psychologia i komunikacja w biznesie,self-determination theory,7,METHOD
+S16,Psychologia i komunikacja w biznesie,in-class smartphone use,3,LOW IMPORTANCE
+S16,Psychologia i komunikacja w biznesie,fear of missing out,5,LOW IMPORTANCE
+S16,Psychologia i komunikacja w biznesie,habitual phone use,3,LOW IMPORTANCE
+S16,Psychologia i komunikacja w biznesie,social network sites (sns),4,NOISE
+S16,Psychologia i komunikacja w biznesie,media effects,5,NOISE
+S16,Psychologia i komunikacja w biznesie,phubbing,7,EXPLORED
+S16,Psychologia i komunikacja w biznesie,pls-sem,8,LOW IMPORTANCE
+S16,Psychologia i komunikacja w biznesie,self-report bias,6,LOW IMPORTANCE
+S16,Psychologia i komunikacja w biznesie,history of mtbi,9,GAP
+S16,Psychologia i komunikacja w biznesie,personal factors,7,GAP
+S16,Psychologia i komunikacja w biznesie,organizational culture,8,NOISE
+S16,Psychologia i komunikacja w biznesie,workplace behaviors,7,NOISE
+S16,Psychologia i komunikacja w biznesie,crisis communication,7,EXPLORED
+S16,Psychologia i komunikacja w biznesie,campus emergency,6.0,LOW IMPORTANCE
+S16,Psychologia i komunikacja w biznesie,native advertising,8,NOISE
+S16,Psychologia i komunikacja w biznesie,news frames,7,NOISE
+S16,Psychologia i komunikacja w biznesie,conference publications,7,NOISE
+S17,Psychologia i komunikacja w biznesie,precuneus,3,NOISE
+S17,Psychologia i komunikacja w biznesie,cognitive load theory,5,GAP
+S17,Psychologia i komunikacja w biznesie,delay of gratification,2,GAP
+S17,Psychologia i komunikacja w biznesie,media richness,5,EXPLORED
+S17,Psychologia i komunikacja w biznesie,text comprehension,2,METHOD
+S17,Psychologia i komunikacja w biznesie,self-determination theory,4,GAP
+S17,Psychologia i komunikacja w biznesie,in-class smartphone use,3,GAP
+S17,Psychologia i komunikacja w biznesie,fear of missing out,4,GAP
+S17,Psychologia i komunikacja w biznesie,habitual phone use,4,GAP
+S17,Psychologia i komunikacja w biznesie,social network sites (sns),2,EXPLORED
+S17,Psychologia i komunikacja w biznesie,media effects,3,EXPLORED
+S17,Psychologia i komunikacja w biznesie,phubbing,3,LOW IMPORTANCE
+S17,Psychologia i komunikacja w biznesie,pls-sem,1,METHOD
+S17,Psychologia i komunikacja w biznesie,self-report bias,8,METHOD
+S17,Psychologia i komunikacja w biznesie,history of mtbi,9,METHOD
+S17,Psychologia i komunikacja w biznesie,personal factors,7,LOW IMPORTANCE
+S17,Psychologia i komunikacja w biznesie,organizational culture,9,EXPLORED
+S17,Psychologia i komunikacja w biznesie,workplace behaviors,5,EXPLORED
+S17,Psychologia i komunikacja w biznesie,crisis communication,4,LOW IMPORTANCE
+S17,Psychologia i komunikacja w biznesie,campus emergency,3.0,LOW IMPORTANCE
+S17,Psychologia i komunikacja w biznesie,native advertising,6,LOW IMPORTANCE
+S17,Psychologia i komunikacja w biznesie,news frames,7,LOW IMPORTANCE
+S17,Psychologia i komunikacja w biznesie,conference publications,7,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,precuneus,4,METHOD
+S18,Psychologia i komunikacja w biznesie,cognitive load theory,8,EXPLORED
+S18,Psychologia i komunikacja w biznesie,delay of gratification,3,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,media richness,9,GAP
+S18,Psychologia i komunikacja w biznesie,text comprehension,1,EXPLORED
+S18,Psychologia i komunikacja w biznesie,self-determination theory,10,NOISE
+S18,Psychologia i komunikacja w biznesie,in-class smartphone use,8,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,fear of missing out,9,NOISE
+S18,Psychologia i komunikacja w biznesie,habitual phone use,7,GAP
+S18,Psychologia i komunikacja w biznesie,social network sites (sns),1,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,media effects,10,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,phubbing,10,NOISE
+S18,Psychologia i komunikacja w biznesie,pls-sem,4,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,self-report bias,10,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,history of mtbi,2,NOISE
+S18,Psychologia i komunikacja w biznesie,personal factors,8,GAP
+S18,Psychologia i komunikacja w biznesie,organizational culture,10,NOISE
+S18,Psychologia i komunikacja w biznesie,workplace behaviors,10,EXPLORED
+S18,Psychologia i komunikacja w biznesie,crisis communication,9,EXPLORED
+S18,Psychologia i komunikacja w biznesie,campus emergency,9.0,NOISE
+S18,Psychologia i komunikacja w biznesie,native advertising,1,GAP
+S18,Psychologia i komunikacja w biznesie,news frames,1,LOW IMPORTANCE
+S18,Psychologia i komunikacja w biznesie,conference publications,1,METHOD
+S19,Psychologia i komunikacja w biznesie,precuneus,1,METHOD
+S19,Psychologia i komunikacja w biznesie,cognitive load theory,1,EXPLORED
+S19,Psychologia i komunikacja w biznesie,delay of gratification,1,NOISE
+S19,Psychologia i komunikacja w biznesie,media richness,6,METHOD
+S19,Psychologia i komunikacja w biznesie,text comprehension,1,METHOD
+S19,Psychologia i komunikacja w biznesie,self-determination theory,1,METHOD
+S19,Psychologia i komunikacja w biznesie,in-class smartphone use,1,LOW IMPORTANCE
+S19,Psychologia i komunikacja w biznesie,fear of missing out,3,LOW IMPORTANCE
+S19,Psychologia i komunikacja w biznesie,habitual phone use,5,LOW IMPORTANCE
+S19,Psychologia i komunikacja w biznesie,social network sites (sns),5,METHOD
+S19,Psychologia i komunikacja w biznesie,media effects,7,GAP
+S19,Psychologia i komunikacja w biznesie,phubbing,4,METHOD
+S19,Psychologia i komunikacja w biznesie,pls-sem,3,LOW IMPORTANCE
+S19,Psychologia i komunikacja w biznesie,self-report bias,3,METHOD
+S19,Psychologia i komunikacja w biznesie,history of mtbi,3,LOW IMPORTANCE
+S19,Psychologia i komunikacja w biznesie,personal factors,4,EXPLORED
+S19,Psychologia i komunikacja w biznesie,organizational culture,1,EXPLORED
+S19,Psychologia i komunikacja w biznesie,workplace behaviors,1,GAP
+S19,Psychologia i komunikacja w biznesie,crisis communication,1,EXPLORED
+S19,Psychologia i komunikacja w biznesie,campus emergency,1.0,GAP
+S19,Psychologia i komunikacja w biznesie,native advertising,8,NOISE
+S19,Psychologia i komunikacja w biznesie,news frames,2,GAP
+S19,Psychologia i komunikacja w biznesie,conference publications,1,GAP
+S20,Psychologia i komunikacja w biznesie,precuneus,5,GAP
+S20,Psychologia i komunikacja w biznesie,cognitive load theory,5,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,delay of gratification,5,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,media richness,5,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,text comprehension,5,EXPLORED
+S20,Psychologia i komunikacja w biznesie,self-determination theory,5,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,in-class smartphone use,5,EXPLORED
+S20,Psychologia i komunikacja w biznesie,fear of missing out,5,EXPLORED
+S20,Psychologia i komunikacja w biznesie,habitual phone use,10,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,social network sites (sns),5,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,media effects,5,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,phubbing,6,EXPLORED
+S20,Psychologia i komunikacja w biznesie,pls-sem,5,EXPLORED
+S20,Psychologia i komunikacja w biznesie,self-report bias,5,METHOD
+S20,Psychologia i komunikacja w biznesie,history of mtbi,7,METHOD
+S20,Psychologia i komunikacja w biznesie,personal factors,2,NOISE
+S20,Psychologia i komunikacja w biznesie,organizational culture,5,GAP
+S20,Psychologia i komunikacja w biznesie,workplace behaviors,4,GAP
+S20,Psychologia i komunikacja w biznesie,crisis communication,8,GAP
+S20,Psychologia i komunikacja w biznesie,campus emergency,3.0,LOW IMPORTANCE
+S20,Psychologia i komunikacja w biznesie,native advertising,5,GAP
+S20,Psychologia i komunikacja w biznesie,news frames,5,GAP
+S20,Psychologia i komunikacja w biznesie,conference publications,8,LOW IMPORTANCE
+S21,Psychologia i komunikacja w biznesie,precuneus,2,EXPLORED
+S21,Psychologia i komunikacja w biznesie,cognitive load theory,5,LOW IMPORTANCE
+S21,Psychologia i komunikacja w biznesie,delay of gratification,7,METHOD
+S21,Psychologia i komunikacja w biznesie,media richness,9,LOW IMPORTANCE
+S21,Psychologia i komunikacja w biznesie,text comprehension,4,EXPLORED
+S21,Psychologia i komunikacja w biznesie,self-determination theory,7,GAP
+S21,Psychologia i komunikacja w biznesie,in-class smartphone use,2,METHOD
+S21,Psychologia i komunikacja w biznesie,fear of missing out,6,METHOD
+S21,Psychologia i komunikacja w biznesie,habitual phone use,9,GAP
+S21,Psychologia i komunikacja w biznesie,social network sites (sns),6,EXPLORED
+S21,Psychologia i komunikacja w biznesie,media effects,4,METHOD
+S21,Psychologia i komunikacja w biznesie,phubbing,2,LOW IMPORTANCE
+S21,Psychologia i komunikacja w biznesie,pls-sem,1,GAP
+S21,Psychologia i komunikacja w biznesie,self-report bias,6,NOISE
+S21,Psychologia i komunikacja w biznesie,history of mtbi,3,EXPLORED
+S21,Psychologia i komunikacja w biznesie,personal factors,6,NOISE
+S21,Psychologia i komunikacja w biznesie,organizational culture,7,EXPLORED
+S21,Psychologia i komunikacja w biznesie,workplace behaviors,9,METHOD
+S21,Psychologia i komunikacja w biznesie,crisis communication,2,EXPLORED
+S21,Psychologia i komunikacja w biznesie,campus emergency,6.0,LOW IMPORTANCE
+S21,Psychologia i komunikacja w biznesie,native advertising,5,EXPLORED
+S21,Psychologia i komunikacja w biznesie,news frames,2,NOISE
+S21,Psychologia i komunikacja w biznesie,conference publications,3,GAP
+S22,Psychologia i komunikacja w biznesie,precuneus,3,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,cognitive load theory,6,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,delay of gratification,4,EXPLORED
+S22,Psychologia i komunikacja w biznesie,media richness,6,METHOD
+S22,Psychologia i komunikacja w biznesie,text comprehension,1,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,self-determination theory,4,METHOD
+S22,Psychologia i komunikacja w biznesie,in-class smartphone use,9,EXPLORED
+S22,Psychologia i komunikacja w biznesie,fear of missing out,5,EXPLORED
+S22,Psychologia i komunikacja w biznesie,habitual phone use,5,METHOD
+S22,Psychologia i komunikacja w biznesie,social network sites (sns),6,NOISE
+S22,Psychologia i komunikacja w biznesie,media effects,7,NOISE
+S22,Psychologia i komunikacja w biznesie,phubbing,8,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,pls-sem,6,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,self-report bias,0,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,history of mtbi,5,EXPLORED
+S22,Psychologia i komunikacja w biznesie,personal factors,6,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,organizational culture,6,NOISE
+S22,Psychologia i komunikacja w biznesie,workplace behaviors,6,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,crisis communication,6,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,campus emergency,6.0,LOW IMPORTANCE
+S22,Psychologia i komunikacja w biznesie,native advertising,6,NOISE
+S22,Psychologia i komunikacja w biznesie,news frames,6,METHOD
+S22,Psychologia i komunikacja w biznesie,conference publications,6,METHOD
+S23,Psychologia i komunikacja w biznesie,precuneus,7,METHOD
+S23,Psychologia i komunikacja w biznesie,cognitive load theory,8,METHOD
+S23,Psychologia i komunikacja w biznesie,delay of gratification,9,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,media richness,6,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,text comprehension,5,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,self-determination theory,7,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,in-class smartphone use,2,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,fear of missing out,1,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,habitual phone use,1,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,social network sites (sns),5,METHOD
+S23,Psychologia i komunikacja w biznesie,media effects,1,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,phubbing,2,NOISE
+S23,Psychologia i komunikacja w biznesie,pls-sem,10,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,self-report bias,2,EXPLORED
+S23,Psychologia i komunikacja w biznesie,history of mtbi,9,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,personal factors,1,EXPLORED
+S23,Psychologia i komunikacja w biznesie,organizational culture,5,EXPLORED
+S23,Psychologia i komunikacja w biznesie,workplace behaviors,2,EXPLORED
+S23,Psychologia i komunikacja w biznesie,crisis communication,3,EXPLORED
+S23,Psychologia i komunikacja w biznesie,campus emergency,8.0,EXPLORED
+S23,Psychologia i komunikacja w biznesie,native advertising,1,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,news frames,10,LOW IMPORTANCE
+S23,Psychologia i komunikacja w biznesie,conference publications,8,LOW IMPORTANCE

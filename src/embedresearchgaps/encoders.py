@@ -81,7 +81,7 @@ class Encoder(ABC):
         """Encode ``texts``, optionally L2-normalising the result.
 
         Raises
-        ------
+ ------
         ValueError
             If ``texts`` is empty or the backend returns the wrong number of
             vectors -- a silent length mismatch would misalign every keyword

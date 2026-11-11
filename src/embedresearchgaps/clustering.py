@@ -36,7 +36,7 @@ def rank_by_similarity(query: np.ndarray, matrix: np.ndarray) -> tuple[np.ndarra
     bounded in ``[0, 2]``.
 
     Returns
-    -------
+ -------
     order:
         Row indices sorted by ascending distance (most similar first).
     distances:

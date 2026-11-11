@@ -1,0 +1,20 @@
+{
+  "n_raters": 23,
+  "n_keywords_compared": 23,
+  "n_judgements": 525,
+  "programmes": {
+    "Psychologia i komunikacja w biznesie": 19,
+    "Informatyka": 4
+  },
+  "spearman_rho": -0.303,
+  "spearman_p": 0.1593,
+  "label_agreement": 0.348,
+  "student_gap_share_overall": 19.6,
+  "model_gap_share": 30.4,
+  "student_mean_on_model_gaps": 4.93,
+  "student_mean_on_model_non_gaps": 5.52,
+  "student_gap_share_on_model_gaps": 23.0,
+  "student_gap_share_on_model_non_gaps": 18.0,
+  "mannwhitney_u": 24.0,
+  "mannwhitney_p": 0.035
+}

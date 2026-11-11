@@ -54,7 +54,7 @@ def selected_and_control_keywords(
     applied by drawing a *random* sample with ``random_state``, not by taking
     the head of the ordered list: a head would be either all-frequent or --
     where document frequencies tie at one, as they do for most author keywords
-    -- an arbitrary subset of rare terms, and either choice makes the control
+ -- an arbitrary subset of rare terms, and either choice makes the control
     set unrepresentative of the keyword population the pipeline filtered.
     """
     selected: list[str] = []

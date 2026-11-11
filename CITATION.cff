@@ -10,18 +10,18 @@ abstract: >-
   space. Two operating modes over the same semantic space: clustering author
   keywords directly, and clustering articles first and then their keywords.
 authors:
-  - family-names: Matysik
+ - family-names: Matysik
     given-names: Sebastian
     affiliation: University of Szczecin
-  - family-names: Wiśniewska
+ - family-names: Wiśniewska
     given-names: Joanna
     affiliation: University of Szczecin
-  - family-names: Frankowski
+ - family-names: Frankowski
     given-names: Paweł Karol
     affiliation: Maritime University of Szczecin
 keywords:
-  - research gaps
-  - text embeddings
-  - systematic literature review
-  - bibliometrics
-  - author keywords
+ - research gaps
+ - text embeddings
+ - systematic literature review
+ - bibliometrics
+ - author keywords

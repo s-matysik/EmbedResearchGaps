@@ -1,4 +1,4 @@
-# EmbedResearchGaps — handoff
+# EmbedResearchGaps - handoff
 
 State of the work as of 13 September 2026, written so that a second person can
 pick it up in a fresh Claude Science session without reconstructing anything.
@@ -13,7 +13,7 @@ needed to continue lives only in the session that produced it.
 | | |
 |---|---|
 | Repository | https://github.com/s-matysik/EmbedResearchGaps |
-| Release cited by the article | `v1.0.0` — https://github.com/s-matysik/EmbedResearchGaps/releases/tag/v1.0.0 |
+| Release cited by the article | `v1.0.0` - https://github.com/s-matysik/EmbedResearchGaps/releases/tag/v1.0.0 |
 | Commit the tag points at | `eed714ad7c` |
 | Package version | 1.0.0 (`pyproject.toml`, `src/embedresearchgaps/__init__.py`, `CITATION.cff` all agree) |
 | Test suite | 316 tests, 93 % statement coverage, runs offline |
@@ -22,7 +22,7 @@ The repository is the transfer medium. Claude Science artifact IDs are scoped
 to the workspace that created them, so they are useless to a different account;
 clone the repository instead, or upload
 `EmbedResearchGaps_reproduction_bundle.tar.gz` (26 MB, attached alongside this
-file) into the new session — the bundle is the repository plus the corpora,
+file) into the new session - the bundle is the repository plus the corpora,
 every result table, the figures and the built submission documents.
 
 ```bash
@@ -32,7 +32,7 @@ cd EmbedResearchGaps && git checkout v1.0.0
 
 ## 2. Environment
 
-Python 3.10–3.13. One conda environment is enough; CI covers all four versions.
+Python 3.10-3.13. One conda environment is enough; CI covers all four versions.
 
 ```bash
 pip install -e ".[dev,excel,agreement]"     # numpy, pandas, scipy, scikit-learn,
@@ -59,7 +59,7 @@ exactly these names:
 | `OPENAI`, `ANTROPIC`, `DEEPSEEK`, `XAI`, `GOOGLE` | the five-provider annotation panel |
 | `GITHUBCLASSIC` | pushing releases (a classic PAT with `repo` scope) |
 
-**The corpora are already in `data/`** — retrieval does not need to be
+**The corpora are already in `data/`** - retrieval does not need to be
 repeated, and re-running it would produce a different corpus as Scopus grows.
 Embeddings are cached under `cache/` *within a session*, but that cache is
 **not** shipped: it is regenerable and large. Consequently the first
@@ -71,7 +71,7 @@ in the article.
 
 The five-provider panel (`run_validation.py`) is the one genuinely expensive
 stage. Its annotations are shipped, and `recompute_validation.py` recomputes
-every comparison from them without a single API call — use that rather than
+every comparison from them without a single API call - use that rather than
 re-annotating.
 
 Moonshot (Kimi) was probed and deliberately excluded from the panel: its models
@@ -82,17 +82,17 @@ reject `temperature=0`, which the annotation protocol requires.
 Scripts live in `examples/` and are analysis drivers, not library code.
 
 ```
-fetch_scopus.py        -> data/*.csv                (already done; do not re-run)
-run_case.py            -> results/<corpus>/         both modes, tables, diagnostics
-run_sensitivity.py     -> results/sensitivity/      corpus-size and seed stability
-run_validation.py      -> panel study               COSTS API CALLS
-run_matched.py         -> filter-eligible arm
+fetch_scopus.py -> data/*.csv                (already done; do not re-run)
+run_case.py -> results/<corpus>/         both modes, tables, diagnostics
+run_sensitivity.py -> results/sensitivity/      corpus-size and seed stability
+run_validation.py -> panel study               COSTS API CALLS
+run_matched.py -> filter-eligible arm
 recompute_validation.py-> disjoint-control results  no API calls, reads annotations on disk
-run_consensus.py       -> consensus over 5 seeds x 4 sizes
-make_figures.py        -> figures/fig1..fig6
+run_consensus.py -> consensus over 5 seeds x 4 sizes
+make_figures.py -> figures/fig1..fig6
 build_supplementary.py -> the supplementary workbook
-build_docx.py          -> the article in the journal template
-build_docx_supp.py     -> the supplementary document
+build_docx.py -> the article in the journal template
+build_docx_supp.py -> the supplementary document
 ```
 
 Every number quoted in the article is collected in
@@ -100,7 +100,7 @@ Every number quoted in the article is collected in
 `results/<corpus>/<mode>_run_config.json` fully describes the run that produced
 the tables beside it.
 
-## 5. Decisions that bind — do not silently revert these
+## 5. Decisions that bind - do not silently revert these
 
 These were argued through and several of them correct real defects. Changing
 any of them changes reported numbers, so a change needs a decision, not a
@@ -110,7 +110,7 @@ refactor.
    `selected_and_control_keywords` builds it; `compare_keyword_sets` *refuses*
    to report parametric p-values when the two arms share a keyword. The
    earlier version compared candidates against the whole keyword population,
-   which contains them — a two-sample statistic on nested samples has no
+   which contains them - a two-sample statistic on nested samples has no
    defined null distribution. `selected_and_all_keywords` is kept as a
    deprecated alias so the superseded study still reproduces.
 2. **`Keywords Plus` / `ID` is not an implicit alias for author keywords.**
@@ -137,7 +137,7 @@ refactor.
    `softwarex-osp-template.docx` as the base document and attaches the five
    mandatory sections to the template's own multilevel list (`numId 1`), so
    Word generates `1.`, `2.`, `2.1.` itself. Never type section numbers into
-   heading text — the list would duplicate them.
+   heading text - the list would duplicate them.
 7. **The honest headline result stays honest.** The embedding-based ranking
    gave *no* reliable novelty enrichment over a disjoint control beyond what
    the lexical and frequency filters already provide (Holm-adjusted minimum
@@ -150,12 +150,12 @@ refactor.
 - **The corresponding-author email is unverified.**
   `sebastian.matysik@usz.edu.pl` appears in metadata row C8, in the
   corresponding-author line and in `CITATION.cff`. It was inferred from
-  context, not retrieved from a trusted source — `host.get_user_email()`
+  context, not retrieved from a trusted source - `host.get_user_email()`
   raised `ContactEmailUnavailable`. Confirm it before submission.
   Earlier commits in the repository history also carry it as the commit author;
   removing it from history would need a local `git filter-repo`, which was not
   done.
-- **The six-page limit for sections 1–5 was never measured exactly.** The
+- **The six-page limit for sections 1-5 was never measured exactly.** The
   sandbox has no DOCX→PDF converter, so only a character-based estimate exists
   (~5.5 pages). Open the document in Word and read the page count. The word
   limit *is* verified: 3988 of 4000, counted as the journal counts it

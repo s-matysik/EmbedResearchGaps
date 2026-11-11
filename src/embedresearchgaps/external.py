@@ -151,7 +151,7 @@ def load_external_ranking(
     """Read a ranking produced outside this package.
 
     Parameters
-    ----------
+ ----------
     source:
         A path to a CSV, TSV or Excel export, a :class:`pandas.DataFrame`, or a
         plain sequence of keywords in rank order.
@@ -180,14 +180,14 @@ def load_external_ranking(
         Disable only when the ranking is already normalised.
 
     Returns
-    -------
+ -------
     PipelineResult
         ``mode='external'``.  ``cluster`` is -1 for every candidate and no
         partition diagnostics are produced: an external ranking carries no
         clustering of ours, and inventing one would misreport its provenance.
 
     Raises
-    ------
+ ------
     ValueError
         When the ranking is empty, or when no keyword column can be resolved.
     """

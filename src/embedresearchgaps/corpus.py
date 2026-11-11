@@ -190,7 +190,7 @@ def from_dataframe(
     """Normalise an arbitrary bibliographic frame into a :class:`Corpus`.
 
     Parameters
-    ----------
+ ----------
     frame:
         Source records, one row per publication.
     column_map:

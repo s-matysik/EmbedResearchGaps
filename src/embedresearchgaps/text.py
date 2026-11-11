@@ -201,7 +201,7 @@ def compute_tfidf_salience(
     """Mean TF-IDF weight of every author keyword in the corpus.
 
     Parameters
-    ----------
+ ----------
     keyword_lists:
         One sequence of author keywords per record.
     ngram_range:

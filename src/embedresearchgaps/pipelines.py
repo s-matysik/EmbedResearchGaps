@@ -269,7 +269,7 @@ def keywords_first(
     """Mode A: cluster author keywords directly, then flag the periphery.
 
     Steps
-    -----
+ -----
     1. Optionally rank records against ``config.problem_description`` and keep
        the top ``config.top_n_articles``.
     2. Embed every unique author keyword and cluster the keyword space with
@@ -279,7 +279,7 @@ def keywords_first(
     4. Attach source articles and their citation counts to every candidate.
 
     Notes
-    -----
+ -----
     Candidates are ranked by centroid distance.  Citations are reported as a
     relevance signal and, unless ``config.use_citations`` is false, used as
     the tie-breaker; they are never used to exclude a candidate, because a
@@ -386,7 +386,7 @@ def articles_first(
     """Mode B: cluster articles, then mine keyword sub-spaces for three gap types.
 
     Steps
-    -----
+ -----
     1. Optionally rank records against ``config.problem_description`` and keep
        the top ``config.top_n_articles``.
     2. Embed title+abstract of each record and cluster the articles.

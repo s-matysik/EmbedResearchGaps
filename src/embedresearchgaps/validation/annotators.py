@@ -21,7 +21,7 @@ Name         Endpoint                             Key variable (default)
 ``moonshot`` api.moonshot.ai (Kimi)               ``MOONSHOT_API_KEY``
 ``xai``      api.x.ai (Grok)                      ``XAI_API_KEY``
 ``google``   generativelanguage.googleapis.com    ``GOOGLE_API_KEY``
-``callable`` any local function                   --
+``callable`` any local function --
 ============ ==================================== =========================
 
 ``CallableAnnotator`` wraps an arbitrary ``str -> str`` function, which keeps

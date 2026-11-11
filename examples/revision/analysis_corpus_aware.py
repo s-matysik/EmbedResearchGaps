@@ -84,7 +84,7 @@ def corpus_prompt(
         lines.append(f"{index}. {keyword}")
         lines.append(f"   used by {info.get('frequency', 0)} of {n_articles} articles")
         for title in titles:
-            lines.append(f"   - {title}")
+            lines.append(f" - {title}")
     lines += [
         "",
         'Return JSON only, with this exact shape and one entry per keyword, in the '

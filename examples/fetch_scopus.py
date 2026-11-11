@@ -102,4 +102,4 @@ if __name__ == "__main__":
         frame = frame[frame["Author Keywords"].str.strip() != ""].reset_index(drop=True)
         path = f"corpora/{name}.csv"
         frame.to_csv(path, index=False)
-        print(f"  -> {path}: {len(frame)} records with author keywords", flush=True)
+        print(f" -> {path}: {len(frame)} records with author keywords", flush=True)

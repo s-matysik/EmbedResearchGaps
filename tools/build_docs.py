@@ -415,12 +415,12 @@ def shell(title: str, active: str, body: str, subtitle: str = "", toc: str = "")
 
 CSS = """
 :root{--ink:#17202a;--muted:#5b6b7c;--line:#e2e8ee;--bg:#ffffff;--soft:#f6f8fa;
-      --accent:#1f5fa8;--code:#0b3d66;--kind:#8a6d1f}
+ --accent:#1f5fa8;--code:#0b3d66;--kind:#8a6d1f}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
      font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-     -webkit-font-smoothing:antialiased}
+ -webkit-font-smoothing:antialiased}
 header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.94);
        backdrop-filter:blur(6px);z-index:5}
 .bar{max-width:1180px;margin:0 auto;padding:.7rem 1.2rem;display:flex;align-items:center;gap:1.4rem}

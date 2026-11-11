@@ -47,7 +47,7 @@ def run(corpus: str, mode: str, n_boot: int = 4000) -> dict:
             deltas.append((selected.mean() - control.mean()) * 100)
 
     observed = (merged[merged.keyword_set == "SELECTED"]["gap"].mean()
-                - merged[merged.keyword_set == "CONTROL"]["gap"].mean()) * 100
+ - merged[merged.keyword_set == "CONTROL"]["gap"].mean()) * 100
     low, high = np.percentile(deltas, [2.5, 97.5])
     return {"n_clusters": len(clusters), "delta_pp": float(observed),
             "cluster_ci": [float(low), float(high)]}

@@ -1,13 +1,31 @@
-corpus,ceiling,n_emerging,shared_with_reported,jaccard_vs_reported
-management,1 (reported),17,17,1.0
-management,2,18,17,0.944
-management,3,17,16,0.889
-management,"proportional max(1, round(N/50))",17,15,0.789
-finance,1 (reported),18,18,1.0
-finance,2,18,18,1.0
-finance,3,18,16,0.8
-finance,"proportional max(1, round(N/50))",17,15,0.75
-gamification,1 (reported),18,18,1.0
-gamification,2,18,18,1.0
-gamification,3,18,17,0.895
-gamification,"proportional max(1, round(N/50))",18,17,0.895
+corpus,top_n,ceiling,effective_threshold,n_emerging,shared_with_reference,jaccard_vs_reference
+management,50,1 (reported),1,17,17,1.0
+management,50,2,2,18,17,0.944
+management,50,3,3,17,16,0.889
+management,50,"proportional max(1, round(N/50)) = 1",1,17,17,1.0
+management,50,none (no frequency ceiling),none,17,15,0.789
+management,200,1 (reported),1,17,17,1.0
+management,200,2,2,18,17,0.944
+management,200,3,3,18,17,0.944
+management,200,"proportional max(1, round(N/50)) = 4",4,18,16,0.842
+management,200,none (no frequency ceiling),none,16,13,0.65
+finance,50,1 (reported),1,18,18,1.0
+finance,50,2,2,18,18,1.0
+finance,50,3,3,18,16,0.8
+finance,50,"proportional max(1, round(N/50)) = 1",1,18,18,1.0
+finance,50,none (no frequency ceiling),none,17,15,0.75
+finance,200,1 (reported),1,18,18,1.0
+finance,200,2,2,18,17,0.895
+finance,200,3,3,18,13,0.565
+finance,200,"proportional max(1, round(N/50)) = 4",4,18,13,0.565
+finance,200,none (no frequency ceiling),none,18,10,0.385
+gamification,50,1 (reported),1,18,18,1.0
+gamification,50,2,2,18,18,1.0
+gamification,50,3,3,18,17,0.895
+gamification,50,"proportional max(1, round(N/50)) = 1",1,18,18,1.0
+gamification,50,none (no frequency ceiling),none,18,17,0.895
+gamification,200,1 (reported),1,18,18,1.0
+gamification,200,2,2,18,16,0.8
+gamification,200,3,3,18,16,0.8
+gamification,200,"proportional max(1, round(N/50)) = 4",4,18,16,0.8
+gamification,200,none (no frequency ceiling),none,18,16,0.8

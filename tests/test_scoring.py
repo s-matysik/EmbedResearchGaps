@@ -70,7 +70,7 @@ class TestScoreEmerging:
 class TestScoreCombination:
     def test_matches_hand_computed_value(self) -> None:
         # similarity term 1-2|0.45-0.45| = 1; frequency min(6/10,1) = 0.6;
-        # tfidf min(10*0.02,1) = 0.2  ->  0.4*1 + 0.3*0.6 + 0.3*0.2 = 0.64
+        # tfidf min(10*0.02,1) = 0.2 ->  0.4*1 + 0.3*0.6 + 0.3*0.2 = 0.64
         assert score_combination(0.45, 3, 3, 0.02) == pytest.approx(0.64)
 
     def test_similarity_term_peaks_at_the_optimum(self) -> None:

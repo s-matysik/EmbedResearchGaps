@@ -254,7 +254,7 @@ def reference_year(articles: pd.DataFrame, config: GapConfig) -> int | None:
 
     ``config.citation_year_reference`` wins; otherwise the most recent
     publication year in the frame is used, which keeps the velocity filter
-    reproducible — reading the system clock would make the same export yield
+    reproducible - reading the system clock would make the same export yield
     different candidates on different days.
     """
     if config.citation_year_reference is not None:

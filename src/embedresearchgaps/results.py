@@ -21,7 +21,7 @@ class PipelineResult:
     """Everything one pipeline run produced.
 
     Attributes
-    ----------
+ ----------
     mode:
         ``'keywords_first'`` or ``'articles_first'``.
     articles:

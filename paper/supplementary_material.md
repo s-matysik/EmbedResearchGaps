@@ -43,7 +43,7 @@ restricted to `DOCTYPE(ar) AND LANGUAGE(english)`:
 |--------|-------|---------------|---------|
 | Management | `TITLE-ABS-KEY("dynamic capabilit*" AND "digital transformation")` | BUSI, ECON, DECI | 493 |
 | Economics & finance | `TITLE-ABS-KEY(("fintech" OR "financial technology") AND ("financial inclusion" OR "credit risk" OR "bank lending"))` | ECON, BUSI | 487 |
-| Gamification (conformance) | `TITLE-ABS-KEY(gamification AND marketing)` | — | 290 |
+| Gamification (conformance) | `TITLE-ABS-KEY(gamification AND marketing)` | - | 290 |
 
 Records without author keywords are dropped at load time; the counts above are
 after that filter.
@@ -58,7 +58,7 @@ after cross-cluster deduplication, the TF-IDF match-type breakdown and the
 encoder description.
 
 The silhouette of the chosen partition lies between 0.017 and 0.069 across all
-six runs (0.017–0.055 for the article partitions of Mode B). The elbow rule
+six runs (0.017-0.055 for the article partitions of Mode B). The elbow rule
 therefore selected *k* in every run, because the best silhouette over the
 candidate range never reached the 0.25 floor. This weak cluster structure is
 the direct cause of the seed sensitivity reported in S6.
@@ -81,7 +81,7 @@ Claude Sonnet 5 was likewise excluded because `temperature` is deprecated for
 it; `claude-sonnet-4-6` accepts the parameter and was used instead.
 
 Each keyword is labelled `GAP`, `EXPLORED`, `LOW IMPORTANCE`, `METHOD` or
-`NOISE` and scored 1–10 for novelty against the rubric reproduced in S8.
+`NOISE` and scored 1-10 for novelty against the rubric reproduced in S8.
 
 Every unique author keyword of the analysis corpus was annotated (146, 168 and
 172 keywords), once per corpus and shared by both modes so that the two are
@@ -93,7 +93,7 @@ defined null distribution. Restricting the control to the non-selected
 keywords removes 20 to 130 judgements per corpus and mode from the control arm
 and leaves 120 to 166 control keywords. `compare_keyword_sets` now refuses to
 report parametric p-values when the two arms it is handed share a keyword, and
-`selected_and_all_keywords` — which returned the nested control in v1.0.0 — is
+`selected_and_all_keywords` - which returned the nested control in v1.0.0 - is
 deprecated in favour of `selected_and_control_keywords`.
 
 The sheet reports label rates, Novelty means, the Welch and Mann-Whitney tests,
@@ -103,9 +103,9 @@ Krippendorff's α, the leave-out concordance and any annotator failures (none in
 the final run).
 
 Six comparisons were run (three corpora × two modes). One is nominally
-significant — economics and finance Mode B, +12.7 pp GAP rate and +12.5 % mean
+significant - economics and finance Mode B, +12.7 pp GAP rate and +12.5 % mean
 novelty, Welch *p* = 0.032, Mann-Whitney *p* = 0.014, permutation *p* = 0.046,
-*d* = 0.21 — and none survives Holm correction across the six (smallest
+*d* = 0.21 - and none survives Holm correction across the six (smallest
 adjusted *p* = 0.19). The `welch_p_holm` column of
 `results/manuscript_numbers_disjoint.csv` carries the adjusted values.
 
@@ -120,13 +120,13 @@ the ranking selected: 45 keywords for management (all annotated) and 64 for
 economics and finance (60 sampled with seed 2026). Two fully disjoint contrasts
 are reported:
 
-- `eligible vs not_eligible` — the eligible pool against the keywords that
+- `eligible vs not_eligible` - the eligible pool against the keywords that
   fail at least one filter: what the lexical and frequency filters contribute.
   Management +7.8 pp GAP and +8.3 % novelty (permutation *p* = 0.149);
   economics and finance +10.6 pp and +9.2 % (*p* = 0.069).
-- `selected vs eligible` — the candidates against the eligible pool they were
+- `selected vs eligible` - the candidates against the eligible pool they were
   selected from: what the embedding-based ranking contributes on top of the
-  filters. Management −6.1 pp and −8.4 % (*p* = 0.192); economics and finance
+  filters. Management -6.1 pp and -8.4 % (*p* = 0.192); economics and finance
   +6.8 pp and +8.6 % (*p* = 0.150).
 
 The filters move both corpora in the same direction by a similar amount; the
@@ -180,8 +180,7 @@ composite score, document frequency, number of source articles, citation
 count, the one-line rationale, the source article titles and DOIs, and all
 underlying metric components (`metric_*` columns).
 
-Two entries of the management Mode A table — `Ryad Titah` and `Pär Ågerfalk` —
-are personal names that a metadata error placed in the author-keyword field of
+Two entries of the management Mode A table - `Ryad Titah` and `Pär Ågerfalk` - are personal names that a metadata error placed in the author-keyword field of
 one Scopus record (DOI 10.1080/0960085X.2020.1857666, single-authored by
 J. Soluk, so neither name is the article's author). They are retained
 deliberately rather than blocklisted: the annotation panel labelled both
@@ -195,22 +194,22 @@ package leaves the decision to the validation layer and the reviewer.
 The prompt supplies the research problem, the domain, the numbered keyword
 batch and this rubric verbatim:
 
-- `GAP` — a topic plausibly relevant to the research problem that the corpus
+- `GAP` - a topic plausibly relevant to the research problem that the corpus
   has not addressed substantively.
-- `EXPLORED` — already well covered in the corpus or the wider literature.
-- `LOW IMPORTANCE` — peripheral to the research problem.
-- `METHOD` — a method, instrument, statistical technique or study design.
-- `NOISE` — not a research topic (a place name alone, an artefact, an
+- `EXPLORED` - already well covered in the corpus or the wider literature.
+- `LOW IMPORTANCE` - peripheral to the research problem.
+- `METHOD` - a method, instrument, statistical technique or study design.
+- `NOISE` - not a research topic (a place name alone, an artefact, an
   unintelligible string).
 
-Novelty Score bands: 1–2 established, 3–4 partially explored, 5–7
-under-explored with clear potential, 8–10 genuinely novel and promising.
+Novelty Score bands: 1-2 established, 3-4 partially explored, 5-7
+under-explored with clear potential, 8-10 genuinely novel and promising.
 
 Replies are requested as JSON only, one entry per keyword. Entries naming a
 keyword that was not in the batch, or carrying a label outside the five, are
-discarded rather than repaired. A reply that is almost-valid JSON — an
+discarded rather than repaired. A reply that is almost-valid JSON - an
 unescaped quotation mark inside a rationale, a trailing comma, a truncated
-tail — is salvaged entry by entry so that one malformed entry does not discard
+tail - is salvaged entry by entry so that one malformed entry does not discard
 the rest of the batch; a batch yielding nothing usable is requested once more
 before the error propagates.
 
@@ -218,10 +217,10 @@ before the error propagates.
 
 The expert arm of the evidence base for this method is the AMCIS antecedent
 study, reference [17] of the manuscript, not this paper. There, two independent
-experts — an associate professor and a full professor, each with more than
-twenty years in the field of the corpus — scored the sixteen candidates that
+experts - an associate professor and a full professor, each with more than
+twenty years in the field of the corpus - scored the sixteen candidates that
 the articles-first procedure produced on a marketing corpus, using the same
-1–10 Novelty Score and the same label set reproduced in S8. Three candidates
+1-10 Novelty Score and the same label set reproduced in S8. Three candidates
 (*social commerce*, *time poverty*, *psychological distance*) were labelled
 `GAP` unanimously by all five models of that study's panel and corroborated as
 gaps by at least one expert. Expert mean Novelty Scores correlated with the
@@ -231,9 +230,9 @@ described its expert arm as a pilot.
 
 This paper did not repeat that arm. A sixteen-keyword pilot on one marketing
 corpus and the five-provider panel study of S3 on three corpora in two other
-domains are different measurements, and the disagreement between them — a
+domains are different measurements, and the disagreement between them - a
 positive expert-panel concordance there, no reliable enrichment over a disjoint
-control here — is what a larger calibrated expert study is needed to resolve.
+control here - is what a larger calibrated expert study is needed to resolve.
 What this paper contributes to that study is the instrument: the blinded sheets
 of S9, shipped for all three corpora, and the concordance function that reads
 them back.
@@ -310,7 +309,7 @@ Scoring, with every component min-max normalised within the candidate set:
 - Peripheral Keyword (Mode A): distance from the keyword's own cluster centroid
 
 Article ranking and all similarity measures use cosine distance,
-`d(u, v) = 1 − cos(u, v)`. Inter-cluster thematic overlap is the pairwise
+`d(u, v) = 1 - cos(u, v)`. Inter-cluster thematic overlap is the pairwise
 cosine similarity of cluster centroids.
 
 ## S11. Test suite

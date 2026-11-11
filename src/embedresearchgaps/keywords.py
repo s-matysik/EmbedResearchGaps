@@ -29,7 +29,7 @@ class KeywordSpace:
     """Author keywords embedded in a semantic space.
 
     Attributes
-    ----------
+ ----------
     keywords:
         Normalised keywords, unique and in order of first appearance.
     embeddings:
@@ -131,7 +131,7 @@ def build_keyword_space(
     """Embed the unique author keywords of ``keyword_lists``.
 
     Parameters
-    ----------
+ ----------
     keyword_lists:
         One sequence of keywords per record; keywords are normalised and
         de-duplicated, and their document frequency is counted.

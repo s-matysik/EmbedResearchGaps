@@ -47,7 +47,7 @@ class ConsensusResult:
     """Candidates pooled over several seeds, with their support.
 
     Attributes
-    ----------
+ ----------
     gaps:
         One row per ``(gap_type, keyword)`` with ``support`` (fraction of
         seeds that produced it), ``n_seeds_found``, score statistics and the
@@ -122,7 +122,7 @@ def consensus_gaps(
     the candidates by support.
 
     Parameters
-    ----------
+ ----------
     corpus, mode, config:
         As for :func:`~embedresearchgaps.pipelines.run`.  Only the k-means
         initialisation changes between runs; the corpus, the embeddings and
@@ -145,11 +145,11 @@ def consensus_gaps(
         the overlap across sizes.  ``None`` keeps ``config.top_n_articles``.
 
     Returns
-    -------
+ -------
     ConsensusResult
 
     Examples
-    --------
+ --------
     >>> result = consensus_gaps(corpus, "articles_first", config,       # doctest: +SKIP
     ...                         min_support=0.5)
     >>> result.gaps[["keyword", "gap_type", "support", "mean_score"]]   # doctest: +SKIP
