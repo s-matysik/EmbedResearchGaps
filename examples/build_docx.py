@@ -257,14 +257,27 @@ def build() -> Path:
                 built.style = document.tables[0].style
             except Exception:
                 pass
+            # The template sets its own table text in Arial; match it, or the
+            # two tables in one document render in two different typefaces.
+            table_font = "Arial"
+            try:
+                first = document.tables[0].rows[0].cells[0].paragraphs[0]
+                table_font = next(
+                    (r.font.name for r in first.runs if r.font.name), "Arial"
+                )
+            except Exception:
+                pass
             for column, text in enumerate(header):
                 run = built.rows[0].cells[column].paragraphs[0].add_run(text)
                 run.bold = True
                 run.font.size = Pt(9)
+                run.font.name = table_font
             for row_index, row in enumerate(body_rows, start=1):
                 for column, text in enumerate(row):
                     cell = built.rows[row_index].cells[column]
-                    cell.paragraphs[0].add_run(text).font.size = Pt(9)
+                    run = cell.paragraphs[0].add_run(text)
+                    run.font.size = Pt(9)
+                    run.font.name = table_font
             document.add_paragraph(style="Body")
         elif kind == "code":
             # One paragraph per source line, monospaced, with leading spaces

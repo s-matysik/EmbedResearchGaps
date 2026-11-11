@@ -36,13 +36,27 @@ REWRITE_THRESHOLD = 0.60
 #: Longest removed-text note worth printing after a revised sentence.
 MAX_DELETION_CHARS = 120
 
+#: Word-sequence similarity below which a new paragraph has no counterpart in
+#: the submitted version and is reported as an addition rather than an edit.
+PAIRING_FLOOR = 0.30
+
 
 def tokenize(text: str) -> list[str]:
     return TOKEN.findall(text)
 
 
+#: Dash characters that were replaced wholesale for typographic reasons.  A
+#: paragraph whose only difference is "—" against " - " did not change in any
+#: sense a reviewer cares about, so the comparison folds them together; the
+#: marked copy would otherwise be a wall of yellow that hides the real edits.
+DASHES = str.maketrans({"\u2014": "-", "\u2013": "-", "\u2012": "-",
+                        "\u2015": "-", "\u2212": "-", "\u2010": "-"})
+
+
 def normalize(text: str) -> str:
-    """Collapse whitespace for alignment, so re-wrapping is not a change."""
+    """Collapse whitespace and dash style, so neither counts as a change."""
+    text = text.translate(DASHES)
+    text = re.sub(r"\s*-\s*", "-", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -193,13 +207,34 @@ def build(old_path: str, new_path: str, out_path: str) -> dict[str, int]:
                     highlight_whole(marked.paragraphs[j])
                     added += 1
         elif tag == "replace":
-            # Pair them up positionally; unpaired new paragraphs are additions.
-            for offset in range(j2 - j1):
-                j = j1 + offset
-                i = i1 + offset
-                if i < i2:
-                    changed += mark_paragraph(marked.paragraphs[j], old_doc.paragraphs[i].text)
-                elif marked.paragraphs[j].text.strip():
+            # Pair by content, not by position. Inserting a paragraph shifts
+            # every later index inside the block, so a positional pairing
+            # compares unrelated paragraphs, scores them below the rewrite
+            # threshold and marks both whole -- which turns an edited document
+            # into a wall of yellow. Each new paragraph is therefore matched to
+            # its most similar unused counterpart in the replaced old block,
+            # and only counts as an addition when nothing there resembles it.
+            candidates = list(range(i1, i2))
+            taken: set[int] = set()
+            for j in range(j1, j2):
+                target = normalize(marked.paragraphs[j].text)
+                if not target:
+                    continue
+                best, best_score = None, 0.0
+                for i in candidates:
+                    if i in taken:
+                        continue
+                    score = difflib.SequenceMatcher(
+                        None, old_pars[i].split(), target.split(), autojunk=False
+                    ).ratio()
+                    if score > best_score:
+                        best, best_score = i, score
+                if best is not None and best_score >= PAIRING_FLOOR:
+                    taken.add(best)
+                    changed += mark_paragraph(
+                        marked.paragraphs[j], old_doc.paragraphs[best].text
+                    )
+                else:
                     highlight_whole(marked.paragraphs[j])
                     added += 1
 
