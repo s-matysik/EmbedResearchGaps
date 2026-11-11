@@ -95,6 +95,66 @@ def corpus_prompt(
     return "\n".join(lines)
 
 
+
+def probe_panel() -> dict[str, dict[str, object]]:
+    """Ask each provider of the original panel whether it will serve the model.
+
+    The availability record deposited with this study is written by this
+    function, not by hand: each entry carries the HTTP status and the first
+    line of the provider's own reply, so a reader can see why an annotator is
+    missing rather than take our word for it.
+    """
+    import os
+
+    import requests
+
+    probes = {
+        # Ask the model, not the catalogue: a model-list query answers "is it
+        # offered", which is not the question. Only a completion request tells
+        # us whether this account can actually reach it.
+        "anthropic:claude-sonnet-4-6": (
+            "POST", "https://api.anthropic.com/v1/messages",
+            lambda key: {"x-api-key": key, "anthropic-version": "2023-06-01"}, "ANTROPIC"),
+        "xai:grok-4.5": (
+            "POST", "https://api.x.ai/v1/chat/completions",
+            lambda key: {"Authorization": f"Bearer {key}"}, "XAI"),
+        "deepseek:deepseek-v4-pro": (
+            "POST", "https://api.deepseek.com/chat/completions",
+            lambda key: {"Authorization": f"Bearer {key}"}, "DEEPSEEK"),
+        "google:gemini-2.5-flash": (
+            "POST", "https://generativelanguage.googleapis.com/v1beta/models/"
+                    "gemini-2.5-flash:generateContent", lambda key: {}, "GOOGLE"),
+        "openai:gpt-4o": (
+            "POST", "https://api.openai.com/v1/chat/completions",
+            lambda key: {"Authorization": f"Bearer {key}"}, "OPENAI"),
+    }
+    ping = [{"role": "user", "content": "Reply with the single character 1."}]
+    record: dict[str, dict[str, object]] = {}
+    for name, (_method, url, headers, key_env) in probes.items():
+        provider, model = name.split(":", 1)
+        key = (os.environ.get(key_env) or "").strip()
+        if not key:
+            record[name] = {"available": False, "status": None, "detail": f"{key_env} unset"}
+            continue
+        try:
+            target = url if provider != "google" else f"{url}?key={key}"
+            if provider == "google":
+                payload = {"contents": [{"parts": [{"text": ping[0]["content"]}]}],
+                           "generationConfig": {"temperature": 0, "maxOutputTokens": 4}}
+            elif provider == "anthropic":
+                payload = {"model": model, "max_tokens": 4, "temperature": 0, "messages": ping}
+            else:
+                payload = {"model": model, "temperature": 0, "max_tokens": 4, "messages": ping}
+            reply = requests.post(target, headers=headers(key), json=payload, timeout=60)
+            served = reply.ok
+            detail = "" if served else reply.text[:200]
+            record[name] = {"available": bool(served), "status": reply.status_code,
+                            "detail": " ".join(detail.split())}
+        except Exception as exc:
+            record[name] = {"available": False, "status": None,
+                            "detail": f"{type(exc).__name__}: {str(exc)[:120]}"}
+    return record
+
 def corpus_evidence(corpus: str) -> tuple[dict[str, dict[str, object]], int]:
     """Frequency and example titles per keyword, from the analysed articles."""
     articles = pd.read_csv(RESULTS / corpus / "articles_first_articles.csv")

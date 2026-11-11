@@ -1,0 +1,31 @@
+{
+  "probed_at": "2026-11-11",
+  "method": "one minimal completion request per model at temperature 0",
+  "providers": {
+    "anthropic:claude-sonnet-4-6": {
+      "available": false,
+      "status": 400,
+      "detail": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_i"
+    },
+    "xai:grok-4.5": {
+      "available": false,
+      "status": 403,
+      "detail": "{\"code\":\"permission-denied\",\"error\":\"Your team faa87b7c-ea3d-49fd-91ac-b53475e0043d has either used all available credits or reached its monthly spending limit. To continue making API requests, please"
+    },
+    "deepseek:deepseek-v4-pro": {
+      "available": false,
+      "status": 402,
+      "detail": "{\"error\":{\"message\":\"Insufficient Balance (request_id: a9ad0346-7e38-49aa-9fcb-fe8c6e806fcb)\",\"type\":\"insufficient_balance_error\",\"param\":null,\"code\":\"invalid_request_error\"}}"
+    },
+    "google:gemini-2.5-flash": {
+      "available": false,
+      "status": 402,
+      "detail": "{ \"error\": { \"code\": 402, \"message\": \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai."
+    },
+    "openai:gpt-4o": {
+      "available": true,
+      "status": 200,
+      "detail": ""
+    }
+  }
+}
