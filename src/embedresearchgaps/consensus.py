@@ -2,7 +2,7 @@
 
 Both published procedures partition a semantic space with k-means and read
 candidates off the resulting clusters.  On real bibliographic corpora the
-silhouette of such a partition is typically small (0.017-0.103 across the
+silhouette of such a partition is typically small (0.017-0.102 across the
 three corpora, two modes and four corpus sizes of the sensitivity study
 shipped with this package), so the partition -- and with it the candidate set
 -- depends on the initialisation.  Running one seed therefore
