@@ -1,0 +1,116 @@
+{
+  "management|articles_first": {
+    "k": 26,
+    "frequency_ceiling": 30.0,
+    "pool_size": 118,
+    "gap_share_ranking": 46.15384615384615,
+    "gap_share_rare_random_mean": 49.208615384615385,
+    "gap_share_rare_random_ci": [
+      36.15384615384615,
+      62.30769230769231
+    ],
+    "gap_share_percentile": 31.06,
+    "novelty_ranking": 3.1538461538461537,
+    "novelty_rare_random_mean": 3.33834,
+    "novelty_rare_random_ci": [
+      2.746153846153846,
+      3.9384615384615387
+    ],
+    "novelty_percentile": 27.3
+  },
+  "management|keywords_first": {
+    "k": 6,
+    "frequency_ceiling": 1.0,
+    "pool_size": 100,
+    "gap_share_ranking": 40.00000000000001,
+    "gap_share_rare_random_mean": 49.67266666666667,
+    "gap_share_rare_random_ci": [
+      23.333333333333332,
+      76.66666666666666
+    ],
+    "gap_share_percentile": 26.279999999999998,
+    "novelty_ranking": 2.8666666666666667,
+    "novelty_rare_random_mean": 3.3514200000000005,
+    "novelty_rare_random_ci": [
+      2.1,
+      4.766666666666667
+    ],
+    "novelty_percentile": 23.26
+  },
+  "finance|articles_first": {
+    "k": 24,
+    "frequency_ceiling": 28.0,
+    "pool_size": 131,
+    "gap_share_ranking": 65.0,
+    "gap_share_rare_random_mean": 59.93120833333334,
+    "gap_share_rare_random_ci": [
+      45.83333333333333,
+      73.54166666666666
+    ],
+    "gap_share_percentile": 74.86,
+    "novelty_ranking": 4.03125,
+    "novelty_rare_random_mean": 3.9413425,
+    "novelty_rare_random_ci": [
+      3.297760416666667,
+      4.583333333333333
+    ],
+    "novelty_percentile": 59.84
+  },
+  "finance|keywords_first": {
+    "k": 4,
+    "frequency_ceiling": 1.0,
+    "pool_size": 110,
+    "gap_share_ranking": 45.0,
+    "gap_share_rare_random_mean": 59.9765,
+    "gap_share_rare_random_ci": [
+      25.0,
+      90.0
+    ],
+    "gap_share_percentile": 19.68,
+    "novelty_ranking": 3.3000000000000003,
+    "novelty_rare_random_mean": 4.001275,
+    "novelty_rare_random_ci": [
+      2.25,
+      5.8
+    ],
+    "novelty_percentile": 23.56
+  },
+  "gamification|articles_first": {
+    "k": 26,
+    "frequency_ceiling": 7.0,
+    "pool_size": 122,
+    "gap_share_ranking": 35.38461538461538,
+    "gap_share_rare_random_mean": 48.10569230769231,
+    "gap_share_rare_random_ci": [
+      36.92307692307692,
+      59.23076923076923
+    ],
+    "gap_share_percentile": 1.02,
+    "novelty_ranking": 2.8000000000000003,
+    "novelty_rare_random_mean": 3.203286153846154,
+    "novelty_rare_random_ci": [
+      2.730769230769231,
+      3.6999999999999997
+    ],
+    "novelty_percentile": 5.16
+  },
+  "gamification|keywords_first": {
+    "k": 6,
+    "frequency_ceiling": 1.0,
+    "pool_size": 104,
+    "gap_share_ranking": 40.0,
+    "gap_share_rare_random_mean": 50.64933333333333,
+    "gap_share_rare_random_ci": [
+      26.666666666666668,
+      76.66666666666666
+    ],
+    "gap_share_percentile": 17.64,
+    "novelty_ranking": 3.1333333333333333,
+    "novelty_rare_random_mean": 3.2784933333333335,
+    "novelty_rare_random_ci": [
+      2.1999999999999997,
+      4.466666666666666
+    ],
+    "novelty_percentile": 41.02
+  }
+}

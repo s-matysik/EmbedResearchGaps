@@ -1,0 +1,212 @@
+{
+  "management|articles_first": {
+    "k": 26,
+    "overlap_with_rarest_k": 0.23076923076923078,
+    "share_singleton_candidates": 0.6153846153846154,
+    "share_multitoken_candidates": 1.0,
+    "median_candidate_df": 1.0,
+    "median_population_df": 1.0,
+    "gap_share_mde_80": 23.718127612274426,
+    "gap_share_tost": {
+      "diff": -1.1794871794871824,
+      "margin": 10.0,
+      "p_tost": 0.15226908324177477,
+      "equivalent": false,
+      "se": 8.46596686009429,
+      "df": 35.365378824697295
+    },
+    "novelty_mde_80": 1.0046532376047301,
+    "novelty_tost": {
+      "diff": -0.12448717948717958,
+      "margin": 0.5,
+      "p_tost": 0.15079841550659565,
+      "equivalent": false,
+      "se": 0.3586017056020244,
+      "df": 38.2610409721381
+    },
+    "agreement_novelty": {
+      "alpha_ordinal": 0.6183879874988947,
+      "ci": [
+        0.544762133671217,
+        0.685754990861531
+      ],
+      "n_units": 146,
+      "n_raters": 5
+    }
+  },
+  "management|keywords_first": {
+    "k": 6,
+    "overlap_with_rarest_k": 0.0,
+    "share_singleton_candidates": 1.0,
+    "share_multitoken_candidates": 1.0,
+    "median_candidate_df": 1.0,
+    "median_population_df": 1.0,
+    "gap_share_mde_80": 48.779001462671374,
+    "gap_share_tost": {
+      "diff": -8.0,
+      "margin": 10.0,
+      "p_tost": 0.4563723864729349,
+      "equivalent": false,
+      "se": 17.41121460354038,
+      "df": 5.340057656606308
+    },
+    "novelty_mde_80": 2.3314912392894414,
+    "novelty_tost": {
+      "diff": -0.44047619047619024,
+      "margin": 0.5,
+      "p_tost": 0.4727945752190243,
+      "equivalent": false,
+      "se": 0.8322042907050449,
+      "df": 5.32457545032966
+    },
+    "agreement_novelty": {
+      "alpha_ordinal": 0.617798495708902,
+      "ci": [
+        0.5347072261951116,
+        0.6820341098955836
+      ],
+      "n_units": 146,
+      "n_raters": 5
+    }
+  },
+  "finance|articles_first": {
+    "k": 24,
+    "overlap_with_rarest_k": 0.25,
+    "share_singleton_candidates": 0.5416666666666666,
+    "share_multitoken_candidates": 1.0,
+    "median_candidate_df": 1.0,
+    "median_population_df": 1.0,
+    "gap_share_mde_80": 26.007011784963,
+    "gap_share_tost": {
+      "diff": 13.020833333333336,
+      "margin": 10.0,
+      "p_tost": 0.6264262531033777,
+      "equivalent": false,
+      "se": 9.28296295141086,
+      "df": 29.694224694667827
+    },
+    "novelty_mde_80": 1.0854187784829903,
+    "novelty_tost": {
+      "diff": 0.4552083333333332,
+      "margin": 0.5,
+      "p_tost": 0.4543333142204292,
+      "equivalent": false,
+      "se": 0.3874302203857584,
+      "df": 32.714682877949095
+    },
+    "agreement_novelty": {
+      "alpha_ordinal": 0.6641933040161411,
+      "ci": [
+        0.5843297887029655,
+        0.7270398934697337
+      ],
+      "n_units": 168,
+      "n_raters": 5
+    }
+  },
+  "finance|keywords_first": {
+    "k": 4,
+    "overlap_with_rarest_k": 0.25,
+    "share_singleton_candidates": 1.0,
+    "share_multitoken_candidates": 1.0,
+    "median_candidate_df": 1.0,
+    "median_population_df": 1.0,
+    "gap_share_mde_80": 53.70889133685052,
+    "gap_share_tost": {
+      "diff": -9.268292682926827,
+      "margin": 10.0,
+      "p_tost": 0.48592064890358255,
+      "equivalent": false,
+      "se": 19.170893317686264,
+      "df": 3.1558109604076785
+    },
+    "novelty_mde_80": 2.376500045399021,
+    "novelty_tost": {
+      "diff": -0.4103658536585364,
+      "margin": 0.5,
+      "p_tost": 0.4610626877260737,
+      "equivalent": false,
+      "se": 0.848269768855981,
+      "df": 3.2003576724505836
+    },
+    "agreement_novelty": {
+      "alpha_ordinal": 0.6714734669655543,
+      "ci": [
+        0.6013331585990332,
+        0.7357533539408023
+      ],
+      "n_units": 168,
+      "n_raters": 5
+    }
+  },
+  "gamification|articles_first": {
+    "k": 26,
+    "overlap_with_rarest_k": 0.07692307692307693,
+    "share_singleton_candidates": 0.6153846153846154,
+    "share_multitoken_candidates": 1.0,
+    "median_candidate_df": 1.0,
+    "median_population_df": 1.0,
+    "gap_share_mde_80": 21.96939245286815,
+    "gap_share_tost": {
+      "diff": -9.135932560590092,
+      "margin": 10.0,
+      "p_tost": 0.4564625220390066,
+      "equivalent": false,
+      "se": 7.841771976390503,
+      "df": 33.1396994556893
+    },
+    "novelty_mde_80": 0.9073778649255715,
+    "novelty_tost": {
+      "diff": -0.25616438356164384,
+      "margin": 0.5,
+      "p_tost": 0.2283106556393486,
+      "equivalent": false,
+      "se": 0.3238801586541578,
+      "df": 34.6431847728127
+    },
+    "agreement_novelty": {
+      "alpha_ordinal": 0.5277267510507897,
+      "ci": [
+        0.45373995404000517,
+        0.5964268149796732
+      ],
+      "n_units": 172,
+      "n_raters": 5
+    }
+  },
+  "gamification|keywords_first": {
+    "k": 6,
+    "overlap_with_rarest_k": 0.0,
+    "share_singleton_candidates": 1.0,
+    "share_multitoken_candidates": 1.0,
+    "median_candidate_df": 1.0,
+    "median_population_df": 1.0,
+    "gap_share_mde_80": 48.55963069579531,
+    "gap_share_tost": {
+      "diff": -3.493975903614455,
+      "margin": 10.0,
+      "p_tost": 0.36104973387748784,
+      "equivalent": false,
+      "se": 17.332912231919565,
+      "df": 5.244759986203062
+    },
+    "novelty_mde_80": 2.1155517202244654,
+    "novelty_tost": {
+      "diff": 0.12008032128514046,
+      "margin": 0.5,
+      "p_tost": 0.31763700502240694,
+      "equivalent": false,
+      "se": 0.7551266713383836,
+      "df": 5.250462504426656
+    },
+    "agreement_novelty": {
+      "alpha_ordinal": 0.5299130163124811,
+      "ci": [
+        0.4521406935632845,
+        0.6021402908539478
+      ],
+      "n_units": 172,
+      "n_raters": 5
+    }
+  }
+}

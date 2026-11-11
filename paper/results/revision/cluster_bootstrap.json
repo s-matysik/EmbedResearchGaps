@@ -1,0 +1,50 @@
+{
+  "management|articles_first": {
+    "n_clusters": 6,
+    "delta_pp": -1.1794871794871764,
+    "cluster_ci": [
+      -13.777777777777784,
+      17.082767978290363
+    ]
+  },
+  "management|keywords_first": {
+    "n_clusters": 6,
+    "delta_pp": -8.000000000000007,
+    "cluster_ci": [
+      -41.58469945355192,
+      18.96296296296296
+    ]
+  },
+  "finance|articles_first": {
+    "n_clusters": 6,
+    "delta_pp": 13.020833333333337,
+    "cluster_ci": [
+      -2.278723404255312,
+      35.11111111111111
+    ]
+  },
+  "finance|keywords_first": {
+    "n_clusters": 6,
+    "delta_pp": -9.268292682926832,
+    "cluster_ci": [
+      -43.59477124183007,
+      23.885714285714283
+    ]
+  },
+  "gamification|articles_first": {
+    "n_clusters": 6,
+    "delta_pp": -9.1359325605901,
+    "cluster_ci": [
+      -19.93599590373784,
+      9.12878787878787
+    ]
+  },
+  "gamification|keywords_first": {
+    "n_clusters": 8,
+    "delta_pp": -3.4939759036144604,
+    "cluster_ci": [
+      -37.42598639455781,
+      22.742857142857137
+    ]
+  }
+}

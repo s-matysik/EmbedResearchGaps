@@ -1,5 +1,62 @@
 # Changelog
 
+## 1.1.0 - 2026-11-11
+
+The revision submitted in response to peer review of the accompanying article
+(SOFTX-D-26-01416). No reported number from 1.0.0 changes; the additions are
+new analyses of the already deposited panel judgements, and corrections to how
+existing numbers were described.
+
+### Added
+
+- `examples/revision/`: the analyses requested in review, all computed from the
+  deposited annotations without further model calls. `analysis_baselines.py`
+  scores random, rarity-matched random and frequency-ordered shortlists of the
+  same size against the same panel judgements; `analysis_rarity_matched.py`
+  draws the rarity-matched comparator from the stratum the filters admit;
+  `analysis_validity.py` reports minimal detectable effects, two one-sided
+  tests against a pre-declared 10 pp margin, and ordinal Krippendorff's alpha
+  with bootstrap intervals; `analysis_cluster_bootstrap.py` resamples article
+  clusters rather than keywords; `analysis_rank_stability.py` measures
+  rank-biased overlap, top-k overlap and Kendall's tau across seeds on the
+  offline backend; `external_audit.py` demonstrates the `load_external_ranking`
+  path end to end.
+- `MAINTENANCE.md`: the reproduction path, the policy for hosted models that
+  providers deprecate, and the release policy.
+- `environment-lock.txt`: pinned versions of every dependency, including the
+  numerical stack, for the runs reported in the article.
+- `paper/figures/figS16_other_corpora.png` and the deposited tables under
+  `paper/results/revision/`.
+
+### Changed
+
+- Continuous integration now runs the suite on Linux, macOS and Windows across
+  Python 3.10-3.13, so the cross-process determinism guarantee is tested where
+  BLAS and library builds differ rather than asserted.
+- `examples/make_figures.py`: Figure 1 redrawn as three numbered stages naming
+  the module behind each component; Figure 4's annotation colour now follows
+  cell luminance instead of a fixed value threshold, which had put white text
+  on pale cells; Figure 6 is built from keyword-level statistics with bootstrap
+  intervals, the unit of analysis the article reports; figure titles are
+  descriptive rather than interpretive.
+- `examples/build_docx.py` renders a second body table using the template's own
+  table style.
+- `paper/`: manuscript and supplementary material revised; the reference list
+  renumbered by first appearance and extended from 26 to 39 entries, each new
+  DOI verified against Crossref.
+
+### Fixed
+
+- The supplementary GAP-rate test was never reported: the permutation column of
+  S14 is the Novelty Score test. Both are now given, with Holm adjustment
+  across the six comparisons (S14b).
+- "No silhouette reaches 0.07" contradicted a run reaching exactly 0.070; the
+  dangling cross-reference to a nonexistent article table now points to Table 1;
+  the two seed-overlap statistics measured on different designs are now
+  distinguished where they meet.
+- Supplementary S7 no longer names the two individuals whose names a metadata
+  error placed in an author-keyword field, nor the affected record.
+
 ## Unreleased
 
 ### Added
