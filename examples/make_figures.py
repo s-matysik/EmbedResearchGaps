@@ -270,7 +270,9 @@ def figure_finance_gaps() -> str:
                                   "Cross-cluster\nconcept"], fontsize=TICK)
     axes[0].set_ylabel("candidate gaps")
     axes[0].set_ylim(0, max(counts) * 1.18)
-    axes[0].set_title("Rare single-study concepts dominate")
+    # Descriptive, not interpretive: the title names what is plotted and
+    # leaves "dominate" to the reader, who can see the counts.
+    axes[0].set_title("Candidate entries by type")
 
     top = gaps.nlargest(12, "score").iloc[::-1]
     axes[1].barh(range(len(top)), top["score"],
@@ -402,7 +404,7 @@ def figure_stability() -> str:
     axes[0].set_xlabel("analysis-corpus size N")
     axes[0].set_ylabel("Jaccard overlap with the N = 50 list")
     axes[0].set_ylim(0, 1.0)
-    axes[0].set_title("Candidate sets barely overlap\nacross corpus sizes")
+    axes[0].set_title("Jaccard overlap with the N = 50 candidate list,\nby analysis-corpus size")
     axes[0].legend(frameon=False, fontsize=TICK, loc="upper right")
     axes[0].grid(alpha=0.2)
 
@@ -425,7 +427,7 @@ def figure_stability() -> str:
     )
     axes[1].set_xlim(0, 1.0)
     axes[1].set_xlabel("mean pairwise Jaccard across 5 k-means seeds")
-    axes[1].set_title("and across initialisations\n(bars: min-max)")
+    axes[1].set_title("Mean pairwise Jaccard across five k-means seeds\n(bars: minimum to maximum pair)")
     fig.tight_layout()
     return save(fig, "fig5_stability.png")
 
