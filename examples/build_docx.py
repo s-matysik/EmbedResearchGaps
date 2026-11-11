@@ -29,22 +29,16 @@ TARGET = Path("manuscript/EmbedResearchGaps_SoftwareX.docx")
 #: Usable text width: Letter minus the template's one-inch margins.
 TEXT_WIDTH_IN = 6.5
 
-#: The five mandatory section headings, in the template's own wording.  The
-#: template carries them as Heading 1 paragraphs attached to its multilevel
-#: list (numId 1: "%1." at level 0, "%1.%2." at level 1), so Word generates
-#: "1.", "2.", "2.1." itself.  Heading text must therefore be unnumbered: a
-#: number typed into the text would be duplicated by the list.
+#: Section numbers are part of the heading text, as in the reference paper:
+#: no list numbering is attached, so a number dropped from the text would
+#: simply disappear. The markdown already carries them, so the map only fixes
+#: the punctuation the journal uses for subsections ("2.1." rather than "2.1").
 SECTION_TITLES = {
-    "1. Motivation and significance": "Motivation and significance",
-    "2. Software description": "Software description",
-    "2.1 Software architecture": "Software architecture",
-    "2.2 Software functionalities": "Software functionalities",
-    "3. Illustrative examples": "Illustrative examples",
-    "3.1 What the modes return": "What the modes return",
-    "3.2 How stable the candidate lists are": "How stable the candidate lists are",
-    "3.3 What the panel says": "What the panel says",
-    "4. Impact": "Impact",
-    "5. Conclusions": "Conclusions",
+    "2.1 Software architecture": "2.1. Software architecture",
+    "2.2 Software functionalities": "2.2. Software functionalities",
+    "3.1 What the modes return": "3.1. What the modes return",
+    "3.2 How stable the candidate lists are": "3.2. How stable the candidate lists are",
+    "3.3 What the panel says": "3.3. What the panel says",
 }
 
 #: The list the template attaches to its section headings.
@@ -110,12 +104,17 @@ def heading(document: Document, text: str, level: int = 1, numbered: bool = Fals
     list numbering is attached.  Word would otherwise prepend its own number
     to a title that already carries one.
     """
+    # The journal writes subsection numbers with a trailing dot ("2.1.
+    # Software architecture"); the markdown source writes "2.1". Normalising
+    # here keeps the two numbering shapes from appearing in one document.
+    text = re.sub(r"^(\d+\.\d+)(?=\s)", r"\1.", text.strip())
     paragraph = document.add_paragraph(text, style="Heading 1")
     for run in paragraph.runs:
         run.font.name = BODY_FONT
         run.font.size = Pt(HEADING_PT)
         run.font.bold = False
     paragraph.paragraph_format.space_before = Pt(0)
+    paragraph.paragraph_format.line_spacing = 1.0
     if level > 1:
         paragraph.paragraph_format.left_indent = Inches(SUBSECTION_INDENT_IN)
     return paragraph
@@ -130,6 +129,7 @@ def prose(document: Document, text: str, size_pt: float | None = None):
         if size_pt is not None:
             run.font.size = Pt(size_pt)
     paragraph.paragraph_format.space_after = Pt(0)
+    paragraph.paragraph_format.line_spacing = 1.0
     return paragraph
 
 
@@ -265,11 +265,9 @@ def build() -> Path:
              if k == "h2" and p.startswith("1. Motivation")][0]
     for kind, payload in blocks[start:]:
         if kind == "h2":
-            heading(document, SECTION_TITLES.get(payload, payload), 1,
-                    numbered=payload in SECTION_TITLES)
+            heading(document, SECTION_TITLES.get(payload, payload), 1)
         elif kind == "h3":
-            heading(document, SECTION_TITLES.get(payload, payload), 2,
-                    numbered=payload in SECTION_TITLES)
+            heading(document, SECTION_TITLES.get(payload, payload), 2)
         elif kind == "table":
             # A second markdown table in the body is a results table: build it
             # with the template's own table style so borders and fonts match
