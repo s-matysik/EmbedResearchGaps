@@ -44,7 +44,14 @@
     "nongap_to_gap": 3
   },
   "_annotators_unavailable": {
-    "anthropic:claude-sonnet-4-6": "model no longer served by the provider",
-    "xai:grok-4.5": "no credits on the account at the time of the rerun"
-  }
+    "anthropic:claude-sonnet-4-6": "model no longer served by the provider (account lists claude-sonnet-5 and later)",
+    "xai:grok-4.5": "HTTP 403 permission-denied: account credits exhausted or monthly limit reached",
+    "deepseek:deepseek-v4-pro": "HTTP 402: insufficient balance",
+    "google:gemini-2.5-flash": "HTTP 402: prepayment credits depleted"
+  },
+  "_annotators_used": [
+    "openai:gpt-4o"
+  ],
+  "_probe_date": "2026-11-11",
+  "_note": "The unavailability list was written by an intermediate run that had probed only two providers; it is replaced here by the full probe of 11 November 2026, which is what the article and the response letter report."
 }
