@@ -76,7 +76,7 @@ def add_inline(paragraph, text: str) -> None:
         elif piece.startswith("`") and piece.endswith("`"):
             run = paragraph.add_run(piece[1:-1])
             run.font.name = "Consolas"
-            run.font.size = Pt(10)
+            run.font.size = Pt(SMALL_PT)
         elif piece.startswith("^") and piece.endswith("^"):
             paragraph.add_run(piece[1:-1].replace("\\*", "*")).font.superscript = True
         elif piece.startswith("*") and piece.endswith("*"):
@@ -88,29 +88,48 @@ def add_inline(paragraph, text: str) -> None:
             paragraph.add_run(piece)
 
 
-def heading(document: Document, text: str, level: int = 1, numbered: bool = False):
-    """Add a heading, optionally attached to the template's section list.
+#: House formatting, taken from an accepted Original Software Publication of
+#: the same group rather than from the template's style definitions: the whole
+#: document is Arial, headings are 11 pt and not bold with no space above
+#: them, captions and reference entries drop to 9 pt, and subsection headings
+#: are indented by a quarter inch.  The template's heading styles (Cambria 14
+#: and 13 pt) and its multilevel section list are deliberately not used: they
+#: render section titles larger than the body and at a different typeface,
+#: which is what made the earlier build look unlike the journal's own papers.
+BODY_FONT = "Arial"
+HEADING_PT = 11
+SMALL_PT = 9
+SUBSECTION_INDENT_IN = 0.25
 
-    ``numbered`` attaches the paragraph to numId 1 at ``level - 1``, which is
-    how the template itself numbers its five mandatory sections and their
-    subsections.  Front matter, the declarations and the reference list are
-    unnumbered in the template and are added without it.
+
+def heading(document: Document, text: str, level: int = 1, numbered: bool = False):
+    """Add a section heading in the house format.
+
+    ``numbered`` is accepted for call compatibility and ignored: section
+    numbers are part of the heading text, as in the reference paper, so no
+    list numbering is attached.  Word would otherwise prepend its own number
+    to a title that already carries one.
     """
-    paragraph = document.add_paragraph(text, style=f"Heading {level}")
-    if numbered:
-        properties = paragraph._p.get_or_add_pPr()
-        number = OxmlElement("w:numPr")
-        for tag, value in (("w:ilvl", level - 1), ("w:numId", SECTION_LIST_ID)):
-            element = OxmlElement(tag)
-            element.set(qn("w:val"), str(value))
-            number.append(element)
-        properties.append(number)
+    paragraph = document.add_paragraph(text, style="Heading 1")
+    for run in paragraph.runs:
+        run.font.name = BODY_FONT
+        run.font.size = Pt(HEADING_PT)
+        run.font.bold = False
+    paragraph.paragraph_format.space_before = Pt(0)
+    if level > 1:
+        paragraph.paragraph_format.left_indent = Inches(SUBSECTION_INDENT_IN)
     return paragraph
 
 
-def prose(document: Document, text: str):
+def prose(document: Document, text: str, size_pt: float | None = None):
     paragraph = document.add_paragraph(style="Body")
     add_inline(paragraph, " ".join(text.split()))
+    for run in paragraph.runs:
+        if run.font.name is None:
+            run.font.name = BODY_FONT
+        if size_pt is not None:
+            run.font.size = Pt(size_pt)
+    paragraph.paragraph_format.space_after = Pt(0)
     return paragraph
 
 
@@ -231,6 +250,10 @@ def build() -> Path:
     heading(document, "Metadata")
     caption = document.add_paragraph(style="Body")
     add_inline(caption, "**Table 1.** Code metadata.")
+    for run in caption.runs:
+        if run.font.name is None:
+            run.font.name = BODY_FONT
+        run.font.size = Pt(SMALL_PT)
     rows = next(p for k, p in blocks if k == "table")
     blocks = [(k, p) for k, p in blocks if not (k == "table" and p is rows)]
     fill_metadata_table(metadata_table, rows[1:])
@@ -289,10 +312,12 @@ def build() -> Path:
                 indent = len(source_line) - len(source_line.lstrip(" "))
                 run = par.add_run("\u00a0" * indent + source_line.strip())
                 run.font.name = "Consolas"
-                run.font.size = Pt(8.5)
+                run.font.size = Pt(SMALL_PT)
             document.add_paragraph(style="Body")
         elif kind == "p":
-            prose(document, payload)
+            # Reference entries are set a step smaller, like the captions.
+            is_reference = bool(re.match(r"\[\d+\]\s", payload.strip()))
+            prose(document, payload, size_pt=SMALL_PT if is_reference else None)
         elif kind == "figure":
             caption_text, path = payload
             image = Path(path)
@@ -302,6 +327,12 @@ def build() -> Path:
             picture.add_run().add_picture(str(image), width=Inches(TEXT_WIDTH_IN))
             figure_caption = document.add_paragraph(style="Body")
             add_inline(figure_caption, caption_text)
+            # Captions sit a step below body text, as in the reference paper.
+            for run in figure_caption.runs:
+                if run.font.name is None:
+                    run.font.name = BODY_FONT
+                run.font.size = Pt(SMALL_PT)
+            figure_caption.paragraph_format.space_after = Pt(0)
 
     TARGET.parent.mkdir(parents=True, exist_ok=True)
     document.save(TARGET)
