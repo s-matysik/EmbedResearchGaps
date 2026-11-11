@@ -82,7 +82,7 @@ Seven figures are produced headlessly, and every run returns the diagnostics a m
 
 Two Scopus corpora were retrieved: 493 records on dynamic capabilities and digital transformation, and 487 on fintech credit, financial inclusion and bank lending, each with a one-sentence problem statement (S1); a third of 290 records on gamification in marketing shares its topic, not its retrieval, with [14]. Queries, dates, identifiers, all tables and the regeneration scripts are deposited [31]. Selecting the N articles nearest the problem statement plays the role screening plays in a review; N = 50 by default.
 
-**Table 1.** Runs in this section. Keywords: distinct author keywords in the analysis corpus. E/X/C/P: emerging concepts, cross-cluster concepts, conceptual combinations, peripheral keywords. Seed J and RBO: mean pairwise Jaccard and rank-biased overlap across five k-means seeds. Support: candidates reaching majority support, of the pooled total across twenty runs. The last column is the keyword-level GAP-rate difference against the disjoint control.
+**Table 1.** Runs in this section. Keywords: distinct author keywords in the corpus. E/X/C/P: emerging, cross-cluster, combination and peripheral candidates. Seed J: mean pairwise Jaccard across five k-means seeds, hosted backend. RBO: rank-biased overlap across five seeds, offline backend. Support: candidates at majority support of the pooled total over twenty runs. Last column: keyword-level GAP-rate difference against the disjoint control.
 
 | Corpus | Mode | Keywords | k | Silhouette | Candidates (distinct) | E/X/C/P | Seed J | RBO | Support >= 0.5 | GAP rate vs control (pp, 95% CI) |
 |---|---|---|---|---|---|---|---|---|---|---|
