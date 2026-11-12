@@ -61,6 +61,7 @@ DASHES = str.maketrans({"\u2014": "-", "\u2013": "-", "\u2012": "-",
 def normalize(text: str) -> str:
     """Collapse whitespace and dash style, so neither counts as a change."""
     text = text.translate(DASHES)
+    text = re.sub(r"\bFig\. (\d)", r"Figure \1", text)   # caption wording, not content
     text = re.sub(r"\s*-\s*", "-", text)
     return re.sub(r"\s+", " ", text).strip()
 

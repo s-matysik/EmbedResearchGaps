@@ -164,7 +164,121 @@ def _complete_run(run) -> int:
         changed = 1
     return changed
 
+
+CAPTION = re.compile(r"^(Figure|Table)\s+\d+\.")
+CONTENT_INDENT_IN = 0.55
+
+
+def _kind(paragraph) -> str:
+    """Classify a paragraph the way the reference paper's formatting does."""
+    text = paragraph.text.strip()
+    if paragraph._p.xpath(".//w:drawing"):
+        return "picture"
+    if paragraph.style.name.startswith("Heading"):
+        return "heading"
+    runs = [r for r in paragraph.runs if r.text.strip()]
+    if runs and all(r.font.name == "Consolas" for r in runs):
+        return "code"
+    if CAPTION.match(text):
+        return "caption"
+    if re.match(r"^\[\d+\]\s", text):
+        return "reference"
+    return "text" if text else "blank"
+
+
+def apply_house_format(document: Document, *, indent_subsections: bool = True,
+                       tables: bool = True) -> dict:
+    """Apply the formatting of the reference paper to a built document.
+
+    Every rule was read from the reference's own paragraphs, not from the
+    journal template's style definitions:
+
+    * headings: Arial 11 pt, bold from the style, 0 pt above, single spacing;
+      subsection headings indented 0.25 in;
+    * content under a subsection (text, captions, code) indented 0.55 in, and
+      content under a top-level heading not indented at all;
+    * running text and captions keep Word's default 10 pt after each paragraph,
+      code blocks and reference entries sit tight (0 pt);
+    * everything single spaced; captions and references 9 pt;
+    * the metadata table's text is 9 pt, the results table is centred with
+      centred cells.
+    """
+    from docx.enum.table import WD_TABLE_ALIGNMENT
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.table import Table
+    from docx.text.paragraph import Paragraph
+
+    # Only a paper has front matter (title, authors) before its Abstract; a
+    # supplement starts straight into running text.
+    has_abstract = any(p.text.strip() == "Abstract" for p in document.paragraphs)
+    in_subsection = in_references = False
+    past_front_matter = not has_abstract
+    counts: dict[str, int] = {}
+    table_index = 0
+    for child in list(document.element.body):
+        tag = child.tag.split("}")[-1]
+        if tag == "tbl":
+            table = Table(child, document)
+            if tables:
+                for row in table.rows:
+                    for cell in row.cells:
+                        for par in cell.paragraphs:
+                            for run in par.runs:
+                                run.font.size = Pt(SMALL_PT)
+                                run.font.name = BODY_FONT
+                if table_index == 1:
+                    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+                    for row in table.rows:
+                        for cell in row.cells:
+                            for par in cell.paragraphs:
+                                par.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            table_index += 1
+            continue
+        if tag != "p":
+            continue
+        par = Paragraph(child, document)
+        kind = _kind(par)
+        counts[kind] = counts.get(kind, 0) + 1
+        fmt = par.paragraph_format
+        fmt.line_spacing = 1.0
+        if kind == "heading":
+            text = par.text.strip()
+            past_front_matter = past_front_matter or text == "Abstract"
+            in_references = text == "References"
+            in_subsection = bool(indent_subsections and fmt.left_indent)
+            fmt.space_before = Pt(0)
+            continue
+        if kind == "blank":
+            continue
+        if not past_front_matter:
+            fmt.space_after = Pt(0)          # author and affiliation block
+            continue
+        if kind == "reference" or in_references:
+            fmt.space_after = Pt(0)
+            fmt.left_indent = None
+        elif kind == "code":
+            fmt.space_after = Pt(0)
+            fmt.left_indent = Inches(CONTENT_INDENT_IN) if in_subsection else None
+        elif kind == "picture":
+            fmt.space_after = None
+            fmt.left_indent = None
+        else:  # running text and captions
+            fmt.space_after = None           # inherit the default 10 pt
+            fmt.left_indent = Inches(CONTENT_INDENT_IN) if in_subsection else None
+    return counts
+
+
+def caption_markup(text: str) -> str:
+    """Rewrite "**Fig. 2.** ..." as "Figure 2. ...": the reference paper's
+    captions spell the word out and do not set the label in bold."""
+    text = re.sub(r"^\*\*Fig\. (\d+)\.\*\*", r"Figure \1.", text.strip())
+    return re.sub(r"^\*\*Table (\d+)\.\*\*", r"Table \1.", text)
+
+
 def prose(document: Document, text: str, size_pt: float | None = None):
+    text = caption_markup(text)
+    if CAPTION.match(text) and size_pt is None:
+        size_pt = SMALL_PT
     paragraph = document.add_paragraph(style="Body")
     add_inline(paragraph, " ".join(text.split()))
     for run in paragraph.runs:
@@ -299,7 +413,7 @@ def build() -> Path:
     # --- Metadata table --------------------------------------------------
     heading(document, "Metadata")
     caption = document.add_paragraph(style="Body")
-    add_inline(caption, "**Table 1.** Code metadata.")
+    add_inline(caption, "Table 1. Code metadata.")
     for run in caption.runs:
         if run.font.name is None:
             run.font.name = BODY_FONT
@@ -351,17 +465,16 @@ def build() -> Path:
                     run.font.name = table_font
             document.add_paragraph(style="Body")
         elif kind == "code":
-            # One paragraph per source line, monospaced, with leading spaces
-            # preserved as non-breaking spaces so Word keeps the indentation.
+            # One paragraph with line breaks, as the reference sets its code;
+            # leading spaces become non-breaking so Word keeps the indentation.
+            par = document.add_paragraph(style="Body")
+            rows_ = []
             for source_line in payload:
-                par = document.add_paragraph(style="Body")
-                par.paragraph_format.space_after = Pt(0)
-                par.paragraph_format.space_before = Pt(0)
                 indent = len(source_line) - len(source_line.lstrip(" "))
-                run = par.add_run("\u00a0" * indent + source_line.strip())
-                run.font.name = "Consolas"
-                run.font.size = Pt(SMALL_PT)
-            document.add_paragraph(style="Body")
+                rows_.append("\u00a0" * indent + source_line.strip())
+            run = par.add_run("\n".join(rows_))
+            run.font.name = "Consolas"
+            run.font.size = Pt(SMALL_PT)
         elif kind == "p":
             # Reference entries are set a step smaller, like the captions.
             is_reference = bool(re.match(r"\[\d+\]\s", payload.strip()))
@@ -374,14 +487,14 @@ def build() -> Path:
             picture = document.add_paragraph(style="Body")
             picture.add_run().add_picture(str(image), width=Inches(TEXT_WIDTH_IN))
             figure_caption = document.add_paragraph(style="Body")
-            add_inline(figure_caption, caption_text)
+            add_inline(figure_caption, caption_markup(caption_text))
             # Captions sit a step below body text, as in the reference paper.
             for run in figure_caption.runs:
                 if run.font.name is None:
                     run.font.name = BODY_FONT
                 run.font.size = Pt(SMALL_PT)
-            figure_caption.paragraph_format.space_after = Pt(0)
 
+    apply_house_format(document)
     complete_run_fonts(document)
     TARGET.parent.mkdir(parents=True, exist_ok=True)
     document.save(TARGET)
