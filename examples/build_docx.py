@@ -112,13 +112,57 @@ def heading(document: Document, text: str, level: int = 1, numbered: bool = Fals
     for run in paragraph.runs:
         run.font.name = BODY_FONT
         run.font.size = Pt(HEADING_PT)
-        run.font.bold = False
+        # Bold is left to the Heading 1 style, which supplies it: the
+        # reference paper's heading runs carry no bold property of their own.
     paragraph.paragraph_format.space_before = Pt(0)
     paragraph.paragraph_format.line_spacing = 1.0
     if level > 1:
         paragraph.paragraph_format.left_indent = Inches(SUBSECTION_INDENT_IN)
     return paragraph
 
+
+
+def complete_run_fonts(document: Document) -> int:
+    """Mirror each run's font onto the complex-script slots.
+
+    python-docx writes only ``w:ascii`` and ``w:hAnsi``; Word also reads
+    ``w:cs`` for complex-script runs and ``w:szCs`` for their size, and the
+    reference paper sets all of them.  Where they are missing a renderer falls
+    back to the theme font, which is how a document that looks like Arial on
+    screen prints a different face in places.
+    """
+    fixed = 0
+    for paragraph in document.paragraphs:
+        for run in paragraph.runs:
+            fixed += _complete_run(run)
+    for table in document.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                for paragraph in cell.paragraphs:
+                    for run in paragraph.runs:
+                        fixed += _complete_run(run)
+    return fixed
+
+
+def _complete_run(run) -> int:
+    if not run.text.strip():
+        return 0
+    properties = run._element.get_or_add_rPr()
+    fonts = properties.find(qn("w:rFonts"))
+    changed = 0
+    if fonts is not None:
+        ascii_font = fonts.get(qn("w:ascii"))
+        if ascii_font and fonts.get(qn("w:cs")) != ascii_font:
+            fonts.set(qn("w:cs"), ascii_font)
+            fonts.set(qn("w:eastAsia"), ascii_font)
+            changed = 1
+    size = properties.find(qn("w:sz"))
+    if size is not None and properties.find(qn("w:szCs")) is None:
+        size_cs = OxmlElement("w:szCs")
+        size_cs.set(qn("w:val"), size.get(qn("w:val")))
+        properties.append(size_cs)
+        changed = 1
+    return changed
 
 def prose(document: Document, text: str, size_pt: float | None = None):
     paragraph = document.add_paragraph(style="Body")
@@ -230,6 +274,12 @@ def build() -> Path:
             affiliations.append(payload)
     paragraph = document.add_paragraph(style="Body")
     add_inline(paragraph, author_line)
+    # add_inline leaves the font to the style; the author block must carry the
+    # document font explicitly like every other run, or it prints in Calibri.
+    for run in paragraph.runs:
+        if run.font.name is None:
+            run.font.name = BODY_FONT
+    paragraph.paragraph_format.line_spacing = 1.0
     # The affiliation lines carry no blank line between them, so they arrive as
     # one buffered block; re-split on the superscript markers that open each.
     for piece in re.findall(r"\^[a-z]\^[^^]*", " ".join(affiliations)):
@@ -332,6 +382,7 @@ def build() -> Path:
                 run.font.size = Pt(SMALL_PT)
             figure_caption.paragraph_format.space_after = Pt(0)
 
+    complete_run_fonts(document)
     TARGET.parent.mkdir(parents=True, exist_ok=True)
     document.save(TARGET)
     return TARGET
