@@ -46,11 +46,11 @@ Section S0 is reorganised: installation, offline smoke test, full reproduction a
 
 **4. Presentation of Table S12.** *"Table S12 (Embedding-backend comparison) in the supplementary material is difficult to read, particularly due to the organization and alignment of the column headings. I recommend revising its layout and structure to facilitate the interpretation and comparison of the results."*
 
-S12 now comprises two tables: a summary (one row per backend/mode: k, silhouette range, candidate count, overlap with reference run, runtime) and a detail table (one row per corpus, mode, backend). Column headings are short, carry units; numeric columns are right-aligned to a fixed decimal count. The dangling cross-reference to "Table 3 of the article" (also flagged in point 12) now points to Table 2.
+S12 now comprises two tables: a summary (one row per backend/mode: k, silhouette range, candidate count, overlap with reference run, runtime) and a detail table (one row per corpus, mode, backend). Column headings are short, carry units; numeric columns are right-aligned to a fixed decimal count. The dangling cross-reference to "Table 3 of the article" (also flagged in point 12) now points to Table 1.
 
 **5. Manuscript organization and clarity.** *"The manuscript contains some formatting issues, inconsistencies in textual flow, and areas where the results could be better organized. I recommend a thorough revision to improve clarity and more clearly distinguish between the implemented software functionalities and those whose effectiveness has been experimentally validated."*
 
-Section 3 is reorganised around Table 2, giving per corpus/mode corpus size, k, silhouette, candidate counts by type, seed Jaccard, rank-biased overlap, support distribution and effect size with interval. The requested distinction appears in three places: Section 2.2 states three of seven embedding backends are evaluated in Section 3.6, remaining hosted backends covered only by recorded-transport tests; the same section states scoring weights and thresholds are untuned inherited defaults, now examined by the weight ablation in S10b and the frequency-ceiling analysis in S10c; Section 4 separates package implementation from evaluation findings. The untested citation filter has been removed entirely.
+Section 3 is reorganised around Table 1, giving per corpus/mode corpus size, k, silhouette, candidate counts by type, seed Jaccard, rank-biased overlap, support distribution and effect size with interval. The requested distinction appears in three places: Section 2.2 states three of seven embedding backends are evaluated in Section 3.6, remaining hosted backends covered only by recorded-transport tests; the same section states scoring weights and thresholds are untuned inherited defaults, now examined by the weight ablation in S10b and the frequency-ceiling analysis in S10c; Section 4 separates package implementation from evaluation findings. The untested citation filter has been removed entirely.
 
 ---
 
@@ -134,7 +134,7 @@ Cluster-robust bootstrap (resampling article clusters, not keywords) widens inte
 
 **(10)** *"Stability is quantified exclusively through the Jaccard overlap of candidate sets. Since the output is proposed as a prioritised reading order, rank-aware measures (for example rank-biased overlap, top-k overlap, or Kendall's τ on shared items) are needed. The backend comparison uses a single reference run, three corpora and no within-backend seed baseline for each backend. Moreover, the statement that backend sensitivity exceeds seed sensitivity (Section 3.5) holds for Mode B (seed overlap of 0.38 to 0.44 versus 0.00 to 0.18 across backends) but not for Mode A (0.14 to 0.15 versus 0.00 to 0.07)."*
 
-Rank-aware measures appear in Section 3.2 and Table 2. Across five seeds: rank-biased overlap (p = 0.9) is 0.27-0.38 (Mode B) and 0.03-0.14 (Mode A); top-10 overlap is 0.41-0.49 and 0.06-0.16; Kendall's τ on shared items is 0.25-0.75 for Mode B. This is blunter than set overlap suggested: roughly half a Mode B top-10 recurs under a different seed, while Mode A does not recur at all. Computed on the offline `tfidf-svd` backend, needing no credentials or hosted endpoint, rerunnable from deposited corpora.
+Rank-aware measures appear in Section 3.2 and Table 1. Across five seeds: rank-biased overlap (p = 0.9) is 0.27-0.38 (Mode B) and 0.03-0.14 (Mode A); top-10 overlap is 0.41-0.49 and 0.06-0.16; Kendall's τ on shared items is 0.25-0.75 for Mode B. This is blunter than set overlap suggested: roughly half a Mode B top-10 recurs under a different seed, while Mode A does not recur at all. Computed on the offline `tfidf-svd` backend, needing no credentials or hosted endpoint, rerunnable from deposited corpora.
 
 Accepted; sentence rewritten. Section 3.6 now states that for Mode B the backend moves the list more than initialisation does, while for Mode A, where seed overlap is only 0.14-0.15, the two sources are comparable. A full within-backend seed baseline per backend (a 3 × 2 × 3 × 5 design) was not added; we state this limitation rather than report a partial version.
 
@@ -156,7 +156,7 @@ We apologise. Every item was traced to its source file before changes were made.
 
 4. The Reviewer is right and our earlier reply was wrong: a stale table remained at the end of S12, giving `tfidf-svd` silhouettes of 0.019-0.033/0.032-0.041 and run times of 0.8-1.0 s for every backend. It is removed and regenerated from the detail-table rows: tfidf-svd now reads -0.000-0.003 (Mode B) and 0.041-0.055 (Mode A), run times 4.6-7.3 s and 4.0-6.3 s. The table now separates one-off embedding cost from time on ready vectors, previously conflated. Rows are deposited as `paper/results/revision/s12_backends.csv`.
 
-5. "Table 3 of the article" was a dangling cross-reference; the article had no tables. It now points to Table 2 of the revised manuscript.
+5. "Table 3 of the article" was a dangling cross-reference; the article had no tables. It now points to Table 1 of the revised manuscript.
 
 6. "No silhouette reaches 0.07" is wrong: one run reaches exactly 0.070 (gamification, Mode A, sbert). It now reads "no silhouette exceeds 0.07, the maximum being 0.070".
 
@@ -168,7 +168,7 @@ Both titles asserted what the figures do not show. Figure 2 is now titled descri
 
 **(14)** *"The main text contains no table. A compact table with, per corpus and mode, N, k, silhouette, number of candidates by type, seed Jaccard, support distribution and effect sizes with CIs would convey the central results more efficiently than their present distribution across text, figures and supplementary sheets. In addition, Section 3 (Illustrative examples) carries the main empirical evaluation, and a separate Evaluation section would reflect this more accurately."*
 
-Table 2 (added) gives, for all six corpus-mode combinations: keywords, k, silhouette, candidate counts (total and by type), seed Jaccard, rank-biased overlap, support distribution, and GAP-rate effect with 95% interval. Section 3 is shortened accordingly.
+Table 1 (added) gives, for all six corpus-mode combinations: keywords, k, silhouette, candidate counts (total and by type), seed Jaccard, rank-biased overlap, support distribution, and GAP-rate effect with 95% interval. Section 3 is shortened accordingly.
 
 We agree but cannot act, as the journal's Original Software Publication template mandates five headings and Reviewer 3 requires strict conformance. We have kept the mandated heading, adding subsections (3.1 candidate outputs, 3.2 stability, 3.3 annotation results, 3.4 comparison with simpler shortlists, 3.5 expert comparison, 3.6 backend sensitivity) for navigability. We will rename if the Editor prefers.
 
@@ -298,7 +298,7 @@ Figure 6 regenerated from keyword-level statistics with 95% intervals; S3 labell
 
 **Presentation and software**
 
-Manuscript rebuilt from the journal template; Figures 1, 2 and 4 regenerated at 300 dpi; Table 2 and a usage listing added; the citation filter removed. Continuous integration extended to Linux, macOS and Windows across Python 3.10-3.13; pinned environment file and a maintenance and versioning policy added.
+Manuscript rebuilt from the journal template; Figures 1, 2 and 4 regenerated at 300 dpi; Table 1 and a usage listing added; the citation filter removed. Continuous integration extended to Linux, macOS and Windows across Python 3.10-3.13; pinned environment file and a maintenance and versioning policy added.
 
 **Not done, with reasons**
 

@@ -275,6 +275,130 @@ def caption_markup(text: str) -> str:
     return re.sub(r"^\*\*Table (\d+)\.\*\*", r"Table \1.", text)
 
 
+TEXT_WIDTH_TWIPS = 9360
+
+
+def normalise_tables(doc, size_pt: float = 9):
+    """Make every table's grid and cell widths agree, fit the text width, set 9 pt.
+
+    ``tblGrid`` and each cell's ``tcW`` must describe the same widths, or Word
+    and other readers draw the table differently; text in tables follows the
+    reference paper's 9 pt rather than the document default.
+    """
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+    from docx.shared import Pt
+
+    order = ["tblStyle", "tblpPr", "tblOverlap", "bidiVisual", "tblStyleRowBandSize",
+             "tblStyleColBandSize", "tblW", "jc", "tblCellSpacing", "tblInd", "tblBorders",
+             "tblShd", "tblLayout", "tblCellMar", "tblLook"]
+    for table in doc.tables:
+        tbl = table._tbl
+        grid_elements = tbl.tblGrid.findall(qn("w:gridCol"))
+        grid = [int(g.get(qn("w:w"))) for g in grid_elements]
+        if sum(grid) > TEXT_WIDTH_TWIPS:
+            total = sum(grid)
+            grid = [int(g * TEXT_WIDTH_TWIPS / total) for g in grid]
+            grid[-1] += TEXT_WIDTH_TWIPS - sum(grid)
+            for element, width in zip(grid_elements, grid):
+                element.set(qn("w:w"), str(width))
+        for tr in tbl.tr_lst:
+            column = 0
+            for tc in tr.tc_lst:
+                props = tc.tcPr
+                span = props.gridSpan.val if props is not None and props.gridSpan is not None else 1
+                width = sum(grid[column:column + span])
+                column += span
+                props = tc.get_or_add_tcPr()
+                for old in props.findall(qn("w:tcW")):
+                    props.remove(old)
+                cell_width = OxmlElement("w:tcW")
+                cell_width.set(qn("w:w"), str(width))
+                cell_width.set(qn("w:type"), "dxa")
+                props.insert(0, cell_width)
+        properties = tbl.tblPr
+        for old in properties.findall(qn("w:tblW")):
+            properties.remove(old)
+        table_width = OxmlElement("w:tblW")
+        table_width.set(qn("w:w"), str(sum(grid)))
+        table_width.set(qn("w:type"), "dxa")
+        properties.append(table_width)
+        children = sorted(list(properties), key=lambda e: order.index(e.tag.split("}")[-1]))
+        for child in children:
+            properties.remove(child)
+        for child in children:
+            properties.append(child)
+        for row in table.rows:
+            for cell in row.cells:
+                for paragraph in cell.paragraphs:
+                    for run in paragraph.runs:
+                        run.font.size = Pt(size_pt)
+
+
+TABLE_WIDTH_TWIPS = 9360  # 6.5 in, the text width of the template
+
+
+def fit_table_columns(table, payload) -> None:
+    """Give a results table one consistent set of column widths.
+
+    Word reads ``tblGrid`` for the layout and ``tcW`` for each cell; python-docx
+    leaves the first at an even split and the second unset, so the two can
+    disagree and the table is drawn differently in Word and in other readers.
+    Widths here follow the longest unbreakable word and the mean length of each
+    column, scaled to the text width, and are written to both places.
+    """
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+
+    # Cell side margins of 0.05 in (the template's 0.08 in leaves no room for the
+    # longest header words in an eleven-column table at 9 pt).
+    margin_twips = 72
+    char_in, pad_in = 0.078, 2 * margin_twips / 1440
+    columns = list(zip(*payload))
+    need, mean_len = [], []
+    for cells in columns:
+        longest_word = max(len(w) for c in cells for w in (c.split() or [""]))
+        need.append((longest_word * char_in + pad_in + 0.02) * 1440)
+        mean_len.append(sum(len(c) for c in cells) / len(cells))
+    spare = TABLE_WIDTH_TWIPS - sum(need)
+    assert spare >= 0, "table cannot fit its longest words in the text width"
+    share = sum(mean_len)
+    widths = [int(n + spare * m / share) for n, m in zip(need, mean_len)]
+    widths[-1] += TABLE_WIDTH_TWIPS - sum(widths)
+
+    properties = table._tbl.tblPr
+    for tag in ("w:tblW", "w:tblLayout"):
+        for old in properties.findall(qn(tag)):
+            properties.remove(old)
+    width = OxmlElement("w:tblW")
+    width.set(qn("w:w"), str(TABLE_WIDTH_TWIPS))
+    width.set(qn("w:type"), "dxa")
+    properties.append(width)
+    layout = OxmlElement("w:tblLayout")
+    layout.set(qn("w:type"), "fixed")
+    properties.append(layout)
+    margins = OxmlElement("w:tblCellMar")
+    for side in ("left", "right"):
+        element = OxmlElement(f"w:{side}")
+        element.set(qn("w:w"), str(margin_twips))
+        element.set(qn("w:type"), "dxa")
+        margins.append(element)
+    properties.append(margins)
+    order = ["tblStyle", "tblpPr", "tblOverlap", "bidiVisual", "tblStyleRowBandSize",
+             "tblStyleColBandSize", "tblW", "jc", "tblCellSpacing", "tblInd", "tblBorders",
+             "tblShd", "tblLayout", "tblCellMar", "tblLook"]
+    children = sorted(list(properties), key=lambda e: order.index(e.tag.split("}")[-1]))
+    for child in children:
+        properties.remove(child)
+    for child in children:
+        properties.append(child)
+    for grid_col, w in zip(table._tbl.tblGrid.findall(qn("w:gridCol")), widths):
+        grid_col.set(qn("w:w"), str(w))
+    for row in table.rows:
+        for cell, w in zip(row.cells, widths):
+            cell.width = w * 635  # twips -> EMU
+
+
 def prose(document: Document, text: str, size_pt: float | None = None):
     text = caption_markup(text)
     if CAPTION.match(text) and size_pt is None:
@@ -412,12 +536,8 @@ def build() -> Path:
 
     # --- Metadata table --------------------------------------------------
     heading(document, "Metadata")
-    caption = document.add_paragraph(style="Body")
-    add_inline(caption, "Table 1. Code metadata.")
-    for run in caption.runs:
-        if run.font.name is None:
-            run.font.name = BODY_FONT
-        run.font.size = Pt(SMALL_PT)
+    # The template and the reference paper leave the metadata table unnumbered
+    # and uncaptioned; numbering starts with the first results table.
     rows = next(p for k, p in blocks if k == "table")
     blocks = [(k, p) for k, p in blocks if not (k == "table" and p is rows)]
     fill_metadata_table(metadata_table, rows[1:])
@@ -463,6 +583,7 @@ def build() -> Path:
                     run = cell.paragraphs[0].add_run(text)
                     run.font.size = Pt(9)
                     run.font.name = table_font
+            fit_table_columns(built, payload)
             document.add_paragraph(style="Body")
         elif kind == "code":
             # One paragraph with line breaks, as the reference sets its code;
