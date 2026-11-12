@@ -167,16 +167,26 @@ def mark_paragraph(paragraph, old_text: str) -> int:
     # Deletions are appended at the end of the paragraph so the revised
     # sentence stays readable; each is struck through and greyed.
     if deletions:
-        run = paragraph.add_run("  [removed: ")
-        run.font.color.rgb = RGBColor(0x80, 0x80, 0x80)
-        run.font.size = paragraph.runs[0].font.size
-        for _, text in deletions:
-            run = paragraph.add_run(normalize(text) + " ")
-            run.font.strike = True
+        # The note inherits the paragraph's own face and size before the grey
+        # and the strike-through are applied: created bare, it would render in
+        # the theme font, which shows up as a line of Arial inside a code block
+        # and as unbolded text inside a bold line.
+        template_rpr = paragraph.runs[0]._element.get_or_add_rPr() if paragraph.runs else None
+
+        def grey_run(text: str, strike: bool = False):
+            run = paragraph.add_run()
+            if template_rpr is not None:
+                run._element.insert(0, copy.deepcopy(template_rpr))
+            run.text = text
+            run.font.highlight_color = None
+            run.font.strike = strike
             run.font.color.rgb = RGBColor(0x80, 0x80, 0x80)
-            run.font.size = paragraph.runs[0].font.size
-        run = paragraph.add_run("]")
-        run.font.color.rgb = RGBColor(0x80, 0x80, 0x80)
+            return run
+
+        grey_run("  [removed: ")
+        for _, text in deletions:
+            grey_run(normalize(text) + " ", strike=True)
+        grey_run("]")
     return 1
 
 
